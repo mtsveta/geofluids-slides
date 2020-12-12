@@ -26,6 +26,18 @@
 \newtcolorbox{cbox}[1]{fonttitle=\bfseries,title=#1}
 
 %===================================================================
+% General packages
+%===================================================================
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{relsize}
+\usepackage{caption}
+\usepackage{kbordermatrix} 
+\usepackage{mathtools}
+\usepackage{comment} % used to comment parts of the document
+
+%===================================================================
 % Pause Commands
 %===================================================================
 \newcommand{\hiddenpause}{\setbeamercovered{invisible}\pause}
@@ -38,36 +50,6 @@
 %\newcommand{\leftcolumn[2]}{\begin{columns}[#1]\column{#2\textwidth}}
 %\newcommand{\newcolumn[1]}{\column{#1\textwidth}}
 %\newcommand{\endcolumn}{\end{columns}}
-
-
-\usepackage{listings}
-\usepackage{xcolor}
-
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
-\lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2
-}
-
-\lstset{style=mystyle}
 
 \newcommand{\lcol}[1][0.5]{\begin{columns}\column{#1\textwidth}}
 \newcommand{\lcoltop}{\begin{columns}[t]\column{0.5\textwidth}}
@@ -112,6 +94,24 @@
 
 \lstset{style=mystyle}
 
+\usepackage{minted}
+
+%===================================================================
+% Misc
+%===================================================================
+% Needed to allow bmatrix with more than 10 columns
+\setcounter{MaxMatrixCols}{20}
+
+\newcommand\wlength{3.5em}
+\newcommand\wscale{0.8}
+\newcommand\w[1]{\makebox[\wlength]{$#1$}}
+\newcommand\wt[1]{\makebox[\wlength]{\scalebox{\wscale}{$#1$}}}
+\newcommand\wl[1]{\scalebox{\wscale}{$#1$}}
+%\newcommand\m{\hphantom{-}}
+
+\newcommand\minus[1]{\mathllap{-}#1}
+
+
 \title{Geofluids — Part IV}
 \subtitle{Introduction to Geochemical and Reactive Transport Modeling}
 \author{Dr. Svetlana Kyas (based on the lecture notes of Dr. Allan Leal)}
@@ -125,8 +125,12 @@ NO F 61}
 
 \maketitle
 
-\input{lecture-1-introduction}
-%\input{lecture-2-chemical-equilibrium}
+%\input{lecture-1-introduction}
+\input{lecture-2-chemical-equilibrium}
+%\input{lecture-3-thermodynamic-model}
+%\input{lecture-chemical-kinetics}
+%\input{lecture-reactive-transport}
+
 %
 %\section[Intro]{Introduction}
 %
@@ -384,19 +388,19 @@ NO F 61}
   \end{figure}
 \end{frame}
 
-\begin{frame}{Quotes}
-  \begin{quote}
-    Veni, Vidi, Vici
-  \end{quote}
-\end{frame}
-
-{%
-\setbeamertemplate{frame footer}{My custom footer}
-\begin{frame}[fragile]{Frame footer}
-    \themename defines a custom beamer template to add a text to the footer. It can be set via
-    \begin{verbatim}\setbeamertemplate{frame footer}{My custom footer}\end{verbatim}
-\end{frame}
-}
+%\begin{frame}{Quotes}
+%  \begin{quote}
+%    Veni, Vidi, Vici
+%  \end{quote}
+%\end{frame}
+%
+%{%
+%\setbeamertemplate{frame footer}{My custom footer}
+%\begin{frame}[fragile]{Frame footer}
+%    \themename defines a custom beamer template to add a text to the footer. It can be set via
+%    \begin{verbatim}\setbeamertemplate{frame footer}{My custom footer}\end{verbatim}
+%\end{frame}
+%}
 
 %\begin{frame}{References}
 %  Some references to showcase [allowframebreaks] \cite{knuth92,ConcreteMath,Simpson,Er01,greenwade93}
