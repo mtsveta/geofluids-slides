@@ -3,9 +3,8 @@
 \begin{singlespace}
 %
 \begin{figure}
-\begin{centering}
+\centering
 \includegraphics[height=0.6\columnwidth]{figures/intro/logo-kyas}
-\par\end{centering}
 \caption{Dr. Svetlana Kyas, Post-Doctoral Associate in Geothermal Energy \& Geofluids}
 \end{figure}
 %
@@ -14,21 +13,20 @@
 \rcol
 \begin{figure}
 \vskip 5pt
-\begin{centering}
+\centering
 \includegraphics[height=0.6\columnwidth]{figures/intro/logo-leal.jpg}
-\par\end{centering}
 \caption{Dr. Allan Leal, Senior Research Assistant in Geothermal Energy \& Geofluids}
 \end{figure}
 \ecol
   
 \end{frame}
 
-\section[Course introduction]{Course introduction}
-
 \begin{frame}{Table of contents}
   \setbeamertemplate{section in toc}[sections numbered]
   \tableofcontents%[hideallsubsections]
 \end{frame}
+
+\section[Course introduction]{Course introduction}
 
 % --------------------------------------------------------------------------------------------------------------------%
 % Outline
@@ -48,10 +46,9 @@ we will use Python and Reaktoro (\href{https://reaktoro.org/}{reaktoro.org}, com
 \end{itemize}
 
 \begin{figure}
-\begin{centering}
+\centering
 \includegraphics[height=0.15\columnwidth]{figures/intro/logo-python.png}
 \includegraphics[height=0.15\columnwidth]{figures/intro/logo-reaktoro.png}
-\par\end{centering}
 \end{figure}
 
 \end{frame}
@@ -175,9 +172,8 @@ from the Earth's mantle upwards.}
 %
 \vskip 20pt
 \begin{figure}
-\begin{centering}
+\centering
 \includegraphics[height=0.6\textheight]{figures/applications/scaling-calcium-strontium-barium}
-\par\end{centering}
 \caption{Scale formation in a well as a result of geochemical reactions leading
 to mineral precipitation.}
 \end{figure}
@@ -239,17 +235,15 @@ Given the following water analysis, with the concentration of many chemical elem
 pH, \textbf{find the concentrations of all aqueous species in the water}:
 \lcol
 \begin{figure}
-\begin{centering}
+\centering
 \includegraphics[height=0.6\textheight]{figures/applications/water-analysis}
-\par\end{centering}
 \caption{Water composition as a result of a water analysis.}
 \end{figure}
 \rcol
 %
 \begin{figure}
-\begin{centering}
+\centering
 \includegraphics[height=0.6\textheight]{figures/applications/evian-chemical-water-composition}
-\par\end{centering}
 \caption{See Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/eq.evian-water-analysis.ipynb}{\emph{Analysis of the Evian water}}.}
 \end{figure}
 %
@@ -288,7 +282,7 @@ CuCl4-{}-(aq) & H+(aq) & HN2O2-(aq) & KOH(aq) & O2(aq) & SO2(aq) & \tabularnewli
 \alert{\textbf{Other questions}} we might want to answer: 
 \begin{itemize}
 \item What are the \textbf{amounts of these species}? 
-\item How \textbf{saturated} is the water \textbf{with respect to several minerals}? \textbf{Note:}\emph{saturation} is the tendency of the solution to dissolve/precipitate a mineral.
+\item How \textbf{saturated} is the water \textbf{with respect to several minerals}? \textbf{Note:}  \emph{saturation} is the tendency of the solution to dissolve/precipitate a mineral.
 \end{itemize}
 \end{frame}
 %
@@ -522,13 +516,14 @@ can be calculated considering this reaction (and others) in equilibrium.
 % Defining the chemical system in each geochemical modeling problem
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\section{Defining the chemical system in each geochemical modeling problem}
-\begin{frame}[<+->]{Defining the chemical system for the modeling problem of interest}
+\section{Defining the chemical system in the geochemical modeling problem}
+%
+\begin{frame}[<+->]{Defining the chemical system for the modeling problem}
 \begin{itemize}
 \item A chemical system is a collection of phases (one or more). Examples:
 \begin{itemize}
 \item a chemical system with only an aqueous phase;
-\item a chemical system with one aqueous phase and one gaseous phase;
+\item a chemical system with aqueous and gaseous phase (CO$_2$(g));
 \item a chemical system with aqueous, gaseous, and mineral phases.
 \end{itemize}
 \item Each phase has one or more chemical species:
@@ -537,16 +532,36 @@ can be calculated considering this reaction (and others) in equilibrium.
 CO$_{3}^{2-}$(aq), CO$_{2}$(aq), Ca$^{2+}$(aq)
 \item gaseous: H$_{2}$O(g), CO$_{2}$(g), O$_{2}$(g), H$_{2}$S(g)
 \item calcite: CaCO$_{3}$(s)
-\item halite: NaCl(s)
+\item solids: combination of several minerals
+\item oil
+\item biomass (to simulate life of bacterias)
 \end{itemize}
 \item In geochemical modeling, suitable phases and their species need to
-be considered. Either manually, or automatically from databases.
+be considered. They must be added either: 
+\begin{itemize}
+\item manually (naming each species separately, e.g., [`H2O(l)', `H+', `OH-', `Na+', ...]) or 
+\item automatically from databases (load all the species containing elements [`H', `O', `C']).
+\end{itemize}
 \end{itemize}
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
-% Example of chemical system when substances H$_{2}$O and CO$_{2}$
-% are involved
+% Demonstration of chemical system definition
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}[<+->]{Demonstration of chemical system definition}
+See Jupyter notebook tutorials: 
+%
+\begin{itemize}
+\item \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/cl.database.ipynb}{\emph{Database class}} ($\approx$ 10min)
+\item \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/cl.chemical-editor.ipynb}{\emph{Chemical editor class}} ($\approx$ 5min)
+\item \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/cl.chemical-system.ipynb}{\emph{Chemical system class}} ($\approx$ 10min)
+\end{itemize}
+\end{frame}
+
+
+% --------------------------------------------------------------------------------------------------------------------%
+% Example of chemical system when substances H2O and CO2 are involved
 % --------------------------------------------------------------------------------------------------------------------%
 %
 \begin{frame}{Example of chemical system when substances H$_{2}$O and CO$_{2}$
@@ -555,12 +570,18 @@ are involved}
 \lcol
 \begin{itemize}
 \item Assume water (H$_{2}$O) and carbon dioxide (CO$_{2}$), are mixed
-at some given temperature $T$ and pressure $P$. 
+at given $T$ and $P$. 
 \item To model the equilibrium state resulting from this process, the first
 step is to think about:
 \begin{itemize}
 \item the possible phases of matter that could exist; and
 \item the species in each phase. 
+\end{itemize}
+%
+\item \alert{\textbf{Questions we are interested in}}: 
+\begin{itemize}
+\item Is CO$_{2}$ fully dissolved, or is it still present as a gas (water is already fully saturated with it)?
+\item What are the amounts of each species in the chemical state after equilibration?
 \end{itemize}
 \end{itemize}
 \rcol
@@ -633,12 +654,20 @@ are involved}
 H$_{2}$O(aq) & CO$_{2}$(aq) & CO$_{2}$(g) & NaCl(s, halite)\tabularnewline
 H$^{+}$(aq) & HCO$_{3}^{-}$(aq) & H$_{2}$O(g) & \tabularnewline
 OH$^{-}$(aq) & CO$_{3}^{2-}$(aq) &  & \tabularnewline
-Na$^{+}$(aq) &  &  & \tabularnewline
+Na$^{+}$(aq) &  NaCl(aq) &  & \tabularnewline
 Cl$^{-}$(aq) &  &  & \tabularnewline
-NaCl(aq) &  &  & \tabularnewline
 \bottomrule
 \end{tabular}
 \par\end{center}
+
+\begin{itemize}
+\item \alert{\textbf{We wan to know}}: 
+\begin{itemize}
+\item How does the salinity of the brine impact the solubility of the water? 
+\item What happens if we put too much of the table salt? The phase of halite is very important because it has a point of solubility in water. 
+\end{itemize}
+\end{itemize}
+
 
 \end{frame}
 %
@@ -663,9 +692,11 @@ depends on the input conditions.
 all phases are \textbf{stable at equilibrium}.
 \end{itemize}
 \rcol
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics[width=0.9\columnwidth]{figures/applications/ternary-phase-diagram-h2o-co2-nacl}
-\par\end{center}
+\caption{Ternary phase diagram.}
+\end{figure}
 
 \ecol
 \end{frame}
@@ -678,8 +709,16 @@ all phases are \textbf{stable at equilibrium}.
 \begin{itemize}
 \item In most computer codes for modeling geochemical reactions, no manual
 selection of phases and species are needed. 
-\item These can be determined automatically by searching in \textbf{thermodynamic
+\item These can be determined \textbf{automatically} by searching in \textbf{thermodynamic
 databases} all possible species and phases that could exist for a
 given model input. 
+\item Depending on the available database, you can model different things: 
+\begin{itemize}
+\item supcrt98.xml
+\item supcrt98-organics.xml (includes organic species)
+\item thermofun.json (T = 200 $^\circ$C, critical temperatures and pressures of gases used in Peng-Robinson's EOS) 
+\item ColdChem.dat (a low-temperature aqueous thermodynamic model)
+\end{itemize}
+
 \end{itemize}
 \end{frame}
