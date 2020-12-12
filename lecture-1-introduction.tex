@@ -517,3 +517,169 @@ dissolve at given temperature, pressure, and fluid composition conditions)
 can be calculated considering this reaction (and others) in equilibrium.
 \end{itemize}
 \end{frame}
+
+% --------------------------------------------------------------------------------------------------------------------%
+% Defining the chemical system in each geochemical modeling problem
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\section{Defining the chemical system in each geochemical modeling problem}
+\begin{frame}[<+->]{Defining the chemical system for the modeling problem of interest}
+\begin{itemize}
+\item A chemical system is a collection of phases (one or more). Examples:
+\begin{itemize}
+\item a chemical system with only an aqueous phase;
+\item a chemical system with one aqueous phase and one gaseous phase;
+\item a chemical system with aqueous, gaseous, and mineral phases.
+\end{itemize}
+\item Each phase has one or more chemical species:
+\begin{itemize}
+\item aqueous: H$_{2}$O(aq), H$^{+}$(aq), OH$^{-}$(aq), HCO$_{3}^{-}$(aq),
+CO$_{3}^{2-}$(aq), CO$_{2}$(aq), Ca$^{2+}$(aq)
+\item gaseous: H$_{2}$O(g), CO$_{2}$(g), O$_{2}$(g), H$_{2}$S(g)
+\item calcite: CaCO$_{3}$(s)
+\item halite: NaCl(s)
+\end{itemize}
+\item In geochemical modeling, suitable phases and their species need to
+be considered. Either manually, or automatically from databases.
+\end{itemize}
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Example of chemical system when substances H$_{2}$O and CO$_{2}$
+% are involved
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Example of chemical system when substances H$_{2}$O and CO$_{2}$
+are involved}
+
+\lcol
+\begin{itemize}
+\item Assume water (H$_{2}$O) and carbon dioxide (CO$_{2}$), are mixed
+at some given temperature $T$ and pressure $P$. 
+\item To model the equilibrium state resulting from this process, the first
+step is to think about:
+\begin{itemize}
+\item the possible phases of matter that could exist; and
+\item the species in each phase. 
+\end{itemize}
+\end{itemize}
+\rcol
+\begin{itemize}
+\item A simple (but reasonable) chemical system for this problem is:
+\end{itemize}
+\begin{center}
+\begin{tabular}{cc}
+\toprule 
+\textbf{Aqueous Phase} & \textbf{Gaseous Phase}\tabularnewline
+\midrule
+H$_{2}$O(aq) & H$_{2}$O(g)\tabularnewline
+H$^{+}$(aq) & CO$_{2}$(g)\tabularnewline
+OH$^{-}$(aq) & \tabularnewline
+HCO$_{3}^{-}$(aq) & \tabularnewline
+CO$_{3}^{2-}$(aq) & \tabularnewline
+CO$_{2}$(aq) & \tabularnewline
+\bottomrule
+\end{tabular}
+\par\end{center}
+
+\ecol
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Example of chemical system when substances H2O and CaCO3 are involved
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Example of chemical system when substances H$_{2}$O and CaCO$_{\boldsymbol{3}}$
+are involved}
+\begin{itemize}
+\item Assume water (H$_{2}$O) and calcite (CaCO$_{3}$) are mixed at some
+given temperature $T$ and pressure $P$. 
+\item A simple (but reasonable) chemical system for this problem is:
+\end{itemize}
+\begin{center}
+\begin{tabular}{cc}
+\toprule 
+\multicolumn{1}{c}{\textbf{Aqueous Phase}} & \textbf{Calcite Phase}\tabularnewline
+\midrule
+H$_{2}$O(aq) & CaCO$_{3}$(s, calcite)\tabularnewline
+H$^{+}$(aq) & \tabularnewline
+OH$^{-}$(aq) & \tabularnewline
+HCO$_{3}^{-}$(aq) & \tabularnewline
+CO$_{3}^{2-}$(aq) & \tabularnewline
+CO$_{2}$(aq) & \tabularnewline
+Ca$^{2+}$(aq)  & \tabularnewline
+\bottomrule
+\end{tabular}
+\par\end{center}
+
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Example of chemical system when substances H2O, NaCl and CO2 are involved
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Example of chemical system when substances H$_{2}$O, NaCl and CO$_{2}$
+are involved}
+\begin{itemize}
+\item Assume water (H$_{2}$O), carbon dioxide (CO$_{2}$), and sodium chloride
+(NaCl), are mixed at some given temperature $T$ and pressure $P$. 
+\item A simple (but reasonable) chemical system for this problem is:
+\end{itemize}
+\begin{center}
+\begin{tabular}{cccc}
+\toprule 
+\multicolumn{2}{c}{\textbf{Aqueous Phase}} & \multicolumn{1}{c}{\textbf{Gaseous Phase}} & \textbf{Halite Phase}\tabularnewline
+\midrule
+H$_{2}$O(aq) & CO$_{2}$(aq) & CO$_{2}$(g) & NaCl(s, halite)\tabularnewline
+H$^{+}$(aq) & HCO$_{3}^{-}$(aq) & H$_{2}$O(g) & \tabularnewline
+OH$^{-}$(aq) & CO$_{3}^{2-}$(aq) &  & \tabularnewline
+Na$^{+}$(aq) &  &  & \tabularnewline
+Cl$^{-}$(aq) &  &  & \tabularnewline
+NaCl(aq) &  &  & \tabularnewline
+\bottomrule
+\end{tabular}
+\par\end{center}
+
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% How many phases and species to consider for our chemical system?
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{How many phases and species to consider for our chemical system?}
+
+\lcol
+
+\small
+\begin{itemize}
+\item In general, the \textbf{number of phases and species} should be \textbf{as
+large as possible} when \emph{defining a chemical system}.
+\item However, the calculations get more expensive with increasing number
+of species and phases.
+\item \textbf{\alert{\textbf{Important:}}} Not all phases considered in
+the calculation will actually exist in positive amounts. Their existence
+depends on the input conditions.
+\item The ternary phase diagram on the right shows conditions in which not
+all phases are \textbf{stable at equilibrium}.
+\end{itemize}
+\rcol
+\begin{center}
+\includegraphics[width=0.9\columnwidth]{figures/applications/ternary-phase-diagram-h2o-co2-nacl}
+\par\end{center}
+
+\ecol
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Final considerations about defining the chemical system
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}[<+->]{Final considerations about defining the chemical system}
+\begin{itemize}
+\item In most computer codes for modeling geochemical reactions, no manual
+selection of phases and species are needed. 
+\item These can be determined automatically by searching in \textbf{thermodynamic
+databases} all possible species and phases that could exist for a
+given model input. 
+\end{itemize}
+\end{frame}
