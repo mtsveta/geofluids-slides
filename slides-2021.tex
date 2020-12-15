@@ -1,6 +1,8 @@
 \documentclass[english,handout, aspectratio=169,10pt]{beamer}
-
-\usetheme[progressbar=frametitle]{metropolis}
+%===================================================================
+% Beamer theme and its fine tune
+%===================================================================
+\usetheme{metropolis}
 \metroset{block=fill}
 \metroset{sectionpage=simple} % needed to avoid Arithmetic Overflow errors
 
@@ -17,6 +19,91 @@
 
 \usepackage{setspace} % to use singlespace
 
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\synctex=-1
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{units}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{cancel}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage[authoryear]{natbib}
+
+%===================================================================
+% General packages
+%===================================================================
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{relsize}
+\usepackage{caption}
+\usepackage{kbordermatrix} 
+\usepackage{mathtools}
+\usepackage{comment} % used to comment parts of the document
+
+%===================================================================
+% Fonts
+%===================================================================
+
+%\usepackage{mathpazo}
+%\usepackage{eulervm}
+%\usepackage{concmath}
+%\usepackage{newtxsf}
+
+\usepackage{unicode-math}
+%\unimathsetup{math-style=ISO, bold-style=ISO, mathrm=sym}
+\usefonttheme{professionalfonts}
+%\setsansfont[BoldFont={Fira Sans Bold}]{Fira Sans}
+%\setmathfont{Fira Math Regular}
+%\setmathfont[range=\circ]{TeX Gyre Pagella Math}
+%\renewcommand{\circ}{\char"25CB} % FiraMath so far has no \circ
+\renewcommand{\circ}{o} % FiraMath so far has no \circ
+\renewcommand{\vdots}{.} % FiraMath so far has no \vdots
+
+\setbeamercovered{transparent}
+
+\definecolor{metrogreen}{HTML}{23373B}
+
+% Set margins
+%\setlength{\leftmargini}{0.2em}
+%\setlength{\leftmarginii}{1.00em}
+%\setlength{\leftmarginiii}{2.00em}
+
+\setbeamertemplate{itemize items}{\textbullet}
+%\setbeamertemplate{itemize items}{}
+\setbeamertemplate{itemize subitem}{\textendash}
+\setbeamertemplate{itemize subsubitem}{\textendash}
+
+\usepackage[version=4]{mhchem}
+\mhchemoptions{textfontcommand=\sffamily}
+\mhchemoptions{mathfontcommand=\mathsf}
+
+%===================================================================
+% Minted package settings for code highlighting
+%===================================================================
+\usepackage{minted}
+\usemintedstyle{trac}
+
+\newminted{python}{fontsize=\scriptsize, 
+   linenos,
+   numbersep=4pt,
+   frame=lines,
+   framesep=1mm} 
+
+\newminted{yaml}{fontsize=\scriptsize, 
+   linenos,
+   numbersep=4pt,
+   frame=lines,
+   framesep=1mm} 
+   
 %===================================================================
 % Colored box
 %===================================================================
@@ -125,11 +212,14 @@ NO F 61}
 
 \maketitle
 
-\input{lecture-1-introduction}
-%\input{lecture-2-chemical-equilibrium}
+%\input{lecture-1-introduction}
+\input{lecture-2-chemical-equilibrium}
 %\input{lecture-3-thermodynamic-model}
-%\input{lecture-chemical-kinetics}
-%\input{lecture-reactive-transport}
+%\input{lecture-4-numerical-method-equilibrium}
+%\input{lecture-5-chemical-kinetics}
+%\input{lecture-6-reactive-transport}
+%\input{lecture-7-demonstrations-of-computer-simulations}
+%\input{lecture-8-project-discussion}
 
 %
 %\section[Intro]{Introduction}
