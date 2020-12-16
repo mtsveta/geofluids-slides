@@ -59,14 +59,13 @@ HCO$_{3}^{-}$ etc.).
 \end{itemize}
 \alert{\textbf{Question}}: at chemical equilibrium, what can we tell about 
 \begin{itemize}
-\item the amounts of H, O, C? \textbf{Answer}: 200 mols of H, 104 mols of O, and 2 mols of C.
-\item the amount of electric charge, represented by element Z? \textbf{Answer}: the final charge must be equal to the initial charge. 
+\item the amounts of H, O, C, Z? \textbf{Answer}: 200 mols of H, 104 mols of O, and 2 mols of C,  the final charge must be equal to the initial charge. 
 \end{itemize}
 \rcol
 \begin{itemize}
 \item Calculating chemical equilibrium requires finding a composition for
 the system (i.e., amount of species, usually defined by vector 
-$n = [n_{H^{+}}, n_{HCO_{3}^{-}}, \ldots]$) that 
+$n = [n_{\sf H^{+}}, n_{\sf HCO_{3}^{-}}, \ldots]$) that 
 \textbf{minimizes its Gibbs energy} and simultaneously satisfies 
 \alert{\textbf{mass conservation}} of:
 \begin{itemize}
@@ -75,7 +74,7 @@ $n = [n_{H^{+}}, n_{HCO_{3}^{-}}, \ldots]$) that
 \end{itemize}
 \item \alert{\textbf{Note}}: we use the term \alert{\textbf{elements}} represented by vector $b$ 
 to denote both \emph{chemical elements} and \emph{electric charge}, i.e., 
-$b = [b_H, b_O, b_C, b_Z]$.
+$b = [b_{\sf H}, b_{\sf O}, b_{\sf C}, b_{\sf Z}]$.
 \end{itemize}
 \ecol
 \end{frame}
@@ -228,7 +227,7 @@ is true for the rows of $A$:
 \vskip 5pt
 \visible<3>{
 \centering
-\href{http://etc.ch/UbWW}{http://etc.ch/UbWW} or \\
+\href{http://etc.ch/UbWW}{\textcolor{indigo(dye)}{\tt http://etc.ch/UbWW}} or \\
 \includegraphics[height=0.3\columnwidth]{figures/chemical-equilibrium/poll-linear-independence.png}}
 %\visible<3>{\textbf{Answer:} (c)}
 
@@ -301,8 +300,8 @@ b_{\mathsf{Z}}
 \visible<2>{If we have vector $n$ and matrix $A$ we can compute $b = A n$.} \\
 \visible<3>{Instead of doing such calculation manually (tedious and error prone), let's program this in \textbf{Python}: 
 \begin{itemize}
-\item for Python shell, you can use an online tool \href{http://repl.it/languages/python}{repl.it/languages/python}
-\item Python source code can be download from \href{https://polybox.ethz.ch/index.php/s/0eoyyzHfloeMk1Y}{polybox}.
+\item for Python shell, you can use an online tool \href{http://repl.it/languages/python}{\textcolor{indigo(dye)}{\tt repl.it/languages/python}}
+\item Python source code can be download from \href{https://polybox.ethz.ch/index.php/s/0eoyyzHfloeMk1Y}{\textcolor{indigo(dye)}{\it polybox}}.
 \end{itemize}
 }
 \end{frame}
@@ -457,6 +456,7 @@ to transform to B.
 % --------------------------------------------------------------------------------------------------------------------%
 %
 \begin{frame}{Chemical potential and its interpretation – Example}
+\vskip 10pt
 \begin{itemize}[<+->]
 \item Consider the following reaction:
 \[
@@ -487,6 +487,8 @@ CO$_{2}$(g) tends to \textbf{dissolve}.
 CO$_{2}$(g) tends to form, \textbf{exsolve}. \setbeamercovered{transparent}
 \end{itemize}
 \end{itemize}
+\vskip -40pt
+\includegraphics[height=0.18\columnwidth,right]{figures/chemical-equilibrium/poll-lnK-log10.png}
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
@@ -549,6 +551,8 @@ three cases:{
 \item What is the direction of the reaction in each case?
 \item In each case, is CO$_{2}$(g) tending to dissolve or exsolve? 
 \end{itemize}
+\vskip -45pt
+\includegraphics[height=0.16\columnwidth,right]{figures/chemical-equilibrium/poll-lnK-log10.png}
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
@@ -648,7 +652,7 @@ The reaction is proceeding to the left, and CO$_{2}$ is tending to
 %
 \begin{frame}[fragile]{Chemical potentials and direction of reactions using Python}
 
-\textbf{Source code}: \href{https://polybox.ethz.ch/index.php/s/4kiqklmnBtXs3pG}{polybox}.
+\textbf{Source code}: \href{https://polybox.ethz.ch/index.php/s/4kiqklmnBtXs3pG}{\textcolor{indigo(dye)}{\it polybox}}.
 
 \begin{lstlisting}[language=Python, caption=Python example]
 mu_case1 = [-239.614, -390.347, -610.019, -19.942]
@@ -804,24 +808,31 @@ which can be computationally expensive.
 \begin{itemize}
 \item Consider the following reaction:
 \[
-\mathrm{A+2B\rightleftharpoons C+3D}.
+\mathsf{A+2B\rightleftharpoons C+3D}.
 \]
-\item At equilibrium, the following \alert{mass action equation} must be
+\item At equilibrium, the following \alert{\textbf{mass action equation}} must be
 satisfied:
 \[
-K=\frac{a_{C}a_{D}^{3}}{a_{A}a_{B}^{2}},
+K=\frac{a_{\sf C}a_{\sf D}^{3}}{a_{\sf A}a_{\sf B}^{2}},
 \]
 where $K=K(T,P)$ is the equilibrium constant of the reaction.
+\item \textbf{Note}: we assume $n_{\mathsf{A}},n_{\mathsf{B}},n_{\mathsf{C}},n_{\mathsf{D}}>0$
+(i.e., these species are \emph{stable at equilibrium}).
+
 \end{itemize}
 \rcol
 \begin{itemize}
-\item We assume $n_{\mathrm{A}},n_{\mathrm{B}},n_{\mathrm{C}},n_{\mathrm{D}}>0$
-(i.e., these species are \emph{stable at equilibrium}).
-\item For a general reaction:
+\item For a \textbf{general reaction}
 \[
 \sum_{r}^{\text{reactants}}\nu_{r}A_{r}\rightleftharpoons\sum_{p}^{\text{products}}\nu_{p}A_{p},
 \]
-the mass action equation is:
+where 
+\begin{itemize}
+\item $A_{r}, A_p$ are reactant and product species
+\item $\nu_{r}, \nu_{p}$ are the stoichiometric coefficients,
+\end{itemize}
+%
+the \alert{\textbf{general mass action equation}} is
 \[
 K=\dfrac{\prod_{p}a_{p}^{\nu_{p}}}{\prod_{r}a_{r}^{\nu_{r}}}.
 \]
@@ -829,30 +840,30 @@ K=\dfrac{\prod_{p}a_{p}^{\nu_{p}}}{\prod_{r}a_{r}^{\nu_{r}}}.
 \ecol
 \end{frame}
 %
-% --------------------------------------------------------------------------------------------------------------------%
-% Mass action equation and equilibrium constant of reaction
-% --------------------------------------------------------------------------------------------------------------------%
+%% --------------------------------------------------------------------------------------------------------------------%
+%% Mass action equation and equilibrium constant of reaction - Exercise
+%% --------------------------------------------------------------------------------------------------------------------%
+%%
+%\begin{frame}{Mass action equation and equilibrium constant of reaction  -- Exercise }
+%\begin{itemize}
+%\item \textbf{Exercise:} At 25 °C and 1 bar, the reaction: 
+%\[
+%\mathsf{H_{2}O\text{(aq)}}\rightleftharpoons\mathsf{H^{+}\text{(aq)}+OH^{-}\text{(aq)}}
+%\]
+%has $K\approx10^{-14}$. If we have pure water, with no dissolved
+%solutes other than H$^{+}$(aq) and OH$^{-}$(aq), then it follows
+%that:
+%\[
+%a_{\mathsf{H^{+}\text{(aq)}}}\approx10^{-7}\qquad a_{\mathsf{OH^{-}\text{(aq)}}}\approx10^{-7}\qquad a_{\mathsf{H_{2}O\text{(aq)}}}\approx1.
+%\]
 %
-\begin{frame}{Mass action equation and equilibrium constant of reaction  \; ii}
-\begin{itemize}
-\item \textbf{Exercise:} At 25 °C and 1 bar, the reaction: 
-\[
-\mathsf{H_{2}O\text{(aq)}}\rightleftharpoons\mathsf{H^{+}\text{(aq)}+OH^{-}\text{(aq)}}
-\]
-has $K\approx10^{-14}$. If we have pure water, with no dissolved
-solutes other than H$^{+}$(aq) and OH$^{-}$(aq), then it follows
-that:
-\[
-a_{\mathsf{H^{+}\text{(aq)}}}\approx10^{-7}\qquad a_{\mathsf{OH^{-}\text{(aq)}}}\approx10^{-7}\qquad a_{\mathsf{H_{2}O\text{(aq)}}}\approx1.
-\]
-
-\begin{enumerate}
-\item[{\small{}(a)}] Show that the mass action equation above is satisfied with the above
-conditions.
-\item[{\small{}(b)}] What is the pH of water at those conditions, where $\text{pH}\coloneqq-\log a_{\mathsf{H^{+}\text{(aq)}}}$?
-\end{enumerate}
-\end{itemize}
-\end{frame}
+%\begin{itemize}
+%\item Show that the mass action equation above is satisfied with the above
+%conditions.
+%\item What is the pH of water at those conditions, where $\text{pH}\coloneqq-\log a_{\mathsf{H^{+}\text{(aq)}}}$?
+%\end{itemize}
+%\end{itemize}
+%\end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Equilibrium constant of reactions from standard chemical potentials
@@ -866,7 +877,7 @@ defined as:
 \ln K=-\frac{1}{RT}\left[\sum_{p}\nu_{p}\mu_{p}^{\circ}-\sum_{r}\nu_{r}\mu_{r}^{\circ}\right],
 \]
 where $R=\unit[8.314]{\mathsf{J/(mol\cdot K)}}$ is the universal
-gas constant; $T$ is temperature (in K). 
+gas constant, and $T$ is temperature (in K). 
 \item \textbf{Exercise:} At 100 °C and 50 bar, ${\mu_{\mathsf{H_{2}O\text{(aq)}}}^{\circ}=\unit[-242.992]{\mathsf{kJ/mol}}}$,
 ${\mu_{\mathsf{H^{+}\text{(aq)}}}^{\circ}=\unit[0.0]{\mathsf{kJ/mol}}}$,
 and ${\mu_{\mathsf{OH^{-}\text{(aq)}}}^{\circ}=\unit[-155.559]{\mathsf{kJ/mol}}}$.
@@ -874,16 +885,21 @@ Calculate $\ln K$ and $\log K$ for the reaction:
 \[
 \mathsf{H_{2}O\text{(aq)}}\rightleftharpoons\mathsf{H^{+}\text{(aq)}+OH^{-}\text{(aq)}}.
 \]
-\hiddenpause
-\item \textbf{Answer: $\ln K=-28.18$} and $\log K=-12.18$.
+\item \textbf{Hint}: $\log_{10} K = \ln K \cdot \log_{10} e$.
+%\hiddenpause
+%\item \textbf{Answer}: $\ln K=-28.18$ and $\log K=-12.18$.
 \end{itemize}
+\centering
+\vskip -15pt
+\includegraphics[height=0.18\columnwidth]{figures/chemical-equilibrium/poll-lnK-log10.png}
+
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Exercise: Mass action and mass conservation equations
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Exercise: Mass action and mass conservation equations \, ii}
+\begin{frame}{Exercise: Mass action and mass conservation equations \, i}
 Consider the following \emph{species}, \emph{elements}, and\emph{
 reactions}:
 
@@ -895,14 +911,14 @@ reactions}:
 \toprule 
 \textbf{Index} & \textbf{Species}\tabularnewline
 \midrule
-1 & \textrm{$\mathsf{H_{2}O(aq)}$}\tabularnewline
-2 & \textrm{$\mathsf{H^{+}(aq)}$}\tabularnewline
-3 & \textrm{$\mathsf{OH^{-}(aq)}$}\tabularnewline
-4 & \textrm{$\mathsf{Na^{+}(aq)}$}\tabularnewline
-5 & \textrm{$\mathsf{Cl^{-}(aq)}$}\tabularnewline
+1 & \textrm{$\mathsf{CO_{2}(aq)}$}\tabularnewline
+2 & \textrm{$\mathsf{CO_{3}^{-2}(aq)}$}\tabularnewline
+3 & \textrm{$\mathsf{Cl^{-}(aq)}$}\tabularnewline
+4 & \textrm{$\mathsf{H^{+}(aq)}$}\tabularnewline
+5 & \textrm{$\mathsf{H_{2}O(l)}$}\tabularnewline
 6 & \textrm{$\mathsf{HCO_{3}^{-}(aq)}$}\tabularnewline
-7 & \textrm{$\mathsf{CO_{2}(aq)}$}\tabularnewline
-8 & \textrm{$\mathsf{CO_{3}^{-2}(aq)}$}\tabularnewline
+7 & \textrm{$\mathsf{Na^{+}(aq)}$}\tabularnewline
+8 & \textrm{$\mathsf{OH^{-}(aq)}$}\tabularnewline
 9 & \textrm{$\mathsf{CO_{2}(g)}$}\tabularnewline
 10 & \textrm{$\mathsf{NaCl(s)}$}\tabularnewline
 \bottomrule
@@ -915,11 +931,11 @@ reactions}:
 \toprule 
 \textbf{Index} & \textbf{Element}\tabularnewline
 \midrule
-1 & H\tabularnewline
-2 & O\tabularnewline
-3 & C\tabularnewline
+1 & C\tabularnewline
+2 & Cl\tabularnewline
+3 & H\tabularnewline
 4 & Na\tabularnewline
-5 & Cl\tabularnewline
+5 & Ol\tabularnewline
 \bottomrule
 \end{tabular}
 \par\end{center}
@@ -927,11 +943,11 @@ reactions}:
 \rcol[0.6]
 
 \begin{align*}
-\mathsf{H_{2}O(aq)} & \mathrm{\rightleftharpoons H^{+}(aq)+OH^{-}(aq)}\tag{1}\\
-\mathsf{HCO_{3}^{-}(aq)+H^{+}(aq)} & \mathrm{\rightleftharpoons CO_{2}(aq)+H_{2}O(aq)}\tag{2}\\
-\mathsf{H_{2}O(aq)+CO_{2}(aq)} & \mathrm{\rightleftharpoons CO_{3}^{-2}(aq)+2H^{+}(aq)}\tag{3}\\
-\mathsf{CO_{2}(g)} & \mathrm{\rightleftharpoons CO_{2}(aq)}\tag{4}\\
-\mathsf{NaCl(s)} & \mathrm{\rightleftharpoons Na^{+}(aq)+Cl^{-}(aq)}\tag{5}
+\mathsf{H_{2}O(aq)} & \mathsf{\rightleftharpoons H^{+}(aq)+OH^{-}(aq)}\tag{1}\\
+\mathsf{HCO_{3}^{-}(aq)+H^{+}(aq)} & \mathsf{\rightleftharpoons CO_{2}(aq)+H_{2}O(aq)}\tag{2}\\
+\mathsf{H_{2}O(aq)+CO_{2}(aq)} & \mathsf{\rightleftharpoons CO_{3}^{-2}(aq)+2H^{+}(aq)}\tag{3}\\
+\mathsf{CO_{2}(g)} & \mathsf{\rightleftharpoons CO_{2}(aq)}\tag{4}\\
+\mathsf{NaCl(s)} & \mathsf{\rightleftharpoons Na^{+}(aq)+Cl^{-}(aq)}\tag{5}
 \end{align*}
 
 \ecol
@@ -942,19 +958,26 @@ reactions}:
 % Exercise: Mass action and mass conservation equations
 % --------------------------------------------------------------------------------------------------------------------%
 \begin{frame}{Exercise: Mass action and mass conservation equations \, ii}
+\mathbf{Tasks}:
 \begin{itemize}
-\item[a)] Write the \textbf{mass action equation }for each reaction.
-\item[b)] Write the \textbf{mass conservation equation }for each element.
-\item[c)] Discuss whether this system of equations are enough to compute $n=(n_{1},\ldots,n_{10})$
+\item Write the \textbf{mass action equation }for each reaction.
+\item Write the \textbf{mass conservation equation }for each element.
+\item Discuss whether this system of equations are enough to compute $n=(n_{1},\ldots,n_{10})$
 and, if so, what kind of algorithm would you use for this.
 \end{itemize}
-Considerations:
+%Considerations:
+%\begin{itemize}
+%\item Use $n_{1}$, ..., $n_{10}$ to denote the amounts of the species;
+%\item Use $b_{1}$, ..., $b_{5}$ to denote the amounts of the elements;
+%\item Use $a_{1}$, ..., $a_{10}$ to denote the activities of the species;
+%\item Use $K_{1}$, ..., $K_{5}$ to denote the equilibrium constants of the reactions.
+%\end{itemize}
+\mathbf{Help materials}: 
 \begin{itemize}
-\item Use $n_{1}$, ..., $n_{10}$ to denote the amounts of the species;
-\item Use $b_{1}$, ..., $b_{5}$ to denote the amounts of the elements;
-\item Use $a_{1}$, ..., $a_{10}$ to denote the activities of the species;
-\item Use $K_{1}$, ..., $K_{5}$ to denote the equilibrium constants of
-the reactions.
+\item pdf with further exercise clarification can be found using the 
+\href{https://polybox.ethz.ch/index.php/s/EPMn4pJtIOL7VFS}{\textcolor{indigo(dye)}{\it polybox-link}}.
+\item Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/eq.mass-balance-mass-action.ipynb}{\textcolor{indigo(dye)}{\it Mass balance and mass action equation}} and 
+video \emph{Mass balance and mass action equations} (available in Doodle) with comments on this tutorial.
 \end{itemize}
 \end{frame}
 %
