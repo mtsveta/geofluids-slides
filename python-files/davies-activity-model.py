@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 # Function calculating activity coeffitient according to the Davis model
 def gamma_davies(Zi, I):
-	# Debye–Huckel parameter (scalar)
+	# Debye-Huckel parameter 
     Agamma = 0.5095
     # Vector of ionic strength in the power 1/2
     sqrtI = numpy.sqrt(I)
@@ -18,7 +18,7 @@ gammaZ1 = gamma_davies(1.0, I)
 gammaZ2 = gamma_davies(2.0, I)
 gammaZ3 = gamma_davies(3.0, I)
 
-# Plot activity coeffitient as a function an ionic strength for different charges
+# Plot an activity coeffitient as a function an ionic strength for different charges
 plt.xlabel('Ionic Strength [molal]')
 plt.ylabel('Activity Coefficient')
 # Use the latex string for legend
