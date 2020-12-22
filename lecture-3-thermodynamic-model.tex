@@ -294,6 +294,7 @@ $Z_{i}=1,2,3$ as a function of $I$.}
 \end{figure}
 %
 \textbf{Question:} How would these curves look like if the charges would be $Z_i$= -1, -2, -3?
+
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
@@ -357,22 +358,24 @@ can be eliminated:
 % Activity coefficient model for H2O: Davies vs. Ideal model
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Activity model for H$_{\boldsymbol{2}}$O(aq): Davies vs Ideal}
+\begin{frame}{Activity model for H$_{\boldsymbol{2}}$O(aq): Davies vs. Ideal model}
 %
+ \lcol
 \begin{figure}
-\centering{}\includegraphics[clip,height=0.8\textheight]{figures/activity-models/activity-water-davies}\caption{Activity of aqueous solvent species H$_{2}$O(aq) as a function of
-ionic strength, $I$.}
+\centering
+\includegraphics[height=0.73\columnwidth]{figures/activity-models/activity-water-davies-vs-ideal}
+\caption{Activities of aqueous solvent species H$_{2}$O(aq) as a function of
+ionic strength $I$ calculated using the Ideal and Davies models.}
 \end{figure}
-
-\end{frame}
-%
-\begin{frame}{Activity model for H$_{\boldsymbol{2}}$O(aq): Davies versus Ideal
-model}
+\rcol
 
 \begin{figure}
-\centering{}\includegraphics[clip,height=0.8\textheight]{figures/activity-models/activity-water-davies-diff}\caption{Relative difference between the Ideal and Davies models for activity
+\centering
+\includegraphics[height=0.73\columnwidth]{figures/activity-models/activity-water-davies-vs-ideal-diff}
+\caption{Relative difference between the Ideal and Davies models for activity
 of water as a function of ionic strength, $I$.}
 \end{figure}
+\ecol
 
 \end{frame}
 %
@@ -418,7 +421,8 @@ $I$ is the ionic strength of the aqueous solution.
 \begin{frame}{Drummond activity coefficient model for CO$_{2}$(aq)}
 
 \begin{figure}
-\centering{}\includegraphics[height=0.8\textheight]{figures/activity-models/activity-coefficient-co2-drummond}\caption{Activity coefficient of CO$_{2}$(aq) calculated using Drummond model
+\centering{}\includegraphics[height=0.8\textheight]{figures/activity-models/activity-coefficient-co2-drummond}
+\caption{Activity coefficient of CO$_{2}$(aq) calculated using Drummond model
 at temperatures 50, 150, and 250 °C as a function of ionic strength.}
 \end{figure}
 
@@ -472,41 +476,44 @@ increases with $I$ for constant $(T, P)$?
 %
 \begin{frame}{Activities of species in a gaseous solution}
 \begin{itemize}[<+->]
-\item The activity of a gaseous species can be calculated using:
+\item The \alert{\textbf{activity of $i$-th gaseous species}} can be calculated using:
 \[
-a_{i}=\varphi_{i}x_{i}\frac{P}{P^{\circ}},
+\boxed{a_{i}=\varphi_{i}x_{i}\frac{P}{P^{\circ}}},
 \]
-where:
+where 
 \begin{itemize}
-\item $\varphi_{i}$ is the fugacity coefficient of the gaseous species;
-\item $x_{i}$ is the mole fraction of the gaseous species;
-\item $P$ is pressure (in units of bar, with $\unit[1]{\mathsf{bar}}=\unit[10^{5}]{\mathsf{Pa}}$);
+\item $\varphi_{i}$ is the \textbf{fugacity coefficient} of the gaseous species,
+\item $x_{i}$ is the \textbf{mole fraction} of the gaseous species,
+\item $P$ is pressure (in units of bar, with $\unit[1]{\mathsf{bar}}=\unit[10^{5}]{\mathsf{Pa}}$),
 and 
 \item $P^{\circ}$ is a reference pressure, $P^{\circ}=\unit[1]{\mathsf{bar}}$.
 \end{itemize}
-\item The fugacity coefficients, $\varphi_{i}$, of ideal gases are $\varphi_{i}=1$.
+\item The \textbf{fugacity coefficients of ideal gases} are $\varphi_{i}=1$. \text{But!}: the gases rarely behaving ideal.  
 \end{itemize}
 \end{frame}
 %
+% --------------------------------------------------------------------------------------------------------------------%
+% Activity of CO2(g) using a cubic equation of state
+% --------------------------------------------------------------------------------------------------------------------%
+%
 \begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state}
 \begin{itemize}[<+->]
-\item An ideal gas solution has a $PVT$ behavior defined by the equation:
+\item An \textbf{ideal gas} solution has \alert{\textbf{a $PVT$ behavior}} defined by the equation:
 \[
 \frac{PV}{RT}=1,
 \]
 where $P$ is pressure (in units of Pa), $T$ is temperature (in units
 of K), $V$ is molar volume (in units of m$^{3}$/mol), and $R=\unit[8.314]{\mathsf{J/(mol\cdot K)}}$.
-\item Let $Z$ denote the \alert{compressibility factor} of the gaseous
-solution, defined as:
+\item For \textbf{real gases}, we introduce a \alert{\textbf{compressibility factor}} $Z$ defined as
+%
 \[
-Z=\frac{PV}{RT}.
+Z=\frac{PV}{RT} < 1.
 \]
-\item Real gases behave such that $Z\to1$ only when:
+\item For \textbf{real gases}, $Z \to 1$ only when
 \begin{itemize}
-\item temperatures are very high;
+\item temperatures are very high or
 \item pressures are very low.
 \end{itemize}
-\item In general, $Z<1$ for real gases.
 \end{itemize}
 \end{frame}
 %
@@ -518,12 +525,10 @@ Z=\frac{PV}{RT}.
 
 \begin{figure}
 \begin{centering}
-\includegraphics[height=0.75\textheight]{figures/activity-models/compressibility-factor-several-gases}
+\includegraphics[height=0.8\textheight]{figures/activity-models/compressibility-factor-several-gases}
 \par\end{centering}
-\caption{{\footnotesize{}The compressibility factor $Z$ for several temperature
-conditions. $T_{R}$ denotes reduced temperature, $T/T_{\mathsf{critical}}$,
-and $P_{R}$ reduced pressure, $P/P_{\mathsf{critical}}$. Reference:
-Cengel and Boles (2011).}}
+\caption{{\footnotesize{}The compressibility factor $Z$ as a function of reduced pressure $P_{R} = P/P_{\mathsf{critical}}$
+for several reduced temperatures $T_{R} = T/T_{\mathsf{critical}}$ (Cengel and Boles, 2011).}}
 \end{figure}
 
 \end{frame}
@@ -532,33 +537,30 @@ Cengel and Boles (2011).}}
 % Compressibility factor of gases
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Compressibility factor of gases \, iI}
-\begin{columns}[t]
+\begin{frame}{Compressibility factor of gases \, ii}
 
-\column{0.5\textwidth}
 \begin{itemize}
-\item Note that different gases have similar thermodynamic behavior when
-temperature and pressure are normalized by their critical values.
+\item Different gases have similar thermodynamic behavior when
+$T$ and $P$ are normalized by their critical values $T_{\mathsf{critical}}$ and $P_{\mathsf{critical}}$, respectively.
+\item This allows us to use \textbf{single equation of state} to model the $PVT$ behavior of a gas.
+\end{itemize}
+%
 \begin{figure}
-\begin{centering}
-\includegraphics[height=0.4\textheight]{figures/activity-models/phase-diagram-pt}
-\par\end{centering}
-\caption{{\footnotesize{}A typical phase diagram of a substance. The critical
+\centering
+\includegraphics[height=0.6\textheight]{figures/activity-models/phase-diagram-pt}
+\caption{{\footnotesize{}A typical phase diagram of a substance. The [critical
 point is the limit point in the liquid-vapor saturation curve.}}
 \end{figure}
-\end{itemize}
 
-\column{0.5\textwidth}
-\begin{center}
-\includegraphics[width=1\columnwidth]{figures/activity-models/compressibility-factor-several-gases}
-\par\end{center}
+%\begin{SCfigure}
+%  \centering
+%  \caption{A typical phase diagram of a substance. The critical point is the limit point in the liquid-vapor saturation curve.}
+%  \includegraphics[height=0.6\textheight]{figures/activity-models/phase-diagram-pt}
+%  % picture filename
+%\end{SCfigure}
 
-\vspace{-1em}
-\begin{itemize}
-\item {\footnotesize{}The similar behavior for different gases allows one
-equation of state to be used to model the $PVT$ behavior of a gas.}{\footnotesize\par}
-\end{itemize}
-\end{columns}
+%\begin{itemize}
+%\end{itemize}
 
 \end{frame}
 %
@@ -566,96 +568,105 @@ equation of state to be used to model the $PVT$ behavior of a gas.}{\footnotesiz
 % Supercritical carbon dioxide
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Supercritical carbon dioxide}
-
+\begin{frame}{Supercritical carbon dioxide (CO$_{\mathsf{2}}$(g))}
+\vskip 5pt
 \begin{figure}
-\begin{centering}
-\includegraphics{figures/activity-models/subcritical-to-supercritical-co2}
-\par\end{centering}
+\centering
+\includegraphics[height=0.45\textheight]{figures/activity-models/subcritical-to-supercritical-co2}
 \caption{CO$_{2}$ initially existing in two phases: liquid and gas. As temperature
 and pressure increase, it transitions to a state in which there is
 only one phase in the \textbf{supercritical state}.}
 \end{figure}
 
-\begin{overprint}
-\onslide<2> 
 \begin{itemize}
-\item As a supercritical fluid, the substance flows like a gas (less viscous
+\item As a \alert{\textbf{supercritical fluid}}, the substance flows like a gas (less viscous
 than liquid) and is dense like a liquid. 
 \item In geologic CO$_{2}$ sequestration, the supercritical state is more
-advantageous because of its high mobility and high density.
+advantageous because of its \textbf{high mobility and high density}.
 \end{itemize}
-\end{overprint}
+
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Activity of CO2(g) using a cubic equation of state
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state}
-\begin{columns}[c]
-
-\column{0.6\textwidth}
-\begin{itemize}
-\item A \textbf{general cubic equation of state} can be written in terms
-of $Z$ as \citep{Smith2005}:
-\[
-\boxed{Z=\frac{Z}{Z-\beta}-q\beta\frac{Z}{(Z+\epsilon\beta)(Z+\sigma\beta)}},
-\]
-where $\beta$ and $q$ are defined as:
-\[
-\beta=\Omega\frac{P_{\mathsf{r}}}{T_{\mathsf{r}}}\qquad q=\frac{\Psi}{\Omega}\frac{\alpha(T_{\mathsf{r}},\omega)}{T_{\mathsf{r}}}.
-\]
-\end{itemize}
-
-\column{0.4\textwidth}
-\begin{overprint}
-\onslide<2> \textbf{Exercise:} Show that the above equation is cubic in $Z$
-by finding the coefficients $A$, $B$, $C$ and $D$ in terms of
-$\beta$, $q$, $\epsilon$ and $\sigma$ of the cubic polynomial:
-\[
-AZ^{3}+BZ^{2}+CZ+D=0.
-\]
-\end{overprint}
-\end{columns}
-
-\end{frame}
-%
-% --------------------------------------------------------------------------------------------------------------------%
-% Activity of CO2(g) using a cubic equation of state 
-% --------------------------------------------------------------------------------------------------------------------%
-%
 \begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state \, i}
-\begin{columns}[c]
 
-\column{0.5\textwidth}
 \begin{itemize}
-\item In addition, the \alert{reduced temperature} $T_{\mathsf{r}}$ and
-\alert{reduced pressure} $P_{\mathsf{r}}$ are defined as:
+\item A \alert{\textbf{general cubic equation of state}} can be written in terms
+of $Z$ \citep{Smith2005} as
 \[
-T_{\mathsf{r}}=\frac{T}{T_{\mathsf{c}}}\qquad\text{and}\qquad P_{\mathsf{r}}=\frac{P}{P_{\mathsf{c}}},
+\boxed{1=\frac{1}{Z-\beta}-q\beta\frac{1}{(Z+\epsilon\beta)(Z+\sigma\beta)}},
 \]
-where $T_{\mathsf{c}}$ and $P_{\mathsf{c}}$ are, respectively, the
-\textbf{critical temperature and pressure} of the substance.
-\item The \alert{acentric factor} $\omega$ is a number that depends on
-the substance.
-\item For CO$_{2}$, ${T_{\mathsf{c}}=304.2\;\mathsf{K}}$, ${P_{\mathsf{c}}=73.83\;\mathsf{bar}}$,
+where  
+\begin{itemize}
+\item $\epsilon$ and $\sigma$ are pure numbers (same for all substances),  
+\item $\beta$ and $q$ are  parameters specific to substances and defined as
+\[
+\beta=\Omega\frac{P_{\mathsf{r}}}{T_{\mathsf{r}}} \qquad \mbox{and} \qquad
+q=\frac{\Psi}{\Omega}\frac{\alpha(T_{\mathsf{r}},\omega)}{T_{\mathsf{r}}}
+\]
+%
+with specific to \textbf{a particular equation of state} $\Omega$, $\Psi$, and $\alpha(T)$, 
+\item the \textbf{reduced temperature and pressure} $T_{\mathsf{r}} = \frac{T}{T_{\mathsf{c}}}$ and
+$P_{\mathsf{r}} = \frac{P}{P_{\mathsf{c}}}$ are defined via \textbf{critical temperature and pressure} 
+$T_{\mathsf{c}}$ and $P_{\mathsf{c}}$, and 
+\item $\omega$ is a \alert{acentric factor} that depends on the substance.
+\end{itemize}
+%
+%\item \textbf{Exercise:} Show that the above equation is cubic in $Z$
+%by finding the coefficients $A$, $B$, $C$ and $D$ in terms of
+%$\beta$, $q$, $\epsilon$ and $\sigma$ of the cubic polynomial:
+%\[
+%AZ^{3}+BZ^{2}+CZ+D=0.
+%\]
+%\item \textbf{Note:} more commonly can be found in the form
+%%
+%\[
+%\boxed{P=\frac{RT}{V-\beta}-q(T)\beta\frac{1}{(V+\epsilon\beta)(V+\sigma\beta)}}.
+%\]
+\item \textbf{Note:} For CO$_{2}$, ${T_{\mathsf{c}}=304.2\;\mathsf{K}}$, ${P_{\mathsf{c}}=73.83\;\mathsf{bar}}$,
 ${\omega=0.224}$. 
 \end{itemize}
 
-\column{0.5\textwidth}
-\begin{overprint}
-\onslide<2>  
-\begin{figure}
-\begin{centering}
-\includegraphics[width=1\textwidth]{figures/activity-models/phase-diagram-pt}
-\par\end{centering}
-\caption{The phase diagram of a substance.}
-\end{figure}
-\end{overprint}
-\end{columns}
-
 \end{frame}
+%
+%% --------------------------------------------------------------------------------------------------------------------%
+%% Activity of CO2(g) using a cubic equation of state 
+%% --------------------------------------------------------------------------------------------------------------------%
+%%
+%\begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state \, ii}
+%\begin{columns}[c]
+%
+%\column{0.5\textwidth}
+%\begin{itemize}
+%\item In addition, the \alert{reduced temperature} $T_{\mathsf{r}}$ and
+%\alert{reduced pressure} $P_{\mathsf{r}}$ are defined as:
+%\[
+%T_{\mathsf{r}}=\frac{T}{T_{\mathsf{c}}}\qquad\text{and}\qquad P_{\mathsf{r}}=\frac{P}{P_{\mathsf{c}}},
+%\]
+%where $T_{\mathsf{c}}$ and $P_{\mathsf{c}}$ are, respectively, the
+%\textbf{critical temperature and pressure} of the substance.
+%\item The \alert{acentric factor} $\omega$ is a number that depends on
+%the substance.
+%\item For CO$_{2}$, ${T_{\mathsf{c}}=304.2\;\mathsf{K}}$, ${P_{\mathsf{c}}=73.83\;\mathsf{bar}}$,
+%${\omega=0.224}$. 
+%\end{itemize}
+%
+%\column{0.5\textwidth}
+%\begin{overprint}
+%\onslide<2>  
+%\begin{figure}
+%\begin{centering}
+%\includegraphics[width=1\textwidth]{figures/activity-models/phase-diagram-pt}
+%\par\end{centering}
+%\caption{The phase diagram of a substance.}
+%\end{figure}
+%\end{overprint}
+%\end{columns}
+%
+%\end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Activity of CO2(g) using a cubic equation of state 
@@ -664,53 +675,27 @@ ${\omega=0.224}$.
 \begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state \, ii}
 
 \begin{table}
-\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}ccccc}
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}lcccc}
 \toprule 
 Equation of State & $\epsilon$ & $\sigma$ & $\Omega$ & $\Psi$\tabularnewline
 \midrule 
 Ideal Gas & 0 & 0 & 0 & 0\tabularnewline
-vdW$^{1}$ \citeyearpar{VanderWaals1873} & 0 & 0 & 1/8 & 27/64\tabularnewline
-RK$^{2}$ \citeyearpar{Redlich1949} & 0 & 1 & 0.08664 & 0.42748\tabularnewline
-SRK$^{3}$ \citeyearpar{Soave1972} & 0 & 1 & 0.08664 & 0.42748\tabularnewline
-PR$^{4}$ \citeyearpar{Peng1976} & $1-\sqrt{2}$ & $1+\sqrt{2}$ & 0.07780 & 0.45724\tabularnewline
+van der Waals (vdW) $^{1}$ \citeyearpar{VanderWaals1873} & 0 & 0 & 1/8 & 27/64\tabularnewline
+Redlich/Kwong (RK) $^{2}$ \citeyearpar{Redlich1949} & 0 & 1 & 0.08664 & 0.42748\tabularnewline
+Soave/Redlich/Kwong (SRK) $^{3}$ \citeyearpar{Soave1972} & 0 & 1 & 0.08664 & 0.42748\tabularnewline
+\textbf{Peng/Robinson (PR)} $^{4}$ \citeyearpar{Peng1976} & $\mathbf{1-\sqrt{2}}$ & $\mathbf{1+\sqrt{2}}$ & \textbf{0.07780} & \textbf{0.45724} \tabularnewline
 \bottomrule
 \end{tabular*}
 
 \footnotesize
 
-\textbf{$^{1}$}\citet{VanderWaals1873}; $^{2}$\citet{Redlich1949};
-$^{3}$\citet{Soave1972}, commonly known as Soave–Redlich–Kwong;
+$^{1}$\citet{VanderWaals1873}; 
+$^{2}$\citet{Redlich1949};
+$^{3}$\citet{Soave1972}, commonly known as Soave--Redlich--Kwong;
 $^{4}$\citet{Peng1976}.
 
-\caption{The parameters $\epsilon$, $\sigma$, $\Omega$ and $\Psi$ for different
+\caption{\normalsize The parameters $\epsilon$, $\sigma$, $\Omega$, and $\Psi$ for different
 equation of states.}
-\end{table}
-
-\end{frame}
-%
-\begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state \, iii}
-
-\begin{table}
-\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}cc}
-\toprule 
-Equation of State & $\alpha(T_{\mathsf{r}},\omega)$\tabularnewline
-\midrule 
-Ideal Gas & 0$\vphantom{\left[T_{\mathsf{r}}^{1/2}\right]^{2}}$\tabularnewline
-vdW$^{1}$ \citeyearpar{VanderWaals1873} & 1$\vphantom{\left[T_{\mathsf{r}}^{1/2}\right]^{2}}$\tabularnewline
-RK$^{2}$ \citeyearpar{Redlich1949} & $T_{\mathsf{r}}^{-1/2}$$\vphantom{\left[T_{\mathsf{r}}^{1/2}\right]^{2}}$\tabularnewline
-SRK$^{3}$ \citeyearpar{Soave1972} & $\left[1+(0.480+1.574\omega-0.176\omega^{2})(1-T_{\mathsf{r}}^{1/2})\right]^{2}$\tabularnewline
-PR$^{4}$ \citeyearpar{Peng1976} & $\left[1+(0.37464+1.54226\omega-0.26992\omega^{2})(1-T_{\mathsf{r}}^{1/2})\right]^{2}$\tabularnewline
-\bottomrule
-\end{tabular*}
-
-\footnotesize
-
-\textbf{$^{1}$}\citet{VanderWaals1873}; $^{2}$\citet{Redlich1949};
-$^{3}$\citet{Soave1972}, commonly known as Soave–Redlich–Kwong;
-$^{4}$\citet{Peng1976}.
-
-\caption{The function $\alpha(T_{\mathsf{r}},\omega)$ for different equations
-of state.}
 \end{table}
 
 \end{frame}
@@ -719,21 +704,19 @@ of state.}
 
 \lcol
 \begin{itemize}
-\item {\small{}On the right, the illustration of a $PV$ }\textbf{\small{}phase
-diagram}{\small{} of a substance.}{\small\par}
-\item {\small{}The area in }\textbf{\small{}green}{\small{} is a region
-in which }\textbf{\small{}\alert{\textbf{\small{}liquid and vapor coexist}}}{\small{}. }{\small\par}
-\item Note the three \textbf{isothermals}: \emph{\alert{\emph{subcritical}}},
-\alert{\emph{critical}}, and \alert{\emph{supercritical}}. 
-\item Note the horizontal blue segment. 
-\item Along this segment, the fluid changes completely from liquid to vapor. 
-\item This phase transition happens at \textbf{constant X }and \textbf{constant
-Y. }\\
-\textbf{Question: }What is X and Y?
+\item The area in \textbf{green} is a region
+in which \textbf{\alert{liquid and vapor coexist}}.
+\item There are three \textbf{isothermals}: \alert{\textbf{subcritical}},
+\alert{\textbf{critical}}, and \alert{\textbf{supercritical}}. 
+\item The horizontal  \textbf{blue segment} corresponds to the fluid change from liquid to vapor at a constant $T$ and $P$. 
 \end{itemize}
 \rcol
 
-\includegraphics[width=1\columnwidth]{figures/activity-models/phase-diagram-pv}
+\begin{figure}
+\centering 
+\includegraphics[width=1\textwidth]{figures/activity-models/phase-diagram-pv}
+\caption{\footnotesize Illustration of a $PV$ \textbf{phase diagram} of a substance.}
+\end{figure}
 
 \ecol
 \end{frame}
@@ -742,201 +725,120 @@ Y. }\\
 
 \lcol
 \begin{itemize}
-\item {\small{}Because we are modeling the $PVT$ behavior of a substance
-using a }\textbf{\small{}\alert{cubic equation of state}}{\small{}:
+\item Because we are modeling the $PVT$ behavior of a substance
+using a \alert{cubic equation of state}:
 \[
 Z^{3}+AZ^{2}+BZ+C=0,
 \]
-some }\textbf{\small{}“spurious”}{\small{} behavior can happen
-as shown on the next figure.}{\small\par}
-\item \textbf{Question:} Can you comment on these \emph{dashed curves}?
+where $Z=\frac{PV}{RT}$ is compressibility factor, 
+\textbf{“spurious”} behavior can happen as shown on the next figure.
+\item This equation of state has \textbf{utmost three roots}. 
 \end{itemize}
 \rcol
 
-\includegraphics[width=1\columnwidth]{figures/activity-models/phase-diagram-pv-cubic-eos}
-
+\begin{figure}
+\centering 
+\includegraphics[width=1\textwidth]{figures/activity-models/phase-diagram-pv-cubic-eos}
+\caption{\footnotesize Illustration of a $PV$ \textbf{phase diagram} of a substance.}
+\end{figure}
 \ecol
 \end{frame}
 %
 \begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state \, vi}
-\begin{itemize}
-\item {\small{}The }\emph{\small{}cubic equation of state}{\small{}: 
-\[
-Z^{3}+AZ^{2}+BZ+C=0,
-\]
-where }\emph{\small{}$Z$ is compressibility factor}{\small{}:
-\[
-Z=\frac{PV}{RT},
-\]
-has utmost a }\emph{\small{}certain number}{\small{} of roots. }{\small\par}
-\item \textbf{\small{}Question: }{\small{}How many values of $Z$ exist
-that solve the above equation? }{\small\par}
-\end{itemize}
-\end{frame}
-%
-\begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state \, vii}
 
 \lcol
 \begin{itemize}
-\item {\small{}When three real roots exists for:
-\[
-Z^{3}+AZ^{2}+BZ+C=0,
-\]
-}{\small\par}
+\item When three real roots exists for cubic equation of state
 \begin{itemize}
-\item {\small{}the }\textbf{\small{}smallest real value}{\small{} }\emph{\small{}possibly
-correspond}{\small{} to the }\textbf{\small{}liquid state}{\small{};}{\small\par}
-\item {\small{}the }\textbf{\small{}largest real value}{\small{} }\emph{\small{}possibly
-correspond}{\small{} to the }\textbf{\small{}gaseous state}{\small{}; }{\small\par}
+\item the \textbf{smallest real value} possibly corresponds to the \textbf{liquid state} and 
+\item the \textbf{largest real value} possibly corresponds to the \textbf{gaseous state}.
 \end{itemize}
-\item {\small{}Any }\textbf{\small{}\alert{\textbf{\small{}root inside the green region}}}{\small{}
-is a }\textbf{\small{}mathematical artifact}{\small{} of the cubic
-model.}{\small\par}
-\item \textbf{\small{}Question:}{\small{} Which value of $Z$ are we interested
-in for CO$_{2}$(g)? $T_{\mathrm{cr}}\approx\unit[31.04]{^{\circ}C}$}{\small\par}
+\item Any \textbf{root inside the green region} is a \textbf{mathematical artifact} of the cubic model.
+\item Since we are interested in vaour (CO$_{2}$(g)) properties, we will be rather looking at the largest 
+root of cubic equation. 
+%\item \textbf{Question}: Which value of $Z$ are we interested
+%in for CO$_{2}$(g)? $T_{\mathrm{cr}}\approx\unit[31.04]{^{\circ}C}$
 \end{itemize}
 \rcol
 
-\includegraphics[width=1\columnwidth]{figures/activity-models/phase-diagram-pv-cubic-eos-roots}
+\begin{figure}
+\centering 
+\includegraphics[width=1\textwidth]{figures/activity-models/phase-diagram-pv-cubic-eos-roots}
+\caption{\footnotesize Illustration of a $PV$ \textbf{phase diagram} of a substance with roots of cubic equation of state.}
+\end{figure}
 
 \ecol
 \end{frame}
 %
-\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ -- fixed point iteration}
+\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ -- Fixed point iteration}
 \begin{itemize}
-\item The equation of state:
+\item The equation of state is non-linear in $Z$, so that its solution requires an \textbf{iterative procedure}.
+%
+\item We rearrange it to a more convenient form for \textbf{the largest root} computation \citep{Smith2005}
 \[
-Z=\frac{Z}{Z-\beta}-q\beta\frac{Z}{(Z+\epsilon\beta)(Z+\sigma\beta)},
+\boxed{Z = f(Z) = 1+\beta-q\beta\frac{Z-\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}}
 \]
-is non-linear in $Z$, so that its solution requires an iterative
-procedure.
-\item The following alternative equation is more convenient for the computation
-of the largest $Z$ using a \alert{fixed-point iteration method}
-\citep{Smith2005}:
+and apply simplest iterative approach, the so-called \alert{\textbf{fixed-point iteration method}}: 
+\begin{itemize}
+\item the \textbf{initial guess} 
 \[
-Z=1+\beta-q\beta\frac{Z-\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}.
+Z^{0}=1,
 \]
+\item the $\boldsymbol{i^{\text{th}}}$ \textbf{iteration}
+\[
+Z^{i+1} =f(Z^{i})= 1+\beta-q\beta\frac{Z^{i}-\beta}{(Z^{i}+\epsilon\beta)(Z^{i}+\sigma\beta)}, 
+\]
+%
+\item the \textbf{acceptance criterion} $|Z^{i+1}-Z^{i}|<\varepsilon$, where $\varepsilon$ is selected tolerance.
+\end{itemize}
 \end{itemize}
 \end{frame}
 %
-\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ -- fixed point iteration}
-\begin{itemize}
-\item Start with an initial guess for $Z$, say $Z^{0}=1$.
-\item Proceed with the following iterative approach:
-\begin{align*}
-Z^{1} & =1+\beta-q\beta\frac{Z^{0}-\beta}{(Z^{0}+\epsilon\beta)(Z^{0}+\sigma\beta)} & \qquad & 1^{\text{st}}\text{ iteration}\\
- & \hphantom{=1+\beta-q\beta}... &  & \qquad...\\
-Z^{i+1} & =1+\beta-q\beta\frac{Z^{i}-\beta}{(Z^{i}+\epsilon\beta)(Z^{i}+\sigma\beta)} &  & i^{\text{th}}\text{ iteration}
-\end{align*}
-\item Stop the iterations when:
-\[
-|Z^{i+1}-Z^{i}|<\text{tolerance},
-\]
-e.g., tolerance of 10$^{-4}$ for absolute difference.
-\end{itemize}
-\end{frame}
+% --------------------------------------------------------------------------------------------------------------------%
+% Calculating the compressibility factor of CO2 -- Python code
+% --------------------------------------------------------------------------------------------------------------------%
 %
 \begin{frame}[fragile, allowframebreaks]{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ -- Python code}
 
-\begin{lstlisting}[language=Python, caption=Python example]
-from numpy import *
-import matplotlib.pyplot as plt
+\lstinputlisting[language=Python, caption=Calculating the compressibility factor of CO2 using fixed point method in Python]{python-files/co2-compressibility-factor-fixed-point.py}
 
-# Define a function to calculate Z using fixed point method,
-# where T is temperature, P is pressure, omega is the acentric factor
-# of the substance, Tc and Pc are the critical temperature and pressure
-# of the substance.
-def compressibility_factor_fixedpoint(T, P, omega, Tc, Pc):
-    # Create variables for the parameters of Peng-Robinson EOS
-    epsilon = 1 - sqrt(2.0)
-    sigma = 1 + sqrt(2.0)
-    Omega = 0.07780
-    Psi = 0.45724
-    # The tolerance and max number of iterations
-    tolerance = 1.0e-4
-    maxiterations = 100
-    # The reduced temperature, Tr, and reduced pressure, Pr
-    Tr = T / Tc
-    Pr = P / Pc
-    # The evaluation of the alpha(Tr, omega) function
-    alpha = (1 + (0.37464 + 1.54226 * omega - 0.26992 * omega**2) * (1 - sqrt(Tr)))**2
-    # The beta and q contants
-    beta = Omega * Pr/Tr
-    q = Psi/Omega * alpha/Tr
-    # The initial guess for Z
-    Z = 1.0
-    # A counter variable for the number of iterations
-    counter = 0
-    # Perform the fixed point iterations 
-    for counter in xrange(maxiterations):
-        Znew = 1 + beta - q * beta * (Z - beta)/((Z + epsilon*beta)*(Z + sigma*beta))
-        if abs(Znew - Z) < tolerance: # Check for convergence
-            return Znew # Return the new value of Z in case of convergence
-        Z = Znew # Update Z with Znew
-    # Raise an error if the fixed point iteration did not converge within max iterations
-    raise RuntimeError('Could not calculate the ' + \
-        'compressibility factor in %d iterations at %f C and %f bar.' % (counter, T, P))
+\textbf{Source code}: \href{}{\textcolor{indigo(dye)}{\it polybox}}.
 
-# The array with temperature values in K
-temperatures = linspace(60.0, 300.0, 9) + 273.15
-
-# The array with pressure values in bar
-pressures = linspace(1.0, 400.0, 101)
-
-# The critical temperature and pressure of CO2
-TcCO2 = 304.2
-PcCO2 = 73.83
-
-# The acentric factor of CO2
-omegaCO2 = 0.224
-
-# Create a plot
-plt.xlabel('Pressure [bar]')
-plt.ylabel(r'$Z = \frac{PV}{RT}$')
-plt.title('Compressibility Factor of Carbon Dioxide\nUsing Fixed Point Method')
-
-# Plot one curve for each temperature, T, in array temperatures
-for T in temperatures:
-    # Create a list with the values of Z at current T and pressure P from the array of pressures
-    Z = [compressibility_factor_fixedpoint(T, P, omegaCO2, TcCO2, PcCO2) for P in pressures]
-    # Plot the values of Z over all pressure points and current temperature T
-    plt.plot(pressures, Z, label=r'$T=%.0f\;^{\circ}\mathrm{C}$' % (T - 273.15))
-
-# Position the legend and save the figure
-plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
-plt.show()
-\end{lstlisting}
 \end{frame}
 %
-\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ —
-Fixed point iteration}
+\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ -- Fixed point iteration}
 
 \begin{figure}
 \begin{centering}
-\includegraphics[height=0.8\textheight]{figures/activity-models/compressibility-factor-co2-fixedpoint}
+\includegraphics[height=0.8\textheight]{figures/activity-models/co2-compressibility-factor-fixed-point}
 \par\end{centering}
-\caption{The compressibility factor, $Z=PV/RT$, of CO$_{2}$ for temperatures
-60–300 °C and 1–400 bar using \textbf{fixed point iteration method}. }
+\caption{The compressibility factor $Z$ of CO$_{2}$ for temperatures
+60–300 °C and 1–400 bar calculated using \textbf{fixed point iteration method}. }
 \end{figure}
 
 \end{frame}
 %
-\begin{frame}[fragile]{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ —
-Newton's method}
+% --------------------------------------------------------------------------------------------------------------------%
+% Calculating the compressibility factor of CO2 -- Fixed point iteration
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}[fragile]{Calculating the compressibility factor of CO$_{\boldsymbol{\sf 2}}$ -- Fixed point iteration}
 \begin{columns}[t]
 
 \column{0.5\textwidth}
 \begin{itemize}[<+->]
-\item The fixed point method can be:
+\item \textbf{Disadvantages} of the fixed point method:\\[-2pt]
 \begin{itemize}
 \item \textbf{slow}, requiring many iterations; and 
 \item \textbf{unstable}, failing to converge. 
 \end{itemize}
-\item For example, the fixed point method \textbf{failed at regions close
-to the liquid-vapor saturation curve}, when temperatures were below
-31.04 °C and pressures were close to the saturation pressure (i.e.,
-near the blue curve in the phase diagram).
-\item \textbf{Newton's method to the rescue!}
+\item The fixed point method \textbf{failed at regions close
+to the liquid-vapor saturation curve}, for temperatures below
+$T_{\sf cr} = $  31.04 °C and pressures close to the saturation pressure (i.e.,
+near the blue curve).
+\item This is due to discontinuity of derivative in the function of Z at $T = T_{\sf cr}$, 
+whereas fixed point requires its \alert{\textbf{continuity}}.
+\item \textbf{Solution}: Newton's method.
 \end{itemize}
 
 \column{0.5\textwidth}
@@ -952,281 +854,198 @@ near the blue curve in the phase diagram).
 
 \end{frame}
 %
-\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ —
-Newton's method}
+% --------------------------------------------------------------------------------------------------------------------%
+% Compressibility factor of CO2 -- Newton vs. Fixed point method
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Compressibility factor of CO$_{\boldsymbol{2}}$ -- Newton vs. Fixed point method}
 \begin{columns}[t]
 
 \column{0.5\textwidth}
 
 \begin{figure}
-\begin{centering}
-\includegraphics[width=1\columnwidth]{figures/activity-models/compressibility-factor-co2-fixedpoint}
-\par\end{centering}
-\caption{The compressibility factor, $Z=PV/RT$, of CO$_{2}$ for temperatures
+\centering
+\includegraphics[width=1.05\columnwidth]{figures/activity-models/co2-compressibility-factor-fixed-point}
+\caption{The compressibility factor $Z$ of CO$_{2}$ for temperatures
 60–300 °C and 1–400 bar using \textbf{fixed point iteration method}.
-\protect\alert{Failed computations for temperatures 0 and 30 °C!}}
+\alert{\textbf{Failed computations for temperatures 0 and 30 °C!}}}
 \end{figure}
-
 
 \column{0.5\textwidth}
 
 \begin{figure}
-\begin{centering}
-\includegraphics[width=1\columnwidth]{figures/activity-models/compressibility-factor-co2-newton}
-\par\end{centering}
-\caption{The compressibility factor, $Z=PV/RT$, of CO$_{2}$ for temperatures
-0–300 °C and 1–400 bar using \textbf{Newton's method}. \protect\alert{Newton's method had no trouble for temperatures 0 and 30 °C!}}
+\centering
+\includegraphics[width=1.05\columnwidth]{figures/activity-models/co2-compressibility-factor-newton}
+\caption{The compressibility factor $Z$ of CO$_{2}$ for temperatures
+0–300 °C and 1–400 bar using \textbf{Newton's method}. 
+\alert{\textbf{Newton's method had no trouble for temperatures 0 and 30 °C!}}}
 \end{figure}
 
 \end{columns}
-
 \end{frame}
 %
-\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ —
-Newton's method}
+% --------------------------------------------------------------------------------------------------------------------%
+% Compressibility factor of CO2 -- Newton's method
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ -- Newton's method}
 \begin{itemize}
-\item In Newton's method, we transform the non-linear equation:
+\item In \alert{\textbf{Newton's method}}, we transform the non-linear equation
+$Z=1+\beta-q\beta\frac{Z-\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}$
+into the form $r(Z)=0$, where $r$ is the \textbf{residual function} 
 \[
-Z=1+\beta-q\beta\frac{Z-\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}
+\boxed{r(Z)=1+\beta-q\beta\frac{Z-\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}-Z}.
 \]
-into the form $f(Z)=0$, where $f$ is the \alert{residual function}
-defined as:
+\item Newton's method requires \textbf{first order derivative} of $r(Z)$ in its iterative process:
+\begin{itemize}
+\item the \textbf{initial guess} 
 \[
-\boxed{f(Z)=1+\beta-q\beta\frac{Z-\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}-Z}.
+Z^{0}=1,
 \]
-\item Newton's method requires $f^{\prime}(Z)$, the first order derivative
-of $f$. \textbf{Show that:}
+\item $\boldsymbol{i^{\text{th}}}$ \textbf{iteration}
 \[
-f^{\prime}(Z)=-\frac{q\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}\left\{ 1-(Z-\beta)\frac{2Z+(\epsilon+\sigma)\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}\right\} -1.
+Z^{i+1} =Z^{i}-r(Z^{i})/r^{\prime}(Z^{i}),
 \]
+%
+\item and \textbf{acceptance criterion} $|r(Z)|<\varepsilon$, where $\varepsilon$ is selected tolerance.
+\end{itemize} 
 \end{itemize}
 \end{frame}
 %
-\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ —
-Newton's method}
-\begin{itemize}
-\item Start with an initial guess for $Z$, say $Z^{0}=1$.
-\item Proceed with the following iterative approach:
-\begin{align*}
-Z^{1} & =Z^{0}-f(Z^{0})/f^{\prime}(Z^{0}) & \qquad & 1^{\text{st}}\text{ iteration}\\
- & \hphantom{=1+\beta-q\beta}... &  & \qquad...\\
-Z^{i+1} & =Z^{i}-f(Z^{i})/f^{\prime}(Z^{i}) &  & i^{\text{th}}\text{ iteration}
-\end{align*}
-\item Stop the iterations when:
-\[
-f(Z^{i+1})<\text{tolerance},
-\]
-e.g., tolerance of 10$^{-4}$ for residual function $f$.
-\end{itemize}
-\end{frame}
+% --------------------------------------------------------------------------------------------------------------------%
+% Compressibility factor of CO2 -- Newton's method
+% --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[fragile, allowframebreaks]{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ —
-Newton's method}
+\begin{frame}[fragile, allowframebreaks]{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ -- Python code}
 
-\begin{lstlisting}[language=Python, caption=Python example]
-from numpy import *
-import matplotlib.pyplot as plt
+\lstinputlisting[language=Python, caption=Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ using Newton's method in Python]{python-files/co2-compressibility-factor-newton.py}
 
-# Define a function that solves the nonlinear equation f(x)=0,
-# where f is the function, fprime its first derivative, and x0 the initial guess for x.
-def newton(f, fprime, x0):
-    maxiters = 100 # maximum number of iterations
-    tolerance = 1e-4 # the tolerance for the convergence
-    counter = 0 # the counter of number of iterations
-    x = x0 # start with the solution x being the initial guess
-    # Perform one or more Newton iterations
-    for counter in xrange(maxiters):
-        x = x - f(x) / fprime(x) # calculate the new approximation for x
-        if abs(f(x)) < tolerance: # check for convergence
-            return x # return x if the calculation converged
-    # Raise an error if the calculation did not converge.
-    raise RuntimeError('Could not calculate the \
-        solution of the nonlinear equation in %d iterations.' % counter)
-
-# Define a function to calculate Z using Newton's method,
-# where T is temperature, P is pressure, omega is the acentric factor
-# of the substance, Tc and Pc are the critical temperature and pressure
-# of the substance.
-def compressibility_factor_newton(T, P, omega, Tc, Pc):
-    # Create variables for the parameters of Peng-Robinson EOS
-    epsilon = 1 - sqrt(2.0)
-    sigma = 1 + sqrt(2.0)
-    Omega = 0.07780
-    Psi = 0.45724
-    # The reduced temperature, Tr, and reduced pressure, Pr
-    Tr = T / Tc
-    Pr = P / Pc
-    # The evaluation of the alpha(Tr, omega) function
-    alpha = (1 + (0.37464 + 1.54226*omega - 0.26992*omega**2)*(1 - sqrt(Tr)))**2
-    # The beta and q contants
-    beta = Omega * Pr / Tr
-    q = Psi/Omega * alpha/Tr
-    # Define the function f that represents the nonlinear equation f(x) = 0
-    def f(Z):
-        return (1 + beta - q*beta*(Z - beta)/((Z + epsilon*beta)*(Z + sigma*beta))) - Z
-    # Define the first order derivative of function f'(x)
-    def fprime(Z):
-        aux = (Z + epsilon*beta)*(Z + sigma*beta)
-        return -q*beta/aux * (1.0 - (Z - beta)*(2*Z + (epsilon + sigma)*beta)/aux) - 1
-    # Set the initial guess
-    Z0 = 1.0
-    return newton(f, fprime, Z0) # use newton function to perform the calculation of Z
-
-# The array with temperature values in K
-temperatures = linspace(0.0, 300.0, 11) + 273.15
-
-# The array with pressure values in bar
-pressures = linspace(1.0, 400.0, 101)
-
-# The critical temperature and pressure of CO2
-TcCO2 = 304.2
-PcCO2 = 73.83
-
-# The acentric factor of CO2
-omegaCO2 = 0.224
-
-# Create a plot
-plt.xlabel('Pressure [bar]')
-plt.ylabel(r'$Z = \frac{PV}{RT}$')
-plt.title('Compressibility Factor of Carbon Dioxide\nUsing Newton\'s Method')
-
-# Plot one curve for each temperature, T, in array temperatures
-for T in temperatures:
-    # Create a list with the values of Z at current T and pressure P from the array of pressures
-    Z = [compressibility_factor_newton(T, P, omegaCO2, TcCO2, PcCO2) for P in pressures]
-    # Plot the values of Z over all pressure points and current temperature T
-    plt.plot(pressures, Z, label=r'$T=%.0f\;^{\circ}\mathrm{C}$' % (T - 273.15))
-
-# Position the legend and save the figure
-plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
-plt.savefig('figures/activity-models/compressibility-factor-co2-newton.pdf', bbox_inches='tight')
-plt.show()
-\end{lstlisting}
-\end{frame}
-%
-\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ —
-Newton's method}
-
-\begin{figure}
-\begin{centering}
-\includegraphics[height=0.8\textheight]{figures/activity-models/compressibility-factor-co2-newton}
-\par\end{centering}
-\caption{The compressibility factor, $Z=PV/RT$, of CO$_{2}$ for temperatures
-0–300 °C and 1–400 bar using \textbf{Newton's method}. \textbf{\protect\visible<2>{\textbf{What is going on at 0~°C and \textasciitilde 48~bar?}}}}
-\end{figure}
+\textbf{Source code}: \href{}{\textcolor{indigo(dye)}{\it polybox}}.
 
 \end{frame}
 %
-\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ —
-Newton's method}
+% --------------------------------------------------------------------------------------------------------------------%
+% Compressibility factor of CO2 -- Newton's method
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ -- Newton's method}
 \begin{columns}[t]
 
-\column{0.5\textwidth}
-\begin{itemize}
-\item Below the critical temperature of CO$_{2}$, 31.04~°C, the increase
-in pressure results in a phase transition from vapor to liquid.
+\column{0.61\textwidth}
 
 \begin{figure}
-\centering{}\includegraphics[width=1\columnwidth]{figures/activity-models/compressibility-factor-co2-newton}
+\centering
+\includegraphics[width=1\columnwidth]{figures/activity-models/co2-compressibility-factor-newton}
+\caption{For $T < T_{\sf cr} (\mathsf{CO_2})= $ 31.04~°C, the increase in pressure results in a phase transition from vapor to liquid.}
 \end{figure}
 
-\end{itemize}
-
-\column{0.5\textwidth}
+\column{0.42\textwidth}
 
 \begin{figure}
-\begin{centering}
+\centering
 \includegraphics[width=1\columnwidth]{figures/activity-models/phase-diagram-pt}
-\par\end{centering}
-\caption{The phase diagram of a substance. $T_{\mathrm{cr}}=\unit[31.04]{{^\circ}C}$
-for CO$_{2}$.}
+\caption{The phase diagram of a substance. $T_{\mathrm{cr}}(\mathsf{CO_2})=$  31.04~°C.}
 \end{figure}
 
 \end{columns}
 
 \end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Activity of CO2 using a cubic equation of state
+% --------------------------------------------------------------------------------------------------------------------%
 %
 \begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state}
 \begin{itemize}
-\item Once $Z$ is calculated, the fugacity coefficient of the gas is computed
+\item Once $Z$ is calculated, the \alert{\textbf{fugacity coefficient of the gas}} is computed
 using:
 \[
 \boxed{\ln\varphi_{i}\coloneqq Z-1-\ln(Z-\beta)-q\theta},
 \]
-where $\theta$ is defined as:{\small{}
-\[
+where $\theta$ is defined as:\[
 \theta\coloneqq\begin{cases}
 {\displaystyle \frac{1}{\sigma-\epsilon}\ln\left(\frac{Z+\sigma\beta}{Z+\epsilon\beta}\right)} & \epsilon\neq\sigma\\
 {\displaystyle \frac{\beta}{Z+\epsilon\beta}} & \epsilon=\sigma
-\end{cases}.
+\end{cases}
 \]
-}{\small\par}
-\item The activity of CO$_{2}$(g) is then calculated using:
+dependent on the equation of state.
+\item The \alert{\textbf{activity of CO$_{2}$(g)}} is calculated using:
 \[
 a_{\mathsf{CO_{2}\text{(g)}}}=\varphi_{\mathsf{CO_{2}\text{(g)}}}\frac{P}{P^{\circ}},
 \]
-with $P^{\circ}=\unit[1]{\mathsf{bar}}$.
+with $P$ measured in bar and $P^{\circ}=\unit[1]{\mathsf{bar}}$.
 \end{itemize}
 \end{frame}
 %
-\begin{frame}{Fugacity coefficient of CO$_{\boldsymbol{2}}$ following the calculation
-of $Z$}
+% --------------------------------------------------------------------------------------------------------------------%
+% Fugacity coefficient of CO2 following the calculation of Z
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Fugacity coefficient of CO$_{\boldsymbol{2}}$ following the calculation of $Z$}
 
 \begin{figure}
 \begin{centering}
 \includegraphics[height=0.8\textheight]{figures/activity-models/fugacity-coefficient-co2-peng-robinson}
 \par\end{centering}
-\caption{The fugacity coefficient of CO$_{2}$ using Peng–Robinson equation
+\caption{The fugacity coefficient of CO$_{2}$ using Peng--Robinson equation
 of state (EOS) for temperatures 0–300 °C and 1–400 bar. }
 \end{figure}
 
 \end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Summary on the calculation of Gibbs energy
+% --------------------------------------------------------------------------------------------------------------------%
 %
 \begin{frame}[shrink=10]{Summary on the calculation of Gibbs energy}
 \begin{columns}[t]
 
 \column{0.5\textwidth}
 \begin{itemize}[<+->]
-\item We have now seen that the \alert{Gibbs energy} is defined as:
+\item The \alert{Gibbs energy} is defined as
 \[
 G(n)=\sum_{i=1}^{\mathsf{N}}n_{i}\mu_{i},
 \]
 where $n=(n_{1},\ldots,n_{\mathsf{N}})$ is the vector of molar amounts
 of the species. 
-\item The \alert{chemical potential} of the $i$th species is defined as:
+\item The \alert{chemical potential} of the $i$th species is defined as
 \[
-\mu_{i}=\mu_{i}^{\circ}+RT\ln a_{i}.
+\mu_{i}=\mu_{i}^{\circ}+RT\ln a_{i}(n, T, P).
 \]
 \end{itemize}
 
 \column{0.5\textwidth}
 \begin{itemize}[<+->]
-\item The \alert{standard chemical potentials} of the species, $\mu_{i}^{\circ}$,
-depend on temperature, $T$, and pressure, $P$, and can be interpolated
+\item The \alert{standard chemical potentials} of the species $\mu_{i}^{\circ}$
+depend on temperature $T$ and pressure $P$ and can be interpolated
 from a table of values over several temperature and pressure points.
-\item The \alert{activities} of the species, $a_{i}$, depend on temperature,
-$T$, pressure, $P$, and the concentrations of the species in the
-same phase:
+%
+\item The \alert{activities} of the species $a_{i}$ depend on temperature
+$T$, pressure $P$, and the concentrations of the species in the
+same phase $n_{\Phi}$.
 \end{itemize}
 \end{columns}
 
 \end{frame}
 %
-\begin{frame}[shrink=15]{Summary on the calculation of activities of gaseous species}
+% --------------------------------------------------------------------------------------------------------------------%
+% Summary on the calculation of activities of gaseous species
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}[shrink=15]{Summary on the calculation of activities of aqueous species}
 \begin{columns}[t]
 
 \column{0.5\textwidth}
 \begin{itemize}[<+->]
-\item  The \alert{activities} of aqueous solute species can be calculated
-using:
+\item  The \alert{activities} of aqueous solute species 
 \[
 a_{i}=\gamma_{i}m_{i}.
 \]
-\item The \alert{molality} of the species, $m_{i}$, is:
+\item The \alert{molality} of the species 
 \[
 m_{i}=55.508\frac{n_{i}}{n_{\mathsf{H_{2}O(aq)}}}.
 \]
-\item The \alert{ionic strength} of the aqueous solution is:
+\item The \alert{ionic strength} of the aqueous solution 
 \[
 I=\frac{1}{2}\sum_{i}m_{i}Z_{i}^{2}.
 \]
@@ -1234,16 +1053,16 @@ I=\frac{1}{2}\sum_{i}m_{i}Z_{i}^{2}.
 
 \column{0.5\textwidth}
 \begin{itemize}[<+->]
-\item  The \alert{activity coefficient}, $\gamma_{i}$, for ionic species
+\item  The \alert{activity coefficient} $\gamma_{i}$  for  \alert{ionic species}
 (e.g., Na$^{+}$, Cl$^{-}$, HCO$_{3}^{-}$, etc.):
 \[
 \log_{10}\gamma_{i}=-A_{\gamma}Z_{i}^{2}\left(\dfrac{\sqrt{I}}{1+\sqrt{I}}-0.3I\right).
 \]
-\item The \alert{activity coefficient}, $\gamma_{i}$, for CO$_{2}$(aq):
+\item The \alert{activity coefficient} $\gamma_{i}$ for  \alert{CO$_{2}$(aq)}:
 \[
 \ln\gamma_{i}=\left(c_{1}+c_{2}T+\frac{c_{3}}{T}\right)I-(c_{4}+c_{5}T)\frac{I}{I+1}.
 \]
-\item The \alert{activity} of H$_{2}$O(aq):
+\item The \alert{activity of H$_{2}$O(aq)}:
 \[
 \ln a_{\mathsf{H_{2}O\text{(aq)}}}=-\frac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}.
 \]
@@ -1252,18 +1071,22 @@ I=\frac{1}{2}\sum_{i}m_{i}Z_{i}^{2}.
 
 \end{frame}
 %
+% --------------------------------------------------------------------------------------------------------------------%
+% Summary on the calculation of activities of gaseous species
+% --------------------------------------------------------------------------------------------------------------------%
+%
 \begin{frame}[shrink=10]{Summary on the calculation of activities of gaseous species}
 \begin{columns}[t]
 
 \column{0.5\textwidth}
 \begin{itemize}[<+->]
-\item  The \alert{activities} of gaseous species can be calculated using:
+\item  The \alert{activities of gaseous species}:
 \[
 a_{i}=\frac{\varphi_{i}x_{i}P}{P^{\circ}}.
 \]
-\item We will only consider CO$_{2}$(g) in the gaseous phase, so that the
-\alert{mole fraction} $x_{i}=1$.
-\item The \alert{fugacity coefficient} of the gas can be calculated using:
+%\item We will only consider CO$_{2}$(g) in the gaseous phase, so that the
+%\alert{mole fraction} $x_{i}=1$.
+\item The \alert{fugacity coefficient} of the CO$_{2}$(g):
 \[
 \ln\varphi_{i}=Z-1-\ln(Z-\beta)-q\theta
 \]
@@ -1271,21 +1094,25 @@ a_{i}=\frac{\varphi_{i}x_{i}P}{P^{\circ}}.
 
 \column{0.5\textwidth}
 \begin{itemize}[<+->]
-\item  The \alert{compressibility factor}, $Z$, is:
+\item  The \alert{compressibility factor} 
 \[
-Z=\frac{PV}{RT},
+Z=\frac{PV}{RT} < 1
 \]
-with $Z\equiv1$ (i.e., always one) \textbf{only} when the substance
-is an ideal gas.
-\item The calculation of $Z$ requires the solution of the \alert{cubic equation of state}:
+with $Z\equiv1$ \textbf{only} when the substance is an \textbf{ideal gas}.
+%
+\item Calculation of $Z$ requires the solution of the \alert{cubic equation of state}
 \[
-Z=\frac{Z}{Z-\beta}-q\beta\frac{Z}{(Z+\epsilon\beta)(Z+\sigma\beta)},
+Z=\frac{Z}{Z-\beta}-q\beta\frac{Z}{(Z+\epsilon\beta)(Z+\sigma\beta)}
 \]
-\item \emph{Fixed point method} or \emph{Newton's method}.
+by \emph{fixed point method} or \emph{Newton's method}.
 \end{itemize}
 \end{columns}
 
 \end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Summary on the calculation of activities of mineral species
+% --------------------------------------------------------------------------------------------------------------------%
 %
 \begin{frame}{Summary on the calculation of activities of mineral species}
 \begin{itemize}

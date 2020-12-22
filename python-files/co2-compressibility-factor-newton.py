@@ -1,50 +1,80 @@
 from numpy import *
 import matplotlib.pyplot as plt
 
-# Define a function that solves the nonlinear equation f(x)=0,
-# where f is the function, fprime its first derivative, and x0 the initial guess for x.
-def newton(f, fprime, x0):
-    maxiters = 100 # maximum number of iterations
-    tolerance = 1e-4 # the tolerance for the convergence
-    counter = 0 # the counter of number of iterations
-    x = x0 # start with the solution x being the initial guess
+# Function that solves the nonlinear equation r(x) = 0
+def newton(r, rprime, x0):
+    """
+    :param r: the function
+    :param rprime: the first derivative of f
+    :param x0: the initial guess for the root 
+    :return x: the root of the equation f(x) = 0
+    """
+
+    # Tolerance and max number of iterations
+    maxiters = 100 
+    tolerance = 1e-4 
+
+    # Counter for the number of iterations
+    counter = 0 
+
+    # Initial guess
+    x = x0 
+
     # Perform one or more Newton iterations
-    for counter in xrange(maxiters):
-        x = x - f(x) / fprime(x) # calculate the new approximation for x
-        if abs(f(x)) < tolerance: # check for convergence
+    for counter in range(maxiters):
+
+        # Calculate the new approximation for x
+        x = x - r(x) / rprime(x) 
+
+        # Check the new value for convergence
+        if abs(r(x)) < tolerance: 
             return x # return x if the calculation converged
+
     # Raise an error if the calculation did not converge.
     raise RuntimeError('Could not calculate the \
         solution of the nonlinear equation in %d iterations.' % counter)
 
-# Define a function to calculate Z using Newton's method,
-# where T is temperature, P is pressure, omega is the acentric factor
-# of the substance, Tc and Pc are the critical temperature and pressure
-# of the substance.
+# Function to calculate Z using Newton's method
 def compressibility_factor_newton(T, P, omega, Tc, Pc):
-    # Create variables for the parameters of Peng-Robinson EOS
+    """
+    :param T: temperature
+    :param P: pressure
+    :param omega: the acentric factor
+    :param Tc: critical temperature
+    :param Pc: critical pressure
+    :return Z: compressibility factor
+    """
+
+    # Parameters of Peng-Robinson EOS    
     epsilon = 1 - sqrt(2.0)
     sigma = 1 + sqrt(2.0)
     Omega = 0.07780
     Psi = 0.45724
-    # The reduced temperature, Tr, and reduced pressure, Pr
+
+    # Reduced temperature and pressure
     Tr = T / Tc
     Pr = P / Pc
-    # The evaluation of the alpha(Tr, omega) function
+
+    # Evaluation of the alpha(Tr, omega) function
     alpha = (1 + (0.37464 + 1.54226*omega - 0.26992*omega**2)*(1 - sqrt(Tr)))**2
-    # The beta and q contants
+
+    # Contants beta and q 
     beta = Omega * Pr / Tr
     q = Psi/Omega * alpha/Tr
-    # Define the function f that represents the nonlinear equation f(x) = 0
-    def f(Z):
+
+    # Residual function r that represents the nonlinear equation r(x) = 0
+    def r(Z):
         return (1 + beta - q*beta*(Z - beta)/((Z + epsilon*beta)*(Z + sigma*beta))) - Z
-    # Define the first order derivative of function f'(x)
-    def fprime(Z):
+
+    # First order derivative of function r'(x)
+    def rprime(Z):
         aux = (Z + epsilon*beta)*(Z + sigma*beta)
         return -q*beta/aux * (1.0 - (Z - beta)*(2*Z + (epsilon + sigma)*beta)/aux) - 1
-    # Set the initial guess
+
+    # Initial guess for Z
     Z0 = 1.0
-    return newton(f, fprime, Z0) # use newton function to perform the calculation of Z
+
+    return newton(r, rprime, Z0) # use newton function to perform the calculation of Z
 
 # The array with temperature values in K
 temperatures = linspace(0.0, 300.0, 11) + 273.15
@@ -64,14 +94,13 @@ plt.xlabel('Pressure [bar]')
 plt.ylabel(r'$Z = \frac{PV}{RT}$')
 plt.title('Compressibility Factor of Carbon Dioxide\nUsing Newton\'s Method')
 
-# Plot one curve for each temperature, T, in array temperatures
-for T in temperatures:
-    # Create a list with the values of Z at current T and pressure P from the array of pressures
+# Plot one curve for each temperature in array temperatures
+for T in reversed(temperatures):
+    # Create a list with Z values at current T and P from the array pressures
     Z = [compressibility_factor_newton(T, P, omegaCO2, TcCO2, PcCO2) for P in pressures]
     # Plot the values of Z over all pressure points and current temperature T
     plt.plot(pressures, Z, label=r'$T=%.0f\;^{\circ}\mathrm{C}$' % (T - 273.15))
 
 # Position the legend and save the figure
 plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
-plt.savefig('../figures/compressibility-factor-co2-newton.pdf', bbox_inches='tight')
-plt.show()
+plt.savefig('co2-compressibility-factor-newton.pdf', bbox_inches='tight')

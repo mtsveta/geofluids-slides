@@ -33,21 +33,8 @@
 \usepackage{mathtools}
 \usepackage{multirow}
 \usepackage{cancel}
-\usepackage{graphicx}
 \usepackage{setspace}
 \usepackage[authoryear]{natbib}
-
-%===================================================================
-% General packages
-%===================================================================
-\usepackage{textcomp}
-\usepackage{xcolor}
-\usepackage{graphicx}
-\usepackage{relsize}
-\usepackage{caption}
-\usepackage{kbordermatrix} 
-\usepackage{mathtools}
-\usepackage{comment} % used to comment parts of the document
 
 %===================================================================
 % Fonts
@@ -180,7 +167,7 @@
 
 \lstset{style=mystyle}
 
-%\usepackage{minted}
+%\usepackage{minted} 
 
 %===================================================================
 % Misc
@@ -199,11 +186,8 @@
 
 
 \usepackage[export]{adjustbox} % for aligment of the graphics 
-
-\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
-\definecolor{coolblack}{rgb}{0.0, 0.18, 0.39}
-\definecolor{darkmidnightblue}{rgb}{0.0, 0.2, 0.4}
-\definecolor{indigo(dye)}{rgb}{0.0, 0.25, 0.42}
+\usepackage{sidecap} % for cation on the right side
+\definecolor{indigo(dye)}{rgb}{0.0, 0.25, 0.42} % color of the references
 
 \title{Geofluids — Part IV}
 \subtitle{Introduction to Geochemical and Reactive Transport Modeling}
@@ -221,7 +205,6 @@ NO F 61}
 %\input{lecture-1-introduction}
 %\input{lecture-2-chemical-equilibrium}
 \input{lecture-3-thermodynamic-model}
-%\input{lecture-4-thermodynamic-model-minerals-gases}
 %\input{lecture-4-numerical-method-equilibrium}
 %\input{lecture-5-chemical-kinetics}
 %\input{lecture-6-reactive-transport}
@@ -549,9 +532,10 @@ NO F 61}
 
 \renewcommand\bibname{}
 
-\end{frame}
-
 \bibliographystyle{apalike2}
 \bibliography{library}
+
+\end{frame}
+
 
 \end{document}

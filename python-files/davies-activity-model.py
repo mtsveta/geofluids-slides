@@ -1,4 +1,3 @@
-# Import array and plotting libraries
 import numpy
 import matplotlib.pyplot as plt
 
@@ -21,9 +20,10 @@ gammaZ3 = gamma_davies(3.0, I)
 # Plot an activity coeffitient as a function an ionic strength for different charges
 plt.xlabel('Ionic Strength [molal]')
 plt.ylabel('Activity Coefficient')
-# Use the latex string for legend
 plt.plot(I, gammaZ1, label=r'$Z_i=1$')
 plt.plot(I, gammaZ2, label=r'$Z_i=2$')
 plt.plot(I, gammaZ3, label=r'$Z_i=3$')
-# Save the plot as a pdf file
-plt.savefig('activity-coefficient-davies.pdf')
+
+# Position the legend and save the figure
+plt.legend(loc='center right')
+plt.savefig('activity-coefficient-davies.pdf', bbox_inches='tight')
