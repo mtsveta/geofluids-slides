@@ -10,7 +10,7 @@
 \item A system under prescribed temperature $T$ and pressure $P$ is in
 chemical equilibrium if its \textbf{Gibbs energy}, $G$, is at a minimum. 
 \begin{itemize}
-\item this is a result of the \emph{second law of thermodynamic} that says
+\item this results from the \emph{second law of thermodynamic} that says
 that a system tends to a state of maximum entropy $S$. 
 \item the minimum Gibbs energy condition arises because $G := H - T\,S$, where
 $H$ is enthalpy. 
@@ -247,10 +247,10 @@ is true for the rows of $A$:
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
-% Calculating the amounts of elements from amounts of species
+% Calculating the amounts of elements from species amounts
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Calculating the amounts of elements from amounts of species}
+\begin{frame}{Calculating the amounts of elements from species amounts}
 
 %\vskip 10pt
 \lcol[0.7]
@@ -391,7 +391,7 @@ $\mu_{i}$?
 
 \begin{itemize}[<+->]
 \item The \textbf{chemical potential of a substance, $\mu_{i}$}, is a measure of
-its tendency to transform to other substances.
+its tendency to transform into other substances.
 \item In the following reaction:
 \[
 \mathsf{A\rightleftharpoons B},
@@ -466,7 +466,7 @@ tend to transform to C and D
 and D are in equilibrium 
 \item $\mu_{\sf A}+\mu_{\sf B}<\mu_{\sf C}+2\,\mu_{\sf D}$: substances C and D will
 tend to transform to A and B
-\item \alert{Warning:} Note the coefficients in the reactions and its use
+\item \alert{Warning:} Note the coefficients in the reactions and their use
 when checking the direction of the reaction!
 \[
 \mathsf{\underline{1}\,A+\underline{1}\,B\rightleftharpoons\underline{1}\,C+\underline{2}\,D}
@@ -638,18 +638,23 @@ The reaction is proceeding to the left, and CO$_{2}$ is tending to
 %
 \begin{frame}[<+->]{Chemical potential $\mu_{i}$ and Gibbs energy}
 \begin{itemize}
-\item The chemical potential of a species, $\mu_{i}$, is equivalent to:{
+\item The chemical potential of a species, $\mu_{i}$, is equivalent to:
 \[
 \mu_{i}\equiv\left[\frac{\partial G}{\partial n_{i}}\right]_{T,P}
 \]
-}{\Large\par}
-\item Thus, the infinitesimal change in Gibbs energy, $\mathrm{d}G$, following
-an infinitesimal change in the amount of species $i$, $\mathrm{d}n_{i}$,
-is given by:
+%
+\item Thus, the infinitesimal change in Gibbs energy $\mathrm{d}G$ following
+an infinitesimal change in the species amount $i$ $\mathrm{d}n_{i}$ is given by
 \[
 \mathrm{d}G=\mu_{i}\mathrm{d}n_{i}
 \]
 at constant temperature $T$ and pressure $P$.
+\item The \textbf{equilibrium criterion} for a multicomponent system with constant $T$ and $P$ is
+\[
+\sum_{i=1}^N \mu_i \, \mathrm{d}n_{i} = 0.
+\]
+At the equilibrium point, the \textbf{Gibbs free energy is minimal} at its minimum.
+%
 \end{itemize}
 \end{frame}
 %
@@ -911,10 +916,10 @@ reactions}:
 \ecol
 \end{frame}
 %
-%
 % --------------------------------------------------------------------------------------------------------------------%
 % Exercise: Mass action and mass conservation equations
 % --------------------------------------------------------------------------------------------------------------------%
+%
 \begin{frame}{Exercise: Mass action and mass conservation equations \, ii}
 \textbf{Tasks}:
 \begin{itemize}
@@ -939,3 +944,464 @@ video \emph{Mass balance and mass action equations} (available in Doodle) with c
 \end{itemize}
 \end{frame}
 %
+% --------------------------------------------------------------------------------------------------------------------%
+% Solubility of aqueous species, gases, and minerals
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Solubility of aqueous species, gases, and minerals}
+
+The \alert{\textbf{solubility}} is the maximum amount of a substance that can be dissolved in a solution. 
+
+\begin{itemize}
+\item \textbf{Aqueous species} do not occur in pure form because their solubility in water is limited.
+
+\item The \textbf{solubility of solids} in liquid generally increases with \textbf{increasing temperature}.
+
+\item The \textbf{solubility of most gases} decreases with \textbf{increasing temperature}. 
+
+\item Most \textbf{reactions rates} are duplicated or triplicated with \textbf{increasing temperature} of 10 \textdegree C. 
+
+\end{itemize}
+
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Calculation of solubility of calcite -- Example
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Calculation of solubility of calcite -- Example}
+%
+\begin{itemize}
+\item The balanced chemical equation of calcite dissolving in water is
+\[
+\mathsf{CaCO_3(s) + H_2O(l) \rightleftharpoons Ca^{2+} + HCO^{-}_3 + OH^{-} }.
+\]
+%
+with equilibrium constant $K_e \approx 10^{-12}$. 
+%
+\item \textbf{Equilibrium expression of reaction} is the ratio of the concentrations of a reaction at equilibrium: 
+$K_e = [\mathsf{Ca^{2+}}] \cdot [\mathsf{HCO^-_3}] \cdot [\mathsf{OH^{-}}]$, where $[\cdot]$ denotes concentration of the species.
+%
+\item Equilibrium equation is \textbf{independent of solids and liquids}.%- and, therefore, they are not included. 
+%
+\item Since the molar ratio of products is $1 : 1 : 1$, 
+and we assume that concentration of each species increased by equal amount $[\mathsf{HCO^{-}_3}] \approx (10^{-12})^{1/3} \mbox{mol/L} = 10^{-4} \mbox{mol/L}$. 
+%
+\item The \textbf{amount of dissolved calcite} is equal \textbf{solubility of calcite}, so since molar amount of calcite is $1 : 1$ with all the products,
+\[
+[\mathsf{CaCO_3(aq)}] = [\mathsf{HCO^{-}_3}] = 10^{-4} \mbox{mol/L} 
+= 10^{-4}  \mbox{mol/L} \cdot 100 \mbox{g/mol} 
+\approx 10^{-2} \mbox{g/L}
+= 10 \mbox{mg/L}.
+\]
+\end{itemize}
+%
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Dependence of calcite solubility on different factors
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Dependence of calcite solubility on different factors}
+%https://www.sciencelearn.org.nz/resources/469-carbonate-chemistry#:~:text=Solubility,of%20more%20soluble%20calcium%20bicarbonate.
+\begin{itemize}
+\item Calcite has a \textbf{very low solubility} in \textbf{pure water} (analytic estimation is 10 \mbox{mg/L}).
+\item\textbf{ In rainwater} saturated with carbon dioxide, its \textbf{solubility increases} due to the formation of more soluble calcium bicarbonate.
+\item Solubility of $\mathsf{CaCO_3}$ \textbf{increases} as the temperature of the water \textbf{decreases}.
+\item Solubility of $\mathsf{CaCO_3}$ \textbf{increases} as the pressure of the water \textbf{increases}.
+\item Demonstration of these properties can be found in Jupyter notebook tutorial 
+\href{}{\textcolor{indigo(dye)}{\it Calcite solubility in water and CO$_2$-saturated rainwater}}.
+\end{itemize}
+\end{frame}
+
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Calcite solubility example -- Stalagmites and stalactites
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Calcite solubility example -- Stalagmites and stalactites}
+
+\[\mathsf{CaCO_3(s) + CO_2(g) + H_2O(l) \rightleftharpoons Ca(HCO_3)_2(aq)}\]
+
+\vskip -10pt
+\begin{columns}[t]
+\column{0.3\textwidth}
+\vskip 10pt
+$\rightarrow$ Rainwater meets with limestone to form a solution of calcium bicarbonate. \\[5pt]
+$\leftarrow$ The bicarbonate-rich water drips from the ceiling of the cave and partially evaporates, leaving behind a calcium carbonate deposit.
+
+\column{0.7\textwidth}
+
+\begin{figure}\centering
+\includegraphics[width=0.7\textwidth]{figures/chemical-equilibrium/stalagmites-stalactities.jpg}
+\caption{\footnotesize
+Diagram of cave showing formation of stalagmites and stalactites.}
+\end{figure}
+
+\end{columns}
+
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Calcite solubility example -- Limestone fizzing
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Calcite solubility example -- Limestone fizzing}
+
+\vskip 10pt
+\begin{figure}
+\centering
+\includegraphics[width=0.65\textwidth]{figures/chemical-equilibrium/limestone-fizzing.jpg}
+\caption{Limestone fizzes when dilute acid is placed on its surface.}
+% When dilute acid is placed on a sample of limestone rock, it fizzes. 
+% The calcium carbonate present in the limestone is reacting with the acid to produce carbon dioxide gas.
+\end{figure}
+
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Saturation index
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Saturation index}
+
+The \alert{\textbf{saturation index}} indicates the saturation state of
+a solution with respect to a mineral phase, which is given by
+%
+\[
+\mathrm{SI} = \log \frac{Q}{K_e},
+\] 
+where $Q$ is the \emph{ion activation product} (IAP) of activities of the dissolved species (characteristic of non-equilibrium solution), 
+and $K_e$ is the \emph{equilibrium constant}. 
+%
+\[
+\mathrm{SI} \quad \begin{cases}
+< 0& \mbox{solution is \textbf{undersaturated} $\Rightarrow$ the mineral may be dissolved }\\
+= 0& \mbox{solution is \textbf{saturated} \qquad \; $\Rightarrow$ the mineral in equilibrium with solution}\\
+> 0 & \mbox{solution is \textbf{supersaturated} $\Rightarrow$ the mineral may be precipitated}
+\end{cases}
+\]
+%
+%The solubility of a given solute can be determined with the solubility product.
+
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Saturation index - Demonstration
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Saturation index -- Demonstration}
+
+\lcol
+\vskip -5pt
+\begin{itemize}
+\item Demonstration of gypsum/anhydrite solubility: 
+%
+Jupyter notebook tutorial 
+\href{}{\textcolor{indigo(dye)}{\it Gypsum/anhydrite solubility in water}}.
+%
+\item Investigation on how saturated the Evian water with carbonates can be found in 
+Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/eq.evian-water-analysis.ipynb}{\textcolor{indigo(dye)}{\it Analysis of the Evian water}}.
+%
+\item Barite precipitation in the water flooding reactive transport example:
+%
+Jupyter notebook tutorial 
+\href{}{\textcolor{indigo(dye)}{\it One-dimensional reactive transport modeling of scaling (without oil)}}.
+
+\end{itemize}
+%
+\rcol
+\begin{figure}
+\centering
+\includegraphics[width=0.8\columnwidth]{figures/chemical-equilibrium/anhydrite-solubility.png}
+%\caption{}
+\end{figure}
+\vskip -10pt
+\begin{figure}
+\centering
+\includegraphics[width=0.75\columnwidth]{figures/chemical-equilibrium/barite-saturation-index-over-time}
+%\caption{}
+\end{figure}
+\ecol
+
+%\begin{itemize}
+%\item Demonstration of gypsum solubility: 
+%%
+%Jupyter notebook tutorial 
+%\href{}{\textcolor{indigo(dye)}{\it }}.
+%%
+%%
+%\item Barite precipitation in the water flooding RT example 
+%%
+%Jupyter notebook tutorial 
+%\href{}{\textcolor{indigo(dye)}{\it Calcite solubility in water and CO$_2$-saturated rainwater}}.
+%\end{itemize}
+
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Electroneutrality principle
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Electroneutrality principle}
+
+\begin{itemize}
+\item \alert{\textbf{Electroneutrality principle}} states that 
+the ionic species in the electrolyte solution have equilibrium of charges on a macroscopic scale.
+
+\item It can be expressed by the charge equilibrium between the species in solution
+%
+\[
+\boxed {\sum_i z_i m_i = 0,}
+\]
+%
+where $z_i$ are the ionic charges and 
+$m_i$ are the molalities of species.
+%
+\item Species in an aqueous solution can donate or accept electrons, for example:
+%
+\[
+\mathsf{e^- + \tfrac{1}{4} \, O_2(aq) + H^+ = \tfrac{1}{2} \, H_2O.}
+\]
+\end{itemize}
+%
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Electrochemical potential, pE
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Electrochemical potential, pE}
+\begin{itemize}
+\item The \alert{\textbf{electrochemical potential}} $\mathsf{pE}$ is defined as
+%
+\[
+\boxed{ \mathsf{pE} = - \log (a_{e^{\scalebox{0.75}[1.0]{-}}}) = -\tfrac{1}{n_e} \log \tfrac{Q^{\scalebox{0.75}[1.0]{-}}_e}{K^{\scalebox{0.75}[1.0]{-}}_e} }
+\]
+%
+where $K^{\scalebox{0.75}[1.0]{-}}_e \approx 25.5$ (at 25 \textdegree C), 
+$n_e$ is the number of consumed/generated electrons, and 
+$Q^{\scalebox{0.75}[1.0]{-}}_e$ is the product of the activities of the reaction. 
+%
+\item It is an \textbf{indication} that the solution \textbf{donates electrons}.
+\end{itemize}
+
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+%Redox reaction
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Redox reaction}
+
+\begin{itemize}
+\item \alert{\textbf{Redox (or oxidation-reduction) reaction}} is a type of chemical reaction that involves a transfer of electrons between two species.
+\item Examples: 
+\begin{itemize}
+\item body uses redox reactions to convert food and oxygen to energy plus water and CO2;
+\item batteries in electronics rely on redox reactions;
+\item combustion reactions in the car engines.
+\end{itemize}
+
+\item The water can be 
+%
+\begin{itemize}
+%\item ionized
+%%
+%\[
+%\mathsf{H_2O(l) = H^+ + OH^-,}
+%\]
+%
+\item oxidized (losing electron)
+%
+\[
+\mathsf{H_2O(l) = O_2(aq) + 2\, e^{-} + 2\, H^+,}
+\]
+%
+\item reduced (accepting electron)
+%
+\[
+\mathsf{H_2O(l) + e^{-} = \tfrac{1}{2} \, H_2(aq) + OH^-.}
+\]
+%
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Balancing redox reaction, Half-reaction method
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Balancing redox reaction, Half-reaction method}
+
+\begin{itemize}
+\item Atoms appear to be balanced, but charges are not:
+%
+\[
+\mbox{\alert{charge 2+}}
+\qquad
+\mathsf{Al(s)+Cu^{2+}(aq) \rightarrow Al^{3+}(aq)+Cu(s).}
+\qquad
+\mbox{\alert{charge 3+}}
+\]
+%
+\item Reduction half-reaction ($\mathsf{Cu^{2+}}$ is being reduced to $\mathsf{Cu(s)}$):
+%
+\[
+\mbox{\alert{charge 0}}
+\qquad
+\mathsf{Cu^{2+}(aq) +  2\, e^{-} \rightarrow Cu(s).}
+\qquad
+\mbox{\alert{charge 0}}
+\]
+%
+\item Oxidation half-reaction ($\mathsf{Al(s)}$ is being oxidized to $\mathsf{Al^{3+}}(aq)$). 
+%
+\[
+\mbox{\alert{charge 0}}
+\qquad
+\mathsf{Al(s) \rightarrow Al^{3+}(aq) +  3\, e^{-} .}
+\qquad
+\mbox{\alert{charge 0}}
+\]
+%
+\item Charge-balanced reaction: 
+%
+\[
+\mbox{\alert{charge 6+}}
+\qquad
+\mathsf{2\, Al(s) + 3\, Cu^{2+}(aq) \rightarrow 2\, Al^{3+}(aq) + 3\, Cu(s).}
+\qquad
+\mbox{\alert{charge 6+}}
+\]
+\end{itemize}
+
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Hydrogen potential, pH
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Hydrogen potential, pH}
+
+\begin{itemize}
+\item The \alert{\textbf{hydrogen potential}} $\mathsf{pH}$ is defined as
+%
+\[
+\boxed{ 
+\mathsf{pH} = - \log (a_{\mathsf{H^+}}). 
+}
+\]
+%
+\item The $\mathsf{pH}$ of a solution is an indication of the \textbf{tendency} of the solution \textbf{to donate hydrogen ions}
+or measure of the \textbf{relative amount of free hydrogen ions} in the solution. 
+%
+\item $\mathsf{pH}$ is a measure of how \textbf{acidic/basic} solution is in the scale from 0 till 14: 
+%
+%\begin{alignat*}{2}
+%\mathsf{pH} < 7: & \qquad \mbox{solution is \textbf{acidic}}\\
+%\mathsf{pH} = 7: & \qquad \mbox{solution is \textbf{neutral}}\\
+%\mathsf{pH} > 7: & \qquad  \mbox{solution is \textbf{alkali/base}}
+%\end{alignat*}
+%
+%\[
+%\mathsf{pH} < 7: \; \mbox{solution is \textbf{acidic}} \qquad
+%\mathsf{pH} = 7: \; \mbox{solution is \textbf{neutral}} \qquad
+%\mathsf{pH} > 7: \; \mbox{solution is \textbf{alkali/base}}
+%\]
+\end{itemize}
+\begin{figure}
+\centering
+\includegraphics[width=0.9\columnwidth]{figures/chemical-equilibrium/ph-scale.png}
+\end{figure}
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% pH, Examples i
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{pH, Examples \; i}
+
+\lcol
+\vskip -5pt
+\begin{itemize}
+\item $\mathsf{CO_2}$ added to the seawater influences the $\mathsf{pH}$ according to the reaction
+%
+\[
+\mathsf{CO_2(g) + H_2O(l) = H^+ + HCO_3^-.}
+\]
+% 
+See tutorial \href{}{\textcolor{indigo(dye)}{\it Dependence of the pH on the $\mathsf{CO_2(g)}$ amount in seawater}}.
+%
+\item Adding HCl into water increases free $\mathsf{H^+}$ ions and decreases pH, whereas 
+%Water and HCl combine to form \textbf{hydrochloric acid} ($\mathsf{H_3O^+}$ and $\mathsf{Cl^-}$):
+%
+%\[
+%\mathsf{HCl(aq) + H_2O(l) = H_3O^+ + Cl^-.}
+%\]
+%
+adding ammonia \textbf{removes} $\mathsf{H^+}$ from water and increases it. 
+%to produce ammonium and hydroxide:
+%%
+%\[
+%\mathsf{NH_3 + H_2O = NH_4^+ + OH^-.}
+%\]
+%
+%
+%By adding acid, we decrease the $\mathsf{pH}$ of water
+%%
+%\[
+%\mathsf{HCl(aq) + H_2O(l) = 2\, H^+ + HO^- + Cl^-.}
+%\]
+% 
+See tutorial \href{}{\textcolor{indigo(dye)}{\it Dependence of the pH on added contaminant in water}}.
+
+\end{itemize}
+%
+\rcol
+%\vskip -30pt
+\begin{figure}
+\centering
+\includegraphics[width=0.82\columnwidth]{figures/chemical-equilibrium/ph-dependence-on-co2-amount-in-seawater.png}
+%\caption{}
+\end{figure}
+\vskip -10pt
+\begin{figure}
+\centering
+\includegraphics[width=0.82\columnwidth]{figures/chemical-equilibrium/ph-dependence-on-contaminants-in-water.png}
+%\caption{}
+\end{figure}
+\ecol
+
+\end{frame}
+
+
+% --------------------------------------------------------------------------------------------------------------------%
+% pH, Examples
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{pH, Examples \; ii}
+
+\lcol
+\vskip -5pt
+Large \alert{\textbf{algae blooms}} can affect the pH as they photosynthesise: 
+\begin{itemize}
+\item during the day that \textbf{drives the pH down} and 
+\item at night when they respire, it \textbf{drives the pH up}.
+%
+\end{itemize}
+%
+\alert{\textbf{The results}}: \textbf{huge pH fluctuations} in water, which can affect fish quite negatively. 
+%
+\rcol
+%\vskip -30pt
+\begin{figure}
+\centering
+\includegraphics[width=0.85\columnwidth]{figures/chemical-equilibrium/toxic_algae_bloom_lake_erie.jpg}
+\caption{\small The worst algae bloom that Lake Erie has experienced in decades resulting from the record torrential spring rains washed fertilizer into the lake, promoting the growth of microcystin-producing cyanobacteria blooms.}
+\end{figure}
+\ecol
+
+\end{frame}
+
