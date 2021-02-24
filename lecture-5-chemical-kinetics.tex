@@ -14,7 +14,7 @@
 %
 \end{itemize}
 
-\vskip -5pt
+\vskip -10pt
 \lcol
 {
 \small
@@ -30,10 +30,10 @@
 \rcol
 
 \begin{figure}
-	\vskip 5pt
+	\vskip 10pt
 	\centering
-	\includegraphics[height=0.4\columnwidth]{figures/chemical-kinetics/lotka-volterra-dynamics.png}
-	\caption{Periodic solutions of the linearized the Lotka--Volterra equation.}
+	\includegraphics[height=0.6\columnwidth]{figures/chemical-kinetics/lotka-volterra}
+	%\caption{Periodic solutions of the linearized the Lotka--Volterra equation.}
 \end{figure}
 
 \ecol
@@ -50,16 +50,16 @@
 		\item \textbf{But!} In reality, such reaction happen in a series of elementary steps, \textbf{sequence of one or more
 			elementary reactions} 
 		\begin{itemize}
-			\item {\it unimolecular reaction}: dissociation/isomerization of one reagent molecule;
+			\item {\it unimolecular reaction}: dissociation of one reagent molecule;
 			\item {\it bimolecular reaction}: collisions between two molecules; or
 			\item{ \it trimolecular reaction}: collision of three reactant molecules (occurs less frequently).
 		\end{itemize}
 		\item \textbf{Elementary chemical reactions} is a transition between two atomic / molecular states. 
 		%
 		$$\mbox{State A} \xrightarrow[]{\text{Activation Energy}} \mbox{State B}$$
-		
+		%
 		\item The \textbf{activation energy} between these two states determines \alert{the rate at which reactions occur}: 
-		%\underbrace{State A}_{Activation energy A} $\rightarrow$ \underbrace{State B}_{Activation energy B}
+		%
 		\begin{itemize}
 			\item for \it{low activation energy} $\Rightarrow$ reaction is rapid, 
 			\item for \it{higher activation energy} $\Rightarrow$ reaction is slower.
@@ -111,8 +111,7 @@
 \begin{itemize}
 	\item Chemical process can be described by the \alert{\textbf{single stoichiometric equation}}, also called  \alert{\textbf{overall reaction equation}}. 
 	\item \alert{\textbf{Stoichiometric equation}} defines the molar ratio of the reacting species and the reaction products / the number of moles of each reactant and the product that appears in the overall reaction equation.
-	\item {\bf Example}: 
-	overall reaction equation for the \alert{combustion (oxidation) of hydrogen}: %/ water production:
+	\item {\bf Example}: overall reaction equation for the \alert{combustion (oxidation) of hydrogen}: %/ water production:
 	%
 	\[\mathsf{2 H_2 + O_2 \rightleftharpoons 2H_2O},\] 
 	%	
@@ -120,7 +119,7 @@
 	$\mathsf{O_2}$ has coefficient 1, 
 	and $\mathsf{H_2O}$ has coefficient 2.
 	%
-	\item Chemical systems described by a single chemical reaction (reactands $\rightarrow$ products) are {\bf very rare}. 
+	\item Chemical systems described by a single chemical reaction (reactants $\rightarrow$ products) are {\bf very rare}. 
 	\item In reality, 
 	%
 	\begin{multline*}
@@ -186,13 +185,6 @@
 			$\bullet$ alkylperoxy radical + NO $\rightarrow$ alkoxy radical + NO$_2$, \\[3pt]
 			$\bullet$ alkoxy radical + O$_2$($^3\sum$) $\rightarrow$ aldehyde + HO. \\[3pt]
 		}
-%		\begin{itemize}
-%			\footnotesize
-%			\item hydrocarbon + OH $\rightarrow$ alkyl radical + H$_2$O, 
-%			\item alkyl radical + O$_2$ ($^3\sum$) $\rightarrow$ alkylperoxy radical, 
-%			\item alkylperoxy radical + NO $\rightarrow$ alkoxy radical + NO$_2$, 
-%			\item alkoxy radical + O$_2$($^3\sum$) $\rightarrow$ aldehyde + HO. 
-%		\end{itemize}
 		%
 		\item The ratio of hydrocarbons changes dependent on the type of pollution source.
 		\item No single species can be identified as reactants or products.
@@ -296,7 +288,7 @@ reactant/product divided by its stoichiometric coefficient.
 % Reaction rate via concantrations of reactants
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[<+->][shrink]{Reaction rate via concantrations of reactants}
+\begin{frame}[<+->][shrink]{Reaction rate via concentrations of reactants}
 %
 \begin{itemize}
 \item Reaction rate for general equation 
@@ -363,11 +355,11 @@ coefficients} of the reactants are commonly the same. \\
 % Stoichometry in intermediate reactions
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[<+->][shrink]{Stoichometry in intermediate reactions}
+\begin{frame}[<+->][shrink]{Stoichiometry in intermediate reactions}
 	%
 	\begin{itemize}
 		\item 
-	The overall reaction of hydrogen combustion $\mathsf{2 \, H_2 + O_2 \rightleftharpoons 2\, H_2O}$ should contain the following intermediate steps (amoung total 30-40 steps):
+	The overall reaction of hydrogen combustion $\mathsf{2 \, H_2 + O_2 \rightleftharpoons 2\, H_2O}$ should contain the following intermediate steps (among total 30-40 steps):
 	{\small
 		\lcol
 		\begin{alignat*}{2}
@@ -384,7 +376,7 @@ coefficients} of the reactants are commonly the same. \\
 	  \ecol
 	}
 	where $M$ is any species present in the mixture.
-	\item Each {\bf elementary reaction step $i$} can be characterised by the stoichiometric equation
+	\item Each {\bf elementary reaction step $i$} can be characterized by the stoichiometric equation
 	%
 	\[
 	\sum_{j} \nu^L_{ij}	{A_j} \xrightleftharpoons[]{k_1} \sum_{j} \nu^R_{ij} {A_j}
@@ -470,8 +462,8 @@ value.
 \begin{frame}{Example: kinetics law of mass action for hydrogen combustion}
 		\begin{itemize}
 		\item The overall reaction $\mathsf{2 \, H_2 + O_2 \rightleftharpoons 2\, H_2O}$ can be 
-		decomposed into the following $M=6$ ementary steps with corresponding 
-		the stoichometry matrix $\nu \in \mathbb{R}^{6 \times 8}$
+		decomposed into the following $M=6$ elementary steps with corresponding 
+		the stoichiometry matrix $\nu \in \mathbb{R}^{6 \times 8}$
 			\lcol
 			{\scriptsize
 			\begin{alignat*}{4}
@@ -635,7 +627,7 @@ value.
 		the rate coefficient is described by a 	\alert{\bf truncated form of the extended Arrhenius equation} \\[-10pt]
 		%
 		\[
-		k= AT^n.
+		k= A\,T^n.
 		\]
 	\end{itemize}
 
@@ -667,8 +659,7 @@ value.
 		\subfloat[Arrhenius plot]{\includegraphics[width=0.4\textwidth]{figures/chemical-kinetics/arrhenius-plot}} \qquad \qquad
  		\subfloat[Extended Arrhenius plot]{\includegraphics[width=0.38\textwidth]{figures/chemical-kinetics/extended-arrhenius-plot}}
 	\end{figure}
-	
-	
+
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
@@ -758,7 +749,6 @@ value.
 			K_e := \tfrac{k_f}{k_b} = \tfrac{\mathsf{[C]^c\, [D]^d}}{\mathsf{[A]^a\,[B]^b}}.
 			\]
 			%
-			%
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -786,8 +776,7 @@ value.
 		\[\mathsf{A} \xrightleftharpoons[]{k_1} \mathsf{B} \xrightleftharpoons[]{k_2} \mathsf{C}. \]
 		%
 		%
-		\item {\bf In parallel reactions} (competitive reactions), the reagent is consumed by two different reaction paths to form 
-		different products:
+		\item {\bf In parallel reactions} (competitive reactions), the reagent is consumed by two different reaction paths to form different products:
 		%
 		\[\mathsf{A} \xrightleftharpoons[]{k_1} \mathsf{B} \quad \mbox{and}\quad \mathsf{A} \xrightleftharpoons[]{k_2} \mathsf{C}. \]
 		%
@@ -1176,21 +1165,12 @@ value.
 		%\lcol
 		{\scriptsize
 		\begin{itemize}
-\item Calcite,      $k_{\mathsf{Calcite}} \sim 10^{-1}$,    \qquad \qquad \quad Siderite,  $k_{\mathsf{Siderite}}  \sim 10^{-6}$,
-\item Daphnite,      $k_{\mathsf{Daphnite}} \sim 10^{-9}$, \qquad \qquad Quartz, $k_{\mathsf{Quartz}} ~10^{-10}$
-\item Kaolinite,     $k_{\mathsf{Kaolinite}} \sim 10^{-11}$,   
+			\item Calcite,      $k_{\mathsf{Calcite}} \sim 10^{-1}$,    \qquad \qquad \qquad -- Siderite,  $k_{\mathsf{Siderite}}  \sim 10^{-6}$,
+			\item Daphnite,      $k_{\mathsf{Daphnite}} \sim 10^{-9}$, \qquad \qquad -- Quartz, $k_{\mathsf{Quartz}} ~10^{-10}$
+			\item Kaolinite,     $k_{\mathsf{Kaolinite}} \sim 10^{-11}$,   
 		\end{itemize}
 		%\rcol
 		}
-%		\begin{itemize}
-%%			\item Calcite,      $k ~ $
-%%			\item Pyrrhotite, $k ~ $
-%%			\item Daphnite,   $k ~ $
-%			\item Siderite,      $k ~ $
-%			\item Kaolinite,     $k ~ $
-%			\item Quartz,         $k ~ $
-%		\end{itemize}
-		%\ecol
 	%
 	\item Assuming that calcite is controlled by equilibrium, we obtained the speedup of $\approx$ \alert{\bf 4.24x}. 
 	\end{itemize}
@@ -1243,7 +1223,8 @@ value.
 		\item The assumption of steady-state is valid for the \alert{\bf intermediate species} that are produced by slow 
 		reactions and consumed by fast reactions, so that their concentrations remain small.
 		%		
-		\item For the mechanism	$\mathsf{A} \xrightarrow[]{k_1} \mathsf{B} \xrightarrow[]{k_3}  \mathsf{C}$, the production rates are
+		\item For the mechanism	$\mathsf{A} \xrightarrow[]{k_1} \mathsf{B} \xrightarrow[]{k_3}  \mathsf{C}$, 
+		the production rates are
 		%
 		\begin{alignat*}{2}
 			\tfrac{d\mathsf{[A]}}{dt}  & = -k_1 \, \mathsf{[A]} \\
@@ -1277,9 +1258,9 @@ value.
 		\item $n_{i} = \mathsf{[A_i]}$ is the \emph{number of moles} of the $i$th species,
 		\item $n \in\mathbb{R}^{N}$ is the \emph{molar composition}
 		vector of the system, and
-		\item $f_{i} :\mathbb{R}^{2+N}\rightarrow\mathbb{R}$ isthe \emph{production/consumption} of the $i$th species in every reaction, and 
+		\item $f_{i} :\mathbb{R}^{2+N}\rightarrow\mathbb{R}$ is the \emph{production/consumption} of the $i$th species in every reaction, and 
 %		\[
-%		f_{i}(T,P,\boldsymbol{n}):=\sum_{j=1}^{M}\nu_{ij}r_{j}(T,P,n)
+%		f_{i}(T,P,\boldsymbol{n}):=\sum_{j=1}^{M}\nu_{ij} r_{j}(T,P,n)
 %		\]
 		\item $r_{j}:\mathbb{R}^{2+N}\rightarrow\mathbb{R}$ is the \emph{kinetic rate function} of the $j$th reaction.
 	\end{itemize}
@@ -1310,22 +1291,21 @@ value.
 		\[	\frac{d n}{dt} = f(n, p), \]
 		where
 		\begin{itemize}
-			\item $n \in \mathbb{R}^{N}$ is a vector of species concetrations,
+			\item $n \in \mathbb{R}^{N}$ is a vector of species concentrations,
 			\item $p \in \mathbb{R}^{N}$ is a vector of parameters, and
 			\item $f: \mathbb{R}^{2N} \rightarrow \mathbb{R}^{N}$ is the rate function of reactions.
 		\end{itemize}
 		%
-	%
-	\item {\bf Jacobian matrix}
-	%
-	\[
-	\boxed{
-		J := \frac{\partial f(n, p)}{\partial n} = \bigg\{  \frac{\partial f_i}{\partial n_j} \bigg\} \qquad  \mbox{or} \qquad
-		F := \frac{\partial f(n, p)}{\partial p} = \bigg\{  \frac{\partial f_i}{\partial p_j} \bigg\},
-	}
-	\]
-	%
-	is very frequently used for the following {\bf reduction algorithms}:
+		\item {\bf Jacobian matrix}
+		%
+		\[
+		\boxed{
+			J := \frac{\partial f(n, p)}{\partial n} = \bigg\{  \frac{\partial f_i}{\partial n_j} \bigg\} \qquad  \mbox{or} \qquad
+			F := \frac{\partial f(n, p)}{\partial p} = \bigg\{  \frac{\partial f_i}{\partial p_j} \bigg\},
+		}
+		\]
+		%
+		is very frequently used for the following {\bf reduction algorithms}:
 		\begin{itemize}
 			\item determining local sensitivity analysis of each species (principal reactions);
 			\item analyzing of timescales present in the kinetic system.
@@ -1445,7 +1425,7 @@ value.
 % Example, partition to kinetic and equilibrium species
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Example, Partition to kinetic and equilibrium species\, i}
+\begin{frame}{Example, Partition to kinetic and equilibrium species \, i}
 	\begin{figure}
 		\centering
 		\includegraphics[height=0.85\textheight]{figures/chemical-kinetics/partitioning-example-1.png}
@@ -1454,7 +1434,7 @@ value.
 	%
 \end{frame}
 %
-\begin{frame}{Example, Partition to kinetic and equilibrium species\, ii}
+\begin{frame}{Example, Partition to kinetic and equilibrium species \, ii}
 	\begin{figure}
 		\centering
 		\includegraphics[height=0.85\textheight]{figures/chemical-kinetics/partitioning-example-2.png}
@@ -1463,7 +1443,7 @@ value.
 	%
 \end{frame}
 %
-\begin{frame}{Example, Partition to kinetic and equilibrium species\, iii}
+\begin{frame}{Example, Partition to kinetic and equilibrium species \, iii}
 	\begin{figure}
 		\centering
 		\includegraphics[height=0.85\textheight]{figures/chemical-kinetics/partitioning-example-3.png}
@@ -1561,12 +1541,12 @@ value.
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
-% Example, Barite precipitation as result of mixing
+% Example, Barite precipitation using Palandri and Kharaka parameters
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[fragile]{Example, Barite precipitation as result of mixing}
+\begin{frame}[fragile]{Example of barite precipitation using Palandri and Kharaka parameters}
 	\begin{itemize}
-		\item Including only \alert{\bf acidic mechanism:} 
+		\item Including only \alert{\bf acidic mechanism} (Palandri and Kharaka, 2004): 
 	\end{itemize}
 	\begin{lstlisting}[language=Python, caption=Define barite mineral reaction and its parameters]
 		eq_str_barite = "Barite = SO4-- + Ba++"
@@ -1580,14 +1560,13 @@ value.
 		\includegraphics[height=0.35\textheight]{figures/chemical-kinetics/barite-acidic-mechanism.png}
 		\caption*{Barite precipitation.}
 	\end{figure}
-
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
-% Example, Barite precipitation as result of mixing
+% Example, Barite precipitation using alternative database
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[fragile]{Example, Barite precipitation as result of mixing \, ii}
+\begin{frame}[fragile]{Example of barite precipitation using alternative database}
 	%
 	\begin{itemize}
 		\item More realistic \alert{\bf mechanism:} 
@@ -1612,7 +1591,7 @@ value.
 \begin{frame}[fragile]{Example of hematite kinetic mechanism in reservoir souring}
 \begin{itemize}
 	\item \alert{\bf Hematite} mineral reacts according to the reaction 
-	\[\mathsf{Fe_{2}O_{3}(hematite)+6H^{+}=3H_{2}O(l)+2Fe^{3+}}\]
+	\[\mathsf{Fe_{2}O_{3}(hematite)+6\,H^{+}=3\,H_{2}O(l)+2\,Fe^{3+}}\]
 	and has the following kinetic rate (taken from more realistic database):
 	%
 	\[
@@ -1624,5 +1603,94 @@ value.
 		& k_{sulfide}:=\mbox{3.5e-9}\cdot\exp\Big[-\tfrac{40}{R}\Big(\tfrac{1}{T}-\tfrac{1}{298.15}\Big)\Big]\cdot a^{1/2}({\rm HS^{-}}),
 	\end{array}
 	\]
+	\end{itemize}
+\end{frame}
+
+\section{Numerical Method for Chemical Kinetics Calculation}
+
+\begin{frame}{Stiffness of system of ODEs}
+	\begin{itemize}
+		\item \alert{\bf Stiffness}: how hard is to solve a system of equations. 
+		\item \alert{\bf Why?} The system of coupled equations for combustion has very different time scale
+		characteristics. In geochemistry, the situation is similar, but a little less critical.
+		\item If {\bf nonstiff methods} are employed to solve stiff problems $\Rightarrow$ more computational is required.
+		One example is the propagation of flame fronts
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Mathematical definition of stiffness}
+\begin{itemize}
+	\item 
+%	Stiff equations and systems:
+% Let  > 0: small parameter. Consider the initial value problem
+%8<
+%:
+%dx(t)
+%dt
+%= 􀀀
+%1
+%
+%x(t); t 2 [0;T];
+%x(0) = 1;
+% Exponential solution x(t) = e􀀀t=.
+% Explicit Euler method with step size t:
+%xk+1 = (1 􀀀
+%t
+%
+%)xk ; x0 = 1;
+%with solution
+%xk = (1 􀀀
+%t
+%
+%)k :
+%Numerical
+\end{itemize}
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Numerical schemes of integration of systems of ODEs
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Numerical schemes of integration of stiff systems of ODEs}
+	
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Example, Roberts system
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Example, Roberts system}
+	\vskip 10pt
+	\begin{itemize}
+		\item Consider the Roberts system modeling  \alert{\bf 3-species chemical kinetics problem}: 
+		find amount $n = [n_{\mathsf{A}}, n_{\mathsf{B}}, n_{\mathsf{C}}]^{\mathrm{T}}$ 
+		on the time-interval $t \in [0, 4 \cdot 10^{3}]$ with
+		%
+		\begin{itemize}
+			\item reaction rates $a = 4 \cdot10^{-2}$, $b = 10^{4}$, $c = 3\cdot10^{7}$ and 
+			\item initial condition $n^\circ = [n_\mathsf{A}^{\circ}, n_{B}^{\circ}, n_{C}^{\circ}]=[1, 0, 0]$
+		\end{itemize}
+		%
+		\begin{columns}[t]
+			\column{.4\textwidth}
+			%
+			{
+				$$
+				\quad 
+				\begin{cases}
+					\tfrac{{\rm d} n_\mathsf{A}}{{\rm d} t} = - a\, n_\mathsf{A} + b\, n_\mathsf{B}\cdot n_\mathsf{C}\\
+					\tfrac{{\rm d} n_\mathsf{B}}{{\rm d} t} =   a\, n_\mathsf{A}-b\, n_\mathsf{B}\cdot n_\mathsf{C}-c\, n_\mathsf{B}^{2}\\
+					\tfrac{{\rm d} n_\mathsf{B}}{{\rm d} t} =   c\, n_\mathsf{B}^{2}
+				\end{cases}
+				$$
+			}
+			\textbf{Source code}: \href{}{\textcolor{indigo(dye)}{\it polybox}}.
+			\column{.6\textwidth}
+			\begin{figure}[!h]
+				\includegraphics[width=0.85\textwidth]{figures/chemical-kinetics/approximations}
+				\caption{\scriptsize Solution of the Roberts system.}
+			\end{figure}
+		\end{columns}
+		%
 	\end{itemize}
 \end{frame}
