@@ -1,0 +1,148 @@
+%% LyX 2.3.4.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage{mathpazo}
+\usepackage{tgadventor}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage[authoryear]{natbib}
+\setstretch{1.05}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\newcommand{\noun}[1]{\textsc{#1}}
+
+\@ifundefined{showcaptionsetup}{}{%
+ \PassOptionsToPackage{caption=false}{subfig}}
+\usepackage{subfig}
+\makeatother
+
+\usepackage{babel}
+
+% To make \maketitle in the center of the page
+\usepackage{titling}
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\begin{document}
+
+\title{\rule[0.5ex]{1\columnwidth}{2pt}{\Huge{}}\\
+\noun{\Huge geofluids project: results}\\
+Calculating the solubility of CO$_{2}$ and calcite in brine using
+a Gibbs energy minimization approach\\
+\rule[0.5ex]{1\columnwidth}{2pt}}
+\author{Lecturer: Dr. Svetlana Kyas and Dr. Allan Leal}
+
+%\maketitle
+\begin{titlingpage}
+	\maketitle
+\end{titlingpage}
+
+\begin{figure}
+\centering	
+\subfloat[Performed\textbf{ without corrections} on the species activities, $a_{i}$, and\textbf{ without interpolation} for the standard chemical potentials, $\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-ideal-and-no-interpolation/plot1}}\\
+\subfloat[Performed\textbf{ without corrections} on the species activities,
+$a_{i}$, but\textbf{with interpolation} for the standard chemical
+potentials, $\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-ideal-with-interpolation/plot1}}\\
+%
+\subfloat[Performed\textbf{with corrections} on the species activities, $a_{i}$,
+and\textbf{with interpolation} for the standard chemical potentials,
+$\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-correct/plot1}}\\
+\caption{Plot 1 performed for three different scenarios.}
+\end{figure}
+
+\begin{figure}
+\centering
+\subfloat[Performed\textbf{ without corrections} on the species activities,
+$a_{i}$, and\textbf{ without interpolation} for the standard chemical
+potentials, $\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-ideal-and-no-interpolation/plot2}}\\
+\subfloat[Performed\textbf{ without corrections} on the species activities,
+$a_{i}$, but\textbf{ with interpolation} for the standard chemical
+potentials, $\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-ideal-with-interpolation/plot2}}\\
+\subfloat[Performed\textbf{ with corrections} on the species activities, $a_{i}$,
+and\textbf{ with interpolation} for the standard chemical potentials,
+$\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-correct/plot2}}
+\caption{Plot 2 performed for three different scenarios.}
+\end{figure}
+
+\begin{figure}
+\centering
+\subfloat[Performed\textbf{ without corrections} on the species activities,
+$a_{i}$, and\textbf{ without interpolation} for the standard chemical
+potentials, $\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-ideal-and-no-interpolation/plot3}} \\
+\subfloat[Performed\textbf{ without corrections} on the species activities,
+$a_{i}$, but\textbf{ with interpolation} for the standard chemical
+potentials, $\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-ideal-with-interpolation/plot3}}\\
+\subfloat[Performed\textbf{ with corrections} on the species activities, $a_{i}$,
+and\textbf{ with interpolation} for the standard chemical potentials,
+$\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-correct/plot3}}
+\caption{Plot 3 performed for three different scenarios.}
+\end{figure}
+
+\begin{figure}
+\centering
+\subfloat[Performed\textbf{ without corrections} on the species activities,
+$a_{i}$, and\textbf{ without interpolation} for the standard chemical
+potentials, $\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-ideal-and-no-interpolation/plot4}}\\
+\subfloat[Performed\textbf{ without corrections} on the species activities,
+$a_{i}$, but\textbf{ with interpolation} for the standard chemical
+potentials, $\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-ideal-with-interpolation/plot4}}\\
+\subfloat[Performed\textbf{ with corrections} on the species activities, $a_{i}$,
+and\textbf{ with interpolation} for the standard chemical potentials,
+$\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-correct/plot4}}
+\caption{Plot 4 performed for three different scenarios.}
+\end{figure}
+
+\begin{figure}
+\centering
+\subfloat[Performed\textbf{ without corrections} on the species activities,
+$a_{i}$, and\textbf{ without interpolation} for the standard chemical
+potentials, $\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-ideal-and-no-interpolation/plot5}}\\
+\subfloat[Performed\textbf{ without corrections} on the species activities,
+$a_{i}$, but\textbf{ with interpolation} for the standard chemical
+potentials, $\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-ideal-with-interpolation/plot5}} \\
+\subfloat[Performed\textbf{ with corrections} on the species activities, $a_{i}$,
+and\textbf{ with interpolation} for the standard chemical potentials,
+$\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-correct/plot5}}
+\caption{Plot 5 performed for three different scenarios.}
+\end{figure}
+
+\begin{figure}
+\centering
+\subfloat[Performed\textbf{ without corrections} on the species activities,
+$a_{i}$, and\textbf{ without interpolation} for the standard chemical
+potentials, $\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-ideal-and-no-interpolation/plot6}} \\
+\subfloat[Performed\textbf{ without corrections} on the species activities,
+$a_{i}$, but\textbf{ with interpolation} for the standard chemical
+potentials, $\mu_{i}^{\circ}$.]{
+\includegraphics[height=0.25\textheight]{codes/figs-ideal-with-interpolation/plot6}}\\
+\subfloat[Performed\textbf{ with corrections} on the species activities, $a_{i}$,
+and\textbf{ with interpolation} for the standard chemical potentials,
+$\mu_{i}^{\circ}$.]{\includegraphics[height=0.25\textheight]{codes/figs-correct/plot6}}
+\caption{Plot 6 performed for three different scenarios.}
+\end{figure}
+
+\end{document}
