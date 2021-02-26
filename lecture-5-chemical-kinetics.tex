@@ -1526,7 +1526,8 @@ value.
 			\item $C_{j,m}$ is a function to model \emph{catalysts and inhibitors} of the mineral reaction, 
 			\item 
 			%
-			\[k_{j,m}:=k_{j,m}^{\circ} e^{\Big[-\tfrac{E_{m,i}}{R}(\tfrac{1}{T}-\tfrac{1}{298.15})\Big]} \]
+			\[
+			k_{j,m}:=k_{j,m}^{\circ} e^{\Big[-\tfrac{E_{m,i}}{R}(\tfrac{1}{T}-\tfrac{1}{298.15})\Big]} \]
 			%
 			is the \emph{rate constant} of the mineral reaction with
 			\begin{itemize}
@@ -1607,52 +1608,116 @@ value.
 \end{frame}
 
 \section{Numerical Method for Chemical Kinetics Calculation}
-
-\begin{frame}{Stiffness of system of ODEs}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% History of stiffness of system of ODEs
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{History of stiffness of system of ODEs}
 	\begin{itemize}
-		\item \alert{\bf Stiffness}: how hard is to solve a system of equations. 
-		\item \alert{\bf Why?} The system of coupled equations for combustion has very different time scale
-		characteristics. In geochemistry, the situation is similar, but a little less critical.
-		\item If {\bf nonstiff methods} are employed to solve stiff problems $\Rightarrow$ more computational is required.
-		One example is the propagation of flame fronts
+		\item \alert{\bf Stiffness}: characteristics of ``how hard'' is it to solve a system of equations. 
+		%
+		\item The first identification due to chemical engineers 
+		Curtiss and Hirschfelder (1952):
+		\begin{multline*}
+			\text{\emph{``Stiff equations are equations where certain implicit methods perform better, }} \\ 
+			\text{\emph{usually tremendously better, than explicit ones''.}}
+		\end{multline*}
+		\item \alert{\bf Where does it come from:} the system of coupled equations for combustion has very different time scale
+		characteristics. In geochemistry, the situation is similar, but a little less critical. 
+%		\item In particular, in Arrhenius equations the term 
+%		%
+%		\[
+%		k_{j,m}:=k_{j,m}^{\circ} e^{\Big[-\tfrac{E_{m,i}}{R}(\tfrac{1}{T}-\tfrac{1}{298.15})\Big]} \]
+%		%
+%		contributes into
+		\item If {\bf nonstiff methods} are employed to solve stiff problems $\Rightarrow$ {\bf more computational effort is required}.
+		%
+		\item This results in {\bf chemical problems being a bottleneck} in reaction kinetics (and other areas, e.g.,  electrical engineering, mechanical engineering, etc.) for 15 years.
+		%
+		\item In 1968, when a variety of methods began to appear in the literature.
 	\end{itemize}
 \end{frame}
-
-\begin{frame}{Mathematical definition of stiffness}
-\begin{itemize}
-	\item 
-%	Stiff equations and systems:
-% Let  > 0: small parameter. Consider the initial value problem
-%8<
-%:
-%dx(t)
-%dt
-%= 􀀀
-%1
-%
-%x(t); t 2 [0;T];
-%x(0) = 1;
-% Exponential solution x(t) = e􀀀t=.
-% Explicit Euler method with step size t:
-%xk+1 = (1 􀀀
-%t
-%
-%)xk ; x0 = 1;
-%with solution
-%xk = (1 􀀀
-%t
-%
-%)k :
-%Numerical
-\end{itemize}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Example of stiff problem and complication by numerical integration
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Example of stiff problem and complication by numerical integration}
+	\begin{itemize}
+		\item Stiff equations and systems:
+		let $\epsilon >$ 0 be a small small parameter. Consider the initial value problem
+		%
+		\[
+		\tfrac{{\rm d} x(t)}{{\rm d} t} = - \tfrac{1}{\epsilon}\,x(t), \quad 
+		x(0) = 1, \quad t \in [0, T],
+		\]
+		%
+		\item Exponential solution $x(t) = e^{-\tfrac{t}{\epsilon}}$.
+		\item In order to accurately integrate this problem with Euler method, $\delta t$ (integration time steps) must be smaller than $\epsilon$.
+	\end{itemize}
+	\begin{figure}[!t]
+		\centering
+		\subfloat[]{\includegraphics[width=0.3\textwidth]{figures/chemical-kinetics/solution-stiff-odes-eps-1}} \;
+		\subfloat[]{\includegraphics[width=0.35\textwidth]{figures/chemical-kinetics/solution-stiff-odes-eps-2}} \;
+		\subfloat[]{\includegraphics[width=0.3\textwidth]{figures/chemical-kinetics/solution-stiff-odes-eps-3}}
+	\end{figure}
 \end{frame}
+%%
+%% --------------------------------------------------------------------------------------------------------------------%
+%% Stiffness of system of ODEs
+%% --------------------------------------------------------------------------------------------------------------------%
+%%
+%\begin{frame}{History of stiffness of system of ODEs}
+%	\begin{itemize}
+%		\item The history of stiff differential equations goes back 55 years.
+%		%
+%		\item The first identification due to chemical engineers in 1952 (Curtiss and Hirschfelder, Proc. of the National Academy of Sciences of U.S., 1952): \\
+%		\begin{multline*}
+%			\text{\emph{``Stiff equations are equations where certain implicit methods perform better, }} \\ 
+%			\text{\emph{usually tremendously better, than explicit ones''.}}
+%		\end{multline*}
+%		%
+%		\item For 15 years, chemical problems a bottleneck in reaction kinetics and other areas, such as electrical engineering, mechanical engineering, etc,.
+%		%
+%		 \item In 1968, when a variety of methods began to appear in the literature.
+%	\end{itemize}
+%\end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
-% Numerical schemes of integration of systems of ODEs
+% Numerical integration schemes and codes for stiff systems
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Numerical schemes of integration of stiff systems of ODEs}
-	
+\begin{frame}{Numerical integration schemes and codes for stiff systems}
+
+\begin{itemize}
+
+\item \alert{\bf One-step methods}:
+%
+\begin{itemize}
+	\item implicit Runge-Kutta methods,
+	\begin{itemize}
+		\item e.g., Gauss, Radau, Lobatto methods, etc.
+	\end{itemize}
+	\item Rosenbrock methods (semi-implicit / semi-explicit / generalized / adaptive / additive Runge-Kutta methods),
+	\item semi-implicit extrapolation methods, 
+	%\item Implicit multistep BDF algorithm (Ascher and Petzold,
+\end{itemize}
+%
+\item \alert{\bf Multi-step methods} (the first numerical methods to be proposed for stiff differential equations):
+%
+\begin{itemize}
+	\item explicit Adams methods,
+	\item predictor-corrector schemes,
+	\item Nystrom methods, 
+	\item backward differentiation formular (BDF) schemes.
+\end{itemize}
+%
+\item For more details, see \cite{Hairer2010}.
+%
+\item In Reaktoro, for the integration of the chemical kinetics, the {\bf CVODE package implementing BDF methods} \cite{Cohen1996, Hindmarsh2005} is used. 
+\end{itemize}
+
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
@@ -1661,20 +1726,30 @@ value.
 %
 \begin{frame}{Example, Roberts system}
 	\vskip 10pt
-	\begin{itemize}
-		\item Consider the Roberts system modeling  \alert{\bf 3-species chemical kinetics problem}: 
+	%\begin{itemize}
+		%\item 
+		Consider the Roberts system modeling  \alert{\bf 3-species chemical kinetics problem}: 
 		find amount $n = [n_{\mathsf{A}}, n_{\mathsf{B}}, n_{\mathsf{C}}]^{\mathrm{T}}$ 
 		on the time-interval $t \in [0, 4 \cdot 10^{3}]$ with
 		%
 		\begin{itemize}
-			\item reaction rates $a = 4 \cdot10^{-2}$, $b = 10^{4}$, $c = 3\cdot10^{7}$ and 
-			\item initial condition $n^\circ = [n_\mathsf{A}^{\circ}, n_{B}^{\circ}, n_{C}^{\circ}]=[1, 0, 0]$
+			\item reaction rates $k_a = 4 \cdot10^{-2}$, $k_b = 10^{4}$, $k_c = 3\cdot10^{7}$ and 
+			\item initial condition $n^\circ = [n_\mathsf{A}^{\circ}, n_{B}^{\circ}, n_{C}^{\circ}]=[1, 0, 0]$.
 		\end{itemize}
 		%
+		\vskip -10pt
+		
 		\begin{columns}[t]
 			\column{.4\textwidth}
-			%
-			{
+			% 
+			   \footnotesize
+				\begin{alignat*}{3}
+					\mathsf{A} & \xrightleftharpoons[]{k_a} \mathsf{B} & \text{(slow)}\\[-5pt]
+					\mathsf{B + C} & \xrightleftharpoons[]{k_b} \mathsf{A + C} & \text{(fast)}\\[-5pt]
+					\mathsf{B + B} &\xrightleftharpoons[]{k_c} \mathsf{C + B} & \quad \text{(very fast)}
+				\end{alignat*}
+				%
+				\qquad resulting in the system of ODEs
 				$$
 				\quad 
 				\begin{cases}
@@ -1683,14 +1758,36 @@ value.
 					\tfrac{{\rm d} n_\mathsf{B}}{{\rm d} t} =   c\, n_\mathsf{B}^{2}
 				\end{cases}
 				$$
-			}
-			\textbf{Source code}: \href{}{\textcolor{indigo(dye)}{\it polybox}}.
 			\column{.6\textwidth}
 			\begin{figure}[!h]
-				\includegraphics[width=0.85\textwidth]{figures/chemical-kinetics/approximations}
+				\includegraphics[width=0.65\textwidth]{figures/chemical-kinetics/approximations}
 				\caption{\scriptsize Solution of the Roberts system.}
 			\end{figure}
 		\end{columns}
 		%
-	\end{itemize}
+		\vskip 5pt
+		\textbf{Source code}: \href{}{\textcolor{indigo(dye)}{\it polybox}} using \href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html}{\textcolor{indigo(dye)}{odeint}} function of 
+		\href{https://docs.scipy.org/doc/scipy/reference/integrate.html}{\textcolor{indigo(dye)}{\bf scipy.integrate}} Python package.
+	%\end{itemize}
+\end{frame}
+
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Example,Kinetic dissolution of carbonates
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Example, Calcite dissolution tutorial}
+	
+ Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/eq.sodium-chloride-solubility-in-water.ipynb}{\textcolor{indigo(dye)}{\it Kinetic dissolution of carbonate}} with \href{https://polybox.ethz.ch/index.php/s/DEVT1vjNEJNh4Zo}{\textcolor{indigo(dye)}{\it recording}}:
+ 	%
+ 	\begin{figure}[!t]
+ 	\centering
+ 	\subfloat[Calcite dissolution]{\includegraphics[width=0.35\textwidth]{figures/chemical-kinetics/kinetic-tutorial-calcite.png}} \qquad \qquad
+ 	\subfloat[Dolomite dissolution]{\includegraphics[width=0.35\textwidth]{figures/chemical-kinetics/kinetic-tutorial-dolomite.png}} \\[5pt]
+ 	\subfloat[Ca and Mg molality increase]{\includegraphics[width=0.35\textwidth]{figures/chemical-kinetics/kinetic-tutorial-ca-mg-ions.png}} \qquad \qquad
+ 	\subfloat[pH]{\includegraphics[width=0.35\textwidth]{figures/chemical-kinetics/kinetic-tutorial-ph.png}}
+ 	%
+ \end{figure}
+ 
+	
 \end{frame}
