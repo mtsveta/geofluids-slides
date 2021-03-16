@@ -206,6 +206,10 @@
 \newcommand\minus[1]{\mathllap{-}#1}
 %\newcommand\d{{\rm d}}
 
+%\usepackage{enumitem}
+%\newlist{mylist}{itemize}{1}
+%\setlist[mylist]{label={\textcolor{blue}{\bf +}}}
+%\newcommand\itema{\item[{\textcolor{red}{\bf --}}]}
 
 %===================================================================
 % S. Kyas packages
@@ -217,6 +221,13 @@
 %\usepackage{chemarr} % text over arrows
 \setbeamercovered{transparent} % make the text transparent on unspecified slides 
 
+\newcommand\Wider[2][4em]{%
+	\makebox[\linewidth][c]{%
+		\begin{minipage}{\dimexpr\textwidth+#1\relax}
+			\raggedright#2
+		\end{minipage}%
+	}%
+}
 
 \title{Geofluids — Part IV}
 \subtitle{Introduction to Geochemical and Reactive Transport Modeling}
@@ -235,8 +246,8 @@ NO F 61}
 %\input{lecture-3-thermodynamic-model}
 %\input{lecture-4-numerical-method-equilibrium}
 %project descriptions
-\input{lecture-5-chemical-kinetics}
-%\input{lecture-6-reactive-transport}
+%\input{lecture-5-chemical-kinetics}
+\input{lecture-6-reactive-transport}
 %\input{lecture-7-demonstrations-of-computer-simulations}
 
 \begin{frame}[allowframebreaks]{References}
