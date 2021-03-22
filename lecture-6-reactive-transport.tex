@@ -98,7 +98,7 @@
 	
 	\begin{figure}[!t]
 		\centering
-		\includegraphics[width=0.48\textwidth]{figures/reactive-transport/steefel-coupling-example.png}
+		\includegraphics[width=0.47\textwidth]{figures/reactive-transport/steefel-coupling-example.png}
 		\caption{Illustration from \cite{Steefel2005}: {\bf coupled geochemical, microbiological,
 			and hydrologic processes operating at both the aquifer and pore scale}, i.e., oxidation-reduction zones developed in an aquifer downstream from an organic-rich landfill.}
 	\end{figure}
@@ -107,8 +107,98 @@
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
+% Petroleum reservoir simulation
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Petroleum reservoir simulation}
+	
+	
+	
+%	\begin{columns}[t]
+%		\column{0.6\textwidth}
+%		\vskip -5pt
+	
+		\begin{itemize}
+		\item {\bf Important characteristics} are the natures of the \alert{\bf rock and of the fluids} filling it.
+		%
+		\item \alert{\bf Reservoir characteristics}:
+		\begin{itemize}
+			\item heterogeneous;
+			%
+			\item properties heavily depend
+			on the space location.
+		\end{itemize}
+		%
+		\item Example, \alert{\bf fractured reservoir} is heterogeneous blocks of porous media (the matrix) and a net of fractures:
+		%
+		\begin{itemize}
+			\item rock properties in such a reservoir dramatically change; 
+			\item permeability in the matrix is one millidarcy (md);
+			\item permeability in the fractures in thousands md.
+		\end{itemize}
+		
+	\end{itemize}
+		
+%		\column{0.4\textwidth}
+%		\vskip -20pt
+%		
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.4\textwidth]{figures/reactive-transport/reservoir-simulation.png}
+		\end{figure}
+%	\end{columns}
+
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Stages of oil recovery
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Stages of oil recovery}
+	The nature of the fluids filling in reservoir strongly depends on the \alert{\bf stage of oil recovery}:
+	\begin{itemize}
+		\item {\bf Early stage / primary recovery}: 
+		\begin{itemize}
+			\item single fluid (gas/oil), 
+			\item high pressure,
+			\item gas/oil is produced by natural decompression without 
+			pumping effort at the wells, 
+			\item stage ends when a pressure equilibrium between the oil field and the atmosphere occurs.
+		\end{itemize}
+		\item {\bf Secondary recovery stage} (to recover part of the remaining oil): 
+		\begin{itemize}
+			\item fluid is injected through injection wells,
+			\item oil is produced through production wells,
+			\item high reservoir pressure,
+			\item high flow rates,
+			\item 
+			$
+			\begin{cases}
+			P_{\rm reservior} \geq P_{\rm bubble}: & 
+			\text{two-phase immiscible flow (water and oil phases),} \\
+			P_{\rm reservior} < P_{\rm bubble}: & 	
+			\text{the flow is of the oil type.} \\
+			%\text{the oil splits into liquid and gaseous phases;} \\
+			%& 	\text{the water phase does not exchange mass with the other phases, but the liquid and gaseous phases exchange mass} \\
+			\end{cases}
+			$			
+		\end{itemize}
+		%
+
+%	In the secondary recovery, if the reservoir pressure is above the bubble point pressure.,
+%	of the oil phase, there is two-phase immiscible flow, one phase being water and the other
+%	being oil, without mass transfer between the phases. If the reservoir pressure drops below
+%	the bubble point pressure, then the oil (more precisely, the hydrocarbon phase) is split into
+%	a liquid phase and a gaseous phase in thermodynamic equilibrium. In this case, the flow
+%	is of black oil type; the water phase does not exchange mass with the other phases, but the
+%	liquid and gaseous phases exchange mass.
+	\end{itemize}
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
 % Advection--diffusion equation (transport equation)
 % --------------------------------------------------------------------------------------------------------------------%
+%
 %
 \begin{frame}{Advection-diffusion-reaction equation (transport equation)}
 \begin{itemize}
@@ -138,30 +228,6 @@ where \\[5pt]
 	\item $\rho (u)$ is the \alert{\bf reaction operator}. 
 \end{itemize}
 \end{itemize}
-\end{frame}
-%
-% --------------------------------------------------------------------------------------------------------------------%
-% Petroleum reservoir simulation
-% --------------------------------------------------------------------------------------------------------------------%
-%
-\begin{frame}{Petroleum reservoir simulation}
-	\begin{itemize}
-	\item {\bf Important characteristics} are the natures of the rock and of the fluids filling it.
-	%
-	\item 
-	\end{itemize}
-\end{frame}
-%
-% --------------------------------------------------------------------------------------------------------------------%
-% Stages of oil recovery
-% --------------------------------------------------------------------------------------------------------------------%
-%
-\begin{frame}{Stages of oil recovery}
-	\begin{itemize}
-		\item 
-		%
-		\item 
-	\end{itemize}
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
