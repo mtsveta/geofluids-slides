@@ -18,7 +18,7 @@ R = 8.3144598
 # The reference pressure P(ref) (in units of Pa)
 Pref = 1.0e5
 
-# The Drummond model for ln activity coefficient of CO2(aq).
+# The Drummond model for ln activity coefficient of     .
 # Parameters:
 # - T is temperature in K
 # - I is ionic strength in molal
@@ -53,7 +53,7 @@ def newton(f, fprime, x0):
     counter = 0 # the counter of number of iterations
     x = x0 # start with the solution x being the initial guess
     # Perform one or more Newton iterations
-    for counter in xrange(maxiters):
+    for counter in range(maxiters):
         x = x - f(x) / fprime(x) # calculate the new approximation for x
         if abs(f(x)) < tolerance: # check for convergence
             return x # return x if the calculation converged
@@ -102,9 +102,9 @@ def ln_fugacity_coefficient_co2(T, P):
 
     return ln_phiCO2
 
-# Create a list of component names
-# components = ['H', 'O', 'C', 'Na', 'Cl', 'Ca', 'Z']
-components = ['H', 'O', 'C', 'Na', 'Cl', 'Ca']
+# Create a list of elements names
+# elements = ['H', 'O', 'C', 'Na', 'Cl', 'Ca', 'Z']
+elements = ['H', 'O', 'C', 'Na', 'Cl', 'Ca']
 
 # Create a list of species names
 species = ['H2O(l)',
@@ -123,7 +123,7 @@ species = ['H2O(l)',
 charges = array([0, 1, -1, -1, -2, 0, 1, -1, 2])
 
 # The number of components and species
-num_components = len(components)
+num_components = len(elements)
 num_species = len(species)
 
 # The number of aqueous, gaseous, and mineral species
@@ -155,8 +155,8 @@ formula_matrix = array([
     # [0, 1,-1,-1,-2, 0, 1,-1, 2, 0, 0]   # Z
 ])
 
-# Create an array with the molar masses of the components
-components_molar_masses = array([
+# Create an array with the molar masses of the elements
+elements_molar_masses = array([
     1.0079,   # H
     15.9994,  # O
     12.0107,  # C
@@ -165,7 +165,7 @@ components_molar_masses = array([
     40.078])  # Ca
 
 # Create an array with the molar masses of the species
-species_molar_masses = transpose(formula_matrix).dot(components_molar_masses)
+species_molar_masses = transpose(formula_matrix).dot(elements_molar_masses)
 
 # A global variable to allow one to choose if ideal activity models are used
 useideal = False
@@ -436,10 +436,10 @@ u0_table['CaCO3(s,calcite)'] = array([
 # Find the fist index i such that values[i] <= val <= values[i+1].
 # Parameters:
 # - val is the given value
-# - values is the list of sorted values in whic
+# - values is the list of sorted values
 # Example:
 # >>> print index_interpolation_point(60.0, [0.0, 25.0, 50.0, 100.0, 150.0])
-# 3
+# 2
 # >>> print index_interpolation_point(150.0, [0.0, 25.0, 50.0, 100.0, 150.0])
 # 3
 def index_interpolation_point(val, values):
@@ -607,17 +607,17 @@ def minimize(state, problem, **options):
     if output:
         header = '{:20} '.format('Iteration')
         header += '{:20} '.format('Error')
-        for i in xrange(n):
+        for i in range(n):
             header += '{:20} '.format('x[%s]' % species[i])
-        for i in xrange(m):
-            header += '{:20} '.format('y[%s]' % components[i])
-        for i in xrange(n):
+        for i in range(m):
+            header += '{:20} '.format('y[%s]' % elements[i])
+        for i in range(n):
             header += '{:20} '.format('z[%s]' % species[i])
         bar = '=' * len(header)
         header = bar + '\n' + header + '\n' + bar
-        print >>output, header
-
-    for it in xrange(imax):
+        print(header, end="", file=output)
+    
+    for it in range(imax):
         f, g, H = problem.objective(x)
 
         # Assemble the negative of the residual vector -F
@@ -639,13 +639,14 @@ def minimize(state, problem, **options):
         if output:
             string = '{:20} '.format(str(it))
             string += '{:20} '.format(str(error))
-            for i in xrange(n):
+            for i in range(n):
                 string += '{:20} '.format(str(x[i]))
-            for i in xrange(m):
+            for i in range(m):
                 string += '{:20} '.format(str(y[i]))
-            for i in xrange(n):
+            for i in range(n):
                 string += '{:20} '.format(str(z[i]))
-            print >>output, string
+            print(string, end="", file=output)
+
 
         # Check if the calculation has converged
         if error < tol:
@@ -670,7 +671,7 @@ def minimize(state, problem, **options):
         dz = delta[-n:]
 
         # Calculate the new values for x and z
-        for i in xrange(n):
+        for i in range(n):
             x[i] += dx[i] if x[i] + dx[i] > 0.0 else -tau * x[i]
             z[i] += dz[i] if z[i] + dz[i] > 0.0 else -tau * z[i]
 
@@ -680,9 +681,9 @@ def minimize(state, problem, **options):
     return (it, it < imax, error)
 
 
-# Auxiliary funtion that calculates the vector b of component amounts for
+# Auxiliary funtion that calculates the vector b of elements amounts for
 # a given recipe involving H2O, CO2, NaCl, and CaCO3.
-def component_amounts(kgH2O, molCO2, molNaCl, molCaCO3):
+def element_amounts(kgH2O, molCO2, molNaCl, molCaCO3):
     molH2O = 55.508 * kgH2O
     b = [2*molH2O,                        # H
          molH2O + 2*molCO2 + 3*molCaCO3,  # O
@@ -690,7 +691,7 @@ def component_amounts(kgH2O, molCO2, molNaCl, molCaCO3):
          molNaCl,                         # Na
          molNaCl,                         # Cl
          molCaCO3]                        # Ca
-    # Ensure the amounts of each component is greater than zero
+    # Ensure the amounts of each elements is greater than zero
     for i in range(len(b)):
         if b[i] <= 0.0:
             b[i] = 1e-10  # replace zero or negative by a small positive number
@@ -737,7 +738,7 @@ class EquilibriumState:
 # Parameters:
 #   - T is temperature in K
 #   - P is pressure in Pa
-#   - b is an array with molar amounts of components
+#   - b is an array with molar amounts of elements
 #   - options is a dictionary with options for the calculation
 # Return:
 #   - an state object with members n, y, z, so that the
@@ -781,15 +782,27 @@ def equilibrate(T, P, b, **options):
 ################################################
 
 T = 298.15  # temperature input in K
-P = 1.0e5   # pressure input in Pa
+P = 1.0e5   # pressure  input in Pa
 
-b = component_amounts(kgH2O=1, molCO2=5, molNaCl=0.2, molCaCO3=5)
+#b = element_amounts(kgH2O=1, molCO2=5, molNaCl=0.2, molCaCO3=5)
+#b = element_amounts(kgH2O=1, molCO2=5, molNaCl=0.0, molCaCO3=0.0)
+#b = element_amounts(kgH2O=1, molCO2=5, molNaCl=0.2, molCaCO3=0.0)
+#b = element_amounts(kgH2O=1, molCO2=5, molNaCl=0.6, molCaCO3=0.0)
+#b = element_amounts(kgH2O=1, molCO2=5.0, molNaCl=0.6, molCaCO3=1.0)
+b = element_amounts(kgH2O=1, molCO2=5.0, molNaCl=0.0, molCaCO3=1.0)
 
 state = equilibrate(T, P, b, output=True)
 
-output = open('result.txt', 'w')
+#output = open('result.txt', 'w')
+#output = open('result_co2_solubility_small_amount_0.6_mol_nacl_brine.txt', 'w')
+#output = open('result_calcite_solubility_0.6_mol_nacl_brine.txt', 'w')
+#output = open('result_calcite_solubility_0.6_mol_nacl_brine_saturated_with_co2.txt', 'w')
+output = open('result_calcite_solubility_pure_water.txt', 'w')
 
-print >>output, state
+print(state, end="", file=output)
+
+import sys
+sys.exit()
 
 # ##############################################################################
 # # The code below is the example given in the project description document.
@@ -798,7 +811,7 @@ print >>output, state
 # P = 100e5  # pressure in Pa (=100 bar)
 # # Calculate the amounts of elements based on a mixture of
 # # 1 kg of H2O, 1 mol of CO2, 0.5 moles of NaCl, and 5 moles of CaCO3.
-# b = component_amounts(kgH2O=1, molCO2=1, molNaCl=0.5, molCaCO3=0.0)
+# b = element_amounts(kgH2O=1, molCO2=1, molNaCl=0.5, molCaCO3=0.0)
 # state = equilibrate(T, P, b)  # perform the equilibrium calculation
 # iH = species.index('H+(aq)')  # the index of species H+(aq)
 # pH = -log10(state.a[iH])  # calculate the pH of the aqueous solution
@@ -808,7 +821,7 @@ print >>output, state
 # def calculate_pH(molesCO2, molesCaCO3=0.0):
 #     T = 75 + 273.15  # in K
 #     P = 100 * 1e5  # in Pa
-#     b = component_amounts(kgH2O=1, molCO2=molesCO2, molNaCl=0.0, molCaCO3=molesCaCO3)
+#     b = elementelement_amounts(kgH2O=1, molCO2=molesCO2, molNaCl=0.0, molCaCO3=molesCaCO3)
 #     state = equilibrate(T, P, b)
 #     iH = species.index('H+(aq)')
 #     pH = -log10(state.a[iH])
@@ -837,7 +850,7 @@ print >>output, state
 
 
 def solubilityCO2(I, T, P):
-    b = component_amounts(kgH2O=1, molCO2=10.0, molNaCl=I, molCaCO3=0.0)
+    b = element_amounts(kgH2O=1, molCO2=10.0, molNaCl=I, molCaCO3=0.0)
     state = equilibrate(T, P, b)
     assert state.n[species.index('CO2(g)')] > 0.1
     iCO2 = species.index('CO2(aq)')
@@ -848,7 +861,7 @@ def solubilityCO2(I, T, P):
 
 
 def pH(molesCO2, I, T, P):
-    b = component_amounts(kgH2O=1, molCO2=molesCO2, molNaCl=I, molCaCO3=0.0)
+    b = element_amounts(kgH2O=1, molCO2=molesCO2, molNaCl=I, molCaCO3=0.0)
     state = equilibrate(T, P, b)
     iH = species.index('H+(aq)')
     pH = -log10(state.a[iH])
@@ -856,28 +869,35 @@ def pH(molesCO2, I, T, P):
 
 
 def solubilityCaCO3(molesCO2, I, T, P):
-    b = component_amounts(kgH2O=1, molCO2=molesCO2, molNaCl=I, molCaCO3=10)
+    b = element_amounts(kgH2O=1, molCO2=molesCO2, molNaCl=I, molCaCO3=10)
     state = equilibrate(T, P, b)
-    assert state.n[species.index('CaCO3(s,calcite)')] > 0.1
+    
+    assert state.n[species.index('CaCO3(s,calcite)')] > 0.1 # check that calcite amount is more than 0.1 mol
+    
     iCa = species.index('Ca++(aq)')
     molality_Ca = state.c[iCa]
     return molality_Ca
 
 
 def dissolvedMassCaCO3(molesCO2, I, T, P):
-    b = component_amounts(kgH2O=1, molCO2=molesCO2, molNaCl=I, molCaCO3=10)
+    
+    molCaCO3 = 10.0
+    molar_massCaCO3 = 100.0869 # g/mol
+
+    b = element_amounts(kgH2O=1, molCO2=molesCO2, molNaCl=I, molCaCO3=molCaCO3)
     state = equilibrate(T, P, b)
-    assert state.n[species.index('CaCO3(s,calcite)')] > 0.1
+    
+    assert state.n[species.index('CaCO3(s,calcite)')] > 0.1 # check that calcite amount is more than 0.1 mol
     iCa = species.index('Ca++(aq)')
     molality_Ca = state.c[iCa]
-    initial_mass = 10 * 100.09  # 10 moles * 100.09 g/mol
+    initial_mass = molCaCO3 * molar_massCaCO3  # 10 moles * 100.09 g/mol
     final_mass = state.m[species.index('CaCO3(s,calcite)')]
     return initial_mass - final_mass
 
 
 npoints = 50
 
-def plot1():
+def plot_co2_solubility_vs_ionic_strength():
     T1 = 50 + 273.15   # temperature in K
     T2 = 75 + 273.15   # temperature in K
     T3 = 100 + 273.15  # temperature in K
@@ -905,7 +925,7 @@ def plot1():
     # plt.show()
 
 
-def plot2():
+def plot_co2_solubility_vs_temperature():
     I1 = 0.0  # ionic strength in molal
     I2 = 0.3  # ionic strength in molal
     I3 = 0.6  # ionic strength in molal
@@ -1004,8 +1024,8 @@ def plot6():
 useideal = False
 userefpotentials = False
 
-plot1()
-plot2()
+plot_co2_solubility_vs_ionic_strength()
+plot_co2_solubility_vs_temperature()
 plot3()
 plot4()
 plot5()
