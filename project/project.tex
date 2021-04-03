@@ -162,7 +162,7 @@ governing the chemistry of fluids or because they are models calibrated
 with experimental data.
 \item The implementation of an interpolation scheme for the calculation
 of standard chemical potentials of the species, $\mu_{i}^{\circ}$,
-at temperatures and pressures other than only 25~°C and 1~bar. This
+at temperatures and pressures other than only 25~Â°C and 1~bar. This
 interpolation capability will extend the temperature and pressure
 range capability of the code; permit more accurate equilibrium calculations,
 and thus solubility calculations, at higher temperatures and pressures;
@@ -196,7 +196,7 @@ to me by that day.}
 
 \begin{figure}
 \begin{centering}
-\includegraphics{../figures/figures-for-project}
+\includegraphics{figures/figures-for-project}
 \par\end{centering}
 \caption{\label{fig:assigned-figures}The figures that need to be plot in this
 project. }
@@ -350,14 +350,14 @@ to calculate $\gamma_{i}$ for aqueous ions as follows:
 \begin{equation}
 \log_{10}\gamma_{i}=-A_{\gamma}Z_{i}^{2}\left(\dfrac{\sqrt{I}}{1+\sqrt{I}}-0.3I\right),
 \end{equation}
-where $A_{\gamma}$ is a Debye\textendash Hückel parameter defined
+where $A_{\gamma}$ is a Debye\textendash HÃ¼ckel parameter defined
 as:
 \begin{equation}
 A_{\gamma}=1.824928\cdot10^{6}\rho_{\mathrm{H_{2}O}}^{1/2}(\epsilon_{\mathrm{H_{2}O}}T)^{-3/2},
 \end{equation}
 where $\rho_{\mathrm{H_{2}O}}$ and $\epsilon_{\mathrm{H_{2}O}}$
 are the density and dielectric constant of pure water. In this project,
-use ${A_{\gamma}=0.5095}$, which corresponds to its value at 25~°C
+use ${A_{\gamma}=0.5095}$, which corresponds to its value at 25~Â°C
 and 1~bar. See Figure~\ref{fig:activity-coefficient-ions}. 
 
 \begin{tcolorbox}
@@ -405,7 +405,7 @@ where ${c_{1}=-1.0312}$, ${c_{2}=1.2806\cdot10^{-3}}$, ${c_{3}=255.9}$,
 ${c_{4}=0.4445}$ and ${c_{5}=-1.606\cdot10^{-3}}$; $T$ is temperature
 in units of K; and $I$ is the ionic strength of the aqueous solution
 in units of molal. This equation is valid within the temperature and
-salinity ranges 20\textendash 400~°C and 0\textendash 6.5~molal
+salinity ranges 20\textendash 400~Â°C and 0\textendash 6.5~molal
 respectively. See Figure~\ref{fig:activity-coefficient-co2-drummond}.
 
 \subsection{Activity model for gaseous solution\label{subsec:activity-model-gaseous}}
@@ -659,7 +659,7 @@ using the SUPCRT92 \citep{Johnson1992} database \texttt{slop98.dat}.}
 
 \begin{tabular*}{1\columnwidth}{@{\extracolsep{\fill}}ccccc}
 \toprule 
-\multirow{2}{*}{} & \multirow{2}{*}{$T$ {[}°C{]}} & \multicolumn{3}{c}{$P$ {[}bar{]}}\tabularnewline
+\multirow{2}{*}{} & \multirow{2}{*}{$T$ {[}Â°C{]}} & \multicolumn{3}{c}{$P$ {[}bar{]}}\tabularnewline
 \cmidrule{3-5} \cmidrule{4-5} \cmidrule{5-5} 
  &  & 1 & 50 & 100\tabularnewline
 \midrule
@@ -724,7 +724,7 @@ using the SUPCRT92 \citep{Johnson1992} database \texttt{slop98.dat}.}
 
 \footnotesize
 
-\textbf{Note:} At 100~°C and 1~bar, water is in vapor state, and
+\textbf{Note:} At 100~Â°C and 1~bar, water is in vapor state, and
 thus a dash ``\textemdash '' is used for the values of $\mu_{i}^{\circ}$
 for aqueous species at that temperature and pressure condition. What
 could be an appropriate value to use in the Python code for those
@@ -732,13 +732,13 @@ entries?
 \end{table}
 
 The provided Python code is limited to calculate the solubility of
-CO$_{2}$ and CaCO$_{3}$ at 25~°C and 1~bar only. This is because
+CO$_{2}$ and CaCO$_{3}$ at 25~Â°C and 1~bar only. This is because
 the code only uses \emph{standard chemical potentials of the species},
 $\mu_{i}^{\circ}$, at that temperature and pressure values. 
 
 Table~\ref{tab:standard-chemical-potentials} contains the standard
 chemical potentials of all species in Table~\ref{tab:chemical-system-example}
-at temperatures 25, 50, 75, and 100~°C and pressures 1, 50, 100~bar.
+at temperatures 25, 50, 75, and 100~Â°C and pressures 1, 50, 100~bar.
 In this project, $\mu_{i}^{\circ}$ at a given $T$ and $P$ needs
 to be interpolated from the given values of $\mu_{i}^{\circ}$ at
 those temperature and pressure points. In what follows, we describe
@@ -778,7 +778,7 @@ $f$ at the red point at $(x,y)$.}
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=1\textwidth]{../figures/project-output-results-demo}
+\includegraphics[width=1\textwidth]{figures/project-output-results-demo}
 \par\end{centering}
 \caption{\label{fig:output-results}The file \texttt{results.txt} that is output
 by executing the Python code \texttt{project.py}.}
@@ -943,7 +943,7 @@ the aqueous solution:
 One of the figures to be plot as part of this project is a pH versus
 amount of CO$_{2}$ (see Figure~\ref{fig:assigned-figures}). In
 this figure, a series of equilibrium calculations need to be performed
-at 75~°C and 100~bar. In this series of calculations, the idea is
+at 75~Â°C and 100~bar. In this series of calculations, the idea is
 to mix an increasing amount of CO$_{2}$, from 0 to 2 moles, with
 1~kg of H$_{2}$O and 0.3~mol of NaCl (which should produce an aqueous
 solution with 0.3 NaCl molal as required). You should decide how many
@@ -976,7 +976,7 @@ coefficients of ionic species;
 \item \textbf{5~points} if the Drummond model is incorporated for the activity
 coefficient of species CO$_{2}$(aq);
 \item \textbf{5~points} if the figures are produced with standard chemical
-potentials corrected for temperatures and pressures other than 25~°C
+potentials corrected for temperatures and pressures other than 25~Â°C
 and 1~bar.
 \end{itemize}
 Thus, by resolving all the above issues, you can achieve the maximum
