@@ -1,4 +1,4 @@
-\section{Reactive Transport Modeling}
+\section{Reactive transport modeling}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Introduction
@@ -192,34 +192,32 @@
 % --------------------------------------------------------------------------------------------------------------------%
 %
 \begin{frame}{Enhanced oil recovery techniques}
-	 Water flooding:
 	\begin{itemize}
-		\item this technique is not very effective: > 50 \%  of hydrocarbons often remain in the reservoir;
+	 \item \alert{\bf Water flooding}
+	 %
+	\begin{itemize}
+		\item is not very effective: > 50 \%  of hydrocarbons often remain in the reservoir;
 		%
 		\item large amount of oil is trapped in small pores and cannot be washed out;
 		%
 		\item the oil is heavy and viscous, whereas the water is extremely mobile;
 		%
-		\item with sufficiently high flow rates, 
-		the production wells primarily produce water instead of oil.
+		\item with sufficiently high flow rates, the production wells primarily produce water instead of oil.
 	\end{itemize}
-		%
+	%
+	\item \alert{\bf Enhanced recovery techniques} (using complex chemical and thermal effects) is injecting materials that are not normally present in a petroleum reservoir. 
+	%
+	\item {\bf Main objective} of these techniques	is to achieve \alert{\bf miscibility} (and thus \alert{\bf eliminate the residual oil saturation oil}) by
+	%
+	\begin{itemize}
+		\item increasing temperature (e.g., in situ combustion) or
+		\item injecting other chemical species (e.g., CO$_2$).
+	\end{itemize}
+	%
+	\item {\bf Thermal methods} (steam drive and soak).
+	\item {\bf Chemical flooding} (alkaline, surfactant, polymer, and foam flooding).
+	\end{itemize}
 \end{frame}
-%To recover more of the hydrocarbons, several enhanced recovery techniques have been
-%developed. These techniques involve complex chemical and thermal effects and are termed
-%tertiary recovery or enhanced recovery. Enhanced oil recovery is oil recovery by injecting
-%materials that are not normally present in a petroleum reservoir. There are many different
-%versions of enhanced recovery techniques, but one of the main objectives of these techniques
-%is to achieve miscibility and thus eliminate the residual oil saturation. The miscibility is
-%achieved by increasing temperature (e.g., in situ combustion) or by injecting other chemical
-%species like CO2. One typical flow in enhanced recovery is the compositional flow, where
-%only the number of chemical species is given a priori, and the number of phases and the
-%composition of each phase in terms of the given species depend on the thermodynamic
-%conditions and the overall concentration of each species. Flows of other types involve
-%thermal methods, particularly steam drive and soak, and chemical flooding, such as alkaline,
-%surfactant, polymer, and foam (ASP+foam) flooding. All flows of these types in petroleum
-%reservoir applications are considered in this book.
-%
 % --------------------------------------------------------------------------------------------------------------------%
 % Advection--diffusion equation (transport equation)
 % --------------------------------------------------------------------------------------------------------------------%
@@ -461,7 +459,8 @@ a point $x_{i}$
 f(x_{i}+\Delta x)=f(x_{i})+\frac{\partial f(x_{i})}{\partial x}\,\Delta x+\frac{1}{2}\frac{\partial^{2}f(x_{i})}{\partial x^{2}}\,\Delta x^{2}+\cdots+\frac{1}{n!}\frac{\partial^{n}f(x_{i})}{\partial x^{n}}\,\Delta x^{n}+\cdots
 \]
 \item \textbf{Exercise:} Write the Taylor expansion for $f(x)=e^{x}$ around
-$x_{i}=0$. \hiddenpause
+$x_{i}=0$. 
+\hiddenpause
 \item \textbf{Answer:}
 \[
 f(x_{i}+h)=e^{x_{i}+\Delta x} \approx 1+\, \Delta x+\frac{1}{2}\, \Delta x^{2}+\frac{1}{6}\, \Delta x^{3}+\cdots
@@ -696,7 +695,8 @@ to prevent this.
 \includegraphics[height=0.6\textheight]{figures/reactive-transport//numerical-diffusion-illustration-1}
 \par\end{center}
 
-\rcol\hiddenpause
+\rcol
+\hiddenpause
 \begin{center}
 \includegraphics[height=0.6\textheight]{figures/reactive-transport//numerical-diffusion-illustration-2}
 \par\end{center}
@@ -725,7 +725,7 @@ into the the following tridiagonal matrix form:
 %
 \item \textbf{Exercise: }Find the values of the coefficients
 $\alert{a_{i}}, \alert{b_{i}}, \alert{c_{i}},$ and $\alert{d_{i}}$.
-%\hiddenpause
+\hiddenpause
 %\item \textbf{Answer:}
 \end{itemize}
 %\[
@@ -841,7 +841,7 @@ with
 %\qquad\text{and}\qquad
 %\left(D\frac{\partial^{2}u}{\partial x^{2}}\right)_{n}^{k+1}=0.
 %\]
-%\hiddenpause
+\hiddenpause
 %\item \textbf{Answer:} The algebraic equation is:
 %\[
 %\left(-\frac{v\Delta t}{\Delta x}\right)u_{n-1}^{k+1}+\left(1+\frac{v\Delta t}{\Delta x}\right)u_{n}^{k+1}=u_{n}^{k}+\Delta tf_{n-1},
@@ -1090,7 +1090,7 @@ element} and according to {\bf the mass conservation condition for the elements}
 %\[
 %\sum_{i=1}^{\mathrm{N}}A_{ji}r_{i}=\;?
 %\]
-%\hiddenpause
+\hiddenpause
 %\end{itemize}
 %
 %\column{0.5\textwidth}
@@ -1101,7 +1101,7 @@ element} and according to {\bf the mass conservation condition for the elements}
 %\text{of element \ensuremath{j}}
 %\end{pmatrix}
 %\]
-%\hiddenpause\textbf{ }
+\hiddenpause\textbf{ }
 %\item \textbf{Question:} What is the rate of production of every chemical
 %element?
 %\end{itemize}
@@ -1250,7 +1250,7 @@ we use the following \alert{\bf operator splitting} scheme:
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
-% Example,Kinetic dissolution of carbonates
+% Example, Kinetic dissolution of carbonates
 % --------------------------------------------------------------------------------------------------------------------%
 %
 \begin{frame}
@@ -1315,4 +1315,188 @@ we use the following \alert{\bf operator splitting} scheme:
 		\includegraphics[width=0.54\textwidth]{figures/reactive-transport/siderite-pyrrhotite-2.png}
 		\caption{Siderite dissolution and pyrrhotite precipitation.}
 	\end{figure}
+\end{frame}
+
+\section{Reactive transport flow}
+
+\begin{frame}{Single-phase fluid flow in porous media}
+%	We consider a relatively simple model for fluid flow for the purpose
+%	of assessing the potential of the ODML algorithm to accelerate chemical
+%	equilibrium calculations in reactive transport simulations. . This
+%	is because our interest in this study is to evaluate how ODML behaves
+%	considering more complex chemical systems and heterogeneous porous
+%	media. In what follows, we assume the fluid is incompressible, gravity
+%	effects are negligible, and the porous medium is isotropic and nondeformable.
+	Solve the coupled \alert{\textbf{continuity equation}}
+	and the  \alert{\textbf{Darcy equation}} below to compute the fluid pressure
+	$P$ and fluid Darcy velocity $\boldsymbol{u}$ throughout the medium:
+	\begin{alignat}{2}
+		\nabla\cdot(\varrho\boldsymbol{u}) & =f & \qquad & \text{in }\Omega\times(0,t_{{\rm final}}),\\
+		\boldsymbol{u} & =-\frac{\kappa}{\mu}\nabla P &  & \text{in }\Omega\times(0,t_{{\rm final}}).\label{eq:darcy}
+	\end{alignat}
+	Here, 
+	\begin{itemize}
+		\item $\varrho$ and $\mu$ are the fluid density and the dynamic
+		viscosity,
+		\item $f$ corresponds to the fluid injection\slash production
+		rate, 
+		\item $\kappa=\kappa(\boldsymbol{x})$, $\boldsymbol{x}\in\Omega$,
+		represents the (isotropic) permeability field of the porous rock,
+		\item $\Omega$ denotes the physical domain, and 
+		\item $t_{{\rm final}}$ indicates the final simulation time.
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}{Reactive transport of the fluid species}
+%	Mass conservation applies to the chemical species in the fluid as
+%	they advect, diffuse, disperse, and react with rock minerals in a
+%	porous medium. We apply the mathematical formulation presented in
+%	Appendix~4 of \citet{Allanetal2020} for the reactive transport of
+%	fluid species in terms of mass conservation of chemical elements and
+%	electric charge. This approach is a standard procedure in the literature
+%	that substantially reduces the number of PDEs to be solved for transport
+%	phenomena \citep{Lichtner1985}. 
+%	The formulation also accounts for
+%	the dissolution and precipitation of rock minerals. 
+	For convenience,
+	we write below the governing equation:
+	\begin{equation}
+		\frac{\partial(b_{i}^{\text{f}}+b_{i}^{\text{s}})}{\partial t}+\nabla\cdot(\boldsymbol{v}b_{i}^{\text{f}}-D\nabla b_{i}^{\text{f}})=0\qquad(i=1,\ldots,\mathrm{E}),\label{eq:elemental-mass-conservation-equation}
+	\end{equation}
+	where $b_{i}^{\text{f}}$ and $b_{i}^{\text{s}}$ are the \emph{bulk
+		concentrations }(mol/m$^{3}$)\emph{ of elements(chemical elements
+		and charge) in the fluid and the solid partitions}, respectively\emph{.
+	}Here, $D$ is the \emph{dispersion-diffusion tensor} \citep{Peaceman1977},
+	i.e., 
+	\begin{equation}
+		D=(\alpha_{\mathrm{mol}}+\alpha_{\mathrm{t}}|\boldsymbol{u}|)I+\frac{\alpha_{\mathrm{l}}-\alpha_{\mathrm{t}}}{|\boldsymbol{u}|}\boldsymbol{u}\otimes\boldsymbol{u}\label{eq:dispersion-diffusion-tensor}
+	\end{equation}
+	where $\alpha_{\mathrm{mol}}$ is the molecular diffusion coefficient
+	as well as $\alpha_{\mathrm{l}}$ and $\alpha_{\mathrm{t}}$ are the
+	longitudinal and the transversal dispersion coefficients, respectively.
+	
+	\textbf{Note:} We assume $\alpha_{l}$ and $\alpha_{t}$ be both zero
+	so that $D\equiv\alpha_{\mathrm{mol}}$, which suffices for the numerical
+	investigations of the ODML approach performance in Section~\ref{sec:Results}.
+	
+%	Equation~(\ref{eq:elemental-mass-conservation-equation}) possesses
+%	two advantages when compared to the transport equation formulated
+%	for chemical species:
+%	\begin{itemize}
+%		\item Absence of the reaction term in the convection-diffusion equation,
+%		leaving such concerns to a separate chemical kinetic/equilibrium solver
+%		and easing the coupling procedure.
+%		\item A considerable decrease in the number of unknowns, as the number of
+%		elements E is typically considerably smaller than the number of species
+%		N (see~(\ref{eq:elemental-mass-conservation-equation})).
+%	\end{itemize}
+%	\textbf{Note:} For more than one fluid phase (each with its velocity
+%	field) and different diffusion coefficients for the fluid species,
+%	this simplified transport formulation becomes less straightforward.
+\end{frame}
+
+\begin{frame}{Chemical reactions among fluid species and rock minerals}
+%	In our simulations, homogeneous and heterogeneous chemical reactions
+%	among the species are considered. We adopt a \emph{local chemical
+%		equilibrium model} so that both fluid species and rock minerals 
+%	are in chemical equilibrium at any point in space and time. Because
+%	of transport processes and variations in temperature\slash pressure
+%	(when applicable), the chemical equilibrium states are continually
+%	altered at each point of the domain. For example, a rock mineral may
+%	gradually dissolve as the more acidic fluid passes through that point
+%	in space.
+	
+	In this manner, at every discretized point in space, we solve the
+	Gibbs energy minimization problem:
+	\begin{equation}
+		\min_{n}G(T,P,n)\quad\text{subject to}\quad\left\{ \begin{aligned}An=b\\
+			n\geq0
+		\end{aligned}
+		\right.,\label{eq:gem-problem}
+	\end{equation}
+	to compute the \emph{chemical equilibrium amounts }$n=(n_{1},\ldots,n_{\mathrm{N}})$
+	of the species distributed among all fluid and solid phases in the
+	chemical system. Vector $n$ includes the aqueous species amounts
+	(solute and solvent water) and the mineral amounts composing the porous
+	rock. \textbf{Note: }The given input of this chemical equilibrium
+	problem includes the temperature $T$, pressure $P$, and the amounts
+	of chemical elements $b=(b_{1},\ldots,b_{\mathrm{E}})$ (including
+	electric charge), whereas the constraints include the mass balance
+	$An=b$ and non-negativity of the species amounts $n\geq0$. In~(\ref{eq:gem-problem}),
+	$T$ is assumed to be constant throughout the medium, $P$ computed
+	via the solution of the continuity and Darcy equations, and \textbf{$b$}
+	is updated over time via~(\ref{eq:elemental-mass-conservation-equation}).
+	For more information on solving the GEM problem, we refer to \citet{Leal2017,Allanetal2020}.
+\end{frame}
+
+\begin{frame}{Time staggered operator splitting steps}
+	To solve the time-dependent reactive transport equations in (\ref{eq:elemental-mass-conservation-equation}),
+	we apply the fully discrete formulation typically resulting from a
+	combination of the finite difference approximation in time with the
+	finite element approach in space. We use index$k$ to denote the \emph{time-step}
+	and $\Delta t=t^{k+1}-t^{k}$ to determine the \emph{time-step size.
+	}We assume the uniform discretization $I_{\ensuremath{\Delta t}}:=\{0=t_{0}<t_{1}<...<t_{K}=t_{{\rm final}}\}$
+	of the time interval $[0,t_{{\rm final}}]$, where $t_{{\rm final}}>0$
+	is the total time. \emph{The operator splitting scheme }described
+	below is used to solve these transport equations\emph{:}
+	\begin{enumerate}
+		\item[\textbf{I.}] Consider~(\ref{eq:elemental-mass-conservation-equation}) employing
+		the \emph{backward Euler scheme in time} to compute an auxiliary element
+		concentrations approximation $\tilde{b}_{i}^{\text{f, k+1}}=\tilde{b}_{i}^{\text{f}}(t_{k+1}),$
+		$i=1,\ldots,\text{E}$, in the fluid partition:
+		\begin{equation}
+			\frac{\tilde{b}_{i}^{\text{f},k+1}-\tilde{b}_{i}^{\text{f},k}}{\Delta t}+\nabla\cdot(\boldsymbol{u}\tilde{b}_{i}^{\text{f},k+1}-D\nabla\tilde{b}_{i}^{\text{f},k+1})=0\qquad\text{in}\quad\Omega.x\label{eq:fluid-element-transport}
+		\end{equation}
+		We assume the flux boundary condition on the \emph{inlet face of boundary}
+		$\Gamma_{{\rm inlet}}\subset\partial\Omega$, where we inject the
+		brine,
+		\[
+		-(\boldsymbol{u}\tilde{b}_{i}^{{\rm f},k+1}-D\nabla\tilde{b}_{i}^{{\rm f},k+1})\cdot\boldsymbol{n}_{\text{inlet}}=u\hat{b}_{i,\text{inlet}}\quad\text{on}\quad\Gamma_{\text{inlet}}
+		\]
+		and zero flux on the top and bottom of the boundary, $\Gamma_{\text{top}},\Gamma_{\text{bottom}}\subset\Gamma\equiv\partial\Omega$,
+		\[
+		-(\boldsymbol{u}\tilde{b}_{i}^{{\rm f},k+1}-D\nabla\tilde{b}_{i}^{{\rm f},k+1})\cdot\textbf{\emph{\ensuremath{\boldsymbol{n}}}}=0\quad\text{on}\quad\Gamma_{\text{top}}\cup\Gamma_{\text{bottom}}.
+		\]
+		The right boundary is considered a free outflow boundary. Vector $\boldsymbol{n}$
+		denotes the outward-pointing normal to the boundary face $\Gamma$
+		($\boldsymbol{n}_{\text{inlet}}$ is the normal on $\Gamma_{\text{inlet}}$),
+		and $\hat{b}_{i,\text{inlet}}$ (in $\mathrm{mol/m_{\mathrm{fluid}}^{3}}$)
+		represents the given concentration of the injected brine. As a space
+		discretization solver for~(\ref{eq:fluid-element-transport}), we
+		employ the Streamline-Upwind Petrov-Galerkin (SUPG) scheme introduced
+		in \citet{BrooksHughes} (see Section~\ref{subsec:supg-method})
+		to handle advection-dominated transport in a accurate and stable way.
+		
+		The velocity in~(\ref{eq:fluid-element-transport}) is generated
+		from the coupling to the Darcy problem, i.e., $\boldsymbol{u}=\boldsymbol{u}^{k}$,
+		where $\boldsymbol{u}^{k}$ satisfies the system
+		\begin{equation}
+			\begin{array}{cccc}
+				\nabla\cdot(\varrho\boldsymbol{u}^{k}) & = & f^{k} & {\rm in}\quad\Omega\times(0,t_{{\rm final}}),\\
+				\boldsymbol{u}^{k} & = & -\tfrac{\kappa}{\mu}\nabla P^{k} & {\rm in\quad\Omega\times(0,t_{{\rm final}}).}
+			\end{array}\label{eq:darcy-discretized}
+		\end{equation}
+		A comprehensive numerical analysis, demonstrating the existence and
+		uniqueness of the solution for the prior semi-discrete system, can
+		be found in \citet{MaltaLoula1998,Maltaetal2000}.
+		\item[\textbf{II.}] Evaluate the total element concentrations $b_{i}$, using prior reconstructed
+		$\tilde{b}_{i}^{\text{f},k+1}$ and $b_{i}^{\mathrm{s}}$ (assumed
+		constant) : 
+		\[
+		b_{i}^{k+1}=\tilde{b}_{i}^{\text{f},k+1}+b_{i}^{\text{s},k}.
+		\]
+		\item[\textbf{III.}] In each space discretization cell, calculate $n^{k+1}$ for given
+		\emph{T, P,} and\emph{ }$b^{k+1}$ using the smart chemical equilibrium
+		algorithm accelerated with the ODML strategy (see Section~\ref{subsec:First-order-Taylor-approximation}).
+	\end{enumerate}
+	To make sure that the Courant–Friedrichs–Lewy (CFL) condition is satisfied,
+	we assume ${\mathrm{CFL}=0.3}$ and the time step is defined by
+	\begin{equation}
+		\Delta t=\frac{{\rm CFL}}{\max\Big\{\max|v_{x}|/\Delta x,\,\max|v_{y}|/\Delta y\Big\}},
+	\end{equation}
+	where $v=[v_{x};v_{y}]^{{\rm T}}$, and $\Delta x$ and $\Delta y$
+	are the lengths of the cells along the $x$ and $y$ coordinates,
+	respectively.
+	
 \end{frame}

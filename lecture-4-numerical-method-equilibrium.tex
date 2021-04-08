@@ -1,4 +1,4 @@
-\section{Numerical Method for Chemical Equilibrium Calculation}
+\section{Numerical method for chemical equilibrium calculation}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Recap of a chemical equilibrium problem
@@ -178,7 +178,8 @@ f(x,y)=x^{2}-y^{2}.
 but $f(0,0)=0$ is \textbf{neither a minimum nor a maximum}. 
 %
 \item \textbf{Exercise:} Check the values of $\partial^{2}f/\partial x^{2}>0$
-and $\partial^{2}f/\partial y^{2}<0$ at $(0,0)$. \hiddenpause
+and $\partial^{2}f/\partial y^{2}<0$ at $(0,0)$. 
+\hiddenpause
 \item The point $(0,0)$ is a \alert{\bf saddle point} of $f$ because $\partial^{2}f/\partial x^{2}>0$ and $\partial^{2}f/\partial y^{2}<0$
 at $(0,0)$.
 \end{itemize}
@@ -270,7 +271,7 @@ n_{i},z_{i} & \geq0 & \vphantom{\frac{\partial L}{\partial y_{j}}} & (i=1,\ldots
 
 \end{frame}
 
-\section{Interior-Point Method for Constrained Minimization}
+\section{Interior-point method for constrained minimization}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % General minimization formulation representing the GEM problem
@@ -284,7 +285,8 @@ n_{i},z_{i} & \geq0 & \vphantom{\frac{\partial L}{\partial y_{j}}} & (i=1,\ldots
 \]
 \item \textbf{Question:} \\
 How would we use this solver for Gibbs energy minimization? \\
-What would $f$ and $x$ above represent? \hiddenpause
+What would $f$ and $x$ above represent? 
+\hiddenpause
 \item We will define $f$ as our Gibbs energy function:
 \[
 f(x)=G(x;T,P),
@@ -652,7 +654,7 @@ was only a function of $T$ and $P$:
 \frac{\partial\ln a_{\mathsf{CO_{2}\text{(g)}}}}{\partial n_{j}} & =\mathsf{Exercise} \\
 &\onslide{ = 0}.
 \end{alignat*}
-%\hiddenpause
+\hiddenpause
 %\item \textbf{Answer:}
 %\[
 %\frac{\partial\ln a_{\mathsf{CO_{2}\text{(g)}}}}{\partial n_{j}}=0.
