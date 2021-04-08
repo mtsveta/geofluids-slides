@@ -1,3 +1,4 @@
+# Import sys package so that we can perform some system-related operations
 import sys
 
 # Import the Python package Numpy so we can perform linear algebra calculations

@@ -801,8 +801,8 @@ output = open('result_calcite_solubility_pure_water.txt', 'w')
 
 print(state, end="", file=output)
 
-import sys
-sys.exit()
+#import sys
+#sys.exit()
 
 # ##############################################################################
 # # The code below is the example given in the project description document.
@@ -954,7 +954,7 @@ def plot_co2_solubility_vs_temperature():
     # plt.show()
 
 
-def plot3():
+def plot_ph_vs_co2_amount():
     I = 0.3          # ionic strength in molal
     T = 75 + 273.15  # temperature in K
     P = 100 * 1e5    # pressure in Pa
@@ -969,7 +969,7 @@ def plot3():
     # plt.show()
 
 
-def plot4():
+def plot_co2_solubility_vs_pressure():
     I = 0.3           # ionic strength in molal
     T1 = 50 + 273.15  # temperature in K
     T2 = 75 + 273.15  # temperature in K
@@ -992,7 +992,7 @@ def plot4():
     # plt.show()
 
 
-def plot5():
+def plot_calcite_solubility_vs_co2_amount():
     T = 75 + 273.15  # temperature in K
     P = 100 * 1e5    # pressure in Pa
     I = 0.2          # ionic strength in molal
@@ -1007,7 +1007,7 @@ def plot5():
     # plt.show()
 
 
-def plot6():
+def plot_calcite_dissolved_mass_vs_co2_amount():
     T = 75 + 273.15  # temperature in K
     P = 100 * 1e5    # pressure in Pa
     I = 0.2          # ionic strength in molal
@@ -1021,13 +1021,41 @@ def plot6():
     plt.close()
     # plt.show()
 
+def plot_calcite_solubility_vs_ionic_strength():
+    molesCO2 = 5.0
+    T1 = 50 + 273.15   # temperature in K
+    T2 = 75 + 273.15   # temperature in K
+    T3 = 100 + 273.15  # temperature in K
+    P1 = 50 * 1e5      # pressure in Pa
+    P2 = 100 * 1e5     # pressure in Pa
+    x = linspace(0.0, 0.7, npoints)  # the ionic strength values from 0.0 to 0.7
+    yT1P1 = [solubilityCaCO3(molesCO2, I, T1, P1) for I in x]  # solubility of CO2 at T1 and P1
+    yT2P1 = [solubilityCaCO3(molesCO2, I, T2, P1) for I in x]  # solubility of CO2 at T2 and P1
+    yT3P1 = [solubilityCaCO3(molesCO2, I, T3, P1) for I in x]  # solubility of CO2 at T3 and P1
+    yT1P2 = [solubilityCaCO3(molesCO2, I, T1, P2) for I in x]  # solubility of CO2 at T1 and P2
+    yT2P2 = [solubilityCaCO3(molesCO2, I, T2, P2) for I in x]  # solubility of CO2 at T2 and P2
+    yT3P2 = [solubilityCaCO3(molesCO2, I, T3, P2) for I in x]  # solubility of CO2 at T3 and P2
+    plt.xlabel('Ionic Strength [molal]')
+    plt.ylabel('Solubility Calcite [molal]')
+    plt.plot(x, yT1P1, label='T = %.0f C, P = %.0f bar' % (T1-273.15, P1*1e-5))
+    plt.plot(x, yT2P1, label='T = %.0f C, P = %.0f bar' % (T2-273.15, P1*1e-5))
+    plt.plot(x, yT3P1, label='T = %.0f C, P = %.0f bar' % (T3-273.15, P1*1e-5))
+    plt.plot(x, yT1P2, label='T = %.0f C, P = %.0f bar' % (T1-273.15, P2*1e-5))
+    plt.plot(x, yT2P2, label='T = %.0f C, P = %.0f bar' % (T2-273.15, P2*1e-5))
+    plt.plot(x, yT3P2, label='T = %.0f C, P = %.0f bar' % (T3-273.15, P2*1e-5))
+    plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    plt.title('Plot 7')
+    plt.savefig('plot7.pdf', bbox_inches='tight')
+    plt.close()
+
 useideal = False
 userefpotentials = False
 
 plot_co2_solubility_vs_ionic_strength()
 plot_co2_solubility_vs_temperature()
-plot3()
-plot4()
-plot5()
-plot6()
+plot_ph_vs_co2_amount()
+plot_co2_solubility_vs_pressure()
+plot_calcite_solubility_vs_co2_amount()
+plot_calcite_dissolved_mass_vs_co2_amount()
+plot_calcite_solubility_vs_ionic_strength()
 
