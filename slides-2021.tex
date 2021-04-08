@@ -1,4 +1,5 @@
-\documentclass[english,handout, aspectratio=169,10pt]{beamer}
+%\documentclass[english,handout, aspectratio=169,10pt]{beamer} % slides for students
+\documentclass[english,aspectratio=169,10pt]{beamer} % slides for the lectures
 %===================================================================
 % Beamer theme and its fine tune
 %===================================================================
@@ -131,9 +132,9 @@
 \usepackage{mathtools}
 \usepackage{comment} % used to comment parts of the document
 
-%===================================================================
-% Pause Commands
-%===================================================================
+%%===================================================================
+%% Pause Commands
+%%===================================================================
 \newcommand{\hiddenpause}{\setbeamercovered{invisible}\pause}
 \newcommand{\hiddenunpause}{\setbeamercovered{transparent}}
 \newcommand{\negpause}{\vspace*{-\baselineskip}\pause}
@@ -231,7 +232,7 @@
 
 \title{Geofluids — Part IV}
 \subtitle{Introduction to Geochemical and Reactive Transport Modeling}
-\author{Dr. Svetlana Kyas (based on the lecture notes of Dr. Allan Leal)}
+\author{Dr. Svetlana Kyas (extension of the lecture notes of Dr. Allan Leal)}
 
 \institute{Postdoc Associate\\
 svetlana.kyas@erdw.ethz.ch\\
@@ -241,14 +242,14 @@ NO F 61}
 \begin{document}
 
 \maketitle
-%\input{lecture-1-introduction}
+
+\input{lecture-1-introduction}
 %\input{lecture-2-chemical-equilibrium}
 %\input{lecture-3-thermodynamic-model}
 %\input{lecture-4-numerical-method-equilibrium}
 %project descriptions
 %\input{lecture-5-chemical-kinetics}
-\input{lecture-6-reactive-transport}
-%\input{lecture-7-demonstrations-of-computer-simulations}
+%\input{lecture-6-reactive-transport}
 
 \begin{frame}[allowframebreaks]{References}
 
