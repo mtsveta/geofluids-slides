@@ -31,7 +31,7 @@ We want to find the \textbf{final position} of the ball that results in a minimu
 %
 \begin{frame}[<+->]{Constraints in a chemical equilibrium state}
 \begin{itemize}
-\item In \textbf{mechanical equilibrium}, a ball rolling down a hill is \textbf{constrained by its surface topology}. 
+\item In \alert{\textbf{mechanical equilibrium}}, a ball rolling down a hill is \textbf{constrained by its surface topology}. 
 \item In \textbf{thermodynamics}, the species in a chemical system seeking a state of chemical
 equilibrium is also \textbf{constrained by some conditions}: 
 \begin{itemize}
@@ -46,9 +46,8 @@ equilibrium is also \textbf{constrained by some conditions}:
 % Mass conservation constraints in chemical equilibrium
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[<+->]{Mass conservation constraints in chemical equilibrium}
+\begin{frame}[<+->]{Mass conservation constraints in chemical equilibrium\, i}
 %
-\lcol
 \vskip 10pt
 To illustrate \alert{\textbf{mass conservation constraints}} the following problem: 
 \begin{itemize}
@@ -57,26 +56,39 @@ and \textbf{calculate the equilibrium state of the system}.
 \item these two substances will react and form several species (H$^{+}$,
 HCO$_{3}^{-}$ etc.).
 \end{itemize}
+\hiddenpause
 \alert{\textbf{Question}}: at chemical equilibrium, what can we tell about 
-\begin{itemize}
-\item the amounts of H, O, C, Z? \textbf{Answer}: 200 mols of H, 104 mols of O, and 2 mols of C,  the final charge must be equal to the initial charge. 
-\end{itemize}
-\rcol
-\begin{itemize}
-\item Calculating chemical equilibrium requires finding a composition for
-the system (i.e., amount of species, usually defined by vector 
-$n = [n_{\sf H^{+}}, n_{\sf HCO_{3}^{-}}, \ldots]$) that 
-\textbf{minimizes its Gibbs energy} and simultaneously satisfies 
-\alert{\textbf{mass conservation}} of:
-\begin{itemize}
-\item \textbf{chemical elements}; and
-\item \textbf{electric charge}.
-\end{itemize}
-\item \alert{\textbf{Note}}: we use the term \alert{\textbf{elements}} represented by vector $b$ 
-to denote both \emph{chemical elements} and \emph{electric charge}, i.e., 
-$b = [b_{\sf H}, b_{\sf O}, b_{\sf C}, b_{\sf Z}]$.
-\end{itemize}
-\ecol
+the amounts of H, O, C, Z?
+
+\begin{center}
+\href{http://etc.ch/oyhr}{\textcolor{indigo(dye)}{\tt http://etc.ch/oyhr}} 
+\quad
+or 
+\quad
+\includegraphics[height=0.25\columnwidth]{figures/chemical-equilibrium/poll-mass-balance.png}
+\end{center}
+
+\hiddenpause
+\textbf{Answer}: 200 mols of H, 104 mols of O, and 2 mols of C,  the final charge must be equal to the initial charge. 
+\end{frame}
+%
+\begin{frame}[<+->]{Mass conservation constraints in chemical equilibrium\, ii}
+	%
+
+	\begin{itemize}
+		\item Calculating chemical equilibrium requires finding a composition for
+		the system (i.e., amount of species, usually defined by vector 
+		$n = [n_{\sf H^{+}}, n_{\sf HCO_{3}^{-}}, \ldots]$) that 
+		\textbf{minimizes its Gibbs energy} and simultaneously satisfies 
+		\alert{\textbf{mass conservation}} of:
+		\begin{itemize}
+			\item \textbf{chemical elements}; and
+			\item \textbf{electric charge}.
+		\end{itemize}
+		\item \alert{\textbf{Note}}: we use the term \alert{\textbf{elements}} represented by vector $b$ 
+		to denote both \emph{chemical elements} and \emph{electric charge}, i.e., 
+		$b = [b_{\sf H}, b_{\sf O}, b_{\sf C}, b_{\sf Z}]$.
+	\end{itemize}
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
@@ -196,7 +208,7 @@ Consider the following ordering for species and elements in the system:
 \end{tabular*}
 \par\end{center}
 
-\textbf{Exercise:} Construct the formula matrix $A$ for this system, where \\
+\alert{\textbf{Exercise:}} Construct the formula matrix $A$ for this system, where \\
 \alert{\textbf{the coefficient $A_{ij}$ characterises the contribution of species 
 $i$ into the element $j$}}. 
 \end{frame}
@@ -217,23 +229,24 @@ $$A=\kbordermatrix{
 }
 $$}
 
-\pause{}
+\hiddenpause
 
 \lcol
 
-\textbf{Exercise:} Which of the following linearly dependency relation
+\alert{\textbf{Exercise:}} Which of the following linearly dependency relation
 is true for the rows of $A$:
 
 \vskip 5pt
-\visible<3>{
+\visible<2->{
 \centering
-\href{http://etc.ch/UbWW}{\textcolor{indigo(dye)}{\tt http://etc.ch/UbWW}} or \\
+\href{http://etc.ch/UbWW}{\textcolor{indigo(dye)}{\tt  http://etc.ch/oyhr}} or \\
 \includegraphics[height=0.3\columnwidth]{figures/chemical-equilibrium/poll-linear-independence.png}}
 %\visible<3>{\textbf{Answer:} (c)}
 
 \rcol
 
 \vspace{-4ex}
+\visible<2->{
 {\small{}
 \begin{alignat*}{2}
 \text{(a)} & \quad & \text{row(Z)} & =\text{row(H)}-2\,\text{row(O)}\\
@@ -242,7 +255,10 @@ is true for the rows of $A$:
 \text{(d)} &  & \text{row(Z)} & =\text{row(H)}-2\,\text{row(O)}+6\,\text{row(C)}
 \end{alignat*}
 }{\small\par}
-
+}
+\visible<3->{
+\textbf{Answer:} (c)
+}
 \ecol
 \end{frame}
 %
@@ -252,10 +268,10 @@ is true for the rows of $A$:
 %
 \begin{frame}{Calculating the amounts of elements from species amounts}
 
-%\vskip 10pt
+\vskip 10pt
 \lcol[0.7]
 
-\textbf{Exercise:} Given:
+\alert{\textbf{Exercise:}} Given 
 \[
 n=\left[\begin{array}{l}
 n_{\mathsf{H_{2}O\text{(}aq\text{)}}}\\
@@ -282,26 +298,26 @@ n_{7}
 0.032861\\
 1.96702\\
 0.0531732
-\end{bmatrix}
+\end{bmatrix},
 \]
 
 \rcol[0.3]
-
-calculate:
+calculate
 \[
 b=\left[\begin{array}{l}
 b_{\mathsf{H}}\\
 b_{\mathsf{O}}\\
 b_{\mathsf{C}}\\
 b_{\mathsf{Z}}
-\end{array}\right].
+\end{array}\right] = A \, n.
 \]
 \ecol
-\visible<2>{If we have vector $n$ and matrix $A$ we can compute $b = A n$.} \\
-\visible<3>{Instead of doing such calculation manually (tedious and error prone), let's program this in \textbf{Python}: 
+\vskip 10pt
+%\visible<2->{If we have vector $n$ and matrix $A$ we can compute $b = A n$.} \\
+\visible<2->{Instead of doing such calculation manually (tedious and error prone), let's use \textbf{Python}: 
 \begin{itemize}
 \item for Python shell, you can use an online tool \href{http://repl.it/languages/python}{\textcolor{indigo(dye)}{\tt repl.it/languages/python}}
-\item Python source code can be downloaded from \href{https://polybox.ethz.ch/index.php/s/0eoyyzHfloeMk1Y}{\textcolor{indigo(dye)}{\it polybox}}.
+\item Python source code can be downloaded from \href{https://polybox.ethz.ch/index.php/s/ku86DyuR6nvW2Zl}{\textcolor{indigo(dye)}{\it mass-balance-with-blanks.py}}.
 \end{itemize}
 }
 \end{frame}
@@ -314,8 +330,6 @@ b_{\mathsf{Z}}
 
 \lstinputlisting[language=Python, caption=Calculating the amounts of elements using Python]{python-files/mass-balance-with-blanks.py}	
 
-\textbf{Source code}: \href{https://polybox.ethz.ch/index.php/s/ku86DyuR6nvW2Zl}{\textcolor{indigo(dye)}{\it polybox}}.
-
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
@@ -324,7 +338,7 @@ b_{\mathsf{Z}}
 %
 \begin{frame}[fragile]{Calculating the amounts of elements using Python -- Output}
 
-The Python code has the following output:
+The Python code has to have the following output:
 
 \begin{lstlisting}[language=Python, caption=Calculating the amounts of elements using Python -- Output]
 Element H has 111.0168 moles and 111.8938 grams
@@ -341,6 +355,9 @@ Species CO2(aq) has 3.2861e-02 moles and 1.4462e+00 grams
 Species CO2(g) has 1.9670e+00 moles and 8.6568e+01 grams
 Species H2O(g) has 5.3173e-02 moles and 9.5793e-01 grams
 \end{lstlisting}
+
+\textbf{To correct the correctness of the gaps in the code}, use the  \href{https://polybox.ethz.ch/index.php/s/sVotdOJMkp740Lw}{\textcolor{indigo(dye)}{\it source code}}.
+
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
@@ -359,13 +376,11 @@ solve the \textbf{constrained minimization problem}:
 \]
 
 \end{cbox}where:
-\hiddenpause
+
 \begin{itemize}
 \item $G$ is the Gibbs energy of the system, a function of $n=(n_{1},\ldots,n_{\text{N}})$
 as well as temperature $T$ and pressure $P$;
-\hiddenpause
 \item $An=b$ are the mass conservation constraints for each element;
-\hiddenpause
 \item $n\geq0$ are the non-negative constraints for the amounts of each
 species.
 \end{itemize}
@@ -373,16 +388,19 @@ species.
 %
 \begin{frame}{Gibbs energy function}
 
+\begin{itemize}
+\item 
 \textbf{The Gibbs energy function}, $G$, is defined as: 
 \[
 G=\sum_{i=1}^{\text{N}}n_{i}\mu_{i},
 \]
 where $\mu_{i}$ is the \alert{chemical potential} of the $i$th
-species. 
-\begin{itemize}
+species. \\[30pt]
+\hiddenpause
 \item \textbf{Question:} What is the dimension (in SI units) of $G$ and
 $\mu_{i}$? 
-\item \visible<2>{\textbf{Answer:} $G$ has units of J, and $\mu_{i}$ units of J/mol.}
+\hiddenpause
+\item \textbf{Answer:} $G$ has units of J, and $\mu_{i}$ units of J/mol.
 \end{itemize}
 \end{frame}
 %
@@ -415,15 +433,14 @@ to transform to B.
 % Chemical potential and its interpretation – Example
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Chemical potential and its interpretation – Example}
+\begin{frame}{Chemical potential and its interpretation, Example}
 \vskip 10pt
 \begin{itemize}[<+->]
 \item Consider the following reaction:
 \[
 \mathsf{CO_{2}\text{(g)}\rightleftharpoons CO_{2}\text{(aq)}}
 \]
-\item \alert{\textbf{Question}}: 
-what is the tendency for CO$_{2}$(g) in each of the following three cases:
+\item We have the following three cases: 
 {
 \footnotesize{}
 \begin{align*}
@@ -434,9 +451,13 @@ what is the tendency for CO$_{2}$(g) in each of the following three cases:
 \mu_{\mathsf{CO_{2}\text{(aq)}}} & = -390.347\,{\mathsf{kJ/mol}} & \mu_{\mathsf{CO_{2}\text{(aq)}}} & = -517.800\,{{\mathsf{kJ/mol}}} & \mu_{\mathsf{CO_{2}\text{(aq)}}} & =-383.861\,{\mathsf{kJ/mol}}
 \end{align*}
 }{\footnotesize\par}
+\vskip 10pt 
 
+\item \alert{\textbf{Question}}: 
+what is the tendency for CO$_{2}$(g) in each of cases:
+%
 \setbeamercovered{invisible}
-
+%
 \item \alert{\textbf{Answer}}:
 \begin{itemize}
 \item \textbf{Case I}: Since $\mu_{\mathsf{CO_{2}\text{(g)}}}=\mu_{\mathsf{CO_{2}\text{(aq)}}}$,
@@ -447,8 +468,10 @@ CO$_{2}$(g) tends to \textbf{dissolve}.
 CO$_{2}$(g) tends to form, \textbf{exsolve}. \setbeamercovered{transparent}
 \end{itemize}
 \end{itemize}
-\vskip -40pt
-\includegraphics[height=0.18\columnwidth,right]{figures/chemical-equilibrium/poll-lnK-log10.png}
+\onslide<4>{
+\vskip -70pt
+\includegraphics[height=0.2\columnwidth,right]{figures/chemical-equilibrium/poll-linear-independence.png}
+}
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
@@ -469,7 +492,7 @@ tend to transform to C and D
 and D are in equilibrium 
 \item $\mu_{\sf A}+\mu_{\sf B}<\mu_{\sf C}+2\,\mu_{\sf D}$: substances C and D will
 tend to transform to A and B
-\item \alert{Warning:} Note the coefficients in the reactions and their use
+\item \alert{\bf Warning:} Note the coefficients in the reactions and their use
 when checking the direction of the reaction!
 \[
 \mathsf{\underline{1}\,A+\underline{1}\,B\rightleftharpoons\underline{1}\,C+\underline{2}\,D}
@@ -481,9 +504,9 @@ when checking the direction of the reaction!
 % Chemical potentials and direction of reactions
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Chemical potentials and direction of reactions -- Exercise \; i}
+\begin{frame}{Chemical potentials and direction of reactions, Exercise \; i}
 
-\textbf{Exercise: }Consider the following reaction and the subsequent
+\alert{\textbf{Exercise: }} Consider the following reaction and the subsequent
 three cases:{
 \[
 \mathsf{H_{2}O(aq)+CO_{2}(g)\rightleftharpoons HCO_{3}^{-}(aq)+H^{+}(aq)}
@@ -512,14 +535,14 @@ three cases:{
 \item In each case, is CO$_{2}$(g) tending to dissolve or exsolve? 
 \end{itemize}
 \vskip -45pt
-\includegraphics[height=0.16\columnwidth,right]{figures/chemical-equilibrium/poll-lnK-log10.png}
+\includegraphics[height=0.16\columnwidth,right]{figures/chemical-equilibrium/poll-linear-independence.png}
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Chemical potentials and direction of reactions
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Chemical potentials and direction of reactions -- Exercise \; ii}
+\begin{frame}{Chemical potentials and direction of reactions, Exercise \; ii}
 
 \textbf{Case I: }
 
@@ -549,7 +572,7 @@ The reaction is in \textbf{equilibrium}.
 % Chemical potentials and direction of reactions, IV
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Chemical potentials and direction of reactions -- Exercise \; iii}
+\begin{frame}{Chemical potentials and direction of reactions, Exercise \; iii}
 
 \textbf{Case II: }
 
@@ -580,7 +603,7 @@ to \textbf{dissolve}.
 % Chemical potentials and direction of reactions, V
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Chemical potentials and direction of reactions -- Exercise \; iv}
+\begin{frame}{Chemical potentials and direction of reactions , Exercise \; iv}
 
 \textbf{Case III: }
 
@@ -612,7 +635,7 @@ The reaction is proceeding to the left, and CO$_{2}$ is tending to
 %
 \begin{frame}[fragile]{Chemical potentials and direction of reactions using Python}
 
-\textbf{Source code}: \href{https://polybox.ethz.ch/index.php/s/4kiqklmnBtXs3pG}{\textcolor{indigo(dye)}{\it polybox}}.
+\textbf{Source code}: \href{https://polybox.ethz.ch/index.php/s/4kiqklmnBtXs3pG}{\textcolor{indigo(dye)}{\it chemical-potential.py}}.
 
 \lstinputlisting[language=Python, caption=Chemical potentials and direction of reactions using Python]{python-files/chemical-potential.py}
 %\begin{lstlisting}[language=Python, caption=Python example]
@@ -641,22 +664,22 @@ The reaction is proceeding to the left, and CO$_{2}$ is tending to
 %
 \begin{frame}[<+->]{Chemical potential $\mu_{i}$ and Gibbs energy}
 \begin{itemize}
-\item The chemical potential of a species, $\mu_{i}$, is equivalent to:
+\item The \alert{\bf chemical potential of a species $\mu_{i}$} is equivalent to
 \[
-\mu_{i}\equiv\left[\frac{\partial G}{\partial n_{i}}\right]_{T,P}
+\mu_{i}\equiv\left[\frac{\partial G}{\partial n_{i}}\right]_{T,P}.
 \]
 %
-\item Thus, the infinitesimal change in Gibbs energy $\mathrm{d}G$ following
-an infinitesimal change in the species amount $i$ $\mathrm{d}n_{i}$ is given by
+\item Thus, the infinitesimal change in Gibbs energy $\mathrm{d}G$ following an infinitesimal change in the $i$th species amount $i$ 
+%
 \[
 \mathrm{d}G=\mu_{i}\mathrm{d}n_{i}
 \]
 at constant temperature $T$ and pressure $P$.
-\item The \textbf{equilibrium criterion} for a multicomponent system with constant $T$ and $P$ is
+\item The \textbf{equilibrium criterion} for a multi-component system with constant $T$ and $P$ is
 \[
 \sum_{i=1}^N \mu_i \, \mathrm{d}n_{i} = 0.
 \]
-At the equilibrium point, the \textbf{Gibbs free energy is minimal} at its minimum.
+At the equilibrium point, the \textbf{Gibbs free energy at its minimum}.
 %
 \end{itemize}
 \end{frame}
@@ -667,23 +690,24 @@ At the equilibrium point, the \textbf{Gibbs free energy is minimal} at its minim
 %
 \begin{frame}{Chemical potential $\mu_{i}$ and its definition}
 \begin{itemize}
-\item The \textbf{chemical potential}, $\mu_{i}$, of a species is defined as:
+\item The \alert{\textbf{chemical potential $\mu_{i}$}} of a species is defined as:
 \[
 \mu_{i}=\mu_{i}^{\circ}+RT\ln a_{i}
 \]
 %
 \item $\mu_{i}^{\circ}$ is the \alert{standard chemical potential} of
 the species at $(T,P)$;
+\item $R$ is the \alert{universal gas constant}, $R= 8.314 \, \mathsf{J/(mol \cdot K)}$;
+\item $T$ and $P$ are given temperature and pressure;
 \item $a_{i}$ is the \alert{activity} of the species at $(T,P,n_{\Phi})$,
 where $n_{\Phi}$ is the vector of amounts of species in the phase
-where species $i$ lives;
+where species $i$ lives.
 \begin{itemize}
 \item \textbf{Note}: the activity of an aqueous species only depends on the
 amounts of the aqueous species, and not on the amounts of gases, minerals,
 etc.!
 \end{itemize}
-\item $R$ is the \alert{universal gas constant}, $R= 8.314 \, \mathsf{J/(mol\cdot K)}$;
-\item $T$ and $P$ are given temperature and pressure. 
+
 \end{itemize}
 \end{frame}
 %
@@ -694,17 +718,16 @@ etc.!
 \begin{frame}{Standard chemical potential $\mu_{i}^{\circ}$}
 \begin{itemize}[<+->]
 \item The \textbf{standard chemical potential} $\mu_{i}^{\circ}$ of a
-species is its chemical potential at a \alert{\emph{standard reference state}},
+species is its chemical potential at a \alert{\bf{standard reference state}},
 in which $a_{i}=1$ is assumed.
 \item For a gas: 
 \begin{itemize}
 \item $\mu_{i}^{\circ}$ is the chemical potential
-of the gas at a hypothetical ideal state with $P^{\circ}=\unit[1]{bar}$.
+of the gas at a hypothetical ideal state with $P^{\circ}=\unit[1]{bar}$;
 \item $\mu_{i}^{\circ}=\mu_{i}^{\circ}(T)$ (i.e., \textbf{no
 pressure dependence}).
 \end{itemize}
-\item We assume here ${\mu_{i}^{\circ}=\mu_{i}^{\circ}(T,P)}$ in general
-(true for aqueous and mineral species).
+\item For aqueous and mineral species, ${\mu_{i}^{\circ}=\mu_{i}^{\circ}(T,P)}$.
 \item Values for $\mu_{i}^{\circ}$ are calculated using equations of state,
 which can be computationally expensive.
 \item Their values are then saved in tables that can be used for interpolation.
@@ -768,11 +791,11 @@ which can be computationally expensive.
 % Mass action equation and equilibrium constant of reaction
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Mass action equation and equilibrium constant of reaction \; i}
+\begin{frame}{Mass action equation and equilibrium constant of reaction}
 
 \lcol
 \begin{itemize}
-\item Consider the following reaction:
+\item Consider the following reaction
 \[
 \mathsf{A+2B\rightleftharpoons C+3D}.
 \]
@@ -781,7 +804,7 @@ satisfied:
 \[
 K=\frac{a_{\sf C}a_{\sf D}^{3}}{a_{\sf A}a_{\sf B}^{2}},
 \]
-where $K=K(T,P)$ is the equilibrium constant of the reaction.
+where $K=K(T,P)$ is the \alert{\textbf{equilibrium constant}} of the reaction.
 \item \textbf{Note}: we assume $n_{\mathsf{A}},n_{\mathsf{B}},n_{\mathsf{C}},n_{\mathsf{D}}>0$
 (i.e., these species are \emph{stable at equilibrium}).
 
@@ -837,14 +860,16 @@ K=\dfrac{\prod_{p}a_{p}^{\nu_{p}}}{\prod_{r}a_{r}^{\nu_{r}}}.
 %
 \begin{frame}[<+->]{Equilibrium constant of reactions from standard chemical potentials}
 \begin{itemize}
-\item The \textbf{\alert{equilibrium constant of a reaction}}, $K$, is
-defined as:
+\item The \textbf{\alert{equilibrium constant of a reaction $K$}} is
+defined as
 \[
 \ln K=-\frac{1}{RT}\left[\sum_{p}\nu_{p}\mu_{p}^{\circ}-\sum_{r}\nu_{r}\mu_{r}^{\circ}\right],
 \]
 where $R=\unit[8.314]{\mathsf{J/(mol\cdot K)}}$ is the universal
 gas constant, and $T$ is temperature (in K). 
-\item \textbf{Exercise:} At 100 °C and 50 bar, ${\mu_{\mathsf{H_{2}O\text{(aq)}}}^{\circ}=\unit[-242.992]{\mathsf{kJ/mol}}}$,
+%
+\vskip 10pt
+\item \alert{\textbf{Exercise:}} At 100 °C and 50 bar, ${\mu_{\mathsf{H_{2}O\text{(aq)}}}^{\circ}=\unit[-242.992]{\mathsf{kJ/mol}}}$,
 ${\mu_{\mathsf{H^{+}\text{(aq)}}}^{\circ}=\unit[0.0]{\mathsf{kJ/mol}}}$,
 and ${\mu_{\mathsf{OH^{-}\text{(aq)}}}^{\circ}=\unit[-155.559]{\mathsf{kJ/mol}}}$.
 Calculate $\ln K$ and $\log K$ for the reaction:
@@ -857,15 +882,32 @@ Calculate $\ln K$ and $\log K$ for the reaction:
 \end{itemize}
 \centering
 \vskip -15pt
-\includegraphics[height=0.18\columnwidth]{figures/chemical-equilibrium/poll-lnK-log10.png}
+\includegraphics[height=0.15\columnwidth]{figures/chemical-equilibrium/poll-lnK-log10.png}
 
+\end{frame}
+%
+\begin{frame}[fragile]{Equilibrium constant of reactions from standard chemical potentials, Exercise}
+%	
+\begin{lstlisting}[language=Python, caption=Calculating equilibrium constant of reactions using Python]
+from math import *
+
+R = 8.314
+T = 100 + 273.15
+mu_H2O = -242.992 * 1e3
+mu_OH = -155.559 * 1e3
+
+lnK = -1/R/T *(mu_OH - mu_H2O)
+
+print("lnK = ", lnK)
+print("log10K = ", lnK * log10(e))
+\end{lstlisting}
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Exercise: Mass action and mass conservation equations
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Exercise: Mass action and mass conservation equations \, i}
+\begin{frame}{Exercise, Mass action and mass conservation equations \, i}
 Consider the following \emph{species}, \emph{elements}, and\emph{
 reactions}:
 
@@ -923,7 +965,7 @@ reactions}:
 % Exercise: Mass action and mass conservation equations
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Exercise: Mass action and mass conservation equations \, ii}
+\begin{frame}{Exercise, Mass action and mass conservation equations \, ii}
 \textbf{Tasks}:
 \begin{itemize}
 \item Write the \textbf{mass action equation }for each reaction.
@@ -943,9 +985,12 @@ and, if so, what kind of algorithm would you use for this.
 \item pdf with further exercise clarification can be found using the 
 \href{https://polybox.ethz.ch/index.php/s/EPMn4pJtIOL7VFS}{\textcolor{indigo(dye)}{\it polybox-link}}.
 \item Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/eq.mass-balance-mass-action.ipynb}{\textcolor{indigo(dye)}{\it Mass balance and mass action equation}} and 
-video \emph{Mass balance and mass action equations} (available in Doodle) with comments on this tutorial.
+video 
+\href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\it Mass balance and mass action equations}} with comments on this tutorial.
 \end{itemize}
 \end{frame}
+%
+\section{Important chemical properties}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Solubility of aqueous species, gases, and minerals
@@ -979,7 +1024,7 @@ The \alert{\textbf{solubility}} is the maximum amount of a substance that can be
 \item \textbf{insoluble/poorly soluble}, e.g., silver chloride in water.
 \end{itemize}
 
- widely, from infinitely soluble (without limit) (miscible[3]) such as ethanol in water, to poorly soluble, such as silver chloride in water. The term insoluble is often applied to poorly or very poorly soluble compounds. A number of other descriptive terms are also used to qualify the extent of solubility for a given application.
+% widely, from infinitely soluble (without limit) (miscible[3]) such as ethanol in water, to poorly soluble, such as silver chloride in water. The term insoluble is often applied to poorly or very poorly soluble compounds. A number of other descriptive terms are also used to qualify the extent of solubility for a given application.
 %\item Most \textbf{reactions rates} are duplicated or triplicated with \textbf{increasing temperature} of 10 \textdegree C. 
 
 \end{itemize}
@@ -990,23 +1035,34 @@ The \alert{\textbf{solubility}} is the maximum amount of a substance that can be
 % Calculation of solubility of calcite -- Example
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Calculation of solubility of calcite -- Example}
+\begin{frame}{Calculation of solubility of calcite, Example}
 %
 \begin{itemize}
 \item The balanced chemical equation of calcite dissolving in water is
 \[
 \mathsf{CaCO_3(s) + H_2O(l) \rightleftharpoons Ca^{2+} + HCO^{-}_3 + OH^{-} }.
 \]
+\vskip -5pt
 %
-with equilibrium constant $K_e \approx 10^{-12}$. 
+\item A limit of how much salt can be dissolved in a given volume of water is given by the \alert{\bf solubility product, $K_{sp}$} defined by 
 %
-\item \textbf{Equilibrium expression of reaction} is the ratio of the concentrations of a reaction at equilibrium: 
-$K_e = [\mathsf{Ca^{2+}}] \cdot [\mathsf{HCO^-_3}] \cdot [\mathsf{OH^{-}}]$, where $[\cdot]$ denotes concentration of the species.
+\[
+K_{sp} = [\mathsf{Ca^{2+}}]^1 \cdot [\mathsf{HCO^-_3}]^1 \cdot [\mathsf{OH^{-}}]^1,
+\] 
+where $[\cdot]$ denotes concentration of the species. {\bf Note}: $K_{sp}$ is \textbf{independent} of solids and liquids.
+
+\item For calcite, $K_e \approx 10^{-12}$. 
 %
-\item Equilibrium equation is \textbf{independent of solids and liquids}.%- and, therefore, they are not included. 
+%\item \textbf{Equilibrium expression of reaction} reads as  
+%$K_{\sp} = [\mathsf{Ca^{2+}}] \cdot [\mathsf{HCO^-_3}] \cdot [\mathsf{OH^{-}}]$, where $[\cdot]$ denotes concentration of the species. {\bf Note}:
+%
 %
 \item Since the molar ratio of products is $1 : 1 : 1$, 
-and we assume that concentration of each species increased by equal amount $[\mathsf{HCO^{-}_3}] \approx (10^{-12})^{1/3} \mbox{mol/L} = 10^{-4} \mbox{mol/L}$. 
+and we assume that concentration of each species increased by equal amount 
+%
+\[
+[\mathsf{HCO^{-}_3}] \approx (10^{-12})^{1/3} \mbox{mol/L} = 10^{-4} \mbox{mol/L}.
+\] 
 %
 \item The \textbf{amount of dissolved calcite} is equal \textbf{solubility of calcite}, so since molar amount of calcite is $1 : 1$ with all the products,
 \[
@@ -1026,12 +1082,16 @@ and we assume that concentration of each species increased by equal amount $[\ma
 \begin{frame}{Dependence of calcite solubility on different factors}
 %https://www.sciencelearn.org.nz/resources/469-carbonate-chemistry#:~:text=Solubility,of%20more%20soluble%20calcium%20bicarbonate.
 \begin{itemize}
-\item Calcite has a \textbf{very low solubility} in \textbf{pure water} (analytic estimation is 10 \mbox{mg/L}).
-\item\textbf{ In rainwater} saturated with carbon dioxide, its \textbf{solubility increases} due to the formation of more soluble calcium bicarbonate.
-\item Solubility of $\mathsf{CaCO_3}$ \textbf{increases} as the temperature of the water \textbf{decreases}.
+\item Solubility of $\mathsf{CaCO_3}$ \textbf{increases} as the temperature of the water \textbf{decreases} ({\bf unusual}!).
 \item Solubility of $\mathsf{CaCO_3}$ \textbf{increases} as the pressure of the water \textbf{increases}.
 \item Demonstration of these properties can be found in Jupyter notebook tutorial 
 \href{}{\textcolor{indigo(dye)}{\it Calcite solubility in water and CO$_2$-saturated rainwater}}.
+%
+\item Calcite has a \textbf{very low solubility} in \textbf{pure water} (we saw an analytic estimation is 10 \mbox{mg/L}).
+\item \textbf{In rainwater} saturated with carbon dioxide (which decreases pH, making it more acidic), its \textbf{solubility increases} due to the formation of more soluble calcium bicarbonate 
+$\Rightarrow$
+%
+driving force behind the {\bf erosion of limestone rocks}.
 \end{itemize}
 \end{frame}
 
@@ -1040,7 +1100,7 @@ and we assume that concentration of each species increased by equal amount $[\ma
 % Calcite solubility example -- Stalagmites and stalactites
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Calcite solubility example -- Stalagmites and stalactites}
+\begin{frame}{Calcite solubility example,  Stalagmites and stalactites}
 
 \[\mathsf{CaCO_3(s) + CO_2(g) + H_2O(l) \rightleftharpoons Ca(HCO_3)_2(aq)}\]
 
@@ -1067,7 +1127,7 @@ Diagram of cave showing formation of stalagmites and stalactites.}
 % Calcite solubility example -- Limestone fizzing
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Calcite solubility example -- Limestone fizzing}
+\begin{frame}{Calcite solubility example,  Limestone fizzing}
 
 \vskip 10pt
 \begin{figure}
@@ -1081,6 +1141,34 @@ Diagram of cave showing formation of stalagmites and stalactites.}
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
+% Solubility of chlorargyrite, Example
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Solubility of chlorargyrite, Example}
+	%
+	\begin{itemize}
+		\item Consider dissolution reaction of chlorargyrite 
+		\[
+		\mathsf{AgCl(s) \rightleftharpoons Ag^{+}(aq) + Cl^{-}(aq)}
+		\]
+		%
+		\item  \alert{\bf Question}: What is solubility of AgCl(s), where $K_{sp} = 1.8 \cdot 10^{-10}$?
+		\begin{center}
+			\href{http://etc.ch/oyhr}{\textcolor{indigo(dye)}{\tt http://etc.ch/oyhr}} 
+			\quad
+			or 
+			\quad
+			\includegraphics[height=0.2\columnwidth]{figures/chemical-equilibrium/poll-mass-balance.png}
+		\end{center}
+		\hiddenpause
+		\item {\bf Answer}: 1 liter of water can dissolve $1.34 \cdot 10^{-5}$ moles of AgCl(s) at room temperature. 
+		%
+		\item 
+		Compared with other types of salts, AgCl is poorly soluble in water.  In contrast, table salt (NaCl) has a higher $K_{sp}$ and is, therefore, more soluble.
+	\end{itemize}
+\end{frame}		
+%
+% --------------------------------------------------------------------------------------------------------------------%
 % Saturation index
 % --------------------------------------------------------------------------------------------------------------------%
 %
@@ -1090,7 +1178,7 @@ The \alert{\textbf{saturation index}} indicates the saturation state of
 a solution with respect to a mineral phase, which is given by
 %
 \[
-\mathrm{SI} = \log \frac{Q}{K_e},
+\boxed{ \mathrm{SI} = \log_{10} \frac{Q}{K_e}},
 \] 
 where $Q$ is the \emph{ion activation product} (IAP) of activities of the dissolved species (characteristic of non-equilibrium solution), 
 and $K_e$ is the \emph{equilibrium constant}. 
@@ -1108,10 +1196,10 @@ and $K_e$ is the \emph{equilibrium constant}.
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
-% Saturation index - Demonstration
+% Saturation index, Demonstration
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Saturation index -- Demonstration}
+\begin{frame}{Saturation index, Demonstration}
 
 \lcol
 \vskip -5pt
@@ -1119,7 +1207,7 @@ and $K_e$ is the \emph{equilibrium constant}.
 \item Demonstration of gypsum/anhydrite solubility: 
 %
 Jupyter notebook tutorial 
-\href{}{\textcolor{indigo(dye)}{\it Gypsum/anhydrite solubility in water}}.
+\href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/eq.anhydrite-solubility.ipynb}{\textcolor{indigo(dye)}{\it Gypsum/anhydrite solubility in water}}.
 %
 \item Investigation on how saturated the Evian water with carbonates can be found in 
 Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/eq.evian-water-analysis.ipynb}{\textcolor{indigo(dye)}{\it Analysis of the Evian water}}.
@@ -1127,7 +1215,7 @@ Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-jupyter/blob
 \item Barite precipitation in the water flooding reactive transport example:
 %
 Jupyter notebook tutorial 
-\href{}{\textcolor{indigo(dye)}{\it One-dimensional reactive transport modeling of scaling (without oil)}}.
+\href{https://github.com/mtsveta/reaktoro-jupyter/blob/master/tutorial/rt.scaling.ipynb}{\textcolor{indigo(dye)}{\it One-dimensional reactive transport modeling of scaling (without oil)}}.
 
 \end{itemize}
 %
@@ -1161,13 +1249,55 @@ Jupyter notebook tutorial
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
+% Saturation index, Example
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Saturation index, Example}
+	
+%	BaSO4(s)↽−−⇀Ba2+(aq)+SO2−4(aq)
+%	Barium sulfate is used in medical imaging of the gastrointestinal tract. Solubility product of barium sulfate is 1.08×1e-10 at 25°C
+%	
+%	Will barium sulfate precipitate if 10.0 mL of 0.0020 M Na2SO4 is added to 100 mL of 3.2 × 10−4 M BaCl2? 
+%	[Ba2+]=2.9×10−4 molal
+%	[SO2−4]=1.8×10−4 molal
+%	IAP = 5.2×10−8
+%	IAP > Ksp: we predict that BaSO4BaSO4 will precipitate when the two solutions are mixed. In fact, BaSO4BaSO4 will continue to precipitate until the system reaches equilibrium, which occurs when 1.08×1e-10 is reached.
+
+	\begin{itemize}
+		\item Consider dissolution reaction of barium sulfate 
+		\[
+		\mathsf{BaSO_4(s) \rightleftharpoons Ba^{2+}(aq) + SO_4^{2-}(aq)}
+		\]
+		%
+		\item Solubility product of barium sulfate is $1.08 \cdot$1e-10 at 25 $\circ$C.
+		%
+		\pause
+		\item  \alert{\bf Question}: What can be said about the water w.r.t. to barium sulfate if \\
+		${\sf [Ba^{2+}}]=2.9 \cdot$ 1e-4 molal
+		${\sf [SO_4^{2-}]}=1.8 \cdot$ 1e-4 molal?
+		%
+		\begin{center}
+			\href{http://etc.ch/oyhr}{\textcolor{indigo(dye)}{\tt http://etc.ch/oyhr}} 
+			\quad
+			or 
+			\quad
+			\includegraphics[height=0.2\columnwidth]{figures/chemical-equilibrium/poll-mass-balance.png}
+		\end{center}
+		\hiddenpause
+		\item {\bf Answer}: Water will be supersaturated with ${\sf BaSO_4(s)}$.
+	\end{itemize}
+
+\end{frame}
+%
+%
+% --------------------------------------------------------------------------------------------------------------------%
 % Electroneutrality principle
 % --------------------------------------------------------------------------------------------------------------------%
 %
 \begin{frame}{Electroneutrality principle}
 
 \begin{itemize}
-\item \alert{\textbf{Electroneutrality principle}} states that 
+\item \alert{\textbf{Electroneutrality principle}} (Pauling, 1948) states that 
 the ionic species in the electrolyte solution have equilibrium of charges on a macroscopic scale.
 
 \item It can be expressed by the charge equilibrium between the species in solution
@@ -1179,32 +1309,44 @@ the ionic species in the electrolyte solution have equilibrium of charges on a m
 where $z_i$ are the ionic charges and 
 $m_i$ are the molalities of species.
 %
-\item Species in an aqueous solution can donate or accept electrons, for example:
-%
-\[
-\mathsf{e^- + \tfrac{1}{4} \, O_2(aq) + H^+ = \tfrac{1}{2} \, H_2O.}
-\]
 \end{itemize}
 %
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
-% Electrochemical potential, pE
+% Reduction/oxidation potential, pE
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Electrochemical potential, pE}
+\begin{frame}{Reduction/oxidation potential, pE}
 \begin{itemize}
-\item The \alert{\textbf{electrochemical potential}} $\mathsf{pE}$ is defined as
+	\item  \alert{\textbf{Oxidation / reduction}} are the reactions, where species either esquire or lose electors, e.g., 
+	%
+	%\item Species in an aqueous solution can {\bf donate or accept electrons}, for example:
+	%
+	\[
+	\mathsf{e^- + \tfrac{1}{4} \, O_2(aq) + H^+ = \tfrac{1}{2} \, H_2O.}
+	\]
+	%
+\item \alert{\textbf{Oxidation / reduction potential}} is a {\bf measure of the tendency} of a species to acquire/lose electrons from/to an electrode and thereby {\bf be reduced or oxidised}. 
+%But such reaction is rather used as a {\bf half-reaction}. Additional half-reaction must be written to result into {\bf a charge-balanced equation}.
+%. 
+%
+\item The \alert{\textbf{reduction/oxidation potential}} $\mathsf{pE}$ is defined as
 %
 \[
-\boxed{ \mathsf{pE} = - \log (a_{e^{\scalebox{0.75}[1.0]{-}}}) = -\tfrac{1}{n_e} \log \tfrac{Q^{\scalebox{0.75}[1.0]{-}}_e}{K^{\scalebox{0.75}[1.0]{-}}_e} }
+\boxed{ \mathsf{pE} = - \log_{10} (a_{e^{\scalebox{0.75}[1.0]{-}}}) = -\tfrac{1}{n_e} \log \tfrac{Q^{\scalebox{0.75}[1.0]{-}}_e}{K^{\scalebox{0.75}[1.0]{-}}_e} }
 \]
+\vskip -5pt
 %
-where $K^{\scalebox{0.75}[1.0]{-}}_e \approx 25.5$ (at 25 \textdegree C), 
-$n_e$ is the number of consumed/generated electrons, and 
-$Q^{\scalebox{0.75}[1.0]{-}}_e$ is the product of the activities of the reaction. 
+where 
+\begin{itemize}
+	\item $K^{\scalebox{0.75}[1.0]{-}}_e \approx 25.5$ (at 25 \textdegree C), 
+	\item $n_e$ is the number of consumed/generated electrons, and 
+	\item $Q^{\scalebox{0.75}[1.0]{-}}_e$ is the product of the activities of the reaction. 
+\end{itemize}
 %
-\item It is an \textbf{indication} that the solution \textbf{donates electrons}.
+\item A solution with a {\bf higher pE} /  {\bf lower pE} will have a tendency to {\bf gain electrons from} / {\bf lose electrons to} the new species.
+%
 \end{itemize}
 
 \end{frame}
@@ -1216,16 +1358,16 @@ $Q^{\scalebox{0.75}[1.0]{-}}_e$ is the product of the activities of the reaction
 \begin{frame}{Hydrogen potential, pH}
 
 \begin{itemize}
+	\item The \alert{\textbf{$\mathsf{pH}$}} of a solution is an indication of the \textbf{tendency} of the solution \textbf{to donate hydrogen ions}
+	or measure of the \textbf{relative amount of free hydrogen ions} in the solution. 
+	%
 \item The \alert{\textbf{hydrogen potential}} $\mathsf{pH}$ is defined as
 %
 \[
 \boxed{ 
-\mathsf{pH} = - \log (a_{\mathsf{H^+}}). 
+\mathsf{pH} = - \log_{10} (a_{\mathsf{H^+}}). 
 }
 \]
-%
-\item The $\mathsf{pH}$ of a solution is an indication of the \textbf{tendency} of the solution \textbf{to donate hydrogen ions}
-or measure of the \textbf{relative amount of free hydrogen ions} in the solution. 
 %
 \item $\mathsf{pH}$ is a measure of how \textbf{acidic/basic} solution is in the scale from 0 till 14: 
 %
@@ -1246,12 +1388,39 @@ or measure of the \textbf{relative amount of free hydrogen ions} in the solution
 \includegraphics[width=0.9\columnwidth]{figures/chemical-equilibrium/ph-scale.png}
 \end{figure}
 \end{frame}
-%
 % --------------------------------------------------------------------------------------------------------------------%
 % pH, Examples i
 % --------------------------------------------------------------------------------------------------------------------%
 %
 \begin{frame}{pH, Examples \; i}
+	
+	\lcol
+	\vskip -5pt
+	Large \alert{\textbf{algae blooms}} can affect the pH as they photosynthesise: 
+	\begin{itemize}
+		\item during the day that \textbf{drives the pH down} and 
+		\item at night when they respire, it \textbf{drives the pH up}.
+		%
+	\end{itemize}
+	%
+	\alert{\textbf{The results}}: \textbf{huge pH fluctuations} in water, which can affect fish quite negatively. 
+	%
+	\rcol
+	%\vskip -30pt
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.85\columnwidth]{figures/chemical-equilibrium/toxic_algae_bloom_lake_erie.jpg}
+		\caption{\small The worst algae bloom that Lake Erie has experienced in decades resulting from the record torrential spring rains washed fertilizer into the lake, promoting the growth of microcystin-producing cyanobacteria blooms.}
+	\end{figure}
+	\ecol
+	
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% pH, Examples ii
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{pH, Examples \; ii}
 
 \lcol
 \vskip -5pt
@@ -1307,31 +1476,4 @@ See tutorial \href{}{\textcolor{indigo(dye)}{\it Dependence of the pH on added c
 \end{frame}
 
 
-% --------------------------------------------------------------------------------------------------------------------%
-% pH, Examples
-% --------------------------------------------------------------------------------------------------------------------%
-%
-\begin{frame}{pH, Examples \; ii}
-
-\lcol
-\vskip -5pt
-Large \alert{\textbf{algae blooms}} can affect the pH as they photosynthesise: 
-\begin{itemize}
-\item during the day that \textbf{drives the pH down} and 
-\item at night when they respire, it \textbf{drives the pH up}.
-%
-\end{itemize}
-%
-\alert{\textbf{The results}}: \textbf{huge pH fluctuations} in water, which can affect fish quite negatively. 
-%
-\rcol
-%\vskip -30pt
-\begin{figure}
-\centering
-\includegraphics[width=0.85\columnwidth]{figures/chemical-equilibrium/toxic_algae_bloom_lake_erie.jpg}
-\caption{\small The worst algae bloom that Lake Erie has experienced in decades resulting from the record torrential spring rains washed fertilizer into the lake, promoting the growth of microcystin-producing cyanobacteria blooms.}
-\end{figure}
-\ecol
-
-\end{frame}
 
