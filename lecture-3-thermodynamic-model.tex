@@ -38,6 +38,7 @@ a_{i}=\gamma_{i}(T,P,c)
 where $\gamma_{i}$ is an \alert{\textbf{activity coefficient}}, a function
 of $(T,P,c)$, with $c$ denoting a vector of concentrations of the
 species in the same phase. 
+\pause
 \item To calculate $\gamma_{i}$, there different (theoretical) \alert{\textbf{activity models}}:
 \begin{itemize}
 \item Davis equation,
@@ -51,12 +52,13 @@ species in the same phase.
 % --------------------------------------------------------------------------------------------------------------------%
 % Aqueous phase
 % --------------------------------------------------------------------------------------------------------------------%
+\section{Aqueous phase}
 %
-\begin{frame}{}
-\centering
-\Large
-\textbf{Aqueous phase}
-\end{frame}
+%{\begin{frame}{}
+%\centering
+%\Large
+%\textbf{Aqueous phase}
+%\end{frame}}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Activities of aqueous solute species
@@ -79,8 +81,9 @@ $i$; and
 \end{itemize}
 \end{itemize}
 \rcol
+\pause
 \begin{itemize}
-\item The  \alert{\textbf{molality}} $m_{i}$ of the $i$th aqueous species is:
+\item The  \alert{\textbf{molality}} $m_{i}$ of the $i$th aqueous species is form of describing concentrations and is defined as follows:
 \[
 m_{i}=\frac{n_{i}}{\text{mass of solvent species H\ensuremath{_{2}}O(aq)}},
 \]
@@ -101,7 +104,7 @@ m_{i} & =  \frac{n_{i}}{\mbox{molar mass}(\mathsf{H_{2}O\text{(aq)}}) \cdot n_{\
 \begin{frame}{Molarity vs. molality}
 %
 \lcol
-\vskip 50pt
+\vskip 20pt
 \begin{itemize}
 \item The \textbf{molarity} $c_{i}$ of the $i$th species is:
 \begin{alignat*}{2}
@@ -119,7 +122,6 @@ m_{i}=\frac{n_{i}}{\text{mass of solvent species H\ensuremath{_{2}}O(aq)}}.
 \]
 \item Measured in units of \alert{molal} = mol/kg (or mol/kgw). 
 \end{itemize}
-\vskip 100pt
 \ecol
 \end{frame}
 %
@@ -140,36 +142,38 @@ where:
 \item $m_{i}$ is the \textbf{molality} of species $i$; and
 \item $Z_{i}$ is the \textbf{electric charge }of species $i$.
 \end{itemize}
+\pause
 \item $I$ is a measure (in molal) of \emph{how much concentrated is the solution with ionic
 species}, 
-\item \textbf{Note}: \emph{Neutral species} play no role in $I$, just the ions.
+\item \textbf{Note}: \alert{Neutral species} play no role in $I$, just the ions.
 \end{itemize}
 \rcol
 \begin{itemize}
-\item \textbf{Question:} What is the ionic strength $I$ of a solution obtained
+	\pause
+\item \alert{\textbf{Question:}} What is the ionic strength $I$ of a solution obtained
 by mixing 1 kg of H$_{2}$O and:
 \begin{itemize}
-\item[a)] 1 mol of NaCl?
+\item[a)] 2 mol of NaCl?
 \item[b)] 1 mol of CaCl$_{2}$?
 \end{itemize}
 \vskip 5pt
-%\item \hiddenpause\textbf{\alert{\textbf{Answer:}}}
-%\begin{itemize}
-%\item[a)] 1 molal.
-%\item[b)] 3 molal
-%\end{itemize}
-\centering
-\href{http://etc.ch/eCnt/?qr}{\textcolor{indigo(dye)}{\tt http://etc.ch/eCnt}} or 
-\includegraphics[height=0.4\columnwidth]{figures/activity-models/poll-ionic-strength.png}
+\begin{center}
+\href{http://etc.ch/eCnt/?qr}{\textcolor{indigo(dye)}{\tt http://etc.ch/paWu}} or 
+\includegraphics[height=0.45\columnwidth]{figures/activity-models/poll-ionic-strength.png}
+\end{center}
+\hiddenpause
+\item \textbf{Answer:}
+a) 2 molal, 
+b) 3 molal
 \end{itemize}
 \ecol
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
-% Calculating species molalities and ionic strength: Exercise
+% Calculating species molalities and ionic strength, Exercise
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Calculating species molalities and ionic strength: Exercise}
+\begin{frame}{Calculating species molalities and ionic strength,  Exercise}
 
 \lcol
 \begin{center}
@@ -201,7 +205,6 @@ Use 18.0154 g/mol as an approximated molar mass of water.
 molal).
 \item Calculate the ionic strength $I$ of aqueous solution (in molal).
 \end{itemize}
-\emph{Provide just a rough number, say, with three digits of precision.}
 
 \ecol
 \end{frame}
@@ -237,6 +240,8 @@ Molality of CO2(aq) is 0.032892 molal.
 \end{lstlisting}
 \end{frame}
 %
+\subsection{Activity coefficient model for aqueous ionic species, Davies model}
+%
 % --------------------------------------------------------------------------------------------------------------------%
 % Activity coefficient model for aqueous ionic species: Davies model
 % --------------------------------------------------------------------------------------------------------------------%
@@ -248,16 +253,16 @@ using:
 \[
 \boxed{\log_{10}\gamma_{i}=-A_{\gamma}Z_{i}^{2}\left(\dfrac{\sqrt{I}}{1+\sqrt{I}}-0.3I\right)},
 \]
-where $A_{\gamma}$ is a \textbf{Debye–Hückel parameter} defined as:{\small{}
+where $A_{\gamma}$ is a \textbf{Debye–Hückel parameter} defined as
 \[
 A_{\gamma}=1.824928\cdot10^{6}\rho_{\mathsf{H_{2}O}}^{1/2}(\epsilon_{\mathsf{H_{2}O}}T)^{-3/2},
 \]
-}where $\rho_{\mathsf{H_{2}O}}$ and $\epsilon_{\mathsf{H_{2}O}}$
+%
+where $\rho_{\mathsf{H_{2}O}}$ and $\epsilon_{\mathsf{H_{2}O}}$
 are the \textbf{density} and \textbf{dielectric constant of pure water}. 
 \item For 25~°C and 1~bar: $A_{\gamma}=0.5095$.
 \item \textbf{Limitations of the model}: \\
-It is accurate for $I$ is in the range 0.1–0.7 molal. \\
-This is equivalent to 1 kg of water mixed with 5.8–40.9 grams of NaCl (0.5-4 teaspoons of table salt).
+It is accurate for $I$ is in the range 0.1–0.7 molal, which is equivalent to 1 kg of water mixed with 5.8–40.9 grams of NaCl (0.5-4 teaspoons of table salt).
 \end{itemize}
 \end{frame}
 %
@@ -265,16 +270,22 @@ This is equivalent to 1 kg of water mixed with 5.8–40.9 grams of NaCl (0.5-4 t
 % Activity coefficient model for aqueous ionic species: Davies model 
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Davies model for activity coefficient of aqueous ionic species -- Exercise}
+\begin{frame}{Davies model for activity coefficient of aqueous ionic species, Exercise}
 
-\textbf{Exercise:} 
 \begin{itemize}
-\item Compute the activity coefficient of species Na$^{+}$ in an aqueous
-solution with ionic strength $I=\unit[0.1]{molal}$ using the \emph{Davies
-activity coefficient model}:
+\item \alert{\textbf{Question:}} What is the activity coefficient of species Na$^{+}$ in an aqueous solution with ionic strength $I=\unit[0.1]{molal}$ using the \emph{Davies activity coefficient model}:
 \[
-\log_{10}\gamma_{i}=-A_{\gamma}Z_{i}^{2}\left(\dfrac{\sqrt{I}}{1+\sqrt{I}}-0.3I\right), \quad \mbox{where} \quad A_{\gamma}=0.5095.
+\log_{10}\gamma_{\mathrm{Na^{+}}}=-A_{\gamma}Z_{\mathrm{Na^{+}}}^{2}\left(\dfrac{\sqrt{I}}{1+\sqrt{I}}-0.3I\right), \quad \mbox{where} \quad A_{\gamma}=0.5095?
 \]
+%
+\begin{center}
+\href{http://etc.ch/eCnt/?qr}{\textcolor{indigo(dye)}{\tt http://etc.ch/paWu}} \quad or \quad 
+\includegraphics[height=0.18\columnwidth]{figures/activity-models/poll-ionic-strength.png}
+\end{center}
+%
+\hiddenpause
+\item \textbf{Answer}: 0.7814.
+\pause
 \item \textbf{Note}: 
 In an ideal solution, $\gamma_{i}=1$ for all species. \\
 Based on the value you just calculated for $\gamma_{\mathrm{Na^{+}}}$, can
@@ -301,17 +312,21 @@ $Z_{i}=1,2,3$ as a function of $I$.}
 % Activity coefficient calculation in Python: Davies model
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[fragile, allowframebreaks]{Activity coefficient calculation in Python: Davies model}
+\begin{frame}[fragile, allowframebreaks]{Activity coefficient calculation in Python, Davies model}
 
 \lstinputlisting[language=Python, caption=Davies activity model calculation in Python]{python-files/davies-activity-model.py}
 
+Source code: \href{https://polybox.ethz.ch/index.php/s/D0gfkcE1KBiFVxD}{\textcolor{indigo(dye)}{\it davies-activity-model.py}}
+
 \end{frame}
+%
+\subsection{Activity coefficient model for H$_2$O(aq), Davies model}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Activity coefficient model for H2O: Davies model
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Activity model for H$_{\boldsymbol{2}}$O(aq): Davies model}
+\begin{frame}{Activity model for H$_{\boldsymbol{2}}$O(aq), Davies model}
 \begin{itemize}
 \item The \textbf{activity of H$_{2}$O(aq)} can be calculated
 using the following \alert{\textbf{Davies model}}:
@@ -323,20 +338,30 @@ where $x_{\mathsf{H_{2}O\text{(aq)}}}$ is the mole fraction of H$_{2}$O(aq):{\sm
 x_{\mathsf{H_{2}O\text{(aq)}}}=\frac{n_{\mathsf{H_{2}O\text{(aq)}}}}{\text{sum of moles of all aqueous species}}.
 \]
 }{\small\par}
-\item \textbf{Note}: The above activity equation can be derived using \alert{\textbf{Gibbs–Duhem equation}}
-\[
-%\sum n_{i}\text{d}\mu_{i}=0\qquad\text{or}\qquad
-\sum n_{i}\text{d}\ln a{}_{i}=0
-\]
-when the Davies model is used for the activities of ionic species.
+\pause
+\item \alert{\textbf{Question}}: Consider pure water as a solution.
+What is the value of ionic strength $I$ and the activity of water $a_{\sf H_2O}$ ?  
+\begin{center}
+	\href{http://etc.ch/eCnt/?qr}{\textcolor{indigo(dye)}{\tt http://etc.ch/paWu}} \quad or \quad 
+	\includegraphics[height=0.1\columnwidth]{figures/activity-models/poll-ionic-strength.png}
+\end{center}
+\hiddenpause
+\item \textbf{Answer}: $I$ = 0, $a_{\sf H_2O}$ = 1.
+%\item \textbf{Note}: The above activity equation can be derived using \alert{\textbf{Gibbs–Duhem equation}}
+%\[
+%%\sum n_{i}\text{d}\mu_{i}=0\qquad\text{or}\qquad
+%\sum n_{i}\text{d}\ln a{}_{i}=0
+%\]
+%when the Davies model is used for the activities of ionic species.
 \end{itemize}
 \end{frame}
+%
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Activity coefficient model for H2O: Ideal model
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Activity model for H$_{\boldsymbol{2}}$O(aq): Ideal model}
+\begin{frame}{Activity model for H$_{\boldsymbol{2}}$O(aq),  Ideal model}
 \begin{itemize}[<+->]
 \item For an \alert{\textbf{ideal solution}}, all contribution arising from ionic strength
 can be eliminated:
@@ -350,7 +375,7 @@ can be eliminated:
 %\ln a_{\mathsf{H_{2}O\text{(aq)}}}=-\frac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}.
 %\]
 \item \textbf{Let's investigate how accurate this approximation is?} 
-\item \textbf{Source code}: \href{https://polybox.ethz.ch/index.php/s/xmvAZqB9bcGvEz3}{\textcolor{indigo(dye)}{\it polybox}}.
+\item \textbf{Source code}: \href{https://polybox.ethz.ch/index.php/s/cAmnV8dKZH7AMcK}{\textcolor{indigo(dye)}{\it activity-water-davies-vs-ideal.py}}.
 \end{itemize}
 \end{frame}
 %
@@ -379,11 +404,13 @@ of water as a function of ionic strength, $I$.}
 
 \end{frame}
 %
+\subsection{Activity coefficient model for CO$_2$(aq), Drummond model}
+%
 % --------------------------------------------------------------------------------------------------------------------%
-% Drummond activity coefficient model for CO2(aq)
+% Activity coefficient model for CO$_{2}$(aq), Drummond model
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Drummond activity coefficient model for CO$_{2}$(aq)}
+\begin{frame}{Activity coefficient model for CO$_{2}$(aq), Drummond model}
 \begin{itemize}[<+->]
 \item The \textbf{activity of the aqueous species CO$_{2}$(aq)} can be calculated
 using
@@ -394,9 +421,10 @@ with $\gamma_{\mathsf{CO_{2}\text{(aq)}}}$ calculated using the \alert{\textbf{D
 \[
 \boxed{\ln\gamma_{\mathsf{CO_{2}\text{(aq)}}}=\left(c_{1}+c_{2}T+\frac{c_{3}}{T}\right)I-(c_{4}+c_{5}T)\frac{I}{I+1}},
 \]
-where ${c_{1}=-1.0312}$, ${c_{2}=1.2806\cdot10^{-3}}$, ${c_{3}=255.9}$,
-${c_{4}=0.4445}$ and ${c_{5}=-1.606\cdot10^{-3}}$, $T$ is temperature, and 
-$I$ is the ionic strength of the aqueous solution. 
+where $T$ is temperature,  
+$I$ is the ionic strength of the aqueous solution, and 
+${c_{1}=-1.0312}$, ${c_{2}=1.2806\cdot10^{-3}}$, ${c_{3}=255.9}$,
+${c_{4}=0.4445}$ and ${c_{5}=-1.606\cdot10^{-3}}$. 
 \item \textbf{Limitations}: This equation is valid within the temperature and salinity ranges
 20–400~°C and 0–6.5~molal, respectively.
 \end{itemize}
@@ -410,7 +438,7 @@ $I$ is the ionic strength of the aqueous solution.
 
 \lstinputlisting[language=Python, caption=Calculating CO$_{2}$(aq) activity coefficient in Python]{python-files/activity-coefficient-co2-drummond.py}
 
-\textbf{Source code}: \href{https://polybox.ethz.ch/index.php/s/Cg91f6PR1xIuKzY}{\textcolor{indigo(dye)}{\it polybox}}.
+\textbf{Source code}: \href{https://polybox.ethz.ch/index.php/s/Cg91f6PR1xIuKzY}{\textcolor{indigo(dye)}{\it  activity-coefficient-co2-drummond.py}}.
 
 \end{frame}
 %
@@ -418,7 +446,7 @@ $I$ is the ionic strength of the aqueous solution.
 % Drummond activity coefficient model for CO$_{2}$(aq)
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Drummond activity coefficient model for CO$_{2}$(aq)}
+\begin{frame}{Activity coefficient model for CO$_{2}$(aq), Drummond model}
 
 \begin{figure}
 \centering{}\includegraphics[height=0.8\textheight]{figures/activity-models/activity-coefficient-co2-drummond}
@@ -441,41 +469,86 @@ at temperatures 50, 150, and 250 °C as a function of ionic strength.}
 \[
 \mathsf{CO_{2}\text{(g)}}\rightleftharpoons\mathsf{CO_{2}\text{(aq)}}.
 \]
-\item At equilibrium, the following \textbf{mass action equation} is satisfied:
-\[
-K=\frac{a_{\mathsf{CO_{2}\text{(aq)}}}}{a_{\mathsf{CO_{2}\text{(g)}}}}.
-\]
+\item At equilibrium, the following \textbf{mass action equation} is satisfied, i.e., 
+%
+$K=\frac{a_{\mathsf{CO_{2}\text{(aq)}}}}{a_{\mathsf{CO_{2}\text{(g)}}}}$.
+%\]
 \item Combining $a_{\mathsf{CO_{2}\text{(aq)}}} = K \, a_{\mathsf{CO_{2}\text{(g)}}}$ and 
 $a_{\mathsf{CO_{2}\text{(aq)}}}=\gamma_{\mathsf{CO_{2}\text{(aq)}}}m_{\mathsf{CO_{2}\text{(aq)}}}$:
 \[
 m_{\mathsf{CO_{2}\text{(aq)}}}=\frac{1}{\gamma_{\mathsf{CO_{2}\text{(aq)}}}} \, K(T, P) \, a_{\mathsf{CO_{2}\text{(g)}}}(T, P)
 \approx \frac{1}{\gamma_{\mathsf{CO_{2}\text{(aq)}}}} \, f(T, P).
 \]
-\item \textbf{Question:} What happens when $\gamma_{\mathsf{CO_{2}\text{(aq)}}}$
+\item \alert{\textbf{Question}}: What happens to $m_{\mathsf{CO_{2}\text{(aq)}}}$ when $\gamma_{\mathsf{CO_{2}\text{(aq)}}}$
 increases with $I$ for constant $(T, P)$?
-\item \textbf{Answer:} \href{http://etc.ch/eCnt/?qr}{\textcolor{indigo(dye)}{\tt http://etc.ch/eCnt}} or 
-%$m_{\mathsf{CO_{2}\text{(aq)}}}$ decreases, so we can dissolve less $\mathsf{CO_{2}\text{(g)}}$ in more saline brine.
-\vskip -10pt
-\includegraphics[height=0.13\columnwidth, center]{figures/activity-models/poll-ionic-strength.png}
+\begin{center}
+	\href{http://etc.ch/eCnt/?qr}{\textcolor{indigo(dye)}{\tt http://etc.ch/paWu}} \quad or \quad 
+	\includegraphics[height=0.14\columnwidth]{figures/activity-models/poll-ionic-strength.png}
+\end{center}
+\item \textbf{Answer:} $m_{\mathsf{CO_{2}\text{(aq)}}}$ decrease. 
 \end{itemize}
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Summary on the calculation of activities of gaseous species
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}[shrink=10]{Summary on the calculation of activities of aqueous species}
+	\begin{columns}[t]
+		
+		\column{0.5\textwidth}
+		\begin{itemize}[<+->]
+			\item  The \alert{activities} of aqueous solute species 
+			\[
+			a_{i}=\gamma_{i}m_{i}.
+			\]
+			\item The \alert{molality} of the species 
+			\[
+			m_{i}=55.508\frac{n_{i}}{n_{\mathsf{H_{2}O(aq)}}}.
+			\]
+			\item The \alert{ionic strength} of the aqueous solution 
+			\[
+			I=\frac{1}{2}\sum_{i}m_{i}Z_{i}^{2}.
+			\]
+		\end{itemize}
+		
+		\column{0.5\textwidth}
+		\begin{itemize}[<+->]
+			\item  The \alert{activity coefficient} $\gamma_{i}$  for  \alert{ionic species}
+			(e.g., Na$^{+}$, Cl$^{-}$, HCO$_{3}^{-}$, etc.) according to the Davies model:
+			\[
+			\log_{10}\gamma_{i}=-A_{\gamma}Z_{i}^{2}\left(\dfrac{\sqrt{I}}{1+\sqrt{I}}-0.3I\right).
+			\]
+			\item The \alert{activity coefficient} $\gamma_{i}$ for  \alert{CO$_{2}$(aq)} according to the Drummond model:
+			\[
+			\ln\gamma_{i}=\left(c_{1}+c_{2}T+\frac{c_{3}}{T}\right)I-(c_{4}+c_{5}T)\frac{I}{I+1}.
+			\]
+			\item The \alert{activity of H$_{2}$O(aq)} according to the Davies model:
+			\[
+			\ln a_{\mathsf{H_{2}O\text{(aq)}}}=-\frac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}.
+			\]
+		\end{itemize}
+	\end{columns}
+	
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Gaseous phase
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{}
-\centering
-\Large
-\textbf{Gaseous phase}
-\end{frame}
+\section{Gaseous phase}
+%\begin{frame}{}
+%\centering
+%\Large
+%\textbf{Gaseous phase}
+%\end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Activities of species in a gaseous solution
 % --------------------------------------------------------------------------------------------------------------------%
 %
 \begin{frame}{Activities of species in a gaseous solution}
-\begin{itemize}[<+->]
+\begin{itemize}
 \item The \alert{\textbf{activity of $i$-th gaseous species}} can be calculated using:
 \[
 \boxed{a_{i}=\varphi_{i}x_{i}\frac{P}{P^{\circ}}},
@@ -488,6 +561,7 @@ where
 and 
 \item $P^{\circ}$ is a reference pressure, $P^{\circ}=\unit[1]{\mathsf{bar}}$.
 \end{itemize}
+\pause
 \item The \textbf{fugacity coefficients of ideal gases} are $\varphi_{i}=1$. \text{But!}: the gases rarely behaving ideal.  
 \end{itemize}
 \end{frame}
@@ -548,7 +622,7 @@ $T$ and $P$ are normalized by their critical values $T_{\mathsf{critical}}$ and 
 \begin{figure}
 \centering
 \includegraphics[height=0.6\textheight]{figures/activity-models/phase-diagram-pt}
-\caption{{\footnotesize{}A typical phase diagram of a substance. The [critical
+\caption{{\footnotesize{}A typical phase diagram of a substance. The critical
 point is the limit point in the liquid-vapor saturation curve.}}
 \end{figure}
 
@@ -699,6 +773,31 @@ equation of states.}
 \end{table}
 
 \end{frame}
+\begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state \, iii}
+	
+	\begin{table}
+		\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}cc}
+			\toprule 
+			Equation of State & $\alpha(T_{\mathsf{r}},\omega)$\tabularnewline
+			\midrule 
+			Ideal Gas & 0$\vphantom{\left[T_{\mathsf{r}}^{1/2}\right]^{2}}$\tabularnewline
+			van der Waals (vdW) $^{1}$ \citeyearpar{VanderWaals1873} & 1$\vphantom{\left[T_{\mathsf{r}}^{1/2}\right]^{2}}$\tabularnewline
+			Redlich/Kwong (RK)$^{2}$ \citeyearpar{Redlich1949} & $T_{\mathsf{r}}^{-1/2}$$\vphantom{\left[T_{\mathsf{r}}^{1/2}\right]^{2}}$\tabularnewline
+			Soave/Redlich/Kwong (SRK)$^{3}$ \citeyearpar{Soave1972} & $\left[1+(0.480+1.574\omega-0.176\omega^{2})(1-T_{\mathsf{r}}^{1/2})\right]^{2}$\tabularnewline
+			\textbf{Peng/Robinson (PR)} $^{4}$ \citeyearpar{Peng1976} & $\mathbf{\left[1+(0.37464+1.54226\omega-0.26992\omega^{2})(1-T_{\mathsf{r}}^{1/2})\right]^{2}}$\tabularnewline
+			\bottomrule
+		\end{tabular*}
+		
+		\footnotesize
+		
+		\textbf{$^{1}$}\citet{VanderWaals1873}; $^{2}$\citet{Redlich1949};
+		$^{3}$\citet{Soave1972}, commonly known as Soave–Redlich–Kwong;
+		$^{4}$\citet{Peng1976}.
+		
+		\caption{The function $\alpha(T_{\mathsf{r}},\omega)$ for different equations of state.}
+	\end{table}
+	
+\end{frame}
 %
 \begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state \, iv}
 
@@ -726,7 +825,7 @@ in which \textbf{\alert{liquid and vapour coexist}}.
 \lcol
 \begin{itemize}
 \item Because we are modeling the $PVT$ behavior of a substance
-using a \alert{cubic equation of state}:
+using a \alert{\bf cubic equation of state}:
 \[
 Z^{3}+AZ^{2}+BZ+C=0,
 \]
@@ -770,10 +869,11 @@ root of cubic equation.
 \ecol
 \end{frame}
 %
-\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ -- Fixed point iteration}
+\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$, Fixed point iteration}
 \begin{itemize}
 \item The equation of state is non-linear in $Z$, so that its solution requires an \textbf{iterative procedure}.
 %
+\pause
 \item We rearrange it to a more convenient form for \textbf{the largest root} computation \citep{Smith2005}
 \[
 \boxed{Z = f(Z) = 1+\beta-q\beta\frac{Z-\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}}
@@ -798,15 +898,15 @@ Z^{i+1} =f(Z^{i})= 1+\beta-q\beta\frac{Z^{i}-\beta}{(Z^{i}+\epsilon\beta)(Z^{i}+
 % Calculating the compressibility factor of CO2 -- Python code
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[fragile, allowframebreaks]{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ -- Python code}
+\begin{frame}[fragile, allowframebreaks]{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$, Python code}
 
 \lstinputlisting[language=Python, caption=Calculating the compressibility factor of CO2 using fixed point method in Python]{python-files/co2-compressibility-factor-fixed-point.py}
 
-\textbf{Source code}: \href{}{\textcolor{indigo(dye)}{\it polybox}}.
+\textbf{Source code}: \href{https://polybox.ethz.ch/index.php/s/39Sznpv0Eirt45B}{\textcolor{indigo(dye)}{\it co2-compressibility-factor-fixed-point.py}}.
 
 \end{frame}
 %
-\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ -- Fixed point iteration}
+\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$, Fixed point iteration \, i}
 
 \begin{figure}
 \begin{centering}
@@ -822,22 +922,24 @@ Z^{i+1} =f(Z^{i})= 1+\beta-q\beta\frac{Z^{i}-\beta}{(Z^{i}+\epsilon\beta)(Z^{i}+
 % Calculating the compressibility factor of CO2 -- Fixed point iteration
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[fragile]{Calculating the compressibility factor of CO$_{\boldsymbol{\sf 2}}$ -- Fixed point iteration}
+\begin{frame}[fragile]{Calculating the compressibility factor of CO$_{\boldsymbol{\sf 2}}$, Fixed point iteration \, ii}
 \begin{columns}[t]
 
 \column{0.5\textwidth}
-\begin{itemize}[<+->]
+\begin{itemize}
 \item \textbf{Disadvantages} of the fixed point method:\\[-2pt]
 \begin{itemize}
 \item \textbf{slow}, requiring many iterations; and 
 \item \textbf{unstable}, failing to converge. 
 \end{itemize}
+\pause
 \item The fixed point method \textbf{failed at regions close
 to the liquid-vapor saturation curve}, for temperatures below
-$T_{\sf cr} = $  31.04 °C and pressures close to the saturation pressure (i.e.,
-near the blue curve).
+$T_{\sf cr} = $  31.04 °C and pressures close to the saturation pressure (i.e., near the blue curve).
+\pause
 \item This is due to discontinuity of derivative in the function of Z at $T = T_{\sf cr}$, 
 whereas fixed point requires its \alert{\textbf{continuity}}.
+\pause
 \item \textbf{Solution}: Newton's method.
 \end{itemize}
 
@@ -858,7 +960,7 @@ whereas fixed point requires its \alert{\textbf{continuity}}.
 % Compressibility factor of CO2 -- Newton vs. Fixed point method
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Compressibility factor of CO$_{\boldsymbol{2}}$ -- Newton vs. Fixed point method}
+\begin{frame}{Compressibility factor of CO$_{\boldsymbol{2}}$, Newton vs. Fixed point method}
 \begin{columns}[t]
 
 \column{0.5\textwidth}
@@ -888,13 +990,15 @@ whereas fixed point requires its \alert{\textbf{continuity}}.
 % Compressibility factor of CO2 -- Newton's method
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ -- Newton's method}
+\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$, Newton's method}
 \begin{itemize}
 \item In \alert{\textbf{Newton's method}}, we transform the non-linear equation
 $Z=1+\beta-q\beta\frac{Z-\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}$
 into the form $r(Z)=0$, where $r$ is the \textbf{residual function} 
 \[
-\boxed{r(Z)=1+\beta-q\beta\frac{Z-\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}-Z}.
+\boxed{r(Z) 
+	= f(Z) - Z 
+	= 1+\beta-q\beta\frac{Z-\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}-Z}.
 \]
 \item Newton's method requires \textbf{first order derivative} of $r(Z)$ in its iterative process:
 \begin{itemize}
@@ -906,6 +1010,11 @@ Z^{0}=1,
 \[
 Z^{i+1} =Z^{i}-r(Z^{i})/r^{\prime}(Z^{i}),
 \]
+where 
+%
+\[
+r^{\prime}(Z)=-\frac{q\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}\left\{ 1-(Z-\beta)\frac{2Z+(\epsilon+\sigma)\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}\right\} -1,
+\]
 %
 \item and \textbf{acceptance criterion} $|r(Z)|<\varepsilon$, where $\varepsilon$ is selected tolerance.
 \end{itemize} 
@@ -916,7 +1025,7 @@ Z^{i+1} =Z^{i}-r(Z^{i})/r^{\prime}(Z^{i}),
 % Compressibility factor of CO2 -- Newton's method
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[fragile, allowframebreaks]{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ -- Python code}
+\begin{frame}[fragile, allowframebreaks]{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$, Python code}
 
 \lstinputlisting[language=Python, caption=Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ using Newton's method in Python]{python-files/co2-compressibility-factor-newton.py}
 
@@ -928,7 +1037,7 @@ Z^{i+1} =Z^{i}-r(Z^{i})/r^{\prime}(Z^{i}),
 % Compressibility factor of CO2 -- Newton's method
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$ -- Newton's method}
+\begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$, Newton's method}
 \begin{columns}[t]
 
 \column{0.61\textwidth}
@@ -994,88 +1103,10 @@ of state (EOS) for temperatures 0–300 °C and 1–400 bar. }
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
-% Summary on the calculation of Gibbs energy
-% --------------------------------------------------------------------------------------------------------------------%
-%
-\begin{frame}[shrink=10]{Summary on the calculation of Gibbs energy}
-\begin{columns}[t]
-
-\column{0.5\textwidth}
-\begin{itemize}[<+->]
-\item The \alert{Gibbs energy} is defined as
-\[
-G(n)=\sum_{i=1}^{\mathsf{N}}n_{i}\mu_{i},
-\]
-where $n=(n_{1},\ldots,n_{\mathsf{N}})$ is the vector of molar amounts
-of the species. 
-\item The \alert{chemical potential} of the $i$th species is defined as
-\[
-\mu_{i}=\mu_{i}^{\circ}+RT\ln a_{i}(n, T, P).
-\]
-\end{itemize}
-
-\column{0.5\textwidth}
-\begin{itemize}[<+->]
-\item The \alert{standard chemical potentials} of the species $\mu_{i}^{\circ}$
-depend on temperature $T$ and pressure $P$ and can be interpolated
-from a table of values over several temperature and pressure points.
-%
-\item The \alert{activities} of the species $a_{i}$ depend on temperature
-$T$, pressure $P$, and the concentrations of the species in the
-same phase $n_{\Phi}$.
-\end{itemize}
-\end{columns}
-
-\end{frame}
-%
-% --------------------------------------------------------------------------------------------------------------------%
 % Summary on the calculation of activities of gaseous species
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[shrink=15]{Summary on the calculation of activities of aqueous species}
-\begin{columns}[t]
-
-\column{0.5\textwidth}
-\begin{itemize}[<+->]
-\item  The \alert{activities} of aqueous solute species 
-\[
-a_{i}=\gamma_{i}m_{i}.
-\]
-\item The \alert{molality} of the species 
-\[
-m_{i}=55.508\frac{n_{i}}{n_{\mathsf{H_{2}O(aq)}}}.
-\]
-\item The \alert{ionic strength} of the aqueous solution 
-\[
-I=\frac{1}{2}\sum_{i}m_{i}Z_{i}^{2}.
-\]
-\end{itemize}
-
-\column{0.5\textwidth}
-\begin{itemize}[<+->]
-\item  The \alert{activity coefficient} $\gamma_{i}$  for  \alert{ionic species}
-(e.g., Na$^{+}$, Cl$^{-}$, HCO$_{3}^{-}$, etc.):
-\[
-\log_{10}\gamma_{i}=-A_{\gamma}Z_{i}^{2}\left(\dfrac{\sqrt{I}}{1+\sqrt{I}}-0.3I\right).
-\]
-\item The \alert{activity coefficient} $\gamma_{i}$ for  \alert{CO$_{2}$(aq)}:
-\[
-\ln\gamma_{i}=\left(c_{1}+c_{2}T+\frac{c_{3}}{T}\right)I-(c_{4}+c_{5}T)\frac{I}{I+1}.
-\]
-\item The \alert{activity of H$_{2}$O(aq)}:
-\[
-\ln a_{\mathsf{H_{2}O\text{(aq)}}}=-\frac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}.
-\]
-\end{itemize}
-\end{columns}
-
-\end{frame}
-%
-% --------------------------------------------------------------------------------------------------------------------%
-% Summary on the calculation of activities of gaseous species
-% --------------------------------------------------------------------------------------------------------------------%
-%
-\begin{frame}[shrink=10]{Summary on the calculation of activities of gaseous species}
+\begin{frame}{Summary on the calculation of activities of gaseous species}
 \begin{columns}[t]
 
 \column{0.5\textwidth}
@@ -1109,6 +1140,8 @@ by \emph{fixed point method} or \emph{Newton's method}.
 \end{columns}
 
 \end{frame}
+%
+\section{Mineral phase}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Summary on the calculation of activities of mineral species

@@ -89,6 +89,7 @@ omegaCO2 = 0.224
 # Create a plot
 plt.xlabel('Pressure [bar]')
 plt.ylabel(r'$Z = \frac{PV}{RT}$')
+plt.ylim(0.05, 1.05)
 plt.title('Compressibility Factor of CO2(g)\nUsing Fixed Point Method')
 
 # Plot one curve for each temperature in array temperatures
