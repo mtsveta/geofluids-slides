@@ -11,7 +11,7 @@ A = [[],
      []]
 
 # Create a list with the amounts of species (in moles)
-n = [55.4551, 1.23485e-4, 8.39739e-11, 4.93648e-11, 1.23484e-4, 0.032861, 1.96702, 0.0531732]
+n = []
 
 # Transform Python lists A and n into Numpy arrays
 A = numpy.array(A)

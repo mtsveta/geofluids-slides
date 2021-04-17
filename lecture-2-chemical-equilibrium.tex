@@ -904,6 +904,43 @@ print("log10K = ", lnK * log10(e))
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
+% Summary on the calculation of Gibbs energy
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Summary on the calculation of Gibbs energy}
+	\begin{columns}[t]
+		
+		\column{0.5\textwidth}
+		\begin{itemize}[<+->]
+			\item The \alert{Gibbs energy} is defined as
+			\[
+			G(n)=\sum_{i=1}^{\mathsf{N}}n_{i}\mu_{i},
+			\]
+			where $n=(n_{1},\ldots,n_{\mathsf{N}})$ is the vector of molar amounts
+			of the species. 
+			\item The \alert{chemical potential} of the $i$th species is defined as
+			\[
+			\mu_{i}=\mu_{i}^{\circ}+RT\ln a_{i}(n, T, P).
+			\]
+		\end{itemize}
+		
+		\column{0.5\textwidth}
+		\begin{itemize}[<+->]
+			\item The \alert{standard chemical potentials} of the species $\mu_{i}^{\circ}$
+			depend on temperature $T$ and pressure $P$ and can be interpolated
+			from a table of values over several temperature and pressure points.
+			%
+			\item The \alert{activities} of the species $a_{i}$ depend on temperature
+			$T$, pressure $P$, and the concentrations of the species in the
+			same phase $n_{\Phi}$. \\
+			%
+			{\bf Note}: Activities are very important as they account for the non-ideal behavior of the species. 
+		\end{itemize}
+	\end{columns}
+	
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
 % Exercise: Mass action and mass conservation equations
 % --------------------------------------------------------------------------------------------------------------------%
 %
@@ -990,7 +1027,7 @@ video
 \end{itemize}
 \end{frame}
 %
-\section{Important chemical properties}
+%\section{Important chemical properties}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Solubility of aqueous species, gases, and minerals
