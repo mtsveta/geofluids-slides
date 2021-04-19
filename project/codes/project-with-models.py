@@ -261,7 +261,13 @@ def ln_activities_gaseous_species(T, P, nphase):
 def ln_activities_mineral_species(T, P, nphase):
     return zeros(num_species_mineral)
 
-
+# Define the function that calculates the activities of the aqueous species.
+# Parameters:
+#   - T is temperature in units of K
+#   - P is pressure in units of Pa
+#   - nphase is an array with the mole amounts of the aqueous species
+# Return:
+#   - an array with the ln activities of aqueous species
 def ln_activities_aqueous_species_ddn(T, P, nphase):
     # The molar amount of H2O(l)
     nH2O = nphase[iH2O]
