@@ -30,22 +30,20 @@ Pref = 1.0e5
 # - I is ionic strength in molal
 # Return: the ln activity coefficient of CO2(aq)
 def ln_activity_coeff_co2_drummond(T, I):
-    c1 = -1.0312
-    c2 = 1.2806e-3
-    c3 = 255.9
-    c4 = 0.4445
-    c5 = -1.606e-3
-    return (c1 + c2*T + c3/T)*I - (c4 + c5*T)*I/(1 + I)
+    
+    # -------------------------------------------------------------------------------- #
+    # TO FILL (see the slides 'Activity coefficient model for CO2(aq), Drummond model')
+    # -------------------------------------------------------------------------------- #    
 
-# The Davies model for the ln activity coefficient of aqueous ions.
 # Parameters:
 # - Z is the charge of the ionic species
 # - I is the ionic strength in molal
 # Return: the ln of activity coefficient of the aqueous ion
 def ln_activity_coeff_ion_davies(Z, I):
-    Agamma = 0.5095
-    sqrtI = sqrt(I)
-    return 2.30258 * (-Agamma * Z**2 * (sqrtI / (1.0 + sqrtI) - 0.3 * I))
+    
+    # ------------------------------------------------------------------------------------- #
+    # TO FILL (see the slides 'Activity coefficient of aqueous ionic species, Davies model')
+    # ------------------------------------------------------------------------------------- #
 
 # Define a function that solves the nonlinear equation f(x) = 0.
 # Parameters:
@@ -54,18 +52,10 @@ def ln_activity_coeff_ion_davies(Z, I):
 # - x0 is the initial guess
 # Return: the value of x such that f(x) = 0
 def newton(f, fprime, x0):
-    maxiters = 100 # maximum number of iterations
-    tolerance = 1e-4 # the tolerance for the convergence
-    counter = 0 # the counter of number of iterations
-    x = x0 # start with the solution x being the initial guess
-    # Perform one or more Newton iterations
-    for counter in range(maxiters):
-        x = x - f(x) / fprime(x) # calculate the new approximation for x
-        if abs(f(x)) < tolerance: # check for convergence
-            return x # return x if the calculation converged
-    # Raise an error if the calculation did not converge.
-    raise RuntimeError('Could not calculate the \
-        solution of the nonlinear equation in %d iterations.' % counter)
+    
+    # ---------------------------------------------------------------------------------------- #
+    # TO FILL (see the slides 'Calculating the compressibility factor of CO2, Newton's method')
+    # ---------------------------------------------------------------------------------------- #
 
 # The Peng-Robinson model for the ln fugacity coefficient of CO2(g).temperature
 # Parameters:
@@ -73,43 +63,15 @@ def newton(f, fprime, x0):
 # - P is pressure in Pa.
 # Return: the ln of fugacity coefficient of CO2(g)
 def ln_fugacity_coefficient_co2(T, P):
-    # The critical temperature and pressure of CO2
-    Tc = 304.2    # CO2 critical temperature in K
-    Pc = 73.83e5  # CO2 critical pressure in Pa
-    # The acentric factor of CO2
-    omega = 0.224
-    # Create variables for the parameters of Peng-Robinson EOS
-    epsilon = 1 - sqrt(2.0)
-    sigma = 1 + sqrt(2.0)
-    Omega = 0.07780
-    Psi = 0.45724
-    # The reduced temperature, Tr, and reduced pressure, Pr
-    Tr = T / Tc
-    Pr = P / Pc
-    # The evaluation of the alpha(Tr, omega) function
-    alpha = (1 + (0.37464 + 1.54226*omega - 0.26992*omega**2)*(1 - sqrt(Tr)))**2
-    # The beta and q contants
-    beta = Omega * Pr / Tr
-    q = Psi/Omega * alpha/Tr
-    # Define the function f that represents the nonlinear equation f(x) = 0
-    def f(Z):
-        return (1 + beta - q*beta*(Z - beta)/((Z + epsilon*beta)*(Z + sigma*beta))) - Z
-    # Define the first order derivative of function f'(x)
-    def fprime(Z):
-        aux = (Z + epsilon*beta)*(Z + sigma*beta)
-        return -q*beta/aux * (1.0 - (Z - beta)*(2*Z + (epsilon + sigma)*beta)/aux) - 1
-    # Calculate the compressibility factor of CO2 at (T, P)
-    Z0 = 1.0 # the initial guess for the compressibility factor
-    Z = newton(f, fprime, Z0) # use newton function to perform the calculation of Z
-    # Calcute theta
-    theta = 1.0/(sigma - epsilon) * log((Z + sigma*beta)/(Z + epsilon*beta))
-    # Calculate ln_phiCO2
-    ln_phiCO2 = Z - 1 - log(Z - beta) - q*theta
-
+    
+    # ---------------------------------------------------------------------------------------- #
+    # TO FILL (see the slides Calculating the compressibility factor of CO2, Newton's method' 
+    # and 'Activity of CO2(g) using a cubic equation of state')
+    # ---------------------------------------------------------------------------------------- #
+  
     return ln_phiCO2
 
 # Create a list of elements names
-# elements = ['H', 'O', 'C', 'Na', 'Cl', 'Ca', 'Z']
 elements = ['H', 'O', 'C', 'Na', 'Cl', 'Ca']
 
 # Create a list of species names
@@ -151,6 +113,7 @@ iCO2 = species.index('CO2(aq)')
 icharged = [idx for idx, charge in enumerate(charges) if charge != 0.0]
 
 # Construct the formula matrix of the chemical system
+# H2O(l) H+(aq) OH-(aq) HCO3-(aq) CO3--(aq) CO2(aq) Na+(aq)Cl-(aq) Ca++(aq) CO2(g) CaCO3(s,calcite)
 formula_matrix = array([
     [2, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],  # H
     [1, 0, 1, 3, 3, 2, 0, 0, 0, 2, 3],  # O
@@ -178,7 +141,10 @@ useideal = False
 
 # A global variable to allow one to choose only reference state standard
 # chemical potentials are used, without interpolation
-userefpotentials = False
+userefpotentials = True
+
+result_folder = 'results-useideal-' + (str(1) if useideal else str(0)) + '-userefpotentials-' + (str(1) if userefpotentials else str(0))
+os.system('mkdir -p ' + result_folder)
 
 # Define the function that calculates the activities of all aqueous species.
 # Parameters:
@@ -203,11 +169,11 @@ def ln_activities_aqueous_species(T, P, nphase):
 
     # Calculate the ln activity coefficient of CO2(aq)
     ln_g[iCO2] = 0.0 if useideal else ln_activity_coeff_co2_drummond(T, I)
-
+    
     # Calculate the ln activity coefficient of each charged species
     for i in icharged:
         ln_g[i] = 0.0 if useideal else ln_activity_coeff_ion_davies(charges[i], I)
-
+    
     # Calculate the natural log of the molalities of the aqueous species
     ln_m = log(m)
 
@@ -462,13 +428,19 @@ def index_interpolation_point(val, values):
 def interpolate(x, y, xpoints, ypoints, fvalues):
     i = index_interpolation_point(x, xpoints)
     j = index_interpolation_point(y, ypoints)
+    
     if i+1 == len(xpoints): return fva
+    
     assert i >= 0 and j >= 0, '{0} <= {1} <= {2} or {3} <= {4} <= {5}'.format(
         xpoints[i], x, xpoints[i+1], ypoints[i], y, ypoints[i+1])
-    xl, xr = xpoints[i], xpoints[i+1]
-    yb, yt = ypoints[j], ypoints[j+1]
-    flb, frb, flt = fvalues[i][j], fvalues[i+1][j], fvalues[i][j+1]
-    f = flb + (x - xl)/(xr - xl) * (frb - flb) + (y - yb)/(yt - yb) * (flt - flb)
+    
+    xl, xr = # -- TO FILL -- #
+    yb, yt = # -- TO FILL -- #
+
+    flb, frb, flt =# -- TO FILL -- #
+    
+    f = # -- TO FILL (see project description) -- #
+    
     return f
 
 # Define the function that calculates the standard chemical potentials of all
@@ -795,8 +767,7 @@ P = 1.0e5   # pressure  input in Pa
 #b = element_amounts(kgH2O=1, molCO2=0.0, molNaCl=0.6, molCaCO3=1.0)
 #b = element_amounts(kgH2O=1, molCO2=5.0, molNaCl=0.6, molCaCO3=1.0)
 #b = element_amounts(kgH2O=1, molCO2=0.0, molNaCl=0.0, molCaCO3=1.0)
-#b = element_amounts(kgH2O=1, molCO2=5.0, molNaCl=0.0, molCaCO3=1.0)
-b = element_amounts(kgH2O=1, molCO2=5.0, molNaCl=0.0, molCaCO3=0.0)
+b = element_amounts(kgH2O=1, molCO2=5.0, molNaCl=0.0, molCaCO3=1.0)
 
 state = equilibrate(T, P, b, output=True)
 
@@ -808,8 +779,7 @@ state = equilibrate(T, P, b, output=True)
 #output = open('result_calcite_solubility_0.6_mol_nacl_brine_no_co2.txt', 'w')
 #output = open('result_calcite_solubility_0.6_mol_nacl_brine_saturated_with_co2.txt', 'w')
 #output = open('result_calcite_solubility_pure_water.txt', 'w')
-#output = open('result_calcite_solubility_pure_water_saturated_with_co2.txt', 'w')
-output = open('result_pure_water_saturated_with_co2.txt', 'w')
+output = open('result_calcite_solubility_pure_water_saturated_with_co2.txt', 'w')
 
 print(state, end="", file=output)
 
@@ -820,29 +790,30 @@ def solubilityCO2(I, T, P):
 
     b = element_amounts(kgH2O=1, molCO2=10.0, molNaCl=I, molCaCO3=0.0)
     state = equilibrate(T, P, b)
-
+    
     assert state.n[species.index('CO2(g)')] > 0.1
-
+    
     iCO2 = species.index('CO2(aq)')
-    iHCO3 = species.index('HCO3-(aq)')
-    iCO3 = species.index('CO3--(aq)')
-    molality_C = state.c[iCO2] + state.c[iHCO3] + state.c[iCO3]
+    iHCO3 = # -- TO FILL -- #
+    iCO3 = # -- TO FILL -- #
+    molality_C = state.c[iCO2] + # -- TO FILL -- #
     
     return molality_C
 
 
 def pH(molesCO2, I, T, P):
-    
+
     b = element_amounts(kgH2O=1, molCO2=molesCO2, molNaCl=I, molCaCO3=0.0)
     state = equilibrate(T, P, b)
     
-    iH = species.index('H+(aq)')
-    pH = -log10(state.a[iH])
+    iH = # -- TO FILL -- #
+    pH = # -- TO FILL -- #
     
     return pH
 
 
 def solubilityCaCO3(molesCO2, I, T, P):
+
     b = element_amounts(kgH2O=1, molCO2=molesCO2, molNaCl=I, molCaCO3=10)
     state = equilibrate(T, P, b)
     
@@ -850,6 +821,7 @@ def solubilityCaCO3(molesCO2, I, T, P):
     
     iCa = species.index('Ca++(aq)')
     molality_Ca = state.c[iCa]
+
     return molality_Ca
 
 
@@ -858,13 +830,12 @@ def dissolvedMassCaCO3(molesCO2, I, T, P):
     molCaCO3 = 10.0
     molar_massCaCO3 = 100.0869 # g/mol
 
-    b = element_amounts(kgH2O=1, molCO2=molesCO2, molNaCl=I, molCaCO3=molCaCO3)
-    state = equilibrate(T, P, b)
+    b = # -- TO FILL -- #
+    state = # -- TO FILL -- #
     
     assert state.n[species.index('CaCO3(s,calcite)')] > 0.1 # check that calcite amount is more than 0.1 mol
-    iCa = species.index('Ca++(aq)')
-    molality_Ca = state.c[iCa]
-    initial_mass = molCaCO3 * molar_massCaCO3  # 10 moles * 100.09 g/mol
+    
+    initial_mass = # -- TO FILL -- #
     final_mass = state.m[species.index('CaCO3(s,calcite)')]
     return initial_mass - final_mass
 
@@ -872,34 +843,14 @@ def dissolvedMassCaCO3(molesCO2, I, T, P):
 npoints = 50
 
 def plot_co2_solubility_vs_ionic_strength():
-    T1 = 50 + 273.15   # temperature in K
-    T2 = 75 + 273.15   # temperature in K
-    T3 = 100 + 273.15  # temperature in K
-    P1 = 50 * 1e5      # pressure in Pa
-    P2 = 100 * 1e5     # pressure in Pa
-    ionic_strength = linspace(0.0, 0.7, npoints)  # the ionic strength values from 0.0 to 0.7
-    mT1P1 = [solubilityCO2(I, T1, P1) for I in ionic_strength]  # solubility of CO2 at T1 and P1
-    mT2P1 = [solubilityCO2(I, T2, P1) for I in ionic_strength]  # solubility of CO2 at T2 and P1
-    mT3P1 = [solubilityCO2(I, T3, P1) for I in ionic_strength]  # solubility of CO2 at T3 and P1
-    mT1P2 = [solubilityCO2(I, T1, P2) for I in ionic_strength]  # solubility of CO2 at T1 and P2
-    mT2P2 = [solubilityCO2(I, T2, P2) for I in ionic_strength]  # solubility of CO2 at T2 and P2
-    mT3P2 = [solubilityCO2(I, T3, P2) for I in ionic_strength]  # solubility of CO2 at T3 and P2
-    plt.xlabel('Ionic Strength [molal]')
-    plt.ylabel('Solubility CO2(g) [molal]')
-    plt.plot(ionic_strength, mT1P1, label='T = %.0f C, P = %.0f bar' % (T1-273.15, P1*1e-5))
-    plt.plot(ionic_strength, mT2P1, label='T = %.0f C, P = %.0f bar' % (T2-273.15, P1*1e-5))
-    plt.plot(ionic_strength, mT3P1, label='T = %.0f C, P = %.0f bar' % (T3-273.15, P1*1e-5))
-    plt.plot(ionic_strength, mT1P2, label='T = %.0f C, P = %.0f bar' % (T1-273.15, P2*1e-5))
-    plt.plot(ionic_strength, mT2P2, label='T = %.0f C, P = %.0f bar' % (T2-273.15, P2*1e-5))
-    plt.plot(ionic_strength, mT3P2, label='T = %.0f C, P = %.0f bar' % (T3-273.15, P2*1e-5))
-    plt.legend(loc='best')
-    plt.title('Plot 1')
-    plt.savefig(result_folder + '/' 'plot1-co2-solubility-vs-ionic-strength.pdf', bbox_inches='tight')
-    plt.close()
-    # plt.show()
+
+    # --------------------------------------- #
+    # TO FILL
+    # --------------------------------------- #    
 
 
 def plot_co2_solubility_vs_temperature():
+
     I1 = 0.0  # ionic strength in molal
     I2 = 0.3  # ionic strength in molal
     I3 = 0.6  # ionic strength in molal
@@ -929,6 +880,7 @@ def plot_co2_solubility_vs_temperature():
 
 
 def plot_co2_solubility_vs_pressure():
+
     I = 0.3           # ionic strength in molal
     T1 = 50 + 273.15  # temperature in K
     T2 = 75 + 273.15  # temperature in K
@@ -945,13 +897,14 @@ def plot_co2_solubility_vs_pressure():
     plt.plot(pressures, mT2, label='T = %.0f C' % (T2-273.15))
     plt.plot(pressures, mT3, label='T = %.0f C' % (T3-273.15))
     plt.legend(loc='best')
-    plt.title('Plot 3')
-    plt.savefig(result_folder + '/' 'plot3-co2-solubility-vs-pressure.pdf', bbox_inches='tight')
+    plt.title('Plot 4')
+    plt.savefig(result_folder + '/' 'plot4-co2-solubility-vs-pressure.pdf', bbox_inches='tight')
     plt.close()
     # plt.show()
 
 
 def plot_ph_vs_co2_amount():
+
     I = 0.3          # ionic strength in molal
     T = 75 + 273.15  # temperature in K
     P = 100 * 1e5    # pressure in Pa
@@ -960,13 +913,14 @@ def plot_ph_vs_co2_amount():
     amountsCO2 = linspace(0.0, 2.0, npoints)
     pHs = [pH(molesCO2, I, T, P) for molesCO2 in amountsCO2]
     plt.plot(amountsCO2, pHs)
-    plt.title('Plot 4')
-    plt.savefig(result_folder + '/' 'plot4-ph-vs-co2-amount.pdf')
+    plt.title('Plot 3')
+    plt.savefig(result_folder + '/' 'plot3-ph-vs-co2-amount.pdf')
     plt.close()
     # plt.show()
 
 
 def plot_calcite_solubility_vs_co2_amount():
+
     T = 75 + 273.15  # temperature in K
     P = 100 * 1e5    # pressure in Pa
     I = 0.2          # ionic strength in molal
@@ -982,6 +936,7 @@ def plot_calcite_solubility_vs_co2_amount():
 
 
 def plot_calcite_dissolved_mass_vs_co2_amount():
+
     T = 75 + 273.15  # temperature in K
     P = 100 * 1e5    # pressure in Pa
     I = 0.2          # ionic strength in molal
@@ -997,6 +952,7 @@ def plot_calcite_dissolved_mass_vs_co2_amount():
 
 
 def plot_calcite_solubility_vs_ionic_strength():
+
     molesCO2 = 5.0
     T1 = 50 + 273.15   # temperature in K
     T2 = 75 + 273.15   # temperature in K
@@ -1026,61 +982,22 @@ def plot_calcite_solubility_vs_ionic_strength():
 
 def plot_calcite_solubility_vs_temperature():
 
-    molesCO2 = 5.0
-    I1 = 0.0  # ionic strength in molal
-    I2 = 0.3  # ionic strength in molal
-    I3 = 0.6  # ionic strength in molal
-    P1 = 50 * 1e5  # pressure in Pa
-    P2 = 100 * 1e5  # pressure in Pa
-    temperatures = linspace(50.0, 100.0, npoints) + 273.15         # temperature values in K
-    mI1P1 = [solubilityCaCO3(molesCO2, I1, T, P1) for T in temperatures]  # solubility of Calcite at I1 and P1
-    mI2P1 = [solubilityCaCO3(molesCO2, I2, T, P1) for T in temperatures]  # solubility of Calcite at I2 and P1
-    mI3P1 = [solubilityCaCO3(molesCO2, I3, T, P1) for T in temperatures]  # solubility of Calcite at I3 and P1
-    mI1P2 = [solubilityCaCO3(molesCO2, I1, T, P2) for T in temperatures]  # solubility of Calcite at I1 and P2
-    mI2P2 = [solubilityCaCO3(molesCO2, I2, T, P2) for T in temperatures]  # solubility of Calcite at I2 and P2
-    mI3P2 = [solubilityCaCO3(molesCO2, I3, T, P2) for T in temperatures]  # solubility of Calcite at I3 and P2
-    plt.xlabel('Temperature [C]')
-    plt.ylabel('Solubility Calcite [molal]')
-    temperatures = temperatures - 273.15  # convert temperature to celsius for plotting reasons
-    plt.plot(temperatures, mI1P1, label='I = %.1f molal, P = %.0f bar' % (I1, P1*1e-5))
-    plt.plot(temperatures, mI2P1, label='I = %.1f molal, P = %.0f bar' % (I2, P1*1e-5))
-    plt.plot(temperatures, mI3P1, label='I = %.1f molal, P = %.0f bar' % (I3, P1*1e-5))
-    plt.plot(temperatures, mI1P2, label='I = %.1f molal, P = %.0f bar' % (I1, P2*1e-5))
-    plt.plot(temperatures, mI2P2, label='I = %.1f molal, P = %.0f bar' % (I2, P2*1e-5))
-    plt.plot(temperatures, mI3P2, label='I = %.1f molal, P = %.0f bar' % (I3, P2*1e-5))
-    plt.legend(loc='upper right')
-    plt.title('Plot 8')
-    plt.savefig(result_folder + '/' 'plot8-calcite-solubility-vs-temperature.pdf', bbox_inches='tight')
-    plt.close()
+    # --------------------------------------- #
+    # TO FILL
+    # --------------------------------------- #    
 
 
 def plot_calcite_solubility_vs_pressure():
 
-    molesCO2 = 5.0
-    I = 0.3           # ionic strength in molal
-    T1 = 50 + 273.15  # temperature in K
-    T2 = 75 + 273.15  # temperature in K
-    T3 = 100 + 273.15 # temperature in K
-    pressures = linspace(50, 100, npoints) * 1e5  # pressure values in Pa
-    mT1 = [solubilityCaCO3(molesCO2, I, T1, P) for P in pressures]  # solubility of Calcite at T1
-    mT2 = [solubilityCaCO3(molesCO2, I, T2, P) for P in pressures]  # solubility of Calcite at T2
-    mT3 = [solubilityCaCO3(molesCO2, I, T3, P) for P in pressures]  # solubility of Calcite at T3
-    pressures = pressures * 1e-5  # convert pressure values from Pa to bar for plotting reasons
-    plt.xlim(xmin=50, xmax=100)
-    plt.xlabel('Pressure [bar]')
-    plt.ylabel('Solubility Calcite [molal]')
-    plt.plot(pressures, mT1, label='T = %.0f C' % (T1-273.15))
-    plt.plot(pressures, mT2, label='T = %.0f C' % (T2-273.15))
-    plt.plot(pressures, mT3, label='T = %.0f C' % (T3-273.15))
-    plt.legend(loc='lower right')
-    plt.title('Plot 9')
-    plt.savefig(result_folder + '/' + 'plot9-calcite-solubility-vs-pressure.pdf', bbox_inches='tight')
-    plt.close()
+    # --------------------------------------- #
+    # TO FILL
+    # --------------------------------------- #    
 
 
 # Create the result folder for the plots
 result_folder = 'results-useideal-' + (str(1) if useideal else str(0)) + '-userefpotentials-' + (str(1) if userefpotentials else str(0))
 os.system('mkdir -p ' + result_folder)
+
 
 # Execute the plots
 plot_co2_solubility_vs_ionic_strength()
