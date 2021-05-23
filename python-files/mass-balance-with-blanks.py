@@ -24,7 +24,7 @@ b = A.dot(n)
 elements = ['H', 'O', 'C', 'Z']
 
 # Create a list with the molar masses of H, O, C, Z 
-molar_masses_elements = [1.0079, 15.9994, 12.0107, 0.0]
+molar_masses_elements = []
 
 # Loop over all elements, their amounts, and their molar masses
 for element, amount, molarmass in zip(elements, b, molar_masses_elements):
@@ -35,7 +35,7 @@ print("") # Just to skip one line in the output
 # Alternative way of looping over all species using an index i
 for i in range(len(species)):
     # Calculate the molar mass of current species
-    molar_mass = 
+    molar_mass = A[:, i].dot(molar_masses_elements)
     # Calculate the mass of current species
     mass = 
     print('Species {} has {} moles and {} grams.'.format(species[i], n[i], mass))
