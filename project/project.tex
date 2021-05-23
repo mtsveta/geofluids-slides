@@ -110,10 +110,10 @@
 \begin{document}
 \title{\rule[0.5ex]{1\columnwidth}{2pt}{\Huge{}}\\
 \noun{\Huge{}geofluids project}\\
-Calculating the solubility of CO$_{2}$ and calcite in brine using
-a Gibbs energy minimization approach\\
+Investigation of CO$_{2}$ and calcite solubilities in the brine \\ using
+the Gibbs energy minimization approach\\
 \rule[0.5ex]{1\columnwidth}{2pt}}
-\author{Lecturer: Dr. Allan Leal}
+\author{Lecturer: Dr. Svetlana Kyas and Dr. Allan Leal}
 \maketitle
 
 \section{Introduction}
@@ -846,7 +846,7 @@ your machine or using some website that offers a development environment for Pyt
 
 If you prefer to run it on your local machine, you will need to
 install Python 3, if it is not already natively provided by your
-operating system, (e.g., by Linux and MacOS). For Windows users,
+operating system (e.g., by Linux and MacOS). For Windows users,
 you can find the Python installer at \\
 %
 \begin{minipage}[t]{1\columnwidth}%
@@ -903,8 +903,8 @@ def equilibrate(T, P, b):
 %\end{pythoncode}
 %\end{figure}
 
-In this function, \texttt{T} is temperature in K, \texttt{P} is pressure
-in Pa, and \texttt{b} is an array with the molar amounts of the elements.
+In this function, \texttt{T} is the temperature in K, \texttt{P} is the pressure
+in Pa, and \texttt{b} is the array with the molar amounts of the elements.
 The returned object, \texttt{equilibriumstate}, contains 
 the temperature and pressure used in the calculation, the amounts,
 concentrations, activities, and activity coefficients of the species.
@@ -973,9 +973,8 @@ which can be used in the example to calculate the pH of the aqueous solution:
 \end{lstlisting}
 
 One of the figures to be plotted as part of this project is a pH versus
-amount of CO$_{2}$ (see Figure~\ref{fig:assigned-figures}). In
-this figure, a series of equilibrium calculations need to be performed
-at 75°C and 100~bar. In this series of calculations, the ideal is
+amount of CO$_{2}$ (see Plot4 in Figure~\ref{fig:assigned-figures}). Here, a series of equilibrium calculations need to be performed
+at 75°C and 100~bar. In this series of calculations, the idea is
 to mix an increasing amount of CO$_{2}$, from 0 to 2 moles, with
 1~kg of H$_{2}$O and 0.3~mol of NaCl (which should produce an aqueous
 solution with 0.3 NaCl molal as required). You should decide how many
@@ -990,8 +989,7 @@ For all other figures, a similar procedure should be performed: perform
 a series of equilibrium calculations by adequately varying the inputs
 (e.g., temperature, pressure, amounts of CO$_{2}$, NaCl, CaCO$_{3}$,
 etc.) and then extract from the calculated equilibrium state the proper
-quantities that will serve for its immediate use in a plot, or used
-to calculate another quantity of interest (e.g., pH).
+quantities that will serve for its immediate use in a plot or for calculating another quantity of interest (e.g., pH).
 
 %\section{Grading}
 %

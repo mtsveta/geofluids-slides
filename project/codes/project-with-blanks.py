@@ -767,7 +767,8 @@ P = 1.0e5   # pressure  input in Pa
 #b = element_amounts(kgH2O=1, molCO2=0.0, molNaCl=0.6, molCaCO3=1.0)
 #b = element_amounts(kgH2O=1, molCO2=5.0, molNaCl=0.6, molCaCO3=1.0)
 #b = element_amounts(kgH2O=1, molCO2=0.0, molNaCl=0.0, molCaCO3=1.0)
-b = element_amounts(kgH2O=1, molCO2=5.0, molNaCl=0.0, molCaCO3=1.0)
+#b = element_amounts(kgH2O=1, molCO2=5.0, molNaCl=0.0, molCaCO3=1.0)
+b = element_amounts(kgH2O=1, molCO2=5.0, molNaCl=0.0, molCaCO3=0.0)
 
 state = equilibrate(T, P, b, output=True)
 
@@ -779,7 +780,8 @@ state = equilibrate(T, P, b, output=True)
 #output = open('result_calcite_solubility_0.6_mol_nacl_brine_no_co2.txt', 'w')
 #output = open('result_calcite_solubility_0.6_mol_nacl_brine_saturated_with_co2.txt', 'w')
 #output = open('result_calcite_solubility_pure_water.txt', 'w')
-output = open('result_calcite_solubility_pure_water_saturated_with_co2.txt', 'w')
+#output = open('result_calcite_solubility_pure_water_saturated_with_co2.txt', 'w')
+output = open('result_pure_water_saturated_with_co2.txt', 'w')
 
 print(state, end="", file=output)
 
@@ -835,9 +837,9 @@ def dissolvedMassCaCO3(molesCO2, I, T, P):
     
     assert state.n[species.index('CaCO3(s,calcite)')] > 0.1 # check that calcite amount is more than 0.1 mol
     
-    initial_mass = # -- TO FILL -- #
+    initial_mass = # -- TO FILL -- # (use molCaCO3 and molar_massCaCO3)
     final_mass = state.m[species.index('CaCO3(s,calcite)')]
-    return initial_mass - final_mass
+    return # -- TO FILL -- #
 
 # Define number of points on the plots
 npoints = 50
