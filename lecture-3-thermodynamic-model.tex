@@ -4,15 +4,17 @@
 % Activities - the effective concentrations of the species
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[<+->]{Activities -- the effective concentrations of the species}
+\begin{frame}{Activities -- the effective concentrations of the species}
 \begin{itemize}
-\item Let $c_{i}$ denote concentration of species $i$ (\textbf{Note}: different to species amount $n_i$)
-\item If we would use $c_{i}$ instead of activities $a_{i}$ to calculate the chemical potentials:
+\item Let $c_{i}$ denote concentration of species $i$ (\textbf{Note}: sometime in literature it is denoted by $[i]$, but is different to species amount $n_i$).
+\pause
+\item If we would use $c_{i}$ instead of activities $a_{i}$ to calculate the chemical potentials, then
 \[
 \mu_{i}=\mu_{i}^{\circ}+RT\ln a_{i} \qquad\text{can be reformulated by} \qquad \mu_{i}=\mu_{i}^{\circ}+RT\ln(c_{i}/c_{i}^{\circ})
 \]
 where $c_{i}^{\circ}$ is a reference concentration
 %
+\pause
 \item \alert{\textbf{But!}} This simplification provides \textbf{accurate predictions only in some limited cases}:
 %
 \begin{itemize}
@@ -28,20 +30,19 @@ where $c_{i}^{\circ}$ is a reference concentration
 %
 \begin{frame}{Activities -- corrected species “concentrations” in non-ideal mixtures}
 \begin{itemize}
-\item Because of \textbf{non-ideal behavior of the mixtures}, the concentrations
+\item Because of the \textbf{non-ideal behavior of the mixtures}, the concentrations
 of the species must be corrected:
 %
 \[
-a_{i}=\gamma_{i}(T,P,c)
+a_{i}=\gamma_{i}(T,P,c) \tfrac{c_i}{c_i^0},
 \]
 %
 where $\gamma_{i}$ is an \alert{\textbf{activity coefficient}}, a function
-of $(T,P,c)$, with $c$ denoting a vector of concentrations of the
-species in the same phase. 
+of $(T,P,c)$, with $c$ denoting a {\bf vector of concentrations of all species in the solution}. 
 \pause
-\item To calculate $\gamma_{i}$, there different (theoretical) \alert{\textbf{activity models}}:
+\item To calculate $\gamma_{i}$, there are different (theoretical) \alert{\textbf{activity models}}:
 \begin{itemize}
-\item Davis equation,
+\item Davies equation,
 \item Debye-H\"uckel equation,
 %\item HKF
 \item Pitzer equations, etc.
@@ -52,7 +53,7 @@ species in the same phase.
 % --------------------------------------------------------------------------------------------------------------------%
 % Aqueous phase
 % --------------------------------------------------------------------------------------------------------------------%
-\section{Aqueous phase}
+\subsection{Aqueous phase}
 %
 %{\begin{frame}{}
 %\centering
@@ -112,7 +113,7 @@ c_{i} & = \frac{n_{i}}{\text{volume of solvent species H\ensuremath{_{2}}O(aq)}}
 	& = \frac{n_{i} \cdot \rho_{\sf H{_{2}}O(aq)}}{\text{mass of solvent species H\ensuremath{_{2}}O(aq)}},
 \end{alignat*}
 where $\rho_{\sf H{_{2}}O(aq)}$ is \textbf{water density} at given $T$ and $P$.
-\item Measured in units of \alert{molar} = mol/L (or mol/Lw or  $10^3$mol/m$^3$). 
+\item Measured in units of {\bf \alert{molar} = mol/L (or mol/Lw or  $10^3$mol/m$^3$)}. 
 \end{itemize}
 \rcol
 \begin{itemize}
@@ -120,7 +121,7 @@ where $\rho_{\sf H{_{2}}O(aq)}$ is \textbf{water density} at given $T$ and $P$.
 \[
 m_{i}=\frac{n_{i}}{\text{mass of solvent species H\ensuremath{_{2}}O(aq)}}.
 \]
-\item Measured in units of \alert{molal} = mol/kg (or mol/kgw). 
+\item Measured in units of {\bf \alert{molal} = mol/kg (or mol/kgw)}. 
 \end{itemize}
 \ecol
 \end{frame}
@@ -133,9 +134,9 @@ m_{i}=\frac{n_{i}}{\text{mass of solvent species H\ensuremath{_{2}}O(aq)}}.
 %
 \lcol
 \begin{itemize}
-\item Most activity models for aqueous solutions depends on \alert{\textbf{ionic strength}}:
+\item Most activity models for aqueous solutions depends on the  \alert{\textbf{ionic strength}}:
 \[
-\boxed{I=\frac{1}{2}\sum_{i=1}^{\text{solutes}}m_{i}Z_{i}^{2}},
+\boxed{I=\tfrac{1}{2}\sum_{i=1}^{\text{solutes}}m_{i}Z_{i}^{2}},
 \]
 where:
 \begin{itemize}
@@ -158,7 +159,7 @@ by mixing 1 kg of H$_{2}$O and:
 \end{itemize}
 \vskip 5pt
 \begin{center}
-\href{http://etc.ch/eCnt/?qr}{\textcolor{indigo(dye)}{\tt http://etc.ch/paWu}} or 
+\href{http://etc.ch/paWu}{\textcolor{indigo(dye)}{\tt http://etc.ch/paWu}} or 
 \includegraphics[height=0.45\columnwidth]{figures/activity-models/poll-ionic-strength.png}
 \end{center}
 \hiddenpause
@@ -238,9 +239,12 @@ Molality of CO3-- is 0.000000 molal.
 Molality of HCO3- is 0.000124 molal.
 Molality of CO2(aq) is 0.032892 molal.
 \end{lstlisting}
+
+\textbf{Answer}: To check the correctness of gaps in the code, use the  \href{https://polybox.ethz.ch/index.php/s/o0tt6lPtd8TBhoG}{\textcolor{indigo(dye)}{\it source code}}.
+
 \end{frame}
 %
-\subsection{Activity coefficient model for aqueous ionic species, Davies model}
+\subsubsection{Activity coefficient model for aqueous ionic species, Davies model}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Activity coefficient model for aqueous ionic species: Davies model
@@ -253,15 +257,15 @@ using:
 \[
 \boxed{\log_{10}\gamma_{i}=-A_{\gamma}Z_{i}^{2}\left(\dfrac{\sqrt{I}}{1+\sqrt{I}}-0.3I\right)},
 \]
-where $A_{\gamma}$ is a \textbf{Debye–Hückel parameter} defined as
+where $A_{\gamma}$ is the \textbf{Debye–Hückel parameter} defined as
 \[
 A_{\gamma}=1.824928\cdot10^{6}\rho_{\mathsf{H_{2}O}}^{1/2}(\epsilon_{\mathsf{H_{2}O}}T)^{-3/2},
 \]
 %
 where $\rho_{\mathsf{H_{2}O}}$ and $\epsilon_{\mathsf{H_{2}O}}$
 are the \textbf{density} and \textbf{dielectric constant of pure water}. 
-\item For 25~°C and 1~bar: $A_{\gamma}=0.5095$.
-\item \textbf{Limitations of the model}: \\
+\item For 25~°C and 1~bar, $A_{\gamma}=0.5095$.
+\item \textbf{Limitations of the model}: 
 It is accurate for $I$ is in the range 0.1–0.7 molal, which is equivalent to 1 kg of water mixed with 5.8–40.9 grams of NaCl (0.5-4 teaspoons of table salt).
 \end{itemize}
 \end{frame}
@@ -272,14 +276,15 @@ It is accurate for $I$ is in the range 0.1–0.7 molal, which is equivalent to 1
 %
 \begin{frame}{Activity coefficient of aqueous ionic species, Davies model, Exercise}
 
+%\vskip 10pt
 \begin{itemize}
-\item \alert{\textbf{Question:}} What is the activity coefficient of species Na$^{+}$ in an aqueous solution with ionic strength $I=\unit[0.1]{molal}$ using the \emph{Davies activity coefficient model}:
+\item \alert{\textbf{Quiz:}} What is the activity coefficient of species Na$^{+}$ in an aqueous solution with ionic strength $I=\unit[0.1]{molal}$ using the \emph{Davies activity coefficient model}:
 \[
 \log_{10}\gamma_{\mathrm{Na^{+}}}=-A_{\gamma}Z_{\mathrm{Na^{+}}}^{2}\left(\dfrac{\sqrt{I}}{1+\sqrt{I}}-0.3I\right), \quad \mbox{where} \quad A_{\gamma}=0.5095?
 \]
 %
 \begin{center}
-\href{http://etc.ch/eCnt/?qr}{\textcolor{indigo(dye)}{\tt http://etc.ch/paWu}} \quad or \quad 
+\href{http://etc.ch/paWu}{\textcolor{indigo(dye)}{\tt http://etc.ch/paWu}} \quad or \quad 
 \includegraphics[height=0.18\columnwidth]{figures/activity-models/poll-ionic-strength.png}
 \end{center}
 %
@@ -288,8 +293,7 @@ It is accurate for $I$ is in the range 0.1–0.7 molal, which is equivalent to 1
 \pause
 \item \textbf{Note}: 
 In an ideal solution, $\gamma_{i}=1$ for all species. \\
-Based on the value you just calculated for $\gamma_{\mathrm{Na^{+}}}$, can
-you tell if an \emph{ideal solution assumption }is a reasonable one?
+\textbf{Question}: Based calculated $\gamma_{\mathrm{Na^{+}}}$, is an \emph{ideal solution assumption } reasonable one?
 \end{itemize}
 \end{frame}
 %
@@ -300,8 +304,7 @@ you tell if an \emph{ideal solution assumption }is a reasonable one?
 \begin{frame}{Activity coefficient as a function of $I$, Davies model}
 
 \begin{figure}
-\centering{}\includegraphics[height=0.7\textheight]{figures/activity-models/activity-coefficient-davies}\caption{Activity coefficient, $\gamma_{i}$, for aqueous ions with charge
-$Z_{i}=1,2,3$ as a function of $I$.}
+\centering{}\includegraphics[height=0.7\textheight]{figures/activity-models/activity-coefficient-davies}\caption{Activity coefficient $\gamma_{i}$ for aqueous ions with charge $Z_{i}=1,2,3$ as a function of $I$.}
 \end{figure}
 %
 \textbf{Question:} How would these curves look like if the charges would be $Z_i$= -1, -2, -3?
@@ -320,7 +323,7 @@ Source code: \href{https://polybox.ethz.ch/index.php/s/D0gfkcE1KBiFVxD}{\textcol
 
 \end{frame}
 %
-\subsection{Activity coefficient model for H$_2$O(aq), Davies model}
+\subsubsection{Activity coefficient model for H$_2$O(aq), Davies model}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Activity coefficient model for H2O: Davies model
@@ -342,7 +345,7 @@ x_{\mathsf{H_{2}O\text{(aq)}}}=\frac{n_{\mathsf{H_{2}O\text{(aq)}}}}{\text{sum o
 \item \alert{\textbf{Question}}: Consider pure water as a solution.
 What is the value of ionic strength $I$ and the activity of water $a_{\sf H_2O}$ ?  
 \begin{center}
-	\href{http://etc.ch/eCnt/?qr}{\textcolor{indigo(dye)}{\tt http://etc.ch/paWu}} \quad or \quad 
+	\href{http://etc.ch/paWu}{\textcolor{indigo(dye)}{\tt http://etc.ch/paWu}} \quad or \quad 
 	\includegraphics[height=0.1\columnwidth]{figures/activity-models/poll-ionic-strength.png}
 \end{center}
 \hiddenpause
@@ -404,7 +407,7 @@ of water as a function of ionic strength, $I$.}
 
 \end{frame}
 %
-\subsection{Activity coefficient model for CO$_2$(aq), Drummond model}
+\subsubsection{Activity coefficient model for CO$_2$(aq), Drummond model}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Activity coefficient model for CO$_{2}$(aq), Drummond model
@@ -425,7 +428,7 @@ where $T$ is temperature,
 $I$ is the ionic strength of the aqueous solution, and 
 ${c_{1}=-1.0312}$, ${c_{2}=1.2806\cdot10^{-3}}$, ${c_{3}=255.9}$,
 ${c_{4}=0.4445}$ and ${c_{5}=-1.606\cdot10^{-3}}$. 
-\item \textbf{Limitations}: This equation is valid within the temperature and salinity ranges
+\item \textbf{Limitations of the model}: This equation is valid within the temperature and salinity ranges
 20–400~°C and 0–6.5~molal, respectively.
 \end{itemize}
 \end{frame}
@@ -471,20 +474,21 @@ at temperatures 50, 150, and 250 °C as a function of ionic strength.}
 \]
 \item At equilibrium, the following \textbf{mass action equation} is satisfied, i.e., 
 %
-$K=\frac{a_{\mathsf{CO_{2}\text{(aq)}}}}{a_{\mathsf{CO_{2}\text{(g)}}}}$.
+$K(T, P) := \frac{a_{\mathsf{CO_{2}\text{(aq)}}}}{a_{\mathsf{CO_{2}\text{(g)}}}}$.
 %\]
-\item Combining $a_{\mathsf{CO_{2}\text{(aq)}}} = K \, a_{\mathsf{CO_{2}\text{(g)}}}$ and 
-$a_{\mathsf{CO_{2}\text{(aq)}}}=\gamma_{\mathsf{CO_{2}\text{(aq)}}}m_{\mathsf{CO_{2}\text{(aq)}}}$:
+\item Combining $a_{\mathsf{CO_{2}\text{(aq)}}} = K(T, P) \, a_{\mathsf{CO_{2}\text{(g)}}}$ and 
+$a_{\mathsf{CO_{2}\text{(aq)}}}=\gamma_{\mathsf{CO_{2}\text{(aq)}}}m_{\mathsf{CO_{2}\text{(aq)}}}$, we obtain 
 \[
 m_{\mathsf{CO_{2}\text{(aq)}}}=\frac{1}{\gamma_{\mathsf{CO_{2}\text{(aq)}}}} \, K(T, P) \, a_{\mathsf{CO_{2}\text{(g)}}}(T, P)
 \approx \frac{1}{\gamma_{\mathsf{CO_{2}\text{(aq)}}}} \, f(T, P).
 \]
-\item \alert{\textbf{Question}}: What happens to $m_{\mathsf{CO_{2}\text{(aq)}}}$ when $\gamma_{\mathsf{CO_{2}\text{(aq)}}}$
+\item \alert{\textbf{Quiz}}: What happens to $m_{\mathsf{CO_{2}\text{(aq)}}}$ when $\gamma_{\mathsf{CO_{2}\text{(aq)}}}$
 increases with $I$ for constant $(T, P)$?
 \begin{center}
-	\href{http://etc.ch/eCnt/?qr}{\textcolor{indigo(dye)}{\tt http://etc.ch/paWu}} \quad or \quad 
+	\href{http://etc.ch/paWu}{\textcolor{indigo(dye)}{\tt http://etc.ch/paWu}} \quad or \quad 
 	\includegraphics[height=0.14\columnwidth]{figures/activity-models/poll-ionic-strength.png}
 \end{center}
+\hiddenpause
 \item \textbf{Answer:} $m_{\mathsf{CO_{2}\text{(aq)}}}$ decrease. 
 \end{itemize}
 \end{frame}
@@ -536,7 +540,7 @@ increases with $I$ for constant $(T, P)$?
 % Gaseous phase
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\section{Gaseous phase}
+\subsection{Gaseous phase}
 %\begin{frame}{}
 %\centering
 %\Large
@@ -549,7 +553,7 @@ increases with $I$ for constant $(T, P)$?
 %
 \begin{frame}{Activities of species in a gaseous solution}
 \begin{itemize}
-\item The \alert{\textbf{activity of $i$-th gaseous species}} can be calculated using:
+\item The \alert{\textbf{activity of gaseous species $i$}} can be calculated using:
 \[
 \boxed{a_{i}=\varphi_{i}x_{i}\frac{P}{P^{\circ}}},
 \]
@@ -562,7 +566,7 @@ and
 \item $P^{\circ}$ is a reference pressure, $P^{\circ}=\unit[1]{\mathsf{bar}}$.
 \end{itemize}
 \pause
-\item The \textbf{fugacity coefficients of ideal gases} are $\varphi_{i}=1$. \text{But!}: the gases rarely behaving ideal.  
+\item The \textbf{fugacity coefficients of ideal gases} are $\varphi_{i}=1$. \textbf{But}: the gases rarely behaving ideal.  
 \end{itemize}
 \end{frame}
 %
@@ -571,18 +575,20 @@ and
 % --------------------------------------------------------------------------------------------------------------------%
 %
 \begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state}
-\begin{itemize}[<+->]
+\begin{itemize}
 \item An \textbf{ideal gas} solution has \alert{\textbf{a $PVT$ behavior}} defined by the equation:
 \[
 \frac{PV}{RT}=1,
 \]
 where $P$ is pressure (in units of Pa), $T$ is temperature (in units
 of K), $V$ is molar volume (in units of m$^{3}$/mol), and $R=\unit[8.314]{\mathsf{J/(mol\cdot K)}}$.
+\pause
 \item For \textbf{real gases}, we introduce a \alert{\textbf{compressibility factor}} $Z$ defined as
 %
 \[
 Z=\frac{PV}{RT} < 1.
 \]
+\pause
 \item For \textbf{real gases}, $Z \to 1$ only when
 \begin{itemize}
 \item temperatures are very high or
@@ -642,7 +648,7 @@ point is the limit point in the liquid-vapor saturation curve.}}
 % Supercritical carbon dioxide
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Supercritical carbon dioxide (CO$_{\mathsf{2}}$(g))}
+\begin{frame}{Supercritical carbon dioxide CO$_{\mathsf{2}}$(g)}
 \vskip 5pt
 \begin{figure}
 \centering
@@ -665,7 +671,7 @@ advantageous because of its \textbf{high mobility and high density}.
 % Activity of CO2(g) using a cubic equation of state
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state \, i}
+\begin{frame}{Cubic equation of state}
 
 \begin{itemize}
 \item A \alert{\textbf{general cubic equation of state}} can be written in terms
@@ -700,7 +706,7 @@ $T_{\mathsf{c}}$ and $P_{\mathsf{c}}$, and
 %\[
 %\boxed{P=\frac{RT}{V-\beta}-q(T)\beta\frac{1}{(V+\epsilon\beta)(V+\sigma\beta)}}.
 %\]
-\item \textbf{Note:} For CO$_{2}$, ${T_{\mathsf{c}}=304.2\;\mathsf{K}}$, ${P_{\mathsf{c}}=73.83\;\mathsf{bar}}$,
+\item \textbf{Note:} For CO$_{2}$(g), ${T_{\mathsf{c}}=304.2\;\mathsf{K}}$, ${P_{\mathsf{c}}=73.83\;\mathsf{bar}}$,
 ${\omega=0.224}$. 
 \end{itemize}
 
@@ -746,7 +752,7 @@ ${\omega=0.224}$.
 % Activity of CO2(g) using a cubic equation of state 
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state \, ii}
+\begin{frame}{Cubic equation of state, Different models \, i}
 
 \begin{table}
 \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}lcccc}
@@ -799,7 +805,7 @@ equation of states.}
 	
 \end{frame}
 %
-\begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state \, iv}
+\begin{frame}{PV phase diagram with isotherms}
 
 \lcol
 \begin{itemize}
@@ -820,7 +826,7 @@ in which \textbf{\alert{liquid and vapour coexist}}.
 \ecol
 \end{frame}
 %
-\begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state \, v}
+\begin{frame}{PV phase diagram with isotherms, Roots of cubic EOS \, i}
 
 \lcol
 \begin{itemize}
@@ -843,29 +849,34 @@ where $Z=\frac{PV}{RT}$ is compressibility factor,
 \ecol
 \end{frame}
 %
-\begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state \, vi}
-
+\begin{frame}{PV phase diagram with isotherms, Roots of cubic EOS \, ii}
+\footnotesize
 \lcol
-\begin{itemize}
+\begin{itemize}[<+->]
 \item When three real roots exists for cubic equation of state
 \begin{itemize}
 \item the \textbf{smallest real value} possibly corresponds to the \textbf{liquid state} and 
 \item the \textbf{largest real value} possibly corresponds to the \textbf{gaseous state}.
 \end{itemize}
 \item Any \textbf{root inside the green region} is a \textbf{mathematical artefact} of the cubic model.
-\item Since we are interested in vapour (CO$_{2}$(g)) properties, we will be rather looking at the largest 
-root of cubic equation. 
-%\item \textbf{Question}: Which value of $Z$ are we interested
-%in for CO$_{2}$(g)? $T_{\mathrm{cr}}\approx\unit[31.04]{^{\circ}C}$
+%\item Since we are interested in vapour (CO$_{2}$(g)) properties, we will be rather looking at \textbf{the largest 
+%root of cubic equation}. 
+\item \alert{\textbf{Quiz}}: Which value of $Z$ are we interested
+in for CO$_{2}$(g)?
+\begin{center}
+	\href{http://etc.ch/paWu}{\textcolor{indigo(dye)}{\tt http://etc.ch/paWu}} \quad or \quad 
+	\includegraphics[height=0.18\columnwidth]{figures/activity-models/poll-ionic-strength.png}
+\end{center} 
+\only<6->{
+\textbf{Answer}: as we are interested in vapor (CO$_{2}$(g)) properties, we need \textbf{the largest root of cubic EOS}. }
+%$T_{\mathrm{cr}}\approx\unit[31.04]{^{\circ}C}$
 \end{itemize}
 \rcol
-
 \begin{figure}
 \centering 
 \includegraphics[width=1\textwidth]{figures/activity-models/phase-diagram-pv-cubic-eos-roots}
 \caption{\footnotesize Illustration of a $PV$ \textbf{phase diagram} of a substance with roots of cubic equation of state.}
 \end{figure}
-
 \ecol
 \end{frame}
 %
@@ -1016,7 +1027,7 @@ where
 r^{\prime}(Z)=-\frac{q\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}\left\{ 1-(Z-\beta)\frac{2Z+(\epsilon+\sigma)\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}\right\} -1,
 \]
 %
-\item and \textbf{acceptance criterion} $|r(Z)|<\varepsilon$, where $\varepsilon$ is selected tolerance.
+\item and \textbf{acceptance criterion} $|r(Z^{i+1})|<\varepsilon$, where $\varepsilon$ is selected tolerance.
 \end{itemize} 
 \end{itemize}
 \end{frame}
@@ -1040,11 +1051,12 @@ r^{\prime}(Z)=-\frac{q\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}\left\{ 1-(Z-\beta
 \begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$, Newton's method}
 \begin{columns}[t]
 
+\footnotesize
 \column{0.61\textwidth}
 
 \begin{figure}
 \centering
-\includegraphics[width=1\columnwidth]{figures/activity-models/co2-compressibility-factor-newton}
+\includegraphics[width=0.8\columnwidth]{figures/activity-models/co2-compressibility-factor-newton}
 \caption{For $T < T_{\sf cr} (\mathsf{CO_2})= $ 31.04~°C, the increase in pressure results in a phase transition from vapor to liquid.}
 \end{figure}
 
@@ -1052,12 +1064,20 @@ r^{\prime}(Z)=-\frac{q\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}\left\{ 1-(Z-\beta
 
 \begin{figure}
 \centering
-\includegraphics[width=1\columnwidth]{figures/activity-models/phase-diagram-pt}
+\includegraphics[width=0.8\columnwidth]{figures/activity-models/phase-diagram-pt-with-lines.png}
 \caption{The phase diagram of a substance. $T_{\mathrm{cr}}(\mathsf{CO_2})=$  31.04~°C.}
 \end{figure}
 
 \end{columns}
 
+\pause
+\alert{\textbf{Quiz}}: To which part of the phase diagram does the blue lines correspond to, \\ 
+if we are increasing P1 to P2?
+\vskip -30pt
+\includegraphics[height=0.12\columnwidth, right]{figures/activity-models/poll-ionic-strength.png}
+\hiddenpause
+\vskip -20pt
+\textbf{Answer:} to the middle. 
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
@@ -1141,7 +1161,7 @@ by \emph{fixed point method} or \emph{Newton's method}.
 
 \end{frame}
 %
-\section{Mineral phase}
+\subsection{Mineral phase}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Summary on the calculation of activities of mineral species
@@ -1150,7 +1170,8 @@ by \emph{fixed point method} or \emph{Newton's method}.
 \begin{frame}{Summary on the calculation of activities of mineral species}
 \begin{itemize}
 \item The activities of pure minerals (e.g., mineral phases composed by
-a single mineral only) is:
+a single mineral only) is
+%
 \[
 a_{i}=1.
 \]
