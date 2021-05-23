@@ -5,7 +5,7 @@
 \begin{figure}
 \centering
 \includegraphics[height=0.6\columnwidth]{figures/intro/logo-kyas}
-\caption{Dr. Svetlana Kyas, Post-Doctoral Associate in Geothermal Energy \& Geofluids}
+\caption*{Dr. Svetlana Kyas, Post-Doctoral Associate in Geothermal Energy \& Geofluids}
 \end{figure}
 %
 \end{singlespace}
@@ -15,19 +15,15 @@
 \vskip 5pt
 \centering
 \includegraphics[height=0.6\columnwidth]{figures/intro/logo-leal.jpg}
-\caption{Dr. Allan Leal, Senior Research Assistant in Geothermal Energy \& Geofluids}
+\caption*{Dr. Allan Leal, Senior Research Assistant in Geothermal Energy \& Geofluids}
 \end{figure}
 \ecol
   
 \end{frame}
 
-\begin{frame}{Table of contents}
-	\vskip 10pt
-  	\setbeamertemplate{section in toc}[sections numbered]
-  	\tableofcontents%[hideallsubsections]
-\end{frame}
+\section[Introduction]{Introduction}
 
-\section[Course introduction]{Course introduction}
+\subsection[Course introduction]{Course introduction}
 
 % --------------------------------------------------------------------------------------------------------------------%
 % Outline
@@ -58,41 +54,48 @@ we will use Python and Reaktoro (\href{https://reaktoro.org/}{\textcolor{indigo(
 % --------------------------------------------------------------------------------------------------------------------%
 % Computational Project
 % --------------------------------------------------------------------------------------------------------------------%
-\begin{frame}{Computational Project}
+\begin{frame}{Computational exercises}
 \small
 
-This course includes a \alert{\textbf{computational project}} using Python:
+\begin{itemize}
+\item This course will include a \alert{\textbf{computational project}} using Python.
 %
 \begin{itemize}
 \item The project \textbf{is not graded!} But helpful in preparing for the final exam.
 \pause
-\item It will involve chemical reaction calculations for a \textbf{chemical system} containing 
+\item It will involve chemical reaction calculations for a \textbf{chemical system} containing different 
+phases, such as 
+%
 \begin{itemize}
-\item an aqueous fluid (HO$_2$(l), HCl(aq), Na$^+$, etc), 
-\item a gaseous fluid (CO$_{2}$(g)), and 
-\item a mineral (e.g., calcite, dolomite, halite). 
+\item aqueous (HO$_2$(l), HCl(aq), Na$^+$, etc), 
+\item gaseous (CO$_{2}$(g), H$_{2}$S(g)), and 
+\item mineral (e.g., calcite, dolomite, halite). 
 \end{itemize}
 \pause
 \item The goal of these calculations can be, for example, to determine the solubility
 of minerals and gases in saline waters (brine) at different salinities,
 temperatures, and pressures. 
-\pause
-\item You are welcome to make teams and interact with each other to complete this project. 
+%\pause
+%\item You are welcome to team up to complete this project. 
 \pause
 \item \textbf{Optional}: We can select the time (to meet online) so that you get to ask your questions, 
 and I will be able to clarify them. 
-\pause
-\item \textbf{Note}: Other computational tasks will be given throughout the lectures as exercises and tutorials 
-(using Jupyter Notebook).
 \end{itemize}
+\pause
+\item Other computational tasks will be given throughout the lectures as \alert{\textbf{exercises, code-listings, and tutorials}} (using python scripts or Jupyter Notebooks).
 %
-\alert{\textbf{Note}}: A document detailing the project's computational assignment will be shared with you later.
+\pause
+\item Lectures will contain \alert{\textbf{interactive quizzes}} helping to understand and apply the presented material. 
+%
+\end{itemize}
+%\pause
+%\alert{\textbf{Note}}: A document detailing the project's computational assignment will be shared with you later.
 \end{frame}
 
 % --------------------------------------------------------------------------------------------------------------------%
 % Example of geochemical calculations
 % --------------------------------------------------------------------------------------------------------------------%
-\begin{frame}{Example of geochemical calculations: CO$_2$(g) solubility in the NaCl-brine}
+\begin{frame}{Example of geochemical calculations, CO$_2$(g) solubility in the NaCl-brine}
 \vskip 10pt
 \Wider{
 \begin{figure}
@@ -142,18 +145,18 @@ calling a function, plotting):
 \textbf{Note}: Videos 
 \emph{Into words}, 
 \emph{Installation on Windows / IoS}, and 
-\emph{Reaktoro Jyputer Notebook Introduction Installation} with explanation on Reaktoro installation and Jupyter Notebook tutorials execution are available  \href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\tt here}}. 
+\emph{Reaktoro Jyputer Notebook Installation} with explanation on Reaktoro installation and Jupyter Notebook tutorials execution are available  \href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\tt here}}. 
 %
-\item To ask questions, you can use my email \href{svetlana.kyas@erdw.ethz.ch}{\textcolor{indigo(dye)}{\tt svetlana.kyas@erdw.ethz.ch}} or the \href{https://gitter.im/geofluids/community}{\textcolor{indigo(dye)}{\it Gitter chat}} (requires the github account).
+\item To ask any questions, you can use my email \href{svetlana.kyas@erdw.ethz.ch}{\textcolor{indigo(dye)}{\tt svetlana.kyas@erdw.ethz.ch}}. 
+%or the \href{https://gitter.im/geofluids/community}{\textcolor{indigo(dye)}{\it Gitter chat}} (requires the github account).
 \end{itemize}
 
 \end{frame}
-
 % --------------------------------------------------------------------------------------------------------------------%
-% Geochemical modeling: a brief overview and its applications
+% A brief overview of geochemical modeling and its applications
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\section{Geochemical modeling: a brief overview and its applications}
+\subsection{A brief overview of geochemical modeling and its applications}
 %
 \begin{frame}{What is geochemical modeling?}
 \vskip 10pt
@@ -167,7 +170,7 @@ Earth's surface} or \textbf{deep in its interior}.
 \begin{figure}
 \centering
 \includegraphics[height=0.5\columnwidth]{figures/applications/example-of-geochemical-reactions-in-yellowstone-geysers}
-\caption{Geochemical reaction calculations for thermal water analysis 
+\caption*{Geochemical reaction calculations for thermal water analysis 
 (Grand Prismatic, Midway Geyser Basin, Yellowstone, Wyoming, USA).}
 \end{figure}
 %
@@ -178,17 +181,17 @@ Earth's surface} or \textbf{deep in its interior}.
 \vskip 5pt
 \centering
 \includegraphics[height=0.5\columnwidth]{figures/applications/example-of-geochemical-reactions-in-a-volcano-magma-chamber}
-\caption{Geochemical reaction calculations for molten rocks as the magma flows
+\caption*{Geochemical reaction calculations for molten rocks as the magma flows
 from the Earth's mantle upwards.}
 \end{figure}
 \ecol
 \end{frame}
 
 % --------------------------------------------------------------------------------------------------------------------%
-% Geochemical modeling applications: Scaling prediction in wells
+% Geochemical modeling applications, Scaling prediction in wells
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Geochemical modeling applications: Scaling prediction in wells}
+\begin{frame}{Geochemical modeling applications, Scaling prediction in wells}
 %
 \lcol
 %
@@ -196,7 +199,7 @@ from the Earth's mantle upwards.}
 \begin{figure}
 \centering
 \includegraphics[height=0.6\textheight]{figures/applications/scaling-calcium-strontium-barium}
-\caption{Scale formation in a well as a result of geochemical reactions leading
+\caption*{Scale formation in a well as a result of geochemical reactions leading
 to mineral precipitation.}
 \end{figure}
 %
@@ -219,7 +222,7 @@ and \textbf{assist }on the \textbf{\alert{\textbf{remediation of scale formation
 % in geologic formations
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Geochemical modeling applications: 
+\begin{frame}{Geochemical modeling applications, 
 CO$_{\boldsymbol{2}}$ storage in geologic formations}
 %
 \vskip 10pt
@@ -227,7 +230,7 @@ CO$_{\boldsymbol{2}}$ storage in geologic formations}
 %
 \begin{figure}
 \includegraphics[height=3.8cm]{figures/applications/co2-storage-injection}
-\caption{Once CO$_{2}$ is injected in a deep saline aquifer, it starts to
+\caption*{Once CO$_{2}$ is injected in a deep saline aquifer, it starts to
 \textbf{dissolve into the resident brine}. Geochemical calculations
 can be used to calculate how much CO$_{2}$ dissolves and how much
 CO$_{2}$ continues mobile as gas or supercritical fluid.}
@@ -237,9 +240,9 @@ CO$_{2}$ continues mobile as gas or supercritical fluid.}
 %
 \begin{figure}
 \includegraphics[height=3.8cm]{figures/applications/co2-storage-fingers}
-\caption{Brine with dissolved CO$_{2}$ becomes acidic. It can then more easily 
+\caption*{Brine with dissolved CO$_{2}$ becomes acidic. It can then more easily 
 \textbf{react with rock minerals}. This change rock properties, such as \textbf{porosity} 
-and \textbf{permeability}. Geochemical calculations can tell \emph{how much rock 
+and \textbf{permeability}. Geochemical calculations can tell {\bf how much rock 
 minerals dissolve}.}
 \end{figure}
 %
@@ -251,7 +254,7 @@ minerals dissolve}.}
 % Geochemical modeling applications: Water analysis
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Geochemical modeling applications: Water analysis}
+\begin{frame}{Geochemical modeling applications, Water analysis}
 %
 Given the following water analysis, with the concentration of many chemical elements and 
 pH, \textbf{find the concentrations of all aqueous species in the water}:
@@ -259,14 +262,14 @@ pH, \textbf{find the concentrations of all aqueous species in the water}:
 \begin{figure}
 \centering
 \includegraphics[height=0.6\textheight]{figures/applications/water-analysis}
-\caption{Water composition as a result of a water analysis.}
+\caption*{Water composition as a result of a water analysis.}
 \end{figure}
 \rcol
 %
 \begin{figure}
 \centering
 \includegraphics[height=0.6\textheight]{figures/applications/evian-chemical-water-composition}
-\caption{See Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/eq.evian-water-analysis.ipynb}{\textcolor{indigo(dye)}{\it Analysis of the Evian water}}.}
+\caption*{See Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/eq.evian-water-analysis.ipynb}{\textcolor{indigo(dye)}{\it Analysis of the Evian water}}.}
 \end{figure}
 %
 \ecol
@@ -301,7 +304,7 @@ CuCl4-{}-(aq) & H+(aq) & HN2O2-(aq) & KOH(aq) & O2(aq) & SO2(aq) & \tabularnewli
 
 \pause
 \vskip 5pt
-\alert{\textbf{Other questions}} we might want to answer: 
+\alert{\textbf{Questions}} we want to answer: 
 \begin{itemize}
 \item What are the \textbf{amounts of these species}? 
 \item How \textbf{saturated} is the water \textbf{with respect to several minerals}? \\
@@ -330,30 +333,32 @@ at the wide range of temperatures and pressures);
 
 \begin{figure}
 \centering
-\includegraphics[height=0.2\columnwidth]{figures/applications/waste-storage.png} \quad %\caption{Radioactive waste captured in cement.}
-\includegraphics[height=0.2\columnwidth]{figures/applications/ore-forming.jpg}  \quad %\caption{Ore forming processes.}
-\includegraphics[height=0.2\columnwidth]{figures/applications/enhanced-oil-recovery.jpg}%\caption{Enhanced oil and gas recovery.}
+\includegraphics[height=0.2\columnwidth]{figures/applications/waste-storage.png} \quad %\caption*{Radioactive waste captured in cement.}
+\includegraphics[height=0.2\columnwidth]{figures/applications/ore-forming.jpg}  \quad %\caption*{Ore forming processes.}
+\includegraphics[height=0.2\columnwidth]{figures/applications/enhanced-oil-recovery.jpg}%\caption*{Enhanced oil and gas recovery.}
 \end{figure}
 
 \end{frame}
 
-\section{Chemical equilibrium and chemical kinetics for modeling geochemical
+\subsection{Chemical equilibrium and chemical kinetics for modeling geochemical
 systems}
 
 % --------------------------------------------------------------------------------------------------------------------%
 % Intuition about chemical reaction behavior
 % --------------------------------------------------------------------------------------------------------------------%
 
-\begin{frame}[<+->]{Chemical reaction behavior: initial intuition}
+\begin{frame}{Chemical reaction behavior,  Initial intuition}
 	\vskip 5pt
 \begin{itemize}
 \item Consider 1 kg of H$_{2}$O mixed with 1 mg of NaCl (halite). 
+\pause
 \item Chemical reactions that occur among the species in the solution and the halite are as follows:\\[-30pt]
 \begin{align*}
 \mathsf{NaCl(halite, s)} & \rightleftharpoons\mathsf{Na^{+}+Cl^{-}}\\
 \mathsf{Na^{+}+Cl^{-}} & \rightleftharpoons\mathsf{NaCl(aq)}\\
 \mathsf{H_{2}O} & \rightleftharpoons\mathsf{H^{+}+OH^{-}}
 \end{align*}
+\pause
 \item Detailed steps: 
 \begin{itemize}
 \item \textbf{pure water} solution contains species: H$_2$O, H$^+$, OH$^-$, O$_2$(aq), H$_2$(aq)
@@ -363,15 +368,55 @@ systems}
 \item after \textbf{mixing} NaCl(s) we have in addition: Na$^{+}$, Cl$^{-}$, NaCl(aq), HCl(aq), NaOH(aq)
 \item  \textbf{new ions} H$^+$ and Cl$^{-}$ produce $\mathsf{H^{+}+Cl^{-}} \rightleftharpoons \mathsf{HCl(aq)}$
 \end{itemize}
+\pause
 \item What can we say about the \alert{\textbf{behavior and time-scale}} of the these species after 1 ms, 1 s, 1 min?
 \end{itemize}
+\end{frame}
+%
+% --------------------------------------------------------------------------------------------------------------------%
+% Reaction classification
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Reaction classification}
+	\begin{itemize}
+		\item \alert{\bf Irreversible} or \alert{\bf reversible}:
+		\begin{itemize}
+			\item An {\bf irreversible} reaction is one that occurs in only one direction and continues in this direction until at least one of the reactants is depleted.
+			\item A {\bf reversible} reaction can occur in both directions (with forward and backward reaction reaction coefficients $k_f$ and $k_b$, respectively):
+			%
+			\[	
+			\mathsf{a\,A + b\,B} \xrightleftharpoons[k_b]{k_f} \mathsf{c\,C + d\,D}.
+			%\quad 
+			%\mbox{with equilibrium constant}
+			\quad
+			%K_e := \tfrac{k_f}{k_b} = \tfrac{\mathsf{[C]^c\, [D]^d}}{\mathsf{[A]^a\,[B]^b}}.
+			\]
+			%
+		\end{itemize}
+		%%%
+		\item \alert{\bf Homogeneous} or \alert{\bf heterogeneous}:
+		\begin{itemize}
+			\item A {\bf homogeneous} reaction involves a single phase, e.g., 
+			%
+			\begin{alignat*}{2}
+				\mbox{Formation of ammonia}:  \mathsf{N_2(g) + 3\,H_2(g) } & \mathsf{\xrightleftharpoons[]{} 2\,NH_3(g)}\\
+				\mbox{Oxidation of sulfur dioxide}: \mathsf{2\,SO_2(g) + O_2(g) } & \mathsf{\xrightleftharpoons[]{} 2\,SO_3(g)} 
+			\end{alignat*}
+			%
+			\item A {\bf heterogeneous} reaction involves more than one phase, e.g., 
+			\begin{alignat*}{2}
+				\mbox{Carbonation} : \mathsf{Ca(OH)_2(s) + CO_2(g)} & \mathsf{\xrightleftharpoons[]{} CaCO_3(s) + H_2O(l)}
+			\end{alignat*}
+		\end{itemize}
+		
+	\end{itemize}
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Chemical kinetics vs. chemical equilibrium
 % --------------------------------------------------------------------------------------------------------------------%
 
-\begin{frame}{Chemical kinetics vs. chemical equilibrium}
+\begin{frame}{Chemical kinetics vs. Chemical equilibrium}
 %
 \small
 \lcol
@@ -395,7 +440,7 @@ the reactions are \alert{\textbf{in equilibrium}}.
 \begin{figure}
 \centering
 \includegraphics[width=0.8\columnwidth]{figures/applications/chemical-kinetics-equilibrium-illustration-evolution-plot}
-\caption{Chemical kinetics evolution of species A, B, and C over time.}
+\caption*{Chemical kinetics evolution of species A, B, and C over time.}
 \end{figure}
 
 \ecol
@@ -438,7 +483,7 @@ the reactions are \alert{\textbf{in equilibrium}}.
 \begin{figure}
 \centering
 \includegraphics[width=0.8\columnwidth]{figures/applications/hemoglobin.png}
-\caption{Hemoglobin structure.}
+\caption*{Hemoglobin structure.}
 \end{figure}
 
 \ecol
@@ -463,7 +508,7 @@ the reactions are \alert{\textbf{in equilibrium}}.
 	\end{itemize}
 	%
 	\pause
-	\item \alert{\textbf{Fluid catalytic cracking (FCC)}}, a conversion process used in petroleum refineries of the high-boiling point, high-molecular weight hydrocarbon fractions of petroleum crude oils into more valuable gasoline, olefinic gases, and other products.
+	\item \alert{\textbf{Fluid catalytic cracking (FCC)}}, a conversion process of petroleum crude oils into gasoline, olefinic gases, and other products. Used in petroleum refineries.
 \end{itemize}      
 
 \rcol
@@ -472,7 +517,7 @@ the reactions are \alert{\textbf{in equilibrium}}.
 \centering
 \includegraphics[width=0.49\columnwidth]{figures/applications/corrosion.jpg} \\[5pt]
 \includegraphics[width=0.49\columnwidth]{figures/applications/fluid-catalytic-cracker}
-%\caption{Hemoglobin structure.}
+%\caption*{Hemoglobin structure.}
 \end{figure}
 
 \ecol
@@ -480,20 +525,24 @@ the reactions are \alert{\textbf{in equilibrium}}.
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
-% Chemical reactions: practical observations
+% Chemical equilibrium, Practical observations
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Chemical reactions: practical observations}
+\subsection{Chemical equilibrium, Practical observations}
+%
+\begin{frame}{Chemical equilibrium, Practical observations}
 	\vskip 10pt
 \begin{itemize}
 \item Chemical reactions \textbf{alter the amounts of species over time}, where species can be distributed among one or more phases (minerals, gaseous, mineral).
 \pause
 \item Each of these reactions have \textbf{forward and backward rates}. 
 \pause
-\item Consider the reaction:
+\item Consider the reaction
 \[
 \mathsf{A+B\rightleftharpoons C+2D,}
 \]
+\pause
+\item Rate of the reaction is measured in mol/s.
 \pause
 \item Assume at some time $t$ this reaction has a \textbf{forward rate}
 of \alert{\textbf{2 mol/s}} and a \textbf{backward rate}
@@ -509,8 +558,8 @@ Consider the reaction
 	\[
 	\mathsf{A+B\rightleftharpoons C+2D.}
 	\]
-
-\alert{\textbf{Questions:}}  What is \textbf{rate of production\slash consumption}
+%
+\alert{\textbf{Question:}}  What is \textbf{rate of production\slash consumption}
 of A, B, C and D (in mol/s)? \\
 \begin{center}{ \href{http://etc.ch/SA8F}{\textcolor{indigo(dye)}{\tt http://etc.ch/SA8F}}} \quad
 or \quad
@@ -617,9 +666,9 @@ can be calculated considering this reaction (and others) in equilibrium.
 % Defining the chemical system in each geochemical modeling problem
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\section{Defining the chemical system in the geochemical modeling problem}
+\subsection{Defining the chemical system in the geochemical modeling problem}
 %
-\begin{frame}[<+->]{Defining the chemical system for the modeling problem}
+\begin{frame}{Defining the chemical system for the modeling problem}
 \begin{itemize}
 \item A chemical system is a collection of phases (one or more). Examples:
 \begin{itemize}
@@ -627,6 +676,7 @@ can be calculated considering this reaction (and others) in equilibrium.
 \item a chemical system with aqueous and gaseous phase (CO$_2$(g));
 \item a chemical system with aqueous, gaseous, and mineral phases.
 \end{itemize}
+\pause
 \item Each phase has one or more chemical species:
 \begin{itemize}
 \item aqueous: H$_{2}$O(aq), H$^{+}$(aq), OH$^{-}$(aq), HCO$_{3}^{-}$(aq),
@@ -637,6 +687,7 @@ CO$_{3}^{2-}$(aq), CO$_{2}$(aq), Ca$^{2+}$(aq)
 \item oil
 \item biomass (to simulate life of bacterias)
 \end{itemize}
+\pause
 \item In geochemical modeling, suitable phases and their species need to
 be considered. They must be added either: 
 \begin{itemize}
@@ -689,8 +740,7 @@ See also Jupyter notebook tutorials
 \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/cl.chemical-editor.ipynb}{\textcolor{indigo(dye)}{\it Chemical editor class}}, and 
 %($\approx$ 5min)
 %\item
- \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/cl.chemical-system.ipynb}{\textcolor{indigo(dye)}{\it Chemical system class}} with corresponding  \href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\it explanation videos 
- }}.  %($\approx$ 10min)
+ \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/cl.chemical-system.ipynb}{\textcolor{indigo(dye)}{\it Chemical system class}} with corresponding  \href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\it explanation videos}}.  %($\approx$ 10min)
 %\end{itemize}
 \end{frame}
 
@@ -704,7 +754,8 @@ See also Jupyter notebook tutorials
 \lcol
 \begin{itemize}
 \item Assume water (H$_{2}$O) and carbon dioxide (CO$_{2}$), are mixed
-at given $T$ and $P$. 
+at given T and P. 
+\pause
 \item To model the equilibrium state resulting from this process, the first
 step is to think about:
 \begin{itemize}
@@ -712,6 +763,7 @@ step is to think about:
 \item the species in each phase. 
 \end{itemize}
 %
+\pause
 \item \alert{\textbf{Questions we are interested in}}: 
 \begin{itemize}
 \item Is CO$_{2}$ fully dissolved, or is it still present as a gas (water is already fully saturated with it)?
@@ -748,7 +800,7 @@ CO$_{2}$(aq) & \tabularnewline
 are involved}
 \begin{itemize}
 \item Assume water (H$_{2}$O) and calcite (CaCO$_{3}$) are mixed at some
-given temperature $T$ and pressure $P$. 
+given temperature $T$ and pressure $P$.
 \item A simple (but reasonable) chemical system for this problem is:
 \end{itemize}
 \begin{center}
@@ -777,7 +829,8 @@ Ca$^{2+}$(aq)  & \tabularnewline
 are involved}
 \begin{itemize}
 \item Assume water (H$_{2}$O), carbon dioxide (CO$_{2}$), and sodium chloride
-(NaCl), are mixed at some given temperature $T$ and pressure $P$. 
+(NaCl), are mixed at some given temperature T and pressure P.
+\pause 
 \item A simple (but reasonable) chemical system for this problem is:
 \end{itemize}
 \begin{center}
@@ -793,12 +846,13 @@ Cl$^{-}$(aq) &  &  & \tabularnewline
 \bottomrule
 \end{tabular}
 \par\end{center}
-
+\pause
 \begin{itemize}
 \item \alert{\textbf{We wan to know}}: 
 \begin{itemize}
 \item How does the salinity of the brine impact the solubility of the water? 
-\item What happens if we put too much of the table salt? The phase of halite is significant
+\item What happens if we put too much of the table salt? 
+\item The phase of halite is significant to provide realistic estimation!
  because it has a point of solubility in water. 
 \end{itemize}
 \end{itemize}
@@ -830,7 +884,7 @@ all phases are \textbf{stable at equilibrium}.
 \begin{figure}
 \centering
 \includegraphics[width=0.9\columnwidth]{figures/applications/ternary-phase-diagram-h2o-co2-nacl}
-\caption{Ternary phase diagram.}
+\caption*{Ternary phase diagram.}
 \end{figure}
 
 \ecol
@@ -840,13 +894,16 @@ all phases are \textbf{stable at equilibrium}.
 % Final considerations about defining the chemical system
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[<+->]{Final considerations about defining the chemical system}
+\begin{frame}{Final considerations about defining the chemical system}
+	\vskip 10pt
 \begin{itemize}
 \item In most computer codes for modeling geochemical reactions, no manual
 selection of phases and species are needed. 
+\pause
 \item These can be determined \textbf{automatically} by searching in \textbf{thermodynamic
 databases} all possible species and phases that could exist for a
 given model input. 
+\pause
 \item Depending on the available database, you can model different things: 
 \begin{itemize}
 \item supcrt98.xml
