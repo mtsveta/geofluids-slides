@@ -105,8 +105,8 @@
 % Time scale of kinetics reactions, Examples
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[<+->][shrink]{Time scale of kinetics reactions, Examples}
-	
+\begin{frame}[<+->]{Time scale of kinetics reactions, Examples}
+	\small
 	\begin{itemize}
 		%
 		\item \textbf{\alert{The time scale}}, on which the chemical reactions occur, spans many orders of magnitude (from microseconds to years).
@@ -222,8 +222,9 @@
 % Complexity of finding single overall reaction equation
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[<+->][shrink]{Complexity of finding single overall reaction equation}
+\begin{frame}[<+->]{Complexity of finding single overall reaction equation}
 	%
+	\small
 	There are {\bf many chemical processes} for which a {\bf single overall reaction equation}
 	that describes the stoichiometry of the process \alert{{\bf cannot be found}}.
 	%
@@ -404,8 +405,9 @@ where
 % Order of reaction vs. stoichiometry
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[shrink]{Order of reaction vs. stoichiometry}
+\begin{frame}{Order of reaction vs. stoichiometry}
 	%
+	\small
 	\begin{itemize}
 	\item For the overall reaction equation, \alert{\bf the order does not necessarily reflect the stoichiometry}, i.e., 
 	%
@@ -445,8 +447,9 @@ coefficients} of the reactants are \alert{\bf commonly the same}. \\[5pt]
 % Stoichometry in intermediate reactions
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[shrink]{Stoichiometry in intermediate reactions}
+\begin{frame}{Stoichiometry in intermediate reactions}
 	%
+	\small
 	\begin{itemize}
 		\item 
 	The overall \alert{\bf reaction of hydrogen combustion} $\mathsf{2 \, H_2 + O_2 \rightleftharpoons 2\, H_2O}$ should contain the following intermediate steps (among total 30-40 steps):
@@ -458,6 +461,7 @@ coefficients} of the reactants are \alert{\bf commonly the same}. \\[5pt]
 			R_3: & \quad \mathsf{H_2 + OH \xrightleftharpoons[]{k_3} H + H_2O} \\
 		\end{alignat*}
 	  \rcol
+	  \vskip -30pt
 	  \begin{alignat*}{2}
 	  	R_4: & \quad \mathsf{H_2 + O \xrightleftharpoons[]{k_4} H + OH} \\
 	  	R_5: & \quad \mathsf{O_2 + H + M \xrightleftharpoons[]{k_5} HO_2 + M} \\
@@ -474,6 +478,7 @@ coefficients} of the reactants are \alert{\bf commonly the same}. \\[5pt]
 	\sum_{i} \nu^R_{ji}	\mathsf{A_i} \xrightleftharpoons[]{k_j} \sum_{i} \nu^P_{ji} \mathsf{A_i}
 	\]
 	%
+	\vskip -10pt
 	\pause
 	\item The \alert{\bf stoichiometric coefficient belonging to species $\mathsf{A_i}$ in a reaction step $j$} can be calculated by
 	%
@@ -526,7 +531,7 @@ value.
 \begin{frame}[<+->]{Example, Differential \& integral forms for the reaction rate, Half-time}
 	%
 	\begin{itemize}
-		\item \alert{\bf Quizz}: Given a first-order reactant and rate constant  $k$ = 1.5e-4 1/min, what is the the half-life of the reactant if the time is defined by  $t_{1/2} = \tfrac{\ln 2}{k}$?
+		\item \alert{\bf Quiz}: Given a first-order reactant and rate constant  $k$ = 1.5e-4 1/min, what is the the half-life of the reactant if the time is defined by  $t_{1/2} = \tfrac{\ln 2}{k}$?
 		%
 		\begin{center}
 			\href{http://etc.ch/xREb}{\textcolor{indigo(dye)}{\tt http://etc.ch/xREb}} or 
@@ -564,7 +569,7 @@ value.
 	%
 	\pause
 	\item \alert{\bf Kinetic system of ordinary differential equastions ODEs} defines the relationship between 
-	{\bf production rates! of the species} $\tfrac{d \mathsf{[A_i]}}{dt}$ and {\bf reaction rates} $r_j$:
+	{\bf production rates of the species} $\tfrac{d \mathsf{[A_i]}}{dt}$ and {\bf reaction rates} $r_j$:
 	%
 	\[
 	\tfrac{d \mathsf{[A_j]}}{dt} = \sum_{j=1}^{\mathsf{N}} \nu_{ji} r_j, \quad j = 1, \ldots, \mathsf{M}.
@@ -606,34 +611,106 @@ value.
 			\rcol
 			{\small
 				\vskip -30pt
+			\only<1	>{
 			\[
-			%\mbox{and} \quad 
 			\nu = 
 			\kbordermatrix{
 				& \mathsf{H} & \mathsf{H_2} & \mathsf{HO_2} & \mathsf{H_2O} & \mathsf{O} & \mathsf{O_2} & \mathsf{OH} & \mathsf{M} \\
-				R_1 &   1 & -1 & 1 & 0 & 0 & 1 & 0 & 0\\[10pt]
-				R_2 & -1 &  0 & 0 & 0 & 1 & 1 & 1 & 0\\[10pt]
-				R_3 &   1 & -1 & 0 & 1 & 0 & 1 & -1 & 0\\[5pt]
-				R_4 &  1 & -1 & 0 & 0 & -1 & 1 & 1 & 0\\[5pt]
-				R_5 & -1 &  0 & 1 & 0 & 0 & 0 & 0 & 0\\[5pt]
+				R_1 &   1 & -1 & 1 & 0 & 0 & \alert{*} & 0 & 0\\[10pt]
+				R_2 & -1 &  0 & 0 & 0 & 1 & \alert{*} & 1 & 0\\[10pt]
+				R_3 &   1 & -1 & 0 & 1 & 0 & \alert{*} & -1 & 0\\[5pt]
+				R_4 &  1 & -1 & 0 & 0 & -1 & \alert{*} & 1 & 0\\[5pt]
+				R_5 & -1 &  0 & 1 & 0 & 0 & \alert{*} & 0 & 0\\[5pt]
+				R_6 &  0 &  0 & -1 & 1 & 0 & \alert{*} & 0 & 0\\[5pt]
+			}
+			\]
+			}
+			\only<2>{
+			\[
+			\nu = 
+			\kbordermatrix{
+				& \mathsf{H} & \mathsf{H_2} & \mathsf{HO_2} & \mathsf{H_2O} & \mathsf{O} & \mathsf{O_2} & \mathsf{OH} & \mathsf{M} \\
+				R_1 &   1 & -1 & 1 & 0 & 0 & -1 & 0 & 0\\[10pt]
+				R_2 & -1 &  0 & 0 & 0 & 1 & -1 & 1 & 0\\[10pt]
+				R_3 &   1 & -1 & 0 & 1 & 0 & 0 & -1 & 0\\[5pt]
+				R_4 &  1 & -1 & 0 & 0 & -1 & 0 & 1 & 0\\[5pt]
+				R_5 & -1 &  0 & 1 & 0 & 0 & -1 & 0 & 0\\[5pt]
 				R_6 &  0 &  0 & -1 & 1 & 0 & 0 & 0 & 0\\[5pt]
 			}
 			\]
 			}
+			}
 			\ecol
-			\vskip 5pt
-		
 	%
-	\item Then, the production rates can be formulated as follows: 
-	{\footnotesize
-	\begin{alignat*}{2}
-		\tfrac{d\mathsf{H}}{dt} = & 1 \, r_1 - 1 \, r_2 + 1 \, r_3 + 1 \, r_4 -  1 \, r_5 + 0 \, r_6\\
-								  = &  k_1  \mathsf{[H_2][O_2] } - k_2  \mathsf{[O_2][H] } + k_3  \mathsf{[H_2][OH]}  + k_4  \mathsf{[H_2][O] } -  k_5  \mathsf{[H][O_2][M]} + 0 \, k_6  \mathsf{[HO_2][OH] }\\
-		\tfrac{d\mathsf{H_2O}}{dt} = & 1 \, r_3 + 1 \, r_6 
-		= k_3  \mathsf{[H_2][OH]} + k_6  \mathsf{[HO_2][OH] }\\
-	\end{alignat*}
+	\vskip -15pt 
+	\item \alert{\bf Quiz}: What are the coefficients in the column with the O$_2$? \\[5pt]
+	\begin{center}
+		\href{http://etc.ch/xREb}{\textcolor{indigo(dye)}{\tt http://etc.ch/xREb}} \quad or \quad
+		\includegraphics[height=0.1\columnwidth]{figures/chemical-kinetics/polls.png}
+	\end{center}
+%	\item The production rates can be formulated as follows: 
+%	{\footnotesize
+%	\begin{alignat*}{2}
+%		\tfrac{d\mathsf{H}}{dt} = & 1 \, r_1 - 1 \, r_2 + 1 \, r_3 + 1 \, r_4 -  1 \, r_5 + 0 \, r_6\\
+%								  = &  k_1  \mathsf{[H_2][O_2] } - k_2  \mathsf{[O_2][H] } + k_3  \mathsf{[H_2][OH]}  + k_4  \mathsf{[H_2][O] } -  k_5  \mathsf{[H][O_2][M]} + 0 \, k_6  \mathsf{[HO_2][OH] }\\
+%		\tfrac{d\mathsf{H_2O}}{dt} = & 1 \, r_3 + 1 \, r_6 
+%		= k_3  \mathsf{[H_2][OH]} + k_6  \mathsf{[HO_2][OH] }\\
+%	\end{alignat*}
+%	}
+	%
+	\end{itemize}
+\end{frame}
+%
+\begin{frame}{Example, Kinetics law of mass action for hydrogen combustion}
+	\lcol
+	{\scriptsize
+		\begin{alignat*}{4}
+			R_1:  & \quad \mathsf{H_2 + O_2 \xrightleftharpoons[]{k_1} H + HO_2}    & \quad & r_1 = k_1  \mathsf{[H_2][O_2] } \\[-5pt]
+			R_2: & \quad \mathsf{O_2 + H \xrightleftharpoons[]{k_2} OH + O}           && r_2 = k_2  \mathsf{[O_2][H] } \\[-5pt]
+			R_3: & \quad \mathsf{H_2 + OH \xrightleftharpoons[]{k_3} H + H_2O}     && r_3 = k_3  \mathsf{[H_2][OH] } \\[-5pt]
+			R_4: & \quad \mathsf{H_2 + O \xrightleftharpoons[]{k_4} H + OH}           && r_4 = k_4  \mathsf{[H_2][O] } \\[-5pt]
+			R_5: & \quad \mathsf{O_2 + H + M \xrightleftharpoons[]{k_5} HO_2 + M} && r_5 = k_5  \mathsf{[O_2][H][M] } \\[-5pt]
+			R_6: & \quad \mathsf{HO_2 + OH \xrightleftharpoons[]{k_6} H_2O + OH} && r_6 = k_6  \mathsf{[HO_2][OH] }
+		\end{alignat*}
 	}
-	%
+	\rcol
+	{\small
+		\vskip -30pt
+		\[
+		\nu = 
+		\kbordermatrix{
+			& \mathsf{H} & \mathsf{H_2} & \mathsf{HO_2} & \mathsf{H_2O} & \mathsf{O} & \mathsf{O_2} & \mathsf{OH} & \mathsf{M} \\
+			R_1 &   1 & -1 & 1 & 0 & 0 & -1 & 0 & 0\\[10pt]
+			R_2 & -1 &  0 & 0 & 0 & 1 & -1 & 1 & 0\\[10pt]
+			R_3 &   1 & -1 & 0 & 1 & 0 & 0 & -1 & 0\\[5pt]
+			R_4 &  1 & -1 & 0 & 0 & -1 & 0 & 1 & 0\\[5pt]
+			R_5 & -1 &  0 & 1 & 0 & 0 & -1 & 0 & 0\\[5pt]
+			R_6 &  0 &  0 & -1 & 1 & 0 & 0 & 0 & 0\\[5pt]
+		}
+		\]
+	}
+	\ecol
+	\vskip -10pt
+	\begin{itemize}
+		\item The production rates can be formulated as follows: 
+		{\footnotesize
+			\begin{alignat*}{2}
+				\tfrac{d\mathsf{H}}{dt} = & 1 \, r_1 - 1 \, r_2 + 1 \, r_3 + 1 \, r_4 -  1 \, r_5 + 0 \, r_6\\
+				= &  k_1  \mathsf{[H_2][O_2] } - k_2  \mathsf{[O_2][H] } + k_3  \mathsf{[H_2][OH]}  + k_4  \mathsf{[H_2][O] } -  k_5  \mathsf{[H][O_2][M]} + 0 \, k_6  \mathsf{[HO_2][OH] }\\[-15pt]
+				%\tfrac{d\mathsf{H_2O}}{dt} = & 1 \, r_3 + 1 \, r_6 
+				%= k_3  \mathsf{[H_2][OH]} + k_6  \mathsf{[HO_2][OH] }\\
+			\end{alignat*}
+		}
+		%\vskip -35pt
+		\item \alert{\bf Quiz}: What is the right-hand side for the $\tfrac{d\mathsf{HO_2}}{dt}$?
+		%\begin{right}
+			\href{http://etc.ch/xREb}{\textcolor{indigo(dye)}{\tt http://etc.ch/xREb}} \quad or \quad
+			\includegraphics[height=0.08\columnwidth]{figures/chemical-kinetics/polls.png}
+		%\end{right}
+		%
+		\vskip 10pt
+		\hiddenpause
+		\item {\bf Answer}:  $\tfrac{d\mathsf{HO_2}}{dt} = 1 \, r_1  + 1 \, r_5 -1  \, r_6 = k_1  \mathsf{[H_2][O_2] } + k_5  \mathsf{[H][O_2][M]}  - \, k_6  \mathsf{[HO_2][OH] }.$
 	\end{itemize}
 \end{frame}
 %
@@ -668,27 +745,28 @@ value.
 % Temperature dependence of rate coefficients, Arrhenius equation
 % --------------------------------------------------------------------------------------------------------------------%
 %
+\subsection{Reaction rate and its dependence on temperature and pressure}
 \begin{frame}{Temperature dependence of rate coefficients, Arrhenius equation}
 	\begin{itemize}
 		\item {\bf The temperature dependence of rate coefficient} $k$ is	described by the \alert{\bf (classic) Arrhenius equation}:
 		%
 		\[
-		k := A\, e^{-\tfrac{E}{R\, T}},\]
+		k := A\, e^{-\tfrac{E_a}{R\, T}},\]
 		%
 		where 
 		\begin{itemize}
 			\item $A$ is the pre-exponential factor or A-factor,
-			\item $E$ is the activation energy ($\tfrac{\rm J}{\rm mol}$), 
+			\item $E_a$ is the activation energy ($\tfrac{\rm J}{\rm mol}$), 
 			\item $R = 8.314$ is the gas constant ($\tfrac{\rm J}{\rm mol \, K}$), and 
 			\item $T$ is the temperature (K).
 		\end{itemize}
 		%
 		\pause
-		\item $E$ is is the {\bf minimum energy} that the reactant molecules must possess before the reaction can occur.
+		\item $E_a$ is is the {\bf minimum energy} that the reactant molecules must possess before the reaction can occur (bigger $E$ is $\Rightarrow$ smaller is the reaction rate $\Rightarrow$ slower the reaction will proceed).
 		\pause
-		\item $E$ is {\bf determined experimentally} by performing the reaction at several temperatures. 
-		\pause
-		\item The dimension of quantity $E/R$ is temperature and it is called the \alert{\bf activation temperature}. 
+		\item $E_a$ is {\bf determined experimentally} by performing the reaction at several temperatures. 
+		%\pause
+		%\item The dimension of quantity $E/R$ is temperature and it is called the \alert{\bf activation temperature}. 
 	\end{itemize}
 \end{frame}
 %
@@ -937,8 +1015,9 @@ value.
 % Reaction mechanism
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[<+->][shrink]{Reaction mechanisms}
+\begin{frame}[<+->]{Reaction mechanisms}
 	%
+	\small
 	\begin{itemize}
 		\item The \alert{\bf kinetic mechanisms} can contain basically {\bf three types of reactions}:
 		%
@@ -1067,12 +1146,12 @@ value.
 			%\mathsf{H_2O(l) = H^+ + OH^-,}
 			%\]
 			%
-			\item \alert{\bf oxidized} (process of losing electron)
+			\item (or oxygen in it) \alert{\bf oxidized}, losing electron, 
 			%
 			$\mathsf{H_2O(l) = O_2(aq) + 2\, e^{-} + 2\, H^+,}$ or 
 			
 			%
-			\item \alert{\bf reduced} (process of accepting electron)
+			\item (or hydrogen in it) \alert{\bf reduced}, accepting electron, 
 			%
 			%\[
 			$
@@ -1098,7 +1177,7 @@ value.
 \begin{frame}{Oxidation number, Oxidizers and reducers }
 	\small
 	\begin{itemize}
-		\item \alert{\textbf{Oxidation number}} of a chemical element is  the number of charges that an atom would 
+		\item \alert{\textbf{Oxidation number}} (NOX) of a chemical element is  the number of charges that an atom would 
 		possess if the electrons were not shared but located entirely on a single atom.
 	\end{itemize}
 	%
@@ -1204,53 +1283,53 @@ value.
 %----------
 %
 %2Al(s) + 6H+(aq) → 2Al3+(aq) + 3H2(g)
-\begin{frame}{Balancing redox reaction, Example}
-	
-	\begin{itemize}
-		\item Atoms appear to be balanced, but \alert{charges are not}:\\[-5pt]
-		%
-		\[
-		\mbox{\alert{charge 2+}}
-		\qquad
-		\mathsf{Al(s)+2\, H^{+}(aq) \rightarrow Al^{3+}(aq)+H_2(g).}
-		\qquad
-		\mbox{\alert{charge 3+}}
-		\]
-		%
-		\item Reduction half-reaction ($\mathsf{H^{+}}$ is being reduced to $\mathsf{H_2(g))}$):\\[-5pt]
-		%
-		\[
-		\mbox{\alert{charge 0}}
-		\qquad
-		\mathsf{H^{+}(aq) +  2\, e^{-} \rightarrow H_2(g).}
-		\qquad
-		\mbox{\alert{charge 0}}
-		\]
-		%
-		\item Oxidation half-reaction ($\mathsf{Al(s)}$ is being oxidized to $\mathsf{Al^{3+}(aq)}$):\\[-5pt]
-		%
-		\[
-		\mbox{\alert{charge 0}}
-		\qquad
-		\mathsf{Al(s) \rightarrow Al^{3+}(aq) +  3\, e^{-} .}
-		\qquad
-		\mbox{\alert{charge 0}}
-		\]
-		%
-		\item Linear combination to obtain \alert{\bf charge-balanced reaction}: 
-		%
-		$$
-		\begin{array}{c}
-			+\begin{cases}
-				\mathsf{6\,H^{+}(aq)+6\:e^{-}} & \rightarrow\mathsf{3\,H_2(g)}\\
-				\mathsf{2\,Al(s)} & \rightarrow\mathsf{2\,Al^{3+}(aq)+6\:e^{-}}
-			\end{cases}\\[5pt]
-			\hline \qquad\mathsf{\;6\,H^{+}(aq)+2\,Al(s)\rightarrow2\,Al^{3+}(aq)+}\mathsf{3\,H_2(g)}.
-		\end{array}
-	    $$
-		\end{itemize}
-	
-\end{frame}
+%\begin{frame}{Balancing redox reaction, Example}
+%	
+%	\begin{itemize}
+%		\item Atoms appear to be balanced, but \alert{charges are not}:\\[-5pt]
+%		
+%		\[
+%		\mbox{\alert{charge 2+}}
+%		\qquad
+%		\mathsf{Al(s)+2\, H^{+}(aq) \rightarrow Al^{3+}(aq)+H_2(g).}
+%		\qquad
+%		\mbox{\alert{charge 3+}}
+%		\]
+%		
+%		\item Reduction half-reaction ($\mathsf{H^{+}}$ is being reduced to $\mathsf{H_2(g)}$):\\[-5pt]
+%		
+%		\[
+%		\mbox{\alert{charge 0}}
+%		\qquad
+%		\mathsf{H^{+}(aq) +  2\, e^{-} \rightarrow H_2(g).}
+%		\qquad
+%		\mbox{\alert{charge 0}}
+%		\]
+%		
+%		\item Oxidation half-reaction ($\mathsf{Al(s)}$ is being oxidized to $\mathsf{Al^{3+}(aq)}$):\\[-5pt]
+%		
+%		\[
+%		\mbox{\alert{charge 0}}
+%		\qquad
+%		\mathsf{Al(s) \rightarrow Al^{3+}(aq) +  3\, e^{-} .}
+%		\qquad
+%		\mbox{\alert{charge 0}}
+%		\]
+%		
+%		\item Linear combination to obtain \alert{\bf charge-balanced reaction}: 
+%		
+%		$$
+%		\begin{array}{c}
+%			+\begin{cases}
+%				\mathsf{6\,H^{+}(aq)+6\:e^{-}} & \rightarrow\mathsf{3\,H_2(g)}\\
+%				\mathsf{2\,Al(s)} & \rightarrow\mathsf{2\,Al^{3+}(aq)+6\:e^{-}}
+%			\end{cases}\\[5pt]
+%			\hline \qquad\mathsf{\;6\,H^{+}(aq)+2\,Al(s)\rightarrow2\,Al^{3+}(aq)+}\mathsf{3\,H_2(g)}.
+%		\end{array}
+%	    $$
+%		\end{itemize}
+%	
+%\end{frame}
 %%
 %% --------------------------------------------------------------------------------------------------------------------%
 %% Solubility in redox reactions
@@ -1272,18 +1351,24 @@ value.
 %
 \begin{frame}{Quiz on redox reaction}
 	\begin{itemize}
-		\item \alert{\textbf{Quiz}}: determine what is the oxidizing and reducing agents in the following reaction:
+		\item \alert{\textbf{Quiz}}: determine what is the oxidizing and reducing agents in the following reaction?
 		%
 		\[
 		\mathsf{Zn + 2\, H^+ \rightarrow  Zn^{2+} + H_2}.
 		\]
 		%
+		Reminder: 
+			\begin{itemize}
+				\item \textbf{reducing agent} is the one that \textbf{forces other species to gain electron}, and 
+				\item \textbf{oxidizing agent}  is the one that \textbf{forces other species to lose one}):
+			\end{itemize}
+		
 		\begin{center}
 			\href{http://etc.ch/xREb}{\textcolor{indigo(dye)}{\tt http://etc.ch/xREb}} \quad or \quad
-			\includegraphics[height=0.2\columnwidth]{figures/chemical-kinetics/polls.png}
+			\includegraphics[height=0.15\columnwidth]{figures/chemical-kinetics/polls.png}
 		\end{center}
 		\hiddenpause
-		\item {\textbf{Answer}}: The oxidation state of  H  changes from +1 to 0, and the oxidation state of  Zn  changes from 0 to +2. \\
+		\item {\textbf{Answer}}: The oxidation state of H changes from +1 to 0, and the oxidation state of  Zn  changes from 0 to +2. \\
 		Hence,  Zn  is oxidized and acts as the reducing agent.  $\mathsf{H^+}$  ion is reduced and acts as the oxidizing agent.
 		
 	\end{itemize}
@@ -1308,11 +1393,11 @@ value.
 	{\textbf{Example 1}}: metals like  titanium and magnesium can burn in nitrogen:
 	%
 	\begin{alignat*}{2}
-		& \mathsf{2Ti(s)+N2(g) \rightarrow 2TiN(s),} \\
-		& \mathsf{3Mg(s)+N2(g) \rightarrow Mg3N2(s).} 
+		& \mathsf{2\,Ti(s)+N_2(g) \rightarrow 2\, TiN(s),} \\
+		& \mathsf{3\,Mg(s)+N_2(g) \rightarrow Mg_3N_2(s).} 
 	\end{alignat*}
 	%
-	{\textbf{Example 2}}: chemicals can be also oxidized by other chemicals than oxygen, such as $\mathsf{H_2}$ or $\mathsf{F_2}$; these processes are also considered combustion reactions.
+	{\textbf{Example 2}}: chemicals can be also oxidized by other chemicals than oxygen, such as $\mathsf{Cl_2}$ or $\mathsf{F_2}$; these processes are also considered combustion reactions.
 	\end{itemize}
 	%
 \end{frame}
@@ -1427,6 +1512,7 @@ value.
 				\href{http://etc.ch/xREb}{\textcolor{indigo(dye)}{\tt http://etc.ch/xREb}} \quad or \quad 
 				\includegraphics[height=0.18\columnwidth]{figures/chemical-kinetics/polls.png}
 			\end{center}
+			\vskip 10pt
 			\hiddenpause
 			\item  {\bf Answer}: $\mathsf{[B]} = K_e \, \mathsf{[A]}$.
 			\end{itemize}	
@@ -1447,16 +1533,16 @@ value.
 			%
 			{\bf Example}: consider equilibrium reaction $\mathsf{A \xrightleftharpoons[k_2]{k_1} B \xrightarrow{k_3} C}$, where $k_3 \ll k_1, k_2$ \\
 			%
-			$\Rightarrow$  assuming $\mathsf{[B]} = K_e \, \mathsf{[A]}$, therefore $\tfrac{d\mathsf{[C]}}{dt} = k_3 \, \mathsf{[B]} = k_3\, K_e \, \mathsf{[A]}$.		\\[10pt]
+			$\Rightarrow$  assuming $\mathsf{[B]} = K_e \, \mathsf{[A]}$, therefore $\tfrac{d\mathsf{[C]}}{dt} = k_3 \, \mathsf{[B]}$.		\\[10pt]
 		%
-		\item \alert{\bf Quiz}: how can we express the production rate of C, if 
-		$\tfrac{d\mathsf{[C]}}{dt} = k_3 \, \mathsf{[B]}$?		
+		\item \alert{\bf Quiz}: how can we express the production rate of C?		
 		%
 		\begin{center}
 			\href{http://etc.ch/xREb}{\textcolor{indigo(dye)}{\tt http://etc.ch/xREb}} \quad or \quad 
 			\includegraphics[height=0.18\columnwidth]{figures/chemical-kinetics/polls.png}
 		\end{center}
 		\hiddenpause
+		\vskip 10pt
 		\item  {\bf Answer}: $\tfrac{d\mathsf{[C]}}{dt} = k_3 \, \mathsf{[B]} = k_3\, K_e \, \mathsf{[A]}$.	
 		\end{itemize}	
 		%		\item {\bf Example I }: consider equilibrium reaction $\mathsf{A \xrightleftharpoons[k_2]{k_1} B}$ with equilibrium $K_e := \tfrac{k_1}{k_2}$: \\
@@ -1472,27 +1558,36 @@ value.
 % Example, Complex souring system
 % --------------------------------------------------------------------------------------------------------------------%
 %
+
 \begin{frame}{Example, Complex souring system}
 	%
+	\small 
 	\begin{itemize}
-		\item Kinetics modeling  of souring of complex system for approx. 58.33 days with minerals: 
-		%\lcol
+		\item Kinetics modeling  of souring of complex system for approx. 58.33 days with minerals: \\[5pt]
+		\lcol
+		\hspace*{2cm}
+		\includegraphics[width=0.6\textwidth]{figures/chemical-kinetics/souring.png}
+		\rcol
 		{\scriptsize
-		\begin{itemize}
-			\item Calcite,      $k_{\mathsf{Calcite}} \sim 10^{-1}$,    \qquad \qquad \quad -- Siderite,  $k_{\mathsf{Siderite}}  \sim 10^{-6}$,
-			\item Daphnite,      $k_{\mathsf{Daphnite}} \sim 10^{-9}$, \qquad \qquad -- Quartz, $k_{\mathsf{Quartz}} ~10^{-10}$
-			\item Kaolinite,     $k_{\mathsf{Kaolinite}} \sim 10^{-11}$,   
-		\end{itemize}
-		%\rcol
+			\vskip -15pt
+			\begin{itemize}
+				\item Calcite,      $k_{\mathsf{Calcite}} \sim 10^{-1}$,  \\[-15pt]
+				\item Daphnite,      $k_{\mathsf{Daphnite}} \sim 10^{-9}$,\\[-15pt]
+				\item Kaolinite,     $k_{\mathsf{Kaolinite}} \sim 10^{-11}$,  \\[-15pt]
+				\item Siderite,  $k_{\mathsf{Siderite}}  \sim 10^{-6}$,\\[-15pt]
+				\item Quartz, $k_{\mathsf{Quartz}} ~10^{-10}$
+			\end{itemize}
 		}
+		\ecol
+	\vskip 5pt	
 	%
 	\item Assuming that calcite is controlled by equilibrium, we obtained the speedup of $\approx$ \alert{\bf 4.24x}. 
 	\end{itemize}
+	\vskip -15pt
 	\begin{figure}[!t]
 		\centering
-		\subfloat[Calcite, daphnite, and kaolinite]{\includegraphics[width=0.4\textwidth]{figures/chemical-kinetics/reaktoro-daphnite-kaolinite-calcite.png}} \qquad \qquad
-		\subfloat[Pyrrhotite and siderite]{\includegraphics[width=0.38\textwidth]{figures/chemical-kinetics/reaktoro-pyrrhotite-siderite.png}}
-		\caption{Minerals change over time.}
+		\subfloat[Calcite, daphnite, and kaolinite ]{\includegraphics[width=0.35\textwidth]{figures/chemical-kinetics/reaktoro-daphnite-kaolinite-calcite.png}} \qquad \qquad
+		\subfloat[Pyrrhotite and siderite over time]{\includegraphics[width=0.33\textwidth]{figures/chemical-kinetics/reaktoro-pyrrhotite-siderite.png}}
 	\end{figure}
 \end{frame}
 
@@ -1504,10 +1599,10 @@ value.
 \begin{frame}{Rate-determining step}
 	% 
 	\begin{itemize}
-		\item \alert{\bf Rate-determining step} is rate coefficient of a single reaction step that could determine 
-		 the production rate of a reactant or final product of the overall chemical reaction. 
+		%\item \alert{\bf Rate-determining step} is rate coefficient of a single reaction step that could determine 
+		 %the production rate of a reactant or final product of the overall chemical reaction. 
 		%		
-		\pause
+		%\pause
 		\item For {\bf sequential first-order reactions}, the reaction step having \alert{\bf the smallest rate coefficient is the rate-determining one}.
 		\pause
 		%
@@ -1789,7 +1884,8 @@ value.
 	\begin{alignat*}{4}
 		\frac{\mathrm{d}b_{e}}{\mathrm{d}t} & = f_e(n_e)& \qquad & t>0, & b_{e}=An_{e}^{\circ} & \qquad & t=0,\label{eq:full-kinetics}\\
 		\frac{\mathrm{d}n_{k}}{\mathrm{d}t} & = f_k(n_k) &  & t>0, & \qquad n_{k}=n_{k}^{\circ} &  & t=0,\nonumber \\
-		n_{e} & =\varphi(T,P,b_{e}) &  & t>0, & n_{e}=n_{e}^{\circ} &  & t=0.\nonumber 
+		n_{e} & =\varphi(T,P,b_{e}) &  & t>0. & &  & 
+		\nonumber 
 	\end{alignat*}
 	%
 	where $n^{\circ}=[n_{e}^{\circ},n_{k}^{\circ}]^{{\rm T}}$ is a given
@@ -1974,7 +2070,7 @@ min_reaction_barite = editor.addMineralReaction("Barite") \
 		\item This results in {\bf chemical problems being a bottleneck} in reaction kinetics (and other areas, e.g.,  electrical engineering, mechanical engineering, etc.) for 15 years.
 		%
 		\pause
-		\item But, In 1968, a variety of methods began to appear in the literature.
+		\item But, in 1968, a variety of methods began to appear in the literature.
 	\end{itemize}
 \end{frame}
 %
@@ -2109,7 +2205,7 @@ min_reaction_barite = editor.addMineralReaction("Barite") \
 		\end{columns}
 		%
 		\vskip 5pt
-		\textbf{Source code}: \href{}{\textcolor{indigo(dye)}{\it polybox}} using \href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html}{\textcolor{indigo(dye)}{odeint}} function of 
+		\textbf{Source code}: \href{https://polybox.ethz.ch/index.php/s/vZ54CLT6rooxoJ8}{\textcolor{indigo(dye)}{\it polybox}} using \href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html}{\textcolor{indigo(dye)}{odeint}} function of 
 		\href{https://docs.scipy.org/doc/scipy/reference/integrate.html}{\textcolor{indigo(dye)}{\bf scipy.integrate}} Python package.
 	%\end{itemize}
 \end{frame}
