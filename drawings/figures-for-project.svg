@@ -1,0 +1,2141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="175mm"
+   height="190.79926mm"
+   viewBox="0 0 661.41737 721.13106"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
+   sodipodi:docname="figures-for-project.svg">
+  <defs
+     id="defs2">
+    <rect
+       x="-1980.0382"
+       y="-1085.5428"
+       width="255.26224"
+       height="833.65405"
+       id="rect1576" />
+    <rect
+       x="-1982.1901"
+       y="-295.47391"
+       width="3.0509849"
+       height="69.155655"
+       id="rect1240" />
+    <rect
+       x="-2267.8806"
+       y="-558.90961"
+       width="563.41522"
+       height="255.26573"
+       id="rect742" />
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5218"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleInM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(-0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5216" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker7185"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path7183" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker6925"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleInM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(-0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path6923" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5764"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5762" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5718"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleInM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(-0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5716" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5166"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5164" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5132"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleInM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(-0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5130" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleInM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleInM"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path4638"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(-0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path4647"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Mend"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4529"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5132-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleInM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(-0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5130-8" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5166-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5164-5" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5132-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleInM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(-0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5130-6" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5166-9"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5164-3" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleInM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleInM-7"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path4638-4"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(-0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-5"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path4647-2"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5718-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleInM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(-0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5716-4" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5764-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5762-4" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5132-7-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleInM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(-0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5130-8-3" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5166-4-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5164-5-7" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleInM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleInM-7-5"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path4638-4-5"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(-0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-5-5"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path4647-2-4"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5718-5-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleInM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(-0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5716-4-1" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5764-7-9"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5762-4-2" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleInM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleInM-7-4"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path4638-4-0"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(-0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-5-57"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path4647-2-0"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98722011"
+     inkscape:cx="155.73407"
+     inkscape:cy="368.4746"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g5718"
+     showgrid="false"
+     units="mm"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true"
+     inkscape:snap-text-baseline="true"
+     inkscape:window-width="1680"
+     inkscape:window-height="968"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:document-rotation="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid5905"
+       originx="2220.1664"
+       originy="-1446.3879" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(2220.1669,1044.9992)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;line-height:1.66667px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="287.5"
+       y="873.59106"
+       id="text4675" />
+    <g
+       id="g6203">
+      <g
+         transform="translate(-40.459221,48.487323)"
+         id="g5880">
+        <text
+           id="text5099"
+           y="279.21646"
+           x="533.73083"
+           style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+             y="279.21646"
+             x="533.73083"
+             id="tspan5097"
+             sodipodi:role="line">Temperature [°C]</tspan></text>
+        <path
+           sodipodi:nodetypes="ccc"
+           inkscape:connector-curvature="0"
+           id="path5101"
+           d="M 683.82963,267.44511 H 488.91445 V 71.78039"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5132);marker-end:url(#marker5166)" />
+        <text
+           transform="matrix(0,-1.0019209,0.99808278,0,0,0)"
+           id="text5105"
+           y="484.64008"
+           x="-244.62662"
+           style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+             y="484.64008"
+             x="-244.62662"
+             id="tspan5103"
+             sodipodi:role="line">Solubility CO<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan4706">2</tspan>(g) [molal]</tspan></text>
+        <text
+           id="text5109"
+           y="203.81215"
+           x="566.69598"
+           style="font-style:normal;font-weight:normal;font-size:13.3745px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.2963px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+             y="203.81215"
+             x="566.69598"
+             id="tspan5107"
+             sodipodi:role="line">?</tspan></text>
+        <text
+           id="text4606"
+           y="229.92448"
+           x="587.75989"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             id="tspan4604"
+             style="text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             y="229.92448"
+             x="587.75989"
+             sodipodi:role="line">at salinities 0.0, 0.3, 0.6 molal </tspan><tspan
+             style="text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             y="246.64261"
+             x="590.1109"
+             sodipodi:role="line"
+             id="tspan4610">and pressures 50 and 100 bar </tspan></text>
+        <text
+           transform="scale(0.99808278,1.0019209)"
+           id="text4690"
+           y="278.80542"
+           x="482.14014"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             style="stroke-width:0.264583"
+             y="278.80542"
+             x="482.14014"
+             id="tspan4688"
+             sodipodi:role="line">50</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="666.22546"
+           y="278.80542"
+           id="text4694"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             sodipodi:role="line"
+             id="tspan4692"
+             x="666.22546"
+             y="278.80542"
+             style="stroke-width:0.264583">100</tspan></text>
+      </g>
+      <g
+         transform="translate(-45.413897,169.70563)"
+         id="g6086">
+        <text
+           transform="scale(0.99808278,1.0019209)"
+           id="text4917"
+           y="758.62305"
+           x="536.42383"
+           style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+             y="758.62305"
+             x="536.42383"
+             id="tspan4915"
+             sodipodi:role="line">Amount CO<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan4913">2</tspan> [mol]</tspan></text>
+        <path
+           sodipodi:nodetypes="ccc"
+           inkscape:connector-curvature="0"
+           id="path4919"
+           d="M 688.78429,747.77264 H 493.86912 V 552.10792"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM);marker-end:url(#TriangleOutM)" />
+        <text
+           transform="matrix(0,-1.0019209,0.99808278,0,0,0)"
+           id="text4925"
+           y="489.55423"
+           x="-728.5611"
+           style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+             y="489.55423"
+             x="-728.5611"
+             id="tspan4923"
+             sodipodi:role="line">Dissolved Mass CaCO<tspan
+   id="tspan4921"
+   style="font-size:65%;baseline-shift:sub">3</tspan> [g]</tspan></text>
+        <text
+           transform="scale(0.99808278,1.0019209)"
+           id="text4929"
+           y="683.21875"
+           x="571.66022"
+           style="font-style:normal;font-weight:normal;font-size:13.3745px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.2963px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+             y="683.21875"
+             x="571.66022"
+             id="tspan4927"
+             sodipodi:role="line">?</tspan></text>
+        <text
+           transform="scale(0.99808278,1.0019209)"
+           id="text4935"
+           y="703.18262"
+           x="592.60028"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             id="tspan4933"
+             style="text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             y="703.18262"
+             x="592.60028"
+             sodipodi:role="line">at temperature 75 °C,</tspan><tspan
+             style="text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             y="719.90076"
+             x="592.60028"
+             sodipodi:role="line"
+             id="tspan4953">pressure 100 bar, and</tspan><tspan
+             style="text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             y="736.6189"
+             x="594.95129"
+             sodipodi:role="line"
+             id="tspan4955">0.2 NaCl molal  </tspan></text>
+        <text
+           transform="scale(0.99808278,1.0019209)"
+           id="text4939"
+           y="758.21204"
+           x="486.09729"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             style="stroke-width:0.264583"
+             y="758.21204"
+             x="486.09729"
+             id="tspan4937"
+             sodipodi:role="line">0.0</tspan></text>
+        <text
+           transform="scale(0.99808278,1.0019209)"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="674.92511"
+           y="758.21204"
+           id="text4943"><tspan
+             sodipodi:role="line"
+             id="tspan4941"
+             x="674.92511"
+             y="758.21204"
+             style="stroke-width:0.264583">2.0</tspan></text>
+      </g>
+      <g
+         transform="translate(-74.35886,169.70563)"
+         id="g5695">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5718);marker-end:url(#marker5764)"
+           d="M 410.21286,747.77264 H 215.29769 V 552.10792"
+           id="path4819"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccc" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="-724.52808"
+           y="210.44771"
+           id="text4823"
+           transform="matrix(0,-1.0019209,0.99808278,0,0,0)"><tspan
+             sodipodi:role="line"
+             id="tspan4821"
+             x="-724.52808"
+             y="210.44771"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">Solubility CaCO<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan4843">3</tspan> [molal]</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:13.3745px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="292.55368"
+           y="683.21875"
+           id="text4827"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             sodipodi:role="line"
+             id="tspan4825"
+             x="292.55368"
+             y="683.21875"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.2963px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">?</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="313.32587"
+           y="703.18268"
+           id="text4833"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             sodipodi:role="line"
+             x="313.32587"
+             y="703.18268"
+             style="line-height:1.33333px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             id="tspan4831">at temperature 75 °C, </tspan><tspan
+             sodipodi:role="line"
+             x="313.32587"
+             y="719.90082"
+             style="line-height:1.33333px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             id="tspan4947">pressure 100 bar, and </tspan><tspan
+             sodipodi:role="line"
+             x="315.67685"
+             y="736.61896"
+             style="line-height:1.33333px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             id="tspan4949">0.2 NaCl molal </tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="206.99075"
+           y="758.21204"
+           id="text4837"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             sodipodi:role="line"
+             id="tspan4835"
+             x="206.99075"
+             y="758.21204"
+             style="stroke-width:0.264583">0.0</tspan></text>
+        <text
+           id="text4841"
+           y="758.21204"
+           x="395.81854"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             style="stroke-width:0.264583"
+             y="758.21204"
+             x="395.81854"
+             id="tspan4839"
+             sodipodi:role="line">2.0</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="257.31729"
+           y="758.62305"
+           id="text4817"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             sodipodi:role="line"
+             id="tspan4815"
+             x="257.31729"
+             y="758.62305"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">Amount CO<tspan
+   id="tspan4813"
+   style="font-size:65%;baseline-shift:sub">2</tspan> [mol]</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:16.72px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="313.44595"
+           y="572.90784"
+           id="text4833-3"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             sodipodi:role="line"
+             x="313.44595"
+             y="572.90784"
+             style="line-height:1.33333px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             id="tspan4949-6"><tspan
+   style="font-weight:bold"
+   id="tspan5584">Tip:</tspan> the solubility of CaCO3 is </tspan><tspan
+             sodipodi:role="line"
+             x="313.44595"
+             y="589.62781"
+             style="line-height:1.33333px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             id="tspan5586">the molality of element Ca.</tspan></text>
+      </g>
+      <g
+         transform="translate(-74.35886,48.480644)"
+         id="g5863">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="245.85504"
+           y="279.21646"
+           id="text4862"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             sodipodi:role="line"
+             id="tspan4860"
+             x="245.85504"
+             y="279.21646"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">Ionic Strength [molal]</tspan></text>
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM);marker-end:url(#TriangleOutM)"
+           d="M 410.21286,267.44511 H 215.29769 V 71.78039"
+           id="path4485-3"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccc" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="-244.62662"
+           y="210.49771"
+           id="text4862-5"
+           transform="matrix(0,-1.0019209,0.99808278,0,0,0)"><tspan
+             sodipodi:role="line"
+             id="tspan4860-6"
+             x="-244.62662"
+             y="210.49771"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">Solubility CO<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan4704">2</tspan>(g) [molal]</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:13.3745px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="292.55368"
+           y="203.81215"
+           id="text5076"
+           transform="scale(0.99808277,1.0019209)"><tspan
+             sodipodi:role="line"
+             id="tspan5074"
+             x="292.55368"
+             y="203.81215"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.2963px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">?</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="313.61755"
+           y="229.92448"
+           id="text5218"
+           transform="scale(0.99808277,1.0019209)"><tspan
+             sodipodi:role="line"
+             x="313.61755"
+             y="229.92448"
+             style="text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             id="tspan5222">at temperatures 50, 75, 100 °C</tspan><tspan
+             sodipodi:role="line"
+             x="315.96854"
+             y="246.64261"
+             style="text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             id="tspan4574">and pressures 50 and 100 bar </tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="206.99075"
+           y="278.80542"
+           id="text4618"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             sodipodi:role="line"
+             id="tspan4616"
+             x="206.99075"
+             y="278.80542"
+             style="stroke-width:0.264583">0.0</tspan></text>
+        <text
+           id="text4642"
+           y="278.80542"
+           x="395.8988"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             style="stroke-width:0.264583"
+             y="278.80542"
+             x="395.8988"
+             id="tspan4640"
+             sodipodi:role="line">0.7</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:16.72px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="313.44595"
+           y="93.501259"
+           id="text4833-3-7"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             sodipodi:role="line"
+             x="313.44595"
+             y="93.501259"
+             style="line-height:1.33333px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             id="tspan4949-6-3"><tspan
+   style="font-weight:bold"
+   id="tspan5584-6">Tip:</tspan> the solubility of CO<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan5612">2</tspan>(g) is </tspan><tspan
+             sodipodi:role="line"
+             x="313.44595"
+             y="110.22126"
+             style="line-height:1.33333px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             id="tspan5586-1">the molality of element C.</tspan></text>
+      </g>
+      <g
+         transform="translate(-74.35886,115.41662)"
+         id="g5903">
+        <text
+           transform="scale(0.99808278,1.0019209)"
+           id="text4710"
+           y="512.61841"
+           x="257.31729"
+           style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+             y="512.61841"
+             x="257.31729"
+             id="tspan4708"
+             sodipodi:role="line">Amount CO<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan4742">2</tspan> [mol]</tspan></text>
+        <path
+           sodipodi:nodetypes="ccc"
+           inkscape:connector-curvature="0"
+           id="path4712"
+           d="M 410.21286,501.29542 H 215.29769 V 305.6307"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM);marker-end:url(#TriangleOutM)" />
+        <text
+           transform="matrix(0,-1.0019209,0.99808278,0,0,0)"
+           id="text4718"
+           y="210.55104"
+           x="-411.87534"
+           style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+             y="210.55104"
+             x="-411.87534"
+             id="tspan4716"
+             sodipodi:role="line">pH</tspan></text>
+        <text
+           transform="scale(0.99808278,1.0019209)"
+           id="text4722"
+           y="437.21411"
+           x="292.55368"
+           style="font-style:normal;font-weight:normal;font-size:13.3745px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.2963px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+             y="437.21411"
+             x="292.55368"
+             id="tspan4720"
+             sodipodi:role="line">?</tspan></text>
+        <text
+           transform="scale(0.99808278,1.0019209)"
+           id="text4728"
+           y="463.32645"
+           x="313.61755"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             id="tspan4724"
+             style="text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             y="463.32645"
+             x="313.61755"
+             sodipodi:role="line">at temperature 75 °C</tspan><tspan
+             id="tspan4726"
+             style="text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             y="480.04459"
+             x="315.96854"
+             sodipodi:role="line">and pressure 100 bar </tspan></text>
+        <text
+           transform="scale(0.99808278,1.0019209)"
+           id="text4732"
+           y="512.2074"
+           x="206.99075"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             style="stroke-width:0.264583"
+             y="512.2074"
+             x="206.99075"
+             id="tspan4730"
+             sodipodi:role="line">0.0</tspan></text>
+        <text
+           transform="scale(0.99808278,1.0019209)"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="395.81854"
+           y="512.2074"
+           id="text4736"><tspan
+             sodipodi:role="line"
+             id="tspan4734"
+             x="395.81854"
+             y="512.2074"
+             style="stroke-width:0.264583">2.0</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:16.72px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="313.96988"
+           y="341.94739"
+           id="text4833-3-7-2"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             sodipodi:role="line"
+             x="313.96988"
+             y="341.94739"
+             style="line-height:1.33333px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             id="tspan5586-1-9"><tspan
+   style="font-weight:bold"
+   id="tspan5584-6-3">Tip:</tspan> pH = –log<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan5662">10 </tspan><tspan
+   style="font-style:italic"
+   id="tspan5672">a</tspan><tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan5664">H+(aq)</tspan>.</tspan></text>
+      </g>
+      <g
+         transform="translate(-40.459221,349.88143)"
+         id="g5880-0">
+        <text
+           id="text5099-3"
+           y="279.21646"
+           x="543.99634"
+           style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+             y="279.21646"
+             x="543.99634"
+             id="tspan5097-6"
+             sodipodi:role="line">Pressure [bar]</tspan></text>
+        <path
+           sodipodi:nodetypes="ccc"
+           inkscape:connector-curvature="0"
+           id="path5101-1"
+           d="M 683.82963,267.44511 H 488.91445 V 71.78039"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5132-7);marker-end:url(#marker5166-4)" />
+        <text
+           transform="matrix(0,-1.0019209,0.99808278,0,0,0)"
+           id="text5105-0"
+           y="484.64008"
+           x="-244.62662"
+           style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+             y="484.64008"
+             x="-244.62662"
+             id="tspan5103-6"
+             sodipodi:role="line">Solubility CO<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan4706-3">2</tspan>(g) [molal]</tspan></text>
+        <text
+           id="text5109-2"
+           y="203.81215"
+           x="566.69598"
+           style="font-style:normal;font-weight:normal;font-size:13.3745px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.2963px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+             y="203.81215"
+             x="566.69598"
+             id="tspan5107-0"
+             sodipodi:role="line">?</tspan></text>
+        <text
+           id="text4606-6"
+           y="229.92448"
+           x="587.75989"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             style="text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             y="229.92448"
+             x="587.75989"
+             sodipodi:role="line"
+             id="tspan4610-5">at salinity 0.3 NaCl molal and </tspan><tspan
+             id="tspan6067"
+             style="text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+             y="246.64261"
+             x="587.75989"
+             sodipodi:role="line">temperatures 50, 75, 100 °C</tspan></text>
+        <text
+           transform="scale(0.99808278,1.0019209)"
+           id="text4690-5"
+           y="278.80542"
+           x="482.14014"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           xml:space="preserve"><tspan
+             style="stroke-width:0.264583"
+             y="278.80542"
+             x="482.14014"
+             id="tspan4688-4"
+             sodipodi:role="line">50</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="666.22546"
+           y="278.80542"
+           id="text4694-7"
+           transform="scale(0.99808278,1.0019209)"><tspan
+             sodipodi:role="line"
+             id="tspan4692-6"
+             x="666.22546"
+             y="278.80542"
+             style="stroke-width:0.264583">100</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g5880-6"
+       transform="translate(-2466.5036,-1113.932)">
+      <text
+         transform="scale(0.99808278,1.0019209)"
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="523.71161"
+         y="279.21646"
+         id="text5099-8"><tspan
+           sodipodi:role="line"
+           id="tspan5097-8"
+           x="523.71161"
+           y="279.21646"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">Temperature [°C]</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5132-5);marker-end:url(#marker5166-9)"
+         d="M 673.82963,267.44511 H 478.91445 V 71.78039"
+         id="path5101-4"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="-244.62662"
+         y="474.62085"
+         id="text5105-3"
+         transform="matrix(0,-1.0019209,0.99808278,0,0,0)"><tspan
+           sodipodi:role="line"
+           id="tspan5103-1"
+           x="-244.62662"
+           y="474.62085"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">Solubility CO<tspan
+   id="tspan4706-4"
+   style="font-size:65%;baseline-shift:sub">2</tspan> [molal]</tspan></text>
+      <text
+         transform="scale(0.99808278,1.0019209)"
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:13.3745px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="556.67676"
+         y="203.81215"
+         id="text5109-9"><tspan
+           sodipodi:role="line"
+           id="tspan5107-2"
+           x="556.67676"
+           y="203.81215"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.2963px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">?</tspan></text>
+      <text
+         transform="scale(0.99808278,1.0019209)"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="577.74066"
+         y="229.92448"
+         id="text4606-0"><tspan
+           sodipodi:role="line"
+           x="577.74066"
+           y="229.92448"
+           style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+           id="tspan4604-6">at salinities 0.0, 0.3, 0.6 molal </tspan><tspan
+           id="tspan4610-8"
+           sodipodi:role="line"
+           x="579.85004"
+           y="244.92448"
+           style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583">and pressures 50 and 100 bar </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="472.12091"
+         y="280.80157"
+         id="text4690-9"
+         transform="scale(0.99808278,1.0019209)"><tspan
+           sodipodi:role="line"
+           id="tspan4688-2"
+           x="472.12091"
+           y="280.80157"
+           style="stroke-width:0.264583">50</tspan></text>
+      <text
+         transform="scale(0.99808278,1.0019209)"
+         id="text4694-6"
+         y="280.80157"
+         x="656.20624"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.264583"
+           y="280.80157"
+           x="656.20624"
+           id="tspan4692-64"
+           sodipodi:role="line">100</tspan></text>
+    </g>
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path4919-8"
+       d="m -1786.674,-352.94106 h -194.9152 v -195.66472"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM-7);marker-end:url(#TriangleOutM-5)" />
+    <text
+       transform="matrix(0,-1.0019209,0.99808278,0,0,0)"
+       id="text4925-7"
+       y="-1990.6567"
+       x="370.0423"
+       style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+         y="-1990.6567"
+         x="370.0423"
+         id="tspan4923-1"
+         sodipodi:role="line">Solubility CaCO3 [molal]</tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       id="text4929-2"
+       y="-415.38464"
+       x="-1908.5508"
+       style="font-style:normal;font-weight:normal;font-size:13.3745px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.2963px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+         y="-415.38464"
+         x="-1908.5508"
+         id="tspan4927-7"
+         sodipodi:role="line">?</tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       id="text4939-0"
+       y="-338.3952"
+       x="-1994.1136"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.264583"
+         y="-338.3952"
+         x="-1994.1136"
+         id="tspan4937-6"
+         sodipodi:role="line">50</tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-1805.2859"
+       y="-338.3952"
+       id="text4943-1"><tspan
+         sodipodi:role="line"
+         id="tspan4941-5"
+         x="-1805.2859"
+         y="-338.3952"
+         style="stroke-width:0.264583">100</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5718-5);marker-end:url(#marker5764-7)"
+       d="m -2010.1904,-352.94106 h -194.9152 v -195.66472"
+       id="path4819-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="374.07532"
+       y="-2214.605"
+       id="text4823-9"
+       transform="matrix(0,-1.0019209,0.99808278,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan4821-0"
+         x="374.07532"
+         y="-2214.605"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">Solubility CaCO<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan4843-9">3</tspan> [molal]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:13.3745px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-2132.499"
+       y="-415.38464"
+       id="text4827-1"
+       transform="scale(0.99808278,1.0019209)"><tspan
+         sodipodi:role="line"
+         id="tspan4825-7"
+         x="-2132.499"
+         y="-415.38464"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.2963px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-2218.062"
+       y="-338.3952"
+       id="text4837-9"
+       transform="scale(0.99808278,1.0019209)"><tspan
+         sodipodi:role="line"
+         id="tspan4835-7"
+         x="-2218.062"
+         y="-338.3952"
+         style="stroke-width:0.264583">0.0</tspan></text>
+    <text
+       id="text4841-7"
+       y="-338.3952"
+       x="-2029.2341"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       transform="scale(0.99808278,1.0019209)"><tspan
+         style="stroke-width:0.264583"
+         y="-338.3952"
+         x="-2029.2341"
+         id="tspan4839-6"
+         sodipodi:role="line">0.7</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-2181.7627"
+       y="-339.98035"
+       id="text4817-7"
+       transform="scale(0.99808278,1.0019209)"><tspan
+         sodipodi:role="line"
+         id="tspan4815-3"
+         x="-2181.7627"
+         y="-339.98035"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">Ionic Strength [molal]</tspan></text>
+    <g
+       id="g5863-4"
+       transform="translate(-2420.4033,-1113.9387)">
+      <text
+         transform="scale(0.99808278,1.0019209)"
+         id="text4862-8"
+         y="279.21646"
+         x="245.85504"
+         style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+           y="279.21646"
+           x="245.85504"
+           id="tspan4860-1"
+           sodipodi:role="line">Ionic Strength [molal]</tspan></text>
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path4485-3-2"
+         d="M 410.21286,267.44511 H 215.29769 V 71.78039"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker6925);marker-end:url(#marker7185)" />
+      <text
+         transform="matrix(0,-1.0019209,0.99808278,0,0,0)"
+         id="text4862-5-9"
+         y="210.49771"
+         x="-244.62662"
+         style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+           y="210.49771"
+           x="-244.62662"
+           id="tspan4860-6-3"
+           sodipodi:role="line">Solubility CO<tspan
+   id="tspan4704-9"
+   style="font-size:65%;baseline-shift:sub">2</tspan> [molal]</tspan></text>
+      <text
+         transform="scale(0.99808277,1.0019209)"
+         id="text5076-0"
+         y="203.81215"
+         x="292.55368"
+         style="font-style:normal;font-weight:normal;font-size:13.3745px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.2963px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+           y="203.81215"
+           x="292.55368"
+           id="tspan5074-8"
+           sodipodi:role="line">?</tspan></text>
+      <text
+         transform="scale(0.99808277,1.0019209)"
+         id="text5218-8"
+         y="229.92448"
+         x="313.61755"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           id="tspan5222-5"
+           style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+           y="229.92448"
+           x="313.61755"
+           sodipodi:role="line">at temperatures 50, 75, 100 °C</tspan><tspan
+           id="tspan4574-0"
+           style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+           y="244.92448"
+           x="315.72693"
+           sodipodi:role="line">and pressures 50 and 100 bar </tspan></text>
+      <text
+         transform="scale(0.99808278,1.0019209)"
+         id="text4618-9"
+         y="280.80157"
+         x="206.99075"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.264583"
+           y="280.80157"
+           x="206.99075"
+           id="tspan4616-6"
+           sodipodi:role="line">0.0</tspan></text>
+      <text
+         transform="scale(0.99808278,1.0019209)"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="395.8988"
+         y="280.80157"
+         id="text4642-3"><tspan
+           sodipodi:role="line"
+           id="tspan4640-8"
+           x="395.8988"
+           y="280.80157"
+           style="stroke-width:0.264583">0.7</tspan></text>
+      <text
+         transform="scale(0.99808278,1.0019209)"
+         id="text4833-3-7-5"
+         y="84.426094"
+         x="313.45627"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:1;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           id="tspan5586-1-5"
+           style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+           y="84.426094"
+           x="313.45627"
+           sodipodi:role="line"><tspan
+   id="tspan5584-6-1"
+   style="font-weight:bold;font-size:12px">Tip:</tspan> the solubility of CO<tspan
+   id="tspan5612-1"
+   style="font-size:12px;baseline-shift:sub">2</tspan> is the </tspan><tspan
+           id="tspan7262"
+           style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+           y="97.800598"
+           x="313.45627"
+           sodipodi:role="line">molality of element C when the </tspan><tspan
+           id="tspan7264"
+           style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+           y="111.17509"
+           x="313.45627"
+           sodipodi:role="line">aqueous solution is <tspan
+   id="tspan7318"
+   style="font-weight:bold">saturated</tspan></tspan><tspan
+           id="tspan7315"
+           style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+           y="124.54959"
+           x="315.56564"
+           sodipodi:role="line">with CO<tspan
+   id="tspan7266"
+   style="font-size:12px;baseline-shift:sub">2</tspan>. </tspan></text>
+    </g>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       id="text4710-8"
+       y="-586.27344"
+       x="-2167.7354"
+       style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+         y="-586.27344"
+         x="-2167.7354"
+         id="tspan4708-4"
+         sodipodi:role="line">Amount CO<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan4742-8">2</tspan> [mol]</tspan></text>
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path4712-1"
+       d="m -2010.1904,-599.70728 h -194.9152 V -795.372"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5218);marker-end:url(#TriangleOutM-5)" />
+    <text
+       transform="matrix(0,-1.0019209,0.99808278,0,0,0)"
+       id="text4718-0"
+       y="-2214.5017"
+       x="687.01654"
+       style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+         y="-2214.5017"
+         x="687.01654"
+         id="tspan4716-3"
+         sodipodi:role="line">pH</tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       id="text4722-0"
+       y="-661.67773"
+       x="-2132.499"
+       style="font-style:normal;font-weight:normal;font-size:13.3745px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.2963px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+         y="-661.67773"
+         x="-2132.499"
+         id="tspan4720-4"
+         sodipodi:role="line">?</tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       id="text4728-4"
+       y="-641.55389"
+       x="-2111.4351"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         id="tspan4724-4"
+         style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         y="-641.55389"
+         x="-2111.4351"
+         sodipodi:role="line">at salinity 0.3 NaCl molal, </tspan><tspan
+         id="tspan4726-4"
+         style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         y="-626.55389"
+         x="-2111.4351"
+         sodipodi:role="line">temperature 75 °C, and </tspan><tspan
+         id="tspan7477"
+         style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         y="-611.55389"
+         x="-2109.3257"
+         sodipodi:role="line">pressure 100 bar </tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       id="text4732-7"
+       y="-584.68829"
+       x="-2218.062"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.264583"
+         y="-584.68829"
+         x="-2218.062"
+         id="tspan4730-6"
+         sodipodi:role="line">0.0</tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-2029.2341"
+       y="-584.68829"
+       id="text4736-3"><tspan
+         sodipodi:role="line"
+         id="tspan4734-1"
+         x="-2029.2341"
+         y="-584.68829"
+         style="stroke-width:0.264583">2.0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:16.72px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-2111.0828"
+       y="-756.94446"
+       id="text4833-3-7-2-7"
+       transform="scale(0.99808278,1.0019209)"><tspan
+         sodipodi:role="line"
+         x="-2111.0828"
+         y="-756.94446"
+         style="line-height:1.33333px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         id="tspan5586-1-9-5"><tspan
+   style="font-weight:bold"
+   id="tspan5584-6-3-9">Tip:</tspan> pH = –log<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan5662-6">10 </tspan><tspan
+   style="font-style:italic"
+   id="tspan5672-2">a</tspan><tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan5664-1">H+(aq)</tspan>.</tspan></text>
+    <g
+       id="g5718"
+       transform="translate(6.0170362,-2)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:14.6667px;line-height:31.9213px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-2141.8379"
+         y="-815.64734"
+         id="text5152"><tspan
+           sodipodi:role="line"
+           id="tspan5150"
+           x="-2141.8379"
+           y="-815.64734"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.6667px;line-height:16px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';fill:#808080">Plot 1</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:14.6667px;line-height:31.9213px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-1898.3215"
+         y="-815.64069"
+         id="text5152-3"><tspan
+           sodipodi:role="line"
+           id="tspan5150-3"
+           x="-1898.3215"
+           y="-815.64069"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.6667px;line-height:16px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';fill:#808080">Plot 2</tspan></text>
+      <text
+         id="text5174"
+         y="-568.86102"
+         x="-2141.8379"
+         style="font-style:normal;font-weight:normal;font-size:14.6667px;line-height:31.9213px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.6667px;line-height:16px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';fill:#808080"
+           y="-568.86102"
+           x="-2141.8379"
+           id="tspan5172"
+           sodipodi:role="line">Plot 4</tspan></text>
+      <text
+         id="text5178"
+         y="-817.00116"
+         x="-1682.2087"
+         style="font-style:normal;font-weight:normal;font-size:14.6667px;line-height:31.9213px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.6667px;line-height:16px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';fill:#808080"
+           y="-817.00116"
+           x="-1682.2087"
+           id="tspan5176"
+           sodipodi:role="line">Plot 3</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:14.6667px;line-height:31.9213px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-2141.8379"
+         y="-322.09479"
+         id="text5182"><tspan
+           sodipodi:role="line"
+           id="tspan5180"
+           x="-2141.8379"
+           y="-322.09479"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.6667px;line-height:16px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';fill:#808080">Plot 7</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:14.6667px;line-height:31.9213px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-1900.3215"
+         y="-322.08813"
+         id="text5186"><tspan
+           sodipodi:role="line"
+           id="tspan5184"
+           x="-1900.3215"
+           y="-322.08813"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.6667px;line-height:16px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';fill:#808080">Plot 8</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text740"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect742);fill:#000000;fill-opacity:1;stroke:none;" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:14.6667px;line-height:31.9213px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-1896.8555"
+         y="-568.1889"
+         id="text5182-5"><tspan
+           sodipodi:role="line"
+           id="tspan5180-8"
+           x="-1896.8555"
+           y="-568.1889"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.6667px;line-height:16px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';fill:#808080">Plot 5</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:14.6667px;line-height:31.9213px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-1677.3391"
+         y="-568.18225"
+         id="text5186-9"><tspan
+           sodipodi:role="line"
+           id="tspan5184-9"
+           x="-1677.3391"
+           y="-568.18225"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.6667px;line-height:16px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';fill:#808080">Plot 6</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:14.6667px;line-height:31.9213px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="-1681.1863"
+         y="-322.0354"
+         id="text5186-7"><tspan
+           sodipodi:role="line"
+           id="tspan5184-95"
+           x="-1681.1863"
+           y="-322.0354"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.6667px;line-height:16px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';fill:#808080">Plot 9</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text1574"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1576);fill:#000000;fill-opacity:1;stroke:none;" />
+    </g>
+    <g
+       id="g5880-0-7"
+       transform="translate(-2256.3908,-1054.6846)">
+      <text
+         transform="scale(0.99808278,1.0019209)"
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="543.99634"
+         y="219.33148"
+         id="text5099-3-8"><tspan
+           sodipodi:role="line"
+           id="tspan5097-6-5"
+           x="543.99634"
+           y="219.33148"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">Pressure [bar]</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5132-7-4);marker-end:url(#marker5166-4-0)"
+         d="M 683.82963,207.44511 H 488.91445 V 11.780387"
+         id="path5101-1-7"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="-184.74165"
+         y="484.64008"
+         id="text5105-0-4"
+         transform="matrix(0,-1.0019209,0.99808278,0,0,0)"><tspan
+           sodipodi:role="line"
+           id="tspan5103-6-1"
+           x="-184.74165"
+           y="484.64008"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">Solubility CO<tspan
+   id="tspan4706-3-8"
+   style="font-size:65%;baseline-shift:sub">2</tspan> [molal]</tspan></text>
+      <text
+         transform="scale(0.99808278,1.0019209)"
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:13.3745px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="566.69598"
+         y="143.92719"
+         id="text5109-2-5"><tspan
+           sodipodi:role="line"
+           id="tspan5107-0-9"
+           x="566.69598"
+           y="143.92719"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.2963px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">?</tspan></text>
+      <text
+         transform="scale(0.99808278,1.0019209)"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="587.75989"
+         y="170.03952"
+         id="text4606-6-7"><tspan
+           id="tspan4610-5-5"
+           sodipodi:role="line"
+           x="587.75989"
+           y="170.03952"
+           style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583">at salinity 0.3 NaCl molal and </tspan><tspan
+           sodipodi:role="line"
+           x="587.75989"
+           y="185.03952"
+           style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+           id="tspan6067-3">temperatures 50, 75, 100 °C</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="482.14014"
+         y="220.91661"
+         id="text4690-5-8"
+         transform="scale(0.99808278,1.0019209)"><tspan
+           sodipodi:role="line"
+           id="tspan4688-4-8"
+           x="482.14014"
+           y="220.91661"
+           style="stroke-width:0.264583">50</tspan></text>
+      <text
+         transform="scale(0.99808278,1.0019209)"
+         id="text4694-7-3"
+         y="220.91661"
+         x="666.22546"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.264583"
+           y="220.91661"
+           x="666.22546"
+           id="tspan4692-6-1"
+           sodipodi:role="line">100</tspan></text>
+    </g>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       id="text4917-5-4"
+       y="-584.87378"
+       x="-1723.5159"
+       style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+         y="-584.87378"
+         x="-1723.5159"
+         id="tspan4915-0-5"
+         sodipodi:role="line">Amount CO<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan4913-4-8">2</tspan> [mol]</tspan></text>
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path4919-8-6"
+       d="m -1566.8262,-598.30488 h -194.9152 V -793.9696"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM-7-5);marker-end:url(#TriangleOutM-5-5)" />
+    <text
+       transform="matrix(0,-1.0019209,0.99808278,0,0,0)"
+       id="text4925-7-2"
+       y="-1770.3855"
+       x="614.93573"
+       style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+         y="-1770.3855"
+         x="614.93573"
+         id="tspan4923-1-5"
+         sodipodi:role="line">Dissolved Mass CaCO<tspan
+   id="tspan4921-7-1"
+   style="font-size:65%;baseline-shift:sub">3</tspan> [g]</tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       id="text4929-2-3"
+       y="-660.27802"
+       x="-1688.2795"
+       style="font-style:normal;font-weight:normal;font-size:13.3745px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.2963px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+         y="-660.27802"
+         x="-1688.2795"
+         id="tspan4927-7-9"
+         sodipodi:role="line">?</tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       id="text4935-2-7"
+       y="-640.31415"
+       x="-1667.3395"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         id="tspan4933-2-3"
+         style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         y="-640.31415"
+         x="-1667.3395"
+         sodipodi:role="line">at temperature 75 °C,</tspan><tspan
+         style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         y="-625.31415"
+         x="-1667.3395"
+         sodipodi:role="line"
+         id="tspan4953-6-7">pressure 100 bar, and</tspan><tspan
+         style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         y="-610.31415"
+         x="-1665.2301"
+         sodipodi:role="line"
+         id="tspan4955-1-5">0.2 NaCl molal  </tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       id="text4939-0-0"
+       y="-583.28864"
+       x="-1773.8424"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.264583"
+         y="-583.28864"
+         x="-1773.8424"
+         id="tspan4937-6-2"
+         sodipodi:role="line">0.0</tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-1585.0146"
+       y="-583.28864"
+       id="text4943-1-1"><tspan
+         sodipodi:role="line"
+         id="tspan4941-5-8"
+         x="-1585.0146"
+         y="-583.28864"
+         style="stroke-width:0.264583">2.0</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5718-5-2);marker-end:url(#marker5764-7-9)"
+       d="m -1790.3426,-598.30488 h -194.9152 V -793.9696"
+       id="path4819-4-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="618.96875"
+       y="-1994.3337"
+       id="text4823-9-1"
+       transform="matrix(0,-1.0019209,0.99808278,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan4821-0-5"
+         x="618.96875"
+         y="-1994.3337"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">Solubility CaCO<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan4843-9-5">3</tspan> [molal]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:13.3745px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-1912.2278"
+       y="-660.27802"
+       id="text4827-1-8"
+       transform="scale(0.99808278,1.0019209)"><tspan
+         sodipodi:role="line"
+         id="tspan4825-7-5"
+         x="-1912.2278"
+         y="-660.27802"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.2963px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-1891.4556"
+       y="-640.31409"
+       id="text4833-7-6"
+       transform="scale(0.99808278,1.0019209)"><tspan
+         sodipodi:role="line"
+         x="-1891.4556"
+         y="-640.31409"
+         style="font-size:12px;line-height:1.33333px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         id="tspan4831-1-7">at temperature 75 °C, </tspan><tspan
+         sodipodi:role="line"
+         x="-1891.4556"
+         y="-625.31409"
+         style="font-size:12px;line-height:1.33333px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         id="tspan4947-1-9">pressure 100 bar, and </tspan><tspan
+         sodipodi:role="line"
+         x="-1889.3462"
+         y="-610.31409"
+         style="font-size:12px;line-height:1.33333px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         id="tspan4949-5-4">0.2 NaCl molal </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-1997.7908"
+       y="-583.28864"
+       id="text4837-9-1"
+       transform="scale(0.99808278,1.0019209)"><tspan
+         sodipodi:role="line"
+         id="tspan4835-7-6"
+         x="-1997.7908"
+         y="-583.28864"
+         style="stroke-width:0.264583">0.0</tspan></text>
+    <text
+       id="text4841-7-1"
+       y="-583.28864"
+       x="-1808.9629"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       transform="scale(0.99808278,1.0019209)"><tspan
+         style="stroke-width:0.264583"
+         y="-583.28864"
+         x="-1808.9629"
+         id="tspan4839-6-2"
+         sodipodi:role="line">2.0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-1947.4641"
+       y="-584.87378"
+       id="text4817-7-0"
+       transform="scale(0.99808278,1.0019209)"><tspan
+         sodipodi:role="line"
+         id="tspan4815-3-4"
+         x="-1947.4641"
+         y="-584.87378"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">Amount CO<tspan
+   id="tspan4813-6-4"
+   style="font-size:65%;baseline-shift:sub">2</tspan> [mol]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:12px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-1891.3252"
+       y="-778.43549"
+       id="text4833-3-5-5"
+       transform="scale(0.99808278,1.0019209)"><tspan
+         sodipodi:role="line"
+         x="-1891.3252"
+         y="-778.43549"
+         style="line-height:11.33px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         id="tspan4949-6-6-9"><tspan
+   style="font-weight:bold;line-height:11.33px"
+   id="tspan5584-3-7">Tip:</tspan> the solubility of CaCO<tspan
+   id="tspan7452-5"
+   style="font-size:65%;baseline-shift:sub">3</tspan> is </tspan><tspan
+         sodipodi:role="line"
+         x="-1891.3252"
+         y="-765.56372"
+         style="line-height:11.33px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         id="tspan5586-9-3">the molality of element Ca </tspan><tspan
+         sodipodi:role="line"
+         x="-1891.3252"
+         y="-753.56372"
+         style="line-height:11.33px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         id="tspan7324-9">when the aqueous solution is </tspan><tspan
+         sodipodi:role="line"
+         x="-1891.3252"
+         y="-741.56372"
+         style="line-height:11.33px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         id="tspan7326-0">saturated with CaCO<tspan
+   style="font-size:65%;line-height:11.33px;baseline-shift:sub"
+   id="tspan7328-5">3</tspan>.</tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       id="text5753-5"
+       y="-778.43549"
+       x="-1667.377"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:12px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         id="tspan5743-6"
+         style="line-height:11.33px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         y="-778.43549"
+         x="-1667.377"
+         sodipodi:role="line"><tspan
+   id="tspan5739-3"
+   style="font-weight:bold;line-height:11.33px">Tip:</tspan> the dissolved mass of </tspan><tspan
+         style="line-height:11.33px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         y="-766.43549"
+         x="-1667.377"
+         sodipodi:role="line"
+         id="tspan5808-2">CaCO<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan5741-6">3</tspan>(s, calcite) needs </tspan><tspan
+         style="line-height:11.33px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         y="-753.56372"
+         x="-1667.377"
+         sodipodi:role="line"
+         id="tspan5811-8">convertion from moles to grams.</tspan><tspan
+         id="tspan5751-9"
+         style="line-height:11.33px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         y="-741.56372"
+         x="-1667.377"
+         sodipodi:role="line">Its molar mass is 100.09 g/mol.</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text1238"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1240);fill:#000000;fill-opacity:1;stroke:none;" />
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path4919-8-8"
+       d="m -1564.6136,-352.15812 h -194.9152 v -195.66472"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM-7-4);marker-end:url(#TriangleOutM-5-57)" />
+    <text
+       transform="matrix(0,-1.0019209,0.99808278,0,0,0)"
+       id="text4925-7-0"
+       y="-1768.1691"
+       x="369.26083"
+       style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+         y="-1768.1691"
+         x="369.26083"
+         id="tspan4923-1-6"
+         sodipodi:role="line">Solubility CaCO3 [molal]</tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       id="text4929-2-5"
+       y="-414.60321"
+       x="-1686.0631"
+       style="font-style:normal;font-weight:normal;font-size:13.3745px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96.2963px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583"
+         y="-414.60321"
+         x="-1686.0631"
+         id="tspan4927-7-7"
+         sodipodi:role="line">?</tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       id="text4939-0-4"
+       y="-337.61374"
+       x="-1771.626"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.264583"
+         y="-337.61374"
+         x="-1771.626"
+         id="tspan4937-6-8"
+         sodipodi:role="line">0.0</tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3745px;line-height:25.0772px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-1582.7982"
+       y="-337.61374"
+       id="text4943-1-7"><tspan
+         sodipodi:role="line"
+         id="tspan4941-5-5"
+         x="-1582.7982"
+         y="-337.61374"
+         style="stroke-width:0.264583">2.0</tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       id="text5218-8-5"
+       y="-383.9006"
+       x="-2101.6526"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         id="tspan5222-5-3"
+         style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         y="-383.9006"
+         x="-2101.6526"
+         sodipodi:role="line">at temperatures 50, 75, 100 °C</tspan><tspan
+         id="tspan4574-0-3"
+         style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         y="-368.9006"
+         x="-2099.5432"
+         sodipodi:role="line">and pressures 50 and 100 bar </tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-1873.0188"
+       y="-386.68164"
+       id="text4606-0-1"><tspan
+         sodipodi:role="line"
+         x="-1873.0188"
+         y="-386.68164"
+         style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         id="tspan4604-6-9">at salinities 0.0, 0.3, 0.6 molal </tspan><tspan
+         id="tspan4610-8-8"
+         sodipodi:role="line"
+         x="-1870.9094"
+         y="-371.68164"
+         style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583">and pressures 50 and 100 bar </tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-1657.6405"
+       y="-390.51883"
+       id="text4606-6-7-8"><tspan
+         id="tspan4610-5-5-0"
+         sodipodi:role="line"
+         x="-1657.6405"
+         y="-390.51883"
+         style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583">at salinity 0.3 NaCl molal and </tspan><tspan
+         sodipodi:role="line"
+         x="-1657.6405"
+         y="-375.51883"
+         style="font-size:12px;text-align:center;text-anchor:middle;fill:#666666;stroke-width:0.264583"
+         id="tspan6067-3-4">temperatures 50, 75, 100 °C</tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-1935.696"
+       y="-338.64642"
+       id="text5099-8-1"><tspan
+         sodipodi:role="line"
+         id="tspan5097-8-2"
+         x="-1935.696"
+         y="-338.64642"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">Temperature [°C]</tspan></text>
+    <text
+       transform="scale(0.99808278,1.0019209)"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:13.3333px;line-height:25.0772px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-1710.0046"
+       y="-337.57031"
+       id="text5099-3-8-6"><tspan
+         sodipodi:role="line"
+         id="tspan5097-6-5-5"
+         x="-1710.0046"
+         y="-337.57031"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L';stroke-width:0.264583">Pressure [bar]</tspan></text>
+  </g>
+</svg>

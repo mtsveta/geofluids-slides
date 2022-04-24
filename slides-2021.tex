@@ -1,0 +1,272 @@
+\documentclass[english,handout, aspectratio=169,10pt]{beamer} % slides for students
+%\documentclass[english,aspectratio=169,10pt]{beamer} % slides for the lectures
+%===================================================================
+% Beamer theme and its fine tune
+%===================================================================
+\usetheme{metropolis}
+\metroset{block=fill}
+\metroset{sectionpage=simple} % needed to avoid Arithmetic Overflow errors
+\metroset{subsectionpage=progressbar}
+%\metroset{subsubsectionpage=progressbar}
+
+\usepackage{appendixnumberbeamer}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+\usepackage{setspace} % to use singlespace
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\synctex=-1
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{units}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{cancel}
+\usepackage{setspace}
+\usepackage[authoryear]{natbib}
+
+%===================================================================
+% Tikz pitures
+%===================================================================
+
+\usepackage{tikz}
+\usetikzlibrary{%
+	arrows,%
+	shapes.misc,% wg. rounded rectangle
+	shapes.arrows,%
+	chains,%
+	matrix,%
+	positioning,% wg. " of "
+	scopes,%
+	decorations.pathmorphing,% /pgf/decoration/random steps | erste Graphik
+	shadows,%
+	backgrounds,
+	fit,positioning,shapes.symbols,chains, 
+	shapes.geometric,calc
+}
+
+%===================================================================
+% Fonts
+%===================================================================
+
+%\usepackage{mathpazo}
+%\usepackage{eulervm}
+%\usepackage{concmath}
+%\usepackage{newtxsf}
+
+%\unimathsetup{math-style=ISO, bold-style=ISO, mathrm=sym}
+\usefonttheme{professionalfonts}
+%\setsansfont[BoldFont={Fira Sans Bold}]{Fira Sans}
+%\setmathfont{Fira Math Regular}
+%\setmathfont[range=\circ]{TeX Gyre Pagella Math}
+%\renewcommand{\circ}{\char"25CB} % FiraMath so far has no \circ
+\renewcommand{\circ}{o} % FiraMath so far has no \circ
+\renewcommand{\vdots}{.} % FiraMath so far has no \vdots
+
+\setbeamercovered{transparent}
+
+\definecolor{metrogreen}{HTML}{23373B}
+
+% Set margins
+%\setlength{\leftmargini}{0.2em}
+%\setlength{\leftmarginii}{1.00em}
+%\setlength{\leftmarginiii}{2.00em}
+
+\setbeamertemplate{itemize items}{\textbullet}
+%\setbeamertemplate{itemize items}{}
+\setbeamertemplate{itemize subitem}{\textendash}
+\setbeamertemplate{itemize subsubitem}{\textendash}
+
+\usepackage[version=4]{mhchem}
+\mhchemoptions{textfontcommand=\sffamily}
+\mhchemoptions{mathfontcommand=\mathsf}
+
+%%===================================================================
+%% Minted package settings for code highlighting
+%%===================================================================
+%\usepackage{minted}
+%\usemintedstyle{trac}
+%
+%\newminted{python}{fontsize=\scriptsize, 
+%   linenos,
+%   numbersep=4pt,
+%   frame=lines,
+%   framesep=1mm} 
+%
+%\newminted{yaml}{fontsize=\scriptsize, 
+%   linenos,
+%   numbersep=4pt,
+%   frame=lines,
+%   framesep=1mm} 
+   
+%===================================================================
+% Colored box
+%===================================================================
+\usepackage{tcolorbox}
+\definecolor{metrogreen}{HTML}{23373B}
+\tcbset{fonttitle=\bfseries, toptitle=1mm, colframe=metrogreen}
+\newtcolorbox{cbox}[1]{fonttitle=\bfseries,title=#1}
+
+%===================================================================
+% General packages
+%===================================================================
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{relsize}
+\usepackage{caption}
+\usepackage{kbordermatrix} 
+\usepackage{mathtools}
+\usepackage{comment} % used to comment parts of the document
+
+%%===================================================================
+%% Pause Commands
+%%===================================================================
+\newcommand{\hiddenpause}{\setbeamercovered{invisible}\pause}
+\newcommand{\hiddenunpause}{\setbeamercovered{transparent}}
+\newcommand{\negpause}{\vspace*{-\baselineskip}\pause}
+
+%===================================================================
+% Column Commands
+%===================================================================
+%\newcommand{\leftcolumn[2]}{\begin{columns}[#1]\column{#2\textwidth}}
+%\newcommand{\newcolumn[1]}{\column{#1\textwidth}}
+%\newcommand{\endcolumn}{\end{columns}}
+
+\newcommand{\lcol}[1][0.5]{\begin{columns}\column{#1\textwidth}}
+\newcommand{\lcoltop}{\begin{columns}[t]\column{0.5\textwidth}}
+\newcommand{\rcol}[1][0.5]{\column{#1\textwidth}}
+\newcommand{\ecol}{\end{columns}}
+
+\newcommand{\lbox}[1]{\lcol\begin{cbox}{#1}}
+\newcommand{\rbox}[1]{\end{cbox}\rcol\begin{cbox}{#1}}
+\newcommand{\ebox}[1]{\end{cbox}\ecol}
+
+
+%===================================================================
+% Listings
+%===================================================================
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+%\usepackage{minted} 
+
+%===================================================================
+% Misc
+%===================================================================
+% Needed to allow bmatrix with more than 10 columns
+\setcounter{MaxMatrixCols}{20}
+
+\newcommand\wlength{3.5em}
+\newcommand\wscale{0.8}
+\newcommand\w[1]{\makebox[\wlength]{$#1$}}
+\newcommand\wt[1]{\makebox[\wlength]{\scalebox{\wscale}{$#1$}}}
+\newcommand\wl[1]{\scalebox{\wscale}{$#1$}}
+%\newcommand\m{\hphantom{-}}
+
+\newcommand\minus[1]{\mathllap{-}#1}
+%\newcommand\d{{\rm d}}
+
+%\usepackage{enumitem}
+%\newlist{mylist}{itemize}{1}
+%\setlist[mylist]{label={\textcolor{blue}{\bf +}}}
+%\newcommand\itema{\item[{\textcolor{red}{\bf --}}]}
+
+%===================================================================
+% S. Kyas packages
+%===================================================================
+
+\usepackage[export]{adjustbox} % for aligment of the graphics 
+\usepackage{sidecap} % for cation on the right side
+\definecolor{indigo(dye)}{rgb}{0.0, 0.25, 0.42} % color of the references
+%\usepackage{chemarr} % text over arrows
+\setbeamercovered{transparent} % make the text transparent on unspecified slides 
+
+\newcommand\Wider[2][4em]{%
+	\makebox[\linewidth][c]{%
+		\begin{minipage}{\dimexpr\textwidth+#1\relax}
+			\raggedright#2
+		\end{minipage}%
+	}%
+}
+
+\title{Geofluids — Part IV}
+\subtitle{Introduction to Geochemical and Reactive Transport Modeling}
+\author{Dr. Svetlana Kyas (extension of the lecture notes of Dr. Allan Leal)}
+
+\institute{Postdoc Associate\\
+svetlana.kyas@erdw.ethz.ch\\
+NO F 61}
+%\titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+\begin{document}
+
+\maketitle
+%
+\begin{frame}[allowframebreaks]{Table of contents}
+	\vskip 10pt
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents%[hidea b llsubsections]
+\end{frame}
+%
+\input{lecture-1-introduction}
+%\input{lecture-2-chemical-equilibrium}
+%\input{lecture-3-thermodynamic-model}
+%\input{lecture-4-numerical-method-equilibrium}
+%project descriptions
+%\input{lecture-5-chemical-kinetics}
+%\input{lecture-6-reactive-transport}
+
+\begin{frame}[allowframebreaks]{References}
+
+\renewcommand\bibname{}
+
+\bibliographystyle{apalike2}
+\bibliography{library}
+
+\end{frame}
+
+
+\end{document}
