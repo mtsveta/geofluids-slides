@@ -124,15 +124,32 @@ or \\[10pt]
 \end{frame}
 
 % --------------------------------------------------------------------------------------------------------------------%
+% Learning Git
+% --------------------------------------------------------------------------------------------------------------------%
+
+\begin{frame}{Poll on the Git background}
+\centering 
+\vskip 10pt
+{\Large \href{http://etc.ch/M2Rp}{\textcolor{indigo(dye)}{\tt http://etc.ch/M2Rp}}}\\ 
+or \\[10pt]
+\includegraphics[height=0.4\columnwidth]{figures/intro/poll-python-background.png}
+\end{frame}
+
+% --------------------------------------------------------------------------------------------------------------------%
 % Learning Python
 % --------------------------------------------------------------------------------------------------------------------%
 \begin{frame}{Tips for learning Python}
 \begin{itemize}
-\item It is sufficient to learn the \alert{\textbf{basics of the Python 3}} (e.g., working with lists or numpy arrays, 
-calling a function, plotting):
+\item It is sufficient to learn the \alert{\textbf{basics of the Python 3}} using
 \end{itemize}
 \begin{center}
 {\href{https://www.programiz.com/python-programming/tutorial}{\textcolor{indigo(dye)}{\tt https://www.programiz.com/python-programming/tutorial}}}{\large\par}
+\par\end{center}
+\begin{itemize}
+\item \alert{\textbf{Git}} intro
+\end{itemize}
+\begin{center}
+{\href{https://youtu.be/hwP7WQkmECE}{\textcolor{indigo(dye)}{\tt https://youtu.be/hwP7WQkmECE}}}{\large\par}
 \par\end{center}
 \begin{itemize}
 \item Consider installing Python 3 using \alert{\textbf{Anaconda}} using
@@ -141,13 +158,13 @@ calling a function, plotting):
 {\href{https://www.anaconda.com/distribution/}{\textcolor{indigo(dye)}{\tt https://www.anaconda.com/distribution/}}}{\large\par}
 \par\end{center}
 \begin{itemize}
-\item Instruction of \alert{\textbf{installing Reaktoro}} are also given using Anaconda. \\
-\textbf{Note}: Videos 
-\emph{Into words}, 
+\item Instruction of \alert{\textbf{installing Reaktoro}} are also given using Anaconda are given in videos 
+\emph{Intro words}, 
 \emph{Installation on Windows / IoS}, and 
-\emph{Reaktoro Jyputer Notebook Installation} with explanation on Reaktoro installation and Jupyter Notebook tutorials execution are available  \href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\tt here}}. 
+\emph{Reaktoro Jyputer Notebook Installation} with explanation on Reaktoro installation and Jupyter Notebook tutorials execution are available \href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\tt here}}. 
 %
-\item To ask any questions, you can use my email \href{svetlana.kyas@erdw.ethz.ch}{\textcolor{indigo(dye)}{\tt svetlana.kyas@erdw.ethz.ch}}. 
+\item 
+Questions are always welcome via my email \href{svetlana.kyas@erdw.ethz.ch}{\textcolor{indigo(dye)}{\tt svetlana.kyas@erdw.ethz.ch}}. 
 %or the \href{https://gitter.im/geofluids/community}{\textcolor{indigo(dye)}{\it Gitter chat}} (requires the github account).
 \end{itemize}
 
@@ -269,7 +286,7 @@ pH, \textbf{find the concentrations of all aqueous species in the water}:
 \begin{figure}
 \centering
 \includegraphics[height=0.6\textheight]{figures/applications/evian-chemical-water-composition}
-\caption*{See Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/eq.evian-water-analysis.ipynb}{\textcolor{indigo(dye)}{\it Analysis of the Evian water}}.}
+\caption*{See Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-v2-workshop/blob/main/tutorials/applications/evian-water-analysis.ipynb}{\textcolor{indigo(dye)}{\it Analysis of the Evian water}}.}
 \end{figure}
 %
 \ecol
@@ -358,6 +375,7 @@ systems}
 \mathsf{Na^{+}+Cl^{-}} & \rightleftharpoons\mathsf{NaCl(aq)}\\
 \mathsf{H_{2}O} & \rightleftharpoons\mathsf{H^{+}+OH^{-}}
 \end{align*}
+\vskip -5pt
 \pause
 \item Detailed steps: 
 \begin{itemize}
@@ -425,8 +443,6 @@ systems}
 $\bullet$ Focuses on \alert{\textbf{pathways of reactions}} and  \alert{\textbf{its rate}}. \\
 $\bullet$ Used to compute the amounts of the reacting species \alert{\textbf{over time}}. \\
 \end{cbox}
-
-\bigskip{}
 
 \begin{cbox}{Chemical Equilibrium} 
 $\bullet$ Focuses on the reactions with \alert{\textbf{net rates are zero}}. \\
@@ -566,7 +582,9 @@ or \quad
 \includegraphics[height=0.25\columnwidth]{figures/intro/poll-python-background.png}
 \end{center}
 \hiddenpause
-\textbf{Answer:} production rates are 1 mol/s for C, 2 mol/s for D; consumption rates are -1 mol/s for A, -1 mol/s for B. 
+\textbf{Answer:} \\
+\qquad $\bullet$ production rates are 1 mol/s for C, 2 mol/s for D; \\
+\qquad $\bullet$ consumption rates are -1 mol/s for A, -1 mol/s for B. 
 \end{frame}
 % --------------------------------------------------------------------------------------------------------------------%
 % Chemical equilibrium of species
@@ -601,7 +619,7 @@ mixing 1 kg of H$_{2}$O with NaCl (halite):\\[-20pt]
 %\end{itemize}
 \end{itemize}
 \pause
-\alert{\textbf{Note}}: See a Jupyter notebook \href{https://github.com/mtsveta/reaktoro-v2-workshop/blob/main/tutorials/solubility/solubility-tablesalt-water.ipynb}{\textcolor{indigo(dye)}{\tt On mixing table salt with water}}.
+\alert{\textbf{Note}}: See a Jupyter notebook \href{https://github.com/mtsveta/reaktoro-v2-workshop/blob/main/tutorials/solubility/solubility-tablesalt-water.ipynb}{\textcolor{indigo(dye)}{\it On mixing table salt with water}}.
 
 \end{frame}
 %
@@ -638,7 +656,7 @@ in equilibrium.
 \end{itemize}
 %
 	\pause
-\alert{\textbf{Note}}: See a tutorial \href{https://reaktoro.org/applications/miscellaneous/opening-bottle-with-sparkling-water.html}{\textcolor{indigo(dye)}{\it On mixing table salt with water}} with Jupyter notebook \href{https://github.com/mtsveta/reaktoro-v2-workshop/blob/main/tutorials/applications/opening-bottel-with-soda.ipynb}{\textcolor{indigo(dye)}{\tt here}}.
+\alert{\textbf{Note}}: See a tutorial \href{https://reaktoro.org/applications/miscellaneous/opening-bottle-with-sparkling-water.html}{\textcolor{indigo(dye)}{\it On mixing table salt with water}} with Jupyter notebook \href{https://github.com/mtsveta/reaktoro-v2-workshop/blob/main/tutorials/applications/opening-bottel-with-soda.ipynb}{\textcolor{indigo(dye)}{\it here}}.
 %
 \end{frame}
 %
@@ -703,35 +721,37 @@ be considered. They must be added either:
 %
 \begin{frame}[fragile, allowframebreaks]{Demonstration of chemical system definition}
 	
-\begin{lstlisting}[language=Python, caption=System definition]
-    from reaktoro import *
+\begin{lstlisting}[language=Python, caption=Chemical system definition]
+from reaktoro import *
 
-    # Define the SUPCRT database
-    db = SupcrtDatabase("supcrtbl")
+# Define the SUPCRT database
+db = SupcrtDatabase("supcrtbl")
 
-    # Define an aqueous solution with automatic species collection for selected elements
-    solution = AqueousPhase(speciate("H O Na Cl Ca C")) 
+# Define an aqueous solution
+solution = AqueousPhase(speciate("H O Na Cl Ca C")) 
 
-    # Define gaseous phase
-    gas = GaseousPhase("CO2(g)")
+# Define gaseous phase
+gas = GaseousPhase("CO2(g)")
 
-    # Define mineral phase
-    minerals = MineralPhases("Halite Calcite Dolomite Quartz")
+# Define mineral phase
+minerals = MineralPhases("Halite Calcite Dolomite Quartz")
 
-    # Create the chemical system
-    system = ChemicalSystem(db, solution, gas, minerals)
-    
-    # Inspect species phases and species
-    for phase in system.phases():
-        print(phase.name())
-        for species in phase.species():
-            print(":: " + species.name())
-	
+# Create the chemical system
+system = ChemicalSystem(db, solution, gas, minerals)
+
+# Inspect species phases and species
+for phase in system.phases():
+    print(phase.name())
+    for species in phase.species():
+        print(":: " + species.name())
 \end{lstlisting}
-See also Reaktoro v2.0 Jupyter notebook tutorials on the Reaktoro website
+See also:
+\begin{itemize}
+    \item Reaktoro v2.0 Jupyter notebook tutorials on the Reaktoro website \href{https://reaktoro.org/tutorials/basics/index.html}{\textcolor{indigo(dye)}{\it Basics}} or
+    \item similar Jupyter notebook  \href{https://github.com/mtsveta/reaktoro-v2-workshop/tree/main/tutorials/basics}{\textcolor{indigo(dye)}{\it Basics}} with interactive version available via \href{https://mybinder.org/v2/gh/mtsveta/reaktoro-v2-workshop/main?labpath=overview.ipynb}{\textcolor{indigo(dye)}{\it MyBinder Reaktoro v2.0}} or 
+    \item \href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\it explanation videos}} for Reaktoro v1.
+\end{itemize}
 %
-\href{https://reaktoro.org/tutorials/basics/index.html}{\textcolor{indigo(dye)}{\it Basics}} or 
-\href{https://github.com/mtsveta/reaktoro-v2-workshop/tree/main/tutorials/basics}{\textcolor{indigo(dye)}{\it Basics}} with interactive version available via \href{https://mybinder.org/v2/gh/mtsveta/reaktoro-v2-workshop/main?labpath=overview.ipynb}{\textcolor{indigo(dye)}{\it MyBinder Reaktoro v2.0}}. Some \href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\it explanation videos}} for Reaktoro v1.
 \end{frame}
 
 
@@ -898,7 +918,7 @@ given model input.
 \begin{itemize}
 \item supcrt98.xml
 \item supcrt98-organics.xml (includes organic species)
-\item thermofun.json (T = 200 $^\circ$C, critical temperatures and pressures of gases used in Peng-Robinson's EOS) 
+\item thermofun.json (T = 200 °C, critical temperatures and pressures of gases used in Peng-Robinson's EOS) 
 \item ColdChem.dat (a low-temperature aqueous thermodynamic model)
 \end{itemize}
 
