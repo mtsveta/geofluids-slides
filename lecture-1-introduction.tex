@@ -561,7 +561,7 @@ Consider the reaction
 %
 \alert{\textbf{Question:}}  What is \textbf{rate of production\slash consumption}
 of A, B, C and D (in mol/s)? \\
-\begin{center}{ \href{http://etc.ch/SA8F}{\textcolor{indigo(dye)}{\tt http://etc.ch/SA8F}}} \quad
+\begin{center}{ \href{http://etc.ch/M2Rp}{\textcolor{indigo(dye)}{\tt http://etc.ch/M2Rp}}} \quad
 or \quad
 \includegraphics[height=0.25\columnwidth]{figures/intro/poll-python-background.png}
 \end{center}
@@ -601,7 +601,7 @@ mixing 1 kg of H$_{2}$O with NaCl (halite):\\[-20pt]
 %\end{itemize}
 \end{itemize}
 \pause
-\alert{\textbf{Note}}: See Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/eq.sodium-chloride-solubility-in-water.ipynb}{\textcolor{indigo(dye)}{\it On mixing table salt with water}} and tutorial video \href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\tt here}}.
+\alert{\textbf{Note}}: See a Jupyter notebook \href{https://github.com/mtsveta/reaktoro-v2-workshop/blob/main/tutorials/solubility/solubility-tablesalt-water.ipynb}{\textcolor{indigo(dye)}{\tt On mixing table salt with water}}.
 
 \end{frame}
 %
@@ -638,7 +638,7 @@ in equilibrium.
 \end{itemize}
 %
 	\pause
-\alert{\textbf{Note}}: See Jupyter notebook tutorial on  \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/eq.co2-solubility-in-water.ipynb}{\textcolor{indigo(dye)}{\it Opening bottle of soda}} and tutorial video \href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\tt here}}.
+\alert{\textbf{Note}}: See a tutorial \href{https://reaktoro.org/applications/miscellaneous/opening-bottle-with-sparkling-water.html}{\textcolor{indigo(dye)}{\it On mixing table salt with water}} with Jupyter notebook \href{https://github.com/mtsveta/reaktoro-v2-workshop/blob/main/tutorials/applications/opening-bottel-with-soda.ipynb}{\textcolor{indigo(dye)}{\tt here}}.
 %
 \end{frame}
 %
@@ -704,44 +704,34 @@ be considered. They must be added either:
 \begin{frame}[fragile, allowframebreaks]{Demonstration of chemical system definition}
 	
 \begin{lstlisting}[language=Python, caption=System definition]
-	# Import reaktoro package
-	from reaktoro import *
-	
-	# Initialize the database 
-	db = Database("supcrt98")
-	
-	# Access all the aqueous species
-	for species in db.aqueousSpecies():
-		print(species.name())
-	
-	# Access all the mineral species
-	for species in db.mineralSpecies():
-		print(species.name())
-	
-	# Define chemical editor to set up the phases of the system 
-	editor = ChemicalEditor(db) # ChemicalEditor recieves the db instance
-	# Define phases
-	editor.addAqueousPhaseWithElements("H O Na Cl C Ca Fe")
-	editor.addGaseousPhase("H2O(g) CO2(g) O2(g)")
-	editor.addMineralPhase("Calcite")
-	editor.addMineralPhase("Halite")
-	
-	# Create chemical system object, we pass object of ChemicalEditor
-	system = ChemicalSystem(editor)
-	print(system)
+    from reaktoro import *
+
+    # Define the SUPCRT database
+    db = SupcrtDatabase("supcrtbl")
+
+    # Define an aqueous solution with automatic species collection for selected elements
+    solution = AqueousPhase(speciate("H O Na Cl Ca C")) 
+
+    # Define gaseous phase
+    gas = GaseousPhase("CO2(g)")
+
+    # Define mineral phase
+    minerals = MineralPhases("Halite Calcite Dolomite Quartz")
+
+    # Create the chemical system
+    system = ChemicalSystem(db, solution, gas, minerals)
+    
+    # Inspect species phases and species
+    for phase in system.phases():
+        print(phase.name())
+        for species in phase.species():
+            print(":: " + species.name())
 	
 \end{lstlisting}
-See also Jupyter notebook tutorials 
+See also Reaktoro v2.0 Jupyter notebook tutorials on the Reaktoro website
 %
-%\begin{itemize}
-%%\item 
-\href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/cl.database.ipynb}{\textcolor{indigo(dye)}{\it Database class}}, %($\approx$ 10min)
-%\item 
-\href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/cl.chemical-editor.ipynb}{\textcolor{indigo(dye)}{\it Chemical editor class}}, and 
-%($\approx$ 5min)
-%\item
- \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/cl.chemical-system.ipynb}{\textcolor{indigo(dye)}{\it Chemical system class}} with corresponding  \href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\it explanation videos}}.  %($\approx$ 10min)
-%\end{itemize}
+\href{https://reaktoro.org/tutorials/basics/index.html}{\textcolor{indigo(dye)}{\it Basics}} or 
+\href{https://github.com/mtsveta/reaktoro-v2-workshop/tree/main/tutorials/basics}{\textcolor{indigo(dye)}{\it Basics}} with interactive version available via \href{https://mybinder.org/v2/gh/mtsveta/reaktoro-v2-workshop/main?labpath=overview.ipynb}{\textcolor{indigo(dye)}{\it MyBinder Reaktoro v2.0}}. Some \href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\it explanation videos}} for Reaktoro v1.
 \end{frame}
 
 
