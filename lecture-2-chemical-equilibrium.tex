@@ -1020,8 +1020,7 @@ reactions}:
 \begin{itemize}
 %\item pdf with further exercise clarification can be found using the 
 %\href{https://polybox.ethz.ch/index.php/s/EPMn4pJtIOL7VFS}{\textcolor{indigo(dye)}{\it polybox-link}}.
-\item Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/eq.mass-balance-mass-action.ipynb}{\textcolor{indigo(dye)}{\it Mass balance and mass action equation}} and corresponding  
-\href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\it video}} with comments on this tutorial.
+\item Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-v2-workshop/blob/main/tutorials/geofluids/mass-balance-mass-action.ipynb}{\textcolor{indigo(dye)}{\it Mass balance and mass action equation}}.
 \end{itemize}
 \end{frame}
 %
@@ -1325,7 +1324,8 @@ and
 \end{itemize}
 %
 \[
-\mathrm{SI} \quad \begin{cases}
+\mathrm{SI} \quad 
+\begin{cases}
 < 0& \mbox{solution is \textbf{undersaturated} $\Rightarrow$ the mineral may be dissolved }\\
 = 0& \mbox{solution is \textbf{saturated} \qquad \; $\Rightarrow$ the mineral in equilibrium with solution}\\
 > 0 & \mbox{solution is \textbf{supersaturated} $\Rightarrow$ the mineral may be precipitated}
@@ -1349,28 +1349,43 @@ and
 %	[Ba2+]=2.9×10−4 molal
 %	[SO2−4]=1.8×10−4 molal
 %	IAP = 5.2×10−8
-%	IAP > Ksp: we predict that BaSO4BaSO4 will precipitate when the two solutions are mixed. In fact, BaSO4BaSO4 will continue to precipitate until the system reaches equilibrium, which occurs when 1.08×1e-10 is reached.
+%	IAP > Ksp: we predict that BaSO4 will precipitate when the two solutions are mixed. In fact, BaSO4 will continue to precipitate until the system reaches equilibrium, which occurs when 1.08×1e-10 is reached.
 
 	\begin{itemize}
 		\item Consider dissolution reaction of barium sulfate 
-		\[
-		\mathsf{BaSO_4(s) \rightleftharpoons Ba^{2+}(aq) + SO_4^{2-}(aq).}
-		\]
 		%
-		\item Solubility product of barium sulfate is 1.08e-10 at 25 ${\rm ^\circ}$C.
+		$\mathsf{BaSO_4(s) \rightleftharpoons Ba^{2+}(aq) + SO_4^{2-}(aq).}$
+		%
+		%
+		\item Solubility product $K_{sp}$ of barium sulfate is 1.08e-10 at 25 ${\rm ^\circ}$C.
 		%
 		\item  \alert{\bf Quiz}: What can be said about the water w.r.t. to barium sulfate if \\
 		${\sf [Ba^{2+}}]=2.9 \cdot$ 1e-4 molal
-		${\sf [SO_4^{2-}]}=1.8 \cdot$ 1e-4 molal?
+		${\sf [SO_4^{2-}]}=1.8 \cdot$ 1e-4 molal
+		%
+		using formula
+		%
+		{\footnotesize
+		\[
+            \mathrm{SI} 
+            = \log_{10} \frac{Q}{K_{sp}} \quad 
+            \begin{cases}
+            < 0& \mbox{solution is \textbf{undersaturated} $\Rightarrow$ the mineral may be dissolved }\\
+            = 0& \mbox{solution is \textbf{saturated} \qquad \:\,$\Rightarrow$ the mineral in equilibrium with solution}\\
+            > 0 & \mbox{solution is \textbf{supersaturated} $\Rightarrow$ the mineral may be precipitated}
+            \end{cases}
+        \] 
+        }
 		%
 		\begin{center}
 			\href{http://etc.ch/bv5y}{\textcolor{indigo(dye)}{\tt http://etc.ch/bv5y}} 
 			\quad
 			or 
 			\quad
-			\includegraphics[height=0.2\columnwidth]{figures/chemical-equilibrium/poll.png}
+			\includegraphics[height=0.18\columnwidth]{figures/chemical-equilibrium/poll.png}
 		\end{center}
 		\hiddenpause
+		\vskip 5pt
 		\item {\bf Answer}: Water will be supersaturated with ${\sf BaSO_4(s)}$.
 	\end{itemize}
 
@@ -1381,7 +1396,6 @@ and
 % --------------------------------------------------------------------------------------------------------------------%
 %
 \begin{frame}{Saturation index, Demonstration}
-	
 	\lcol
 	\vskip -5pt
 	\begin{itemize}
@@ -1397,7 +1411,6 @@ and
 		%
 		Jupyter notebook tutorial 
 		\href{https://github.com/mtsveta/reaktoro-jupyter/blob/master/tutorial/rt.scaling.ipynb}{\textcolor{indigo(dye)}{\it One-dimensional reactive transport modeling of scaling (without oil)}}.
-		
 	\end{itemize}
 	%
 	\rcol
@@ -1575,7 +1588,7 @@ where
 		\item  \alert{\bf Quiz}: What was the mass of dissolved HCl?
 		%
 		\begin{center}
-			\href{http://etc.ch/oyhr}{\textcolor{indigo(dye)}{\tt http://etc.ch/oyhr}} 
+			\href{http://etc.ch/bv5y}{\textcolor{indigo(dye)}{\tt http://etc.ch/bv5y}} 
 			\quad
 			or 
 			\quad
