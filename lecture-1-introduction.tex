@@ -58,28 +58,34 @@ we will use Python and Reaktoro (\href{https://reaktoro.org/}{\textcolor{indigo(
 \small
 
 \begin{itemize}
-\item This course will include a \alert{\textbf{computational project}} using Python.
+\item This course will include a \alert{\textbf{computational project}} using Python, Jupyter Notebook, and possibly Git:
 %
 \begin{itemize}
-\item The project \textbf{is not graded!} But helpful in preparing for the final exam.
+\item The project \textbf{is graded} and helpful if you want to get the experience and improve you final grade. But \textbf{not necessary}. 
 \pause
-\item It will involve chemical reaction calculations for a \textbf{chemical system} containing different 
-phases, such as 
-%
+Possible forms of the project: 
 \begin{itemize}
-\item aqueous (HO$_2$(l), HCl(aq), Na$^+$, etc), 
-\item gaseous (CO$_{2}$(g), H$_{2}$S(g)), and 
-\item mineral (e.g., calcite, dolomite, halite). 
+\item learning basics of geochemical simulation on one example (dissolving calcite in CO2-rich brine) in Python, 
+\item learning Reaktoro (Python-based framework to model geochemical reactions) via doing hands-on Jupyter notebook exercises (on variety of problems), or 
+\item learning Reaktoro via Jupyter notebooks and by trying to model and program realistic application example (try out a new interesting application). 
 \end{itemize}
-\pause
-\item The goal of these calculations can be, for example, to determine the solubility
-of minerals and gases in saline waters (brine) at different salinities,
-temperatures, and pressures. 
+% \item It will involve chemical reaction calculations for a \textbf{chemical system} containing different 
+% phases, such as 
+% %
+% \begin{itemize}
+% \item aqueous (HO$_2$(l), HCl(aq), Na$^+$, etc), 
+% \item gaseous (CO$_{2}$(g), H$_{2}$S(g)), and 
+% \item mineral (e.g., calcite, dolomite, halite). 
+% \end{itemize}
+% \pause
+% \item The goal of these calculations can be, for example, to determine the solubility
+% of minerals and gases in saline waters (brine) at different salinities,
+% temperatures, and pressures. 
 %\pause
 %\item You are welcome to team up to complete this project. 
-\pause
-\item \textbf{Optional}: We can select the time (to meet online) so that you get to ask your questions, 
-and I will be able to clarify them. 
+% \pause
+% \item \textbf{Optional}: We can select the time (to meet online) so that you get to ask your questions, 
+% and I will be able to clarify them. 
 \end{itemize}
 \pause
 \item Other computational tasks will be given throughout the lectures as \alert{\textbf{exercises, code-listings, and tutorials}} (using python scripts or Jupyter Notebooks).
@@ -87,35 +93,20 @@ and I will be able to clarify them.
 \pause
 \item Lectures will contain \alert{\textbf{interactive quizzes}} helping to understand and apply the presented material. 
 %
+\begin{center}
+    LET'S TRY THE QUIZZES OUT!
+\end{center}
 \end{itemize}
 %\pause
 %\alert{\textbf{Note}}: A document detailing the project's computational assignment will be shared with you later.
 \end{frame}
 
-% --------------------------------------------------------------------------------------------------------------------%
-% Example of geochemical calculations
-% --------------------------------------------------------------------------------------------------------------------%
-\begin{frame}{Example of geochemical calculations, CO$_2$(g) solubility in the NaCl-brine}
-\vskip 10pt
-\Wider{
-\begin{figure}
-\centering
-\includegraphics[height=0.37\columnwidth]{figures/intro/co2-solubility-nacl-h2o-1bar.png}
-%\includegraphics[height=0.3\columnwidth]{figures/intro/co2-solubility-nacl-h2o-100bar.png}\\
-\includegraphics[height=0.37\columnwidth]{figures/intro/co2-solubility-nacl-h2o-vs-pressure-60celsius.png}
-%\includegraphics[height=0.3\columnwidth]{figures/intro/co2-solubility-nacl-h2o-vs-pressure-300celsius.png}
-\end{figure}
-}
-\vskip 10pt
-{\bf Note}: See Reaktoro v1 Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/eq.co2-solubility-in-nacl-brine.ipynb}{\textcolor{indigo(dye)}{\it CO$_2$ solubility in NaCl-brine}} and \href{https://reaktoro.org/applications/solubility/solubility-co2-on-salinity-and-temperature.html}{\textcolor{indigo(dye)}{\it Reaktoro v2.0 example}} with the \href{https://github.com/mtsveta/reaktoro-v2-workshop/blob/main/tutorials/applications/salting-out-effect-co2.ipynb}{\textcolor{indigo(dye)}{\it Jupyter notebook}}.
-
-\end{frame}
 
 % --------------------------------------------------------------------------------------------------------------------%
 % Learning Python
 % --------------------------------------------------------------------------------------------------------------------%
 
-\begin{frame}{Poll on the Python background}
+\begin{frame}{Poll on the you background and preferences}
 \centering 
 \vskip 10pt
 {\Large \href{http://etc.ch/M2Rp}{\textcolor{indigo(dye)}{\tt http://etc.ch/M2Rp}}}\\ 
@@ -123,22 +114,11 @@ or \\[10pt]
 \includegraphics[height=0.4\columnwidth]{figures/intro/poll.png}
 \end{frame}
 
-% --------------------------------------------------------------------------------------------------------------------%
-% Learning Git
-% --------------------------------------------------------------------------------------------------------------------%
-
-\begin{frame}{Poll on the Git background}
-\centering 
-\vskip 10pt
-{\Large \href{http://etc.ch/M2Rp}{\textcolor{indigo(dye)}{\tt http://etc.ch/M2Rp}}}\\ 
-or \\[10pt]
-\includegraphics[height=0.4\columnwidth]{figures/intro/poll.png}
-\end{frame}
 
 % --------------------------------------------------------------------------------------------------------------------%
 % Learning Python
 % --------------------------------------------------------------------------------------------------------------------%
-\begin{frame}{Tips for learning Python}
+\begin{frame}{Tips for learning}
 \begin{itemize}
 \item It is sufficient to learn the \alert{\textbf{basics of the Python 3}} using
 \end{itemize}
@@ -161,7 +141,7 @@ or \\[10pt]
 \item Instruction of \alert{\textbf{installing Reaktoro}} are also given using Anaconda are given in videos 
 \emph{Intro words}, 
 \emph{Installation on Windows / IoS}, and 
-\emph{Reaktoro Jyputer Notebook Installation} with explanation on Reaktoro installation and Jupyter Notebook tutorials execution are available \href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\tt here}}. 
+\emph{Reaktoro Jyputer Notebook Installation} with explanation on Reaktoro installation and Jupyter Notebook tutorials execution are available \href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\it here}}. 
 %
 \item 
 Questions are always welcome via my email \href{svetlana.kyas@erdw.ethz.ch}{\textcolor{indigo(dye)}{\tt svetlana.kyas@erdw.ethz.ch}}. 
@@ -170,11 +150,30 @@ Questions are always welcome via my email \href{svetlana.kyas@erdw.ethz.ch}{\tex
 
 \end{frame}
 % --------------------------------------------------------------------------------------------------------------------%
+% Example of geochemical calculations
+% --------------------------------------------------------------------------------------------------------------------%
+\begin{frame}{Example of geochemical calculations, CO$_2$(g) solubility in the NaCl-brine}
+\vskip 10pt
+\Wider{
+\begin{figure}
+\centering
+\includegraphics[height=0.37\columnwidth]{figures/intro/co2-solubility-nacl-h2o-1bar.png}
+%\includegraphics[height=0.3\columnwidth]{figures/intro/co2-solubility-nacl-h2o-100bar.png}\\
+\includegraphics[height=0.37\columnwidth]{figures/intro/co2-solubility-nacl-h2o-vs-pressure-60celsius.png}
+%\includegraphics[height=0.3\columnwidth]{figures/intro/co2-solubility-nacl-h2o-vs-pressure-300celsius.png}
+\end{figure}
+}
+\vskip 10pt
+{\bf Note}: See \href{https://reaktoro.org/applications/solubility/solubility-co2-on-salinity-and-temperature.html}{\textcolor{indigo(dye)}{\it Reaktoro v2.0 example}} with the \href{https://github.com/mtsveta/reaktoro-v2-workshop/blob/main/tutorials/applications/salting-out-effect-co2.ipynb}{\textcolor{indigo(dye)}{\it Jupyter notebook}}.
+
+\end{frame}
+
+% --------------------------------------------------------------------------------------------------------------------%
 % A brief overview of geochemical modeling and its applications
 % --------------------------------------------------------------------------------------------------------------------%
 %
 \subsection{A brief overview of geochemical modeling and its applications}
-%
+           %A brief overview of geochemical modeling and its applications
 \begin{frame}{What is geochemical modeling?}
 \vskip 10pt
  \textbf{Geochemical modeling} is the use of computers to simulate \textbf{chemical
@@ -390,44 +389,20 @@ systems}
 \item What can we say about the \alert{\textbf{behavior and time-scale}} of the these species after 1 ms, 1 s, 1 min?
 \end{itemize}
 \end{frame}
+
+\begin{frame}{Poll on chemical equilibrium and kinetics }
+\alert{\bf Quiz}: In a context of this example and kinetic/equilibrium simulations, make a guess on which statement is correct?
+\begin{center}
+\vskip 10pt
+{\Large \href{http://etc.ch/M2Rp}{\textcolor{indigo(dye)}{\tt http://etc.ch/M2Rp}}}
+or 
+\includegraphics[height=0.25\columnwidth]{figures/intro/poll.png}
+\end{center}    
 %
-% --------------------------------------------------------------------------------------------------------------------%
-% Reaction classification
-% --------------------------------------------------------------------------------------------------------------------%
-%
-\begin{frame}{Reaction classification}
-	\begin{itemize}
-		\item \alert{\bf Irreversible} or \alert{\bf reversible}:
-		\begin{itemize}
-			\item An {\bf irreversible} reaction is one that occurs in only one direction and continues in this direction until at least one of the reactants is depleted.
-			\item A {\bf reversible} reaction can occur in both directions (with forward and backward reaction reaction coefficients $k_f$ and $k_b$, respectively):
-			%
-			\[	
-			\mathsf{a\,A + b\,B} \xrightleftharpoons[k_b]{k_f} \mathsf{c\,C + d\,D}.
-			%\quad 
-			%\mbox{with equilibrium constant}
-			\quad
-			%K_e := \tfrac{k_f}{k_b} = \tfrac{\mathsf{[C]^c\, [D]^d}}{\mathsf{[A]^a\,[B]^b}}.
-			\]
-			%
-		\end{itemize}
-		%%%
-		\item \alert{\bf Homogeneous} or \alert{\bf heterogeneous}:
-		\begin{itemize}
-			\item A {\bf homogeneous} reaction involves a single phase, e.g., 
-			%
-			\begin{alignat*}{2}
-				\mbox{Formation of ammonia}:  \mathsf{N_2(g) + 3\,H_2(g) } & \mathsf{\xrightleftharpoons[]{} 2\,NH_3(g)}\\
-				\mbox{Oxidation of sulfur dioxide}: \mathsf{2\,SO_2(g) + O_2(g) } & \mathsf{\xrightleftharpoons[]{} 2\,SO_3(g)} 
-			\end{alignat*}
-			%
-			\item A {\bf heterogeneous} reaction involves more than one phase, e.g., 
-			\begin{alignat*}{2}
-				\mbox{Carbonation} : \mathsf{Ca(OH)_2(s) + CO_2(g)} & \mathsf{\xrightleftharpoons[]{} CaCO_3(s) + H_2O(l)}
-			\end{alignat*}
-		\end{itemize}
-		
-	\end{itemize}
+% \hiddenpause
+% {\bf Answer}: \\
+% \qquad $\bullet$ The chemical processes of the time scale of 1 ms are governed by equilibrium. \\ 
+% \qquad $\bullet$ The chemical processes of the time scale of 1 min are governed by kinetics.
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
@@ -440,12 +415,12 @@ systems}
 \lcol
 \vskip 10pt
 \begin{cbox}{Chemical Kinetics}
-$\bullet$ Focuses on \alert{\textbf{pathways of reactions}} and  \alert{\textbf{its rate}}. \\
+$\bullet$ Focuses on \alert{\textbf{pathways of reactions}} and  \alert{\textbf{their rate}}. \\
 $\bullet$ Used to compute the amounts of the reacting species \alert{\textbf{over time}}. \\
 \end{cbox}
 
 \begin{cbox}{Chemical Equilibrium} 
-$\bullet$ Focuses on the reactions with \alert{\textbf{net rates are zero}}. \\
+$\bullet$ Focuses on the reactions with \alert{\textbf{no changes in the amount of reactants and products}}. \\
 $\bullet$ Used to directly compute the final composition of the species when
 the reactions are \alert{\textbf{in equilibrium}}. 
 \end{cbox}
@@ -544,10 +519,49 @@ the reactions are \alert{\textbf{in equilibrium}}.
 % Chemical equilibrium, Practical observations
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\subsection{Chemical equilibrium, Practical observations}
+\subsection{Practical observations on chemical equilibrium}
 %
-\begin{frame}{Chemical equilibrium, Practical observations}
-	\vskip 10pt
+% --------------------------------------------------------------------------------------------------------------------%
+% Reaction classification
+% --------------------------------------------------------------------------------------------------------------------%
+%
+\begin{frame}{Reaction classification}
+	\begin{itemize}
+		\item \alert{\bf Irreversible} or \alert{\bf reversible}:
+		\begin{itemize}
+			\item An {\bf irreversible} reaction is one that occurs in only one direction and continues in this direction until at least one of the reactants is depleted.
+			\item A {\bf reversible} reaction can occur in both directions (with forward and backward reaction reaction coefficients $k_f$ and $k_b$, respectively):
+			%
+			\[	
+			\mathsf{a\,A + b\,B} \xrightleftharpoons[k_b]{k_f} \mathsf{c\,C + d\,D}.
+			%\quad 
+			%\mbox{with equilibrium constant}
+			\quad
+			%K_e := \tfrac{k_f}{k_b} = \tfrac{\mathsf{[C]^c\, [D]^d}}{\mathsf{[A]^a\,[B]^b}}.
+			\]
+			%
+		\end{itemize}
+		%%%
+		\item \alert{\bf Homogeneous} or \alert{\bf heterogeneous}:
+		\begin{itemize}
+			\item A {\bf homogeneous} reaction involves a single phase, e.g., 
+			%
+			\begin{alignat*}{2}
+				\mbox{Formation of ammonia}:  \mathsf{N_2(g) + 3\,H_2(g) } & \mathsf{\xrightleftharpoons[]{} 2\,NH_3(g)}\\
+				\mbox{Oxidation of sulfur dioxide}: \mathsf{2\,SO_2(g) + O_2(g) } & \mathsf{\xrightleftharpoons[]{} 2\,SO_3(g)} 
+			\end{alignat*}
+			%
+			\item A {\bf heterogeneous} reaction involves more than one phase, e.g., 
+			\begin{alignat*}{2}
+				\mbox{Carbonation} : \mathsf{Ca(OH)_2(s) + CO_2(g)} & \mathsf{\xrightleftharpoons[]{} CaCO_3(s) + H_2O(l)}
+			\end{alignat*}
+		\end{itemize}
+		
+	\end{itemize}
+\end{frame}
+%
+\begin{frame}{Practical observations on chemical equilibrium}
+\vskip 10pt
 \begin{itemize}
 \item Chemical reactions \textbf{alter the amounts of species over time}, where species can be distributed among one or more phases (minerals, gaseous, mineral).
 \pause
@@ -555,7 +569,7 @@ the reactions are \alert{\textbf{in equilibrium}}.
 \pause
 \item Consider the reaction
 \[
-\mathsf{A+B\rightleftharpoons C+2D,}
+\mathsf{A+B \xrightleftharpoons[k_b]{k_f} C+2\,D,}
 \]
 \pause
 \item Rate of the reaction is measured in mol/s.
@@ -565,6 +579,10 @@ of \alert{\textbf{2 mol/s}} and a \textbf{backward rate}
 of \alert{\textbf{1 mol/s}}.
 \pause
 \item \alert{\textbf{Net rate of the reaction}} = \textbf{forward rate} - \textbf{backward rate}. 
+\pause 
+\item 
+\textbf{forward rate} = \textbf{production rate} $>$ 0, \\
+\textbf{backward rate} = \textbf{consumption rate} $<$ 0.
 \end{itemize}
 \end{frame}
 
@@ -572,19 +590,19 @@ of \alert{\textbf{1 mol/s}}.
 	\vskip 10pt
 Consider the reaction
 	\[
-	\mathsf{A+B\rightleftharpoons C+2D.}
+	\mathsf{A+B\xrightleftharpoons[k_b]{k_f} C+2\,D.}
 	\]
 %
-\alert{\textbf{Question:}}  What is \textbf{rate of production\slash consumption}
+\alert{\textbf{Quiz:}} What is \textbf{rate of production\slash consumption}
 of A, B, C and D (in mol/s)? \\
 \begin{center}{ \href{http://etc.ch/M2Rp}{\textcolor{indigo(dye)}{\tt http://etc.ch/M2Rp}}} \quad
 or \quad
-\includegraphics[height=0.25\columnwidth]{figures/intro/poll.png}
+\includegraphics[height=0.23\columnwidth]{figures/intro/poll.png}
 \end{center}
-\hiddenpause
-\textbf{Answer:} \\
-\qquad $\bullet$ production rates are 1 mol/s for C, 2 mol/s for D; \\
-\qquad $\bullet$ consumption rates are -1 mol/s for A, -1 mol/s for B. 
+% \hiddenpause
+% \textbf{Answer:} \\
+% \qquad $\bullet$ production rates are 1 mol/s for C, 2 mol/s for D; \\
+% \qquad $\bullet$ consumption rates are -1 mol/s for A, -1 mol/s for B. 
 \end{frame}
 % --------------------------------------------------------------------------------------------------------------------%
 % Chemical equilibrium of species
@@ -592,12 +610,52 @@ or \quad
 %
 \begin{frame}{Chemical equilibrium of species}
 %
-\alert{\textbf{Questions:}} What happens when this \textbf{net rate} is \alert{\textbf{zero}}? \\\textbf{Answer:} The amounts of each species in the system \textbf{no longer experience
-any change}, and they are in \alert{\textbf{chemical equilibrium}}. \\[5pt]
+\alert{\textbf{Quiz:}} What happens when this \textbf{net rate} is \alert{\textbf{zero}} in a context of reaction 
 %
-\pause
-\alert{\textbf{Example:}}
-mixing 1 kg of H$_{2}$O with NaCl (halite):\\[-20pt] 
+\[
+\mathsf{A+B \xrightleftharpoons[k_b]{k_f} C+2\,D?}
+\]
+%
+\begin{center}{ \href{http://etc.ch/M2Rp}{\textcolor{indigo(dye)}{\tt http://etc.ch/M2Rp}}} \quad
+or \quad
+\includegraphics[height=0.23\columnwidth]{figures/intro/poll.png}
+\end{center}
+% \hiddenpause
+% \textbf{Answer:} \\ 
+% \qquad $\bullet$ the amounts of each species in the system \textbf{no longer experience any change}, and \\ 
+% \qquad $\bullet$ they are in \alert{\textbf{chemical equilibrium}}.
+% %
+% \pause
+% \alert{\textbf{Example:}}
+% mixing 1 kg of H$_{2}$O with NaCl (halite):\\[-20pt] 
+% %
+% \begin{align*}
+% \mathsf{NaCl(halite, s)} & \rightleftharpoons\mathsf{Na^{+}+Cl^{-}}\\[-1pt]
+% \mathsf{Na^{+}+Cl^{-}} & \rightleftharpoons\mathsf{NaCl(aq)}\\[-1pt]
+% \mathsf{H_{2}O} & \rightleftharpoons\mathsf{H^{+}+OH^{-}}
+% \end{align*}
+% %
+% \vskip -5pt
+% \pause
+% \begin{itemize}
+% %
+% \item If we take \alert{\textbf{1 mg of NaCl}}, eventually, all salt fully dissolves, so the net rate of production of Na$^{+}$ and C$^-$ becomes zero.
+% %%\item we have reached the \textbf{chemical equilibrium} of the system. 
+% %\end{itemize}
+% %
+% \pause
+% \item If we take \alert{\textbf{100 mg of NaCl }}: eventually, water solution will be saturated with the salt, so Na$^{+}$ and C$^-$  is precipitating NaCl with the similar rate as it is dissolving.
+% %%\item we have reached the \textbf{chemical equilibrium} of the system. 
+% %\end{itemize}
+% \end{itemize}
+% \pause
+% \alert{\textbf{Note}}: See a Jupyter notebook \href{https://github.com/mtsveta/reaktoro-v2-workshop/blob/main/tutorials/solubility/solubility-tablesalt-water.ipynb}{\textcolor{indigo(dye)}{\it On mixing table salt with water}}.
+
+\end{frame}
+%
+\begin{frame}{Example explaining the reaction net rate}
+%
+Let us mix 1 kg of H$_{2}$O with NaCl (halite):\\[-20pt] 
 %
 \begin{align*}
 \mathsf{NaCl(halite, s)} & \rightleftharpoons\mathsf{Na^{+}+Cl^{-}}\\[-1pt]
@@ -607,6 +665,7 @@ mixing 1 kg of H$_{2}$O with NaCl (halite):\\[-20pt]
 %
 \vskip -5pt
 \pause
+Let us consider \textbf{two scenarios}:
 \begin{itemize}
 %
 \item If we take \alert{\textbf{1 mg of NaCl}}, eventually, all salt fully dissolves, so the net rate of production of Na$^{+}$ and C$^-$ becomes zero.
@@ -647,16 +706,20 @@ solution to gas}) at the same rate.
 \]
 \vskip -10pt
 %
-	\pause
+\alert{\textbf{Note}}: see the tutorial  \href{https://reaktoro.org/applications/miscellaneous/opening-bottle-with-sparkling-water.html}{\textcolor{indigo(dye)}{\it On opening bottle with soda}} with Jupyter notebook \href{https://github.com/mtsveta/reaktoro-v2-workshop/blob/main/tutorials/applications/opening-bottel-with-soda.ipynb}{\textcolor{indigo(dye)}{\it here}}.
+%
+\pause
 \item \alert{\textbf{Good to know:}} The \textbf{solubility of
 CO$_{2}$} (i.e., the maximum amount of CO$_{2}$ that the solution
 can dissolve at given temperature, pressure, and fluid composition
 conditions) can be calculated considering this reaction (and all others)
-in equilibrium.
+in equilibrium. \\[5pt]
+%
+\alert{\textbf{Note}}: see the tutorial 
+\href{https://reaktoro.org/applications/solubility/solubility-calcite-on-acidity-and-temperature.html}{\textcolor{indigo(dye)}{\it Calcite solubility in water and CO2-saturated rainwater}} with Jupyter notebook \href{Calcite solubility in water and CO2-saturated rainwater}{\textcolor{indigo(dye)}{\it here}}.
+
 \end{itemize}
 %
-	\pause
-\alert{\textbf{Note}}: See a tutorial \href{https://reaktoro.org/applications/miscellaneous/opening-bottle-with-sparkling-water.html}{\textcolor{indigo(dye)}{\it On mixing table salt with water}} with Jupyter notebook \href{https://github.com/mtsveta/reaktoro-v2-workshop/blob/main/tutorials/applications/opening-bottel-with-soda.ipynb}{\textcolor{indigo(dye)}{\it here}}.
 %
 \end{frame}
 %
@@ -677,7 +740,10 @@ solution to solid}) at the same rate.
 calcite} (i.e., the maximum amount of calcite that the solution can
 dissolve at given temperature, pressure, and fluid composition conditions)
 can be calculated considering this reaction (and others) in equilibrium.
+\vskip 5pt
+\alert{\textbf{Note}}: See a tutorial \href{https://reaktoro.org/applications/solubility/solubility-calcite-on-acidity-and-temperature.html}{\textcolor{indigo(dye)}{\it Calcite solubility in water and CO2-saturated rainwater}} with Jupyter notebook \href{Calcite solubility in water and CO2-saturated rainwater}{\textcolor{indigo(dye)}{\it here}}.
 \end{itemize}
+
 \end{frame}
 
 % --------------------------------------------------------------------------------------------------------------------%
@@ -734,7 +800,7 @@ solution = AqueousPhase(speciate("H O Na Cl Ca C"))
 gas = GaseousPhase("CO2(g)")
 
 # Define mineral phase
-minerals = MineralPhases("Halite Calcite Dolomite Quartz")
+minerals = MineralPhases("Halite Calcite Dolomite")
 
 # Create the chemical system
 system = ChemicalSystem(db, solution, gas, minerals)
@@ -748,8 +814,7 @@ for phase in system.phases():
 See also:
 \begin{itemize}
     \item Reaktoro v2.0 Jupyter notebook tutorials on the Reaktoro website \href{https://reaktoro.org/tutorials/basics/index.html}{\textcolor{indigo(dye)}{\it Basics}} or
-    \item similar Jupyter notebook  \href{https://github.com/mtsveta/reaktoro-v2-workshop/tree/main/tutorials/basics}{\textcolor{indigo(dye)}{\it Basics}} with interactive version available via \href{https://mybinder.org/v2/gh/mtsveta/reaktoro-v2-workshop/main?labpath=overview.ipynb}{\textcolor{indigo(dye)}{\it MyBinder Reaktoro v2.0}} or 
-    \item \href{https://polybox.ethz.ch/index.php/s/qStBnxUnry648U5}{\textcolor{indigo(dye)}{\it explanation videos}} for Reaktoro v1.
+    \item similar Jupyter notebook  \href{https://github.com/mtsveta/reaktoro-v2-workshop/tree/main/tutorials/basics}{\textcolor{indigo(dye)}{\it Basics}} with interactive version available via \href{https://mybinder.org/v2/gh/mtsveta/reaktoro-v2-workshop/main?labpath=overview.ipynb}{\textcolor{indigo(dye)}{\it MyBinder Reaktoro v2.0}}.
 \end{itemize}
 %
 \end{frame}
