@@ -89,13 +89,13 @@ $i$; and
 \begin{itemize}
 \item The  \alert{\textbf{molality}} $m_{i}$ of the $i$th aqueous species is form of describing concentrations and is defined as follows:
 \[
-m_{i}=\frac{n_{i}}{\text{mass of solvent species H\ensuremath{_{2}}O(aq)}},
+m_{i}=\tfrac{n_{i}}{\text{mass of solvent species H\ensuremath{_{2}}O(aq)}},
 \]
 or equivalently:
 \begin{alignat*}{2}
-m_{i} & =  \frac{n_{i}}{\mbox{molar mass}(\mathsf{H_{2}O\text{(aq)}}) \cdot n_{\mathsf{H_{2}O\text{(aq)}}}} \\
-         & =  \frac{n_{i}}{18.01528 \cdot 10^{-3} \cdot  n_{\mathsf{H_{2}O\text{(aq)}}}} \\
-         & = 55.508\frac{n_{i}}{n_{\mathsf{H_{2}O\text{(aq)}}}}.
+m_{i} & =  \tfrac{n_{i}}{\mbox{molar mass}(\mathsf{H_{2}O\text{(aq)}}) \cdot n_{\mathsf{H_{2}O\text{(aq)}}}} \\
+         & =  \tfrac{n_{i}}{18.01528 \cdot 10^{-3} \cdot  n_{\mathsf{H_{2}O\text{(aq)}}}} \\
+         & = 55.508\tfrac{n_{i}}{n_{\mathsf{H_{2}O\text{(aq)}}}}.
 \end{alignat*}
 \end{itemize}
 \ecol
@@ -112,8 +112,8 @@ m_{i} & =  \frac{n_{i}}{\mbox{molar mass}(\mathsf{H_{2}O\text{(aq)}}) \cdot n_{\
 \begin{itemize}
 \item The \textbf{molarity} $c_{i}$ of the $i$th species is:
 \begin{alignat*}{2}
-c_{i} & = \frac{n_{i}}{\text{volume of solvent species H\ensuremath{_{2}}O(aq)}} \\
-	& = \frac{n_{i} \cdot \rho_{\sf H{_{2}}O(aq)}}{\text{mass of solvent species H\ensuremath{_{2}}O(aq)}},
+c_{i} & = \tfrac{n_{i}}{\text{volume of solvent species H\ensuremath{_{2}}O(aq)}} \\
+	& = \tfrac{n_{i} \cdot \rho_{\sf H{_{2}}O(aq)}}{\text{mass of solvent species H\ensuremath{_{2}}O(aq)}},
 \end{alignat*}
 where $\rho_{\sf H{_{2}}O(aq)}$ is \textbf{water density} at given $T$ and $P$.
 \item Measured in units of {\bf \alert{molar} = mol/L (or mol/Lw or  $10^3$mol/m$^3$)}. 
@@ -122,7 +122,7 @@ where $\rho_{\sf H{_{2}}O(aq)}$ is \textbf{water density} at given $T$ and $P$.
 \begin{itemize}
 \item The \textbf{molality} $m_{i}$ of the $i$th species is:
 \[
-m_{i}=\frac{n_{i}}{\text{mass of solvent species H\ensuremath{_{2}}O(aq)}}.
+m_{i}=\tfrac{n_{i}}{\text{mass of solvent species H\ensuremath{_{2}}O(aq)}}.
 \]
 \item Measured in units of {\bf \alert{molal} = mol/kg (or mol/kgw)}. 
 \end{itemize}
@@ -233,14 +233,14 @@ molal).
 
 \begin{lstlisting}[language=Python, caption=Calculating species molalities and ionic strength using Python -- Output]
 Ionic strength of solution is 0.921001 molal.
-Molality of H2O(aq) is 55.508000 molal.
-Molality of H+ is 0.000124 molal.
-Molality of OH- is 0.000000 molal.
-Molality of Na+ is 0.920878 molal.
-Molality of Cl- is 0.920878 molal.
-Molality of CO3-- is 0.000000 molal.
-Molality of HCO3- is 0.000124 molal.
-Molality of CO2(aq) is 0.032892 molal.
+Molality of H2O(aq)  is 5.5508e+01 molal.
+Molality of H+       is 1.2360e-04 molal.
+Molality of OH-      is 8.4054e-11 molal.
+Molality of Na+      is 9.2088e-01 molal.
+Molality of Cl-      is 9.2088e-01 molal.
+Molality of CO3--    is 4.9412e-11 molal.
+Molality of HCO3-    is 1.2360e-04 molal.
+Molality of CO2(aq)  is 3.2892e-02 molal.
 \end{lstlisting}
 
 \textbf{Answer}: To check the correctness of gaps in the code, use the  \href{https://polybox.ethz.ch/index.php/s/o0tt6lPtd8TBhoG}{\textcolor{indigo(dye)}{\it source code}}.
@@ -253,12 +253,20 @@ Molality of CO2(aq) is 0.032892 molal.
 % Activity coefficient model for aqueous ionic species: Davies model
 % --------------------------------------------------------------------------------------------------------------------%
 %
+\begin{frame}{Activity coefficient of aqueous species, Structure}
+\begin{figure}
+\centering{}\includegraphics[height=0.9\textheight]{figures/activity-models/activity-aqueous-species-1}
+\end{figure}
+
+
+\end{frame}
+
 \begin{frame}{Activity coefficient of aqueous ionic species, Davies model}
 \begin{itemize}[<+->]
-\item The \alert{\textbf{Davies activity coefficient model} }calculates $\gamma_{i}$
+\item The \alert{\textbf{Davies activity coefficient model} } calculates $\gamma_{i}$
 using:
 \[
-\boxed{\log_{10}\gamma_{i}=-A_{\gamma}Z_{i}^{2}\left(\dfrac{\sqrt{I}}{1+\sqrt{I}}-0.3I\right)},
+\boxed{\log_{10}\gamma_{i}=-A_{\gamma}Z_{i}^{2}\left(\dfrac{\sqrt{I}}{1+\sqrt{I}}-0.3I\right),}
 \]
 where $A_{\gamma}$ is the \textbf{Debye–Hückel parameter} defined as
 \[
@@ -266,7 +274,7 @@ A_{\gamma}=1.824928\cdot10^{6}\rho_{\mathsf{H_{2}O}}^{1/2}(\epsilon_{\mathsf{H_{
 \]
 %
 where $\rho_{\mathsf{H_{2}O}}$ and $\epsilon_{\mathsf{H_{2}O}}$
-are the \textbf{density} and \textbf{dielectric constant of pure water}. 
+are the \textbf{density} and \textbf{dielectric constant of pure water} resp. 
 \item For 25~°C and 1~bar, $A_{\gamma}=0.5095$.
 \item \textbf{Limitations of the model}: 
 It is accurate for $I$ is in the range 0.1–0.7 molal, which is equivalent to 1 kg of water mixed with 5.8–40.9 grams of NaCl (0.5-4 teaspoons of table salt).
@@ -291,12 +299,11 @@ It is accurate for $I$ is in the range 0.1–0.7 molal, which is equivalent to 1
 \includegraphics[height=0.18\columnwidth]{figures/activity-models/poll-ionic-strength.png}
 \end{center}
 %
+\vskip 10pt
 \hiddenpause
 \item \textbf{Answer}: 0.7814.
 \pause
-\item \textbf{Note}: 
-In an ideal solution, $\gamma_{i}=1$ for all species. \\
-\textbf{Question}: Based calculated $\gamma_{\mathrm{Na^{+}}}$, is an \emph{ideal solution assumption } reasonable one?
+\item \textbf{Question}: Based on the calculated-above $\gamma_{\mathrm{Na^{+}}}$, is an \emph{ideal solution assumption} with $\gamma_{i}=1$ a reasonable one?
 \end{itemize}
 \end{frame}
 %
@@ -307,7 +314,8 @@ In an ideal solution, $\gamma_{i}=1$ for all species. \\
 \begin{frame}{Activity coefficient as a function of $I$, Davies model}
 
 \begin{figure}
-\centering{}\includegraphics[height=0.7\textheight]{figures/activity-models/activity-coefficient-davies}\caption{Activity coefficient $\gamma_{i}$ for aqueous ions with charge $Z_{i}=1,2,3$ as a function of $I$.}
+\centering{}\includegraphics[height=0.7\textheight]{figures/activity-models/activity-coefficient-davies}
+\caption*{Activity coefficient $\gamma_{i}$ for aqueous ions with charge $Z_{i}=1,2,3$ as a function of $I$.}
 \end{figure}
 %
 \textbf{Question:} How would these curves look like if the charges would be $Z_i$= -1, -2, -3?
@@ -337,11 +345,11 @@ Source code: \href{https://polybox.ethz.ch/index.php/s/D0gfkcE1KBiFVxD}{\textcol
 \item The \textbf{activity of H$_{2}$O(aq)} can be calculated
 using the following \alert{\textbf{Davies model}}:
 \[
-\boxed{\ln a_{\mathsf{H_{2}O\text{(aq)}}}=\frac{\ln10}{55.5084}A_{\gamma}\left[2\left(\frac{I+2\sqrt{I}}{1+\sqrt{I}}\right)-4\ln(1+\sqrt{I})-0.3I^{2}\right]-\frac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}},
+\boxed{\ln a_{\mathsf{H_{2}O\text{(aq)}}}=\tfrac{\ln10}{55.5084}A_{\gamma}\left[2\left(\tfrac{I+2\sqrt{I}}{1+\sqrt{I}}\right)-4\ln(1+\sqrt{I})-0.3I^{2}\right]-\tfrac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}},
 \]
 where $x_{\mathsf{H_{2}O\text{(aq)}}}$ is the mole fraction of H$_{2}$O(aq):{\small{}
 \[
-x_{\mathsf{H_{2}O\text{(aq)}}}=\frac{n_{\mathsf{H_{2}O\text{(aq)}}}}{\text{sum of moles of all aqueous species}}.
+x_{\mathsf{H_{2}O\text{(aq)}}}=\tfrac{n_{\mathsf{H_{2}O\text{(aq)}}}}{\text{sum of moles of all aqueous species}}.
 \]
 }{\small\par}
 \pause
@@ -371,14 +379,14 @@ What is the value of ionic strength $I$ and the activity of water $a_{\sf H_2O}$
 \begin{itemize}[<+->]
 \item For an \alert{\textbf{ideal solution}}, all contribution arising from ionic strength
 can be eliminated:
-\begin{alignat}{2}
+\begin{alignat*}{2}
 \ln a_{\mathsf{H_{2}O\text{(aq)}}} 
-& =\cancel{\frac{\ln10}{55.5084}A_{\gamma}\left[2\left(\frac{I+2\sqrt{I}}{1+\sqrt{I}}\right)-4\ln(1+\sqrt{I})-0.3I^{2}\right]}-\frac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}} \\ 
-&=-\frac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}.
-\end{alignat}
+& =\cancel{\tfrac{\ln10}{55.5084}A_{\gamma}\left[2\left(\tfrac{I+2\sqrt{I}}{1+\sqrt{I}}\right)-4\ln(1+\sqrt{I})-0.3I^{2}\right]}-\tfrac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}} \\ 
+&=-\tfrac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}.
+\end{alignat*}
 %\item This results in the following simpler activity model for $a_{\mathsf{H_{2}O\text{(aq)}}}$:
 %\[
-%\ln a_{\mathsf{H_{2}O\text{(aq)}}}=-\frac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}.
+%\ln a_{\mathsf{H_{2}O\text{(aq)}}}=-\tfrac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}.
 %\]
 \item \textbf{Let's investigate how accurate this approximation is?} 
 \item \textbf{Source code}: \href{https://polybox.ethz.ch/index.php/s/cAmnV8dKZH7AMcK}{\textcolor{indigo(dye)}{\it activity-water-davies-vs-ideal.py}}.
@@ -425,7 +433,7 @@ a_{\mathsf{CO_{2}\text{(aq)}}}=\gamma_{\mathsf{CO_{2}\text{(aq)}}}m_{\mathsf{CO_
 \]
 with $\gamma_{\mathsf{CO_{2}\text{(aq)}}}$ calculated using the \alert{\textbf{Drummond model}}
 \[
-\boxed{\ln\gamma_{\mathsf{CO_{2}\text{(aq)}}}=\left(c_{1}+c_{2}T+\frac{c_{3}}{T}\right)I-(c_{4}+c_{5}T)\frac{I}{I+1}},
+\boxed{\ln\gamma_{\mathsf{CO_{2}\text{(aq)}}}=\left(c_{1}+c_{2}T+\tfrac{c_{3}}{T}\right)I-(c_{4}+c_{5}T)\tfrac{I}{I+1}},
 \]
 where $T$ is temperature,  
 $I$ is the ionic strength of the aqueous solution, and 
@@ -477,13 +485,13 @@ at temperatures 50, 150, and 250 °C as a function of ionic strength.}
 \]
 \item At equilibrium, the following \textbf{mass action equation} is satisfied, i.e., 
 %
-$K(T, P) := \frac{a_{\mathsf{CO_{2}\text{(aq)}}}}{a_{\mathsf{CO_{2}\text{(g)}}}}$.
+$K(T, P) := \tfrac{a_{\mathsf{CO_{2}\text{(aq)}}}}{a_{\mathsf{CO_{2}\text{(g)}}}}$.
 %\]
 \item Combining $a_{\mathsf{CO_{2}\text{(aq)}}} = K(T, P) \, a_{\mathsf{CO_{2}\text{(g)}}}$ and 
 $a_{\mathsf{CO_{2}\text{(aq)}}}=\gamma_{\mathsf{CO_{2}\text{(aq)}}}m_{\mathsf{CO_{2}\text{(aq)}}}$, we obtain 
 \[
-m_{\mathsf{CO_{2}\text{(aq)}}}=\frac{1}{\gamma_{\mathsf{CO_{2}\text{(aq)}}}} \, K(T, P) \, a_{\mathsf{CO_{2}\text{(g)}}}(T, P)
-\approx \frac{1}{\gamma_{\mathsf{CO_{2}\text{(aq)}}}} \, f(T, P).
+m_{\mathsf{CO_{2}\text{(aq)}}}=\tfrac{1}{\gamma_{\mathsf{CO_{2}\text{(aq)}}}} \, K(T, P) \, a_{\mathsf{CO_{2}\text{(g)}}}(T, P)
+\approx \tfrac{1}{\gamma_{\mathsf{CO_{2}\text{(aq)}}}} \, f(T, P).
 \]
 \item \alert{\textbf{Quiz}}: What happens to $m_{\mathsf{CO_{2}\text{(aq)}}}$ when $\gamma_{\mathsf{CO_{2}\text{(aq)}}}$
 increases with $I$ for constant $(T, P)$?
@@ -502,8 +510,8 @@ increases with $I$ for constant $(T, P)$?
 %
 \begin{frame}[shrink=10]{Summary on the calculation of activities of aqueous species}
 	\begin{columns}[t]
-		
 		\column{0.5\textwidth}
+		\vskip 20pt
 		\begin{itemize}[<+->]
 			\item  The \alert{activities} of aqueous solute species 
 			\[
@@ -511,29 +519,29 @@ increases with $I$ for constant $(T, P)$?
 			\]
 			\item The \alert{molality} of the species 
 			\[
-			m_{i}=55.508\frac{n_{i}}{n_{\mathsf{H_{2}O(aq)}}}.
+			m_{i}=55.508\tfrac{n_{i}}{n_{\mathsf{H_{2}O(aq)}}}.
 			\]
 			\item The \alert{ionic strength} of the aqueous solution 
 			\[
-			I=\frac{1}{2}\sum_{i}m_{i}Z_{i}^{2}.
+			I=\tfrac{1}{2}\sum_{i}m_{i}Z_{i}^{2}.
 			\]
 		\end{itemize}
 		
 		\column{0.5\textwidth}
 		\begin{itemize}[<+->]
-			\item  The \alert{activity coefficient} $\gamma_{i}$  for  \alert{ionic species}
-			(e.g., Na$^{+}$, Cl$^{-}$, HCO$_{3}^{-}$, etc.) according to the Davies model:
+			\item  The \alert{activity coefficient} $\gamma_{i}$  for  \alert{ionic species} according to the Davies model:
 			\[
-			\log_{10}\gamma_{i}=-A_{\gamma}Z_{i}^{2}\left(\dfrac{\sqrt{I}}{1+\sqrt{I}}-0.3I\right).
-			\]
-			\item The \alert{activity coefficient} $\gamma_{i}$ for  \alert{CO$_{2}$(aq)} according to the Drummond model:
-			\[
-			\ln\gamma_{i}=\left(c_{1}+c_{2}T+\frac{c_{3}}{T}\right)I-(c_{4}+c_{5}T)\frac{I}{I+1}.
+			\log_{10}\gamma_{i}=-A_{\gamma}Z_{i}^{2}\left(\tfrac{\sqrt{I}}{1+\sqrt{I}}-0.3I\right).
 			\]
 			\item The \alert{activity of H$_{2}$O(aq)} according to the Davies model:
 			\[
-			\ln a_{\mathsf{H_{2}O\text{(aq)}}}=-\frac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}.
+			\ln a_{\mathsf{H_{2}O\text{(aq)}}}=-\tfrac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}.
 			\]
+			\item The \alert{activity coefficient} $\gamma_{i}$ for  \alert{CO$_{2}$(aq)} according to the Drummond model:
+			\[
+			\ln\gamma_{i}=\left(c_{1}+c_{2}T+\tfrac{c_{3}}{T}\right)I-(c_{4}+c_{5}T)\tfrac{I}{I+1}.
+			\]
+			
 		\end{itemize}
 	\end{columns}
 	
@@ -558,7 +566,7 @@ increases with $I$ for constant $(T, P)$?
 \begin{itemize}
 \item The \alert{\textbf{activity of gaseous species $i$}} can be calculated using:
 \[
-\boxed{a_{i}=\varphi_{i}x_{i}\frac{P}{P^{\circ}}},
+\boxed{a_{i}=\varphi_{i}x_{i}\tfrac{P}{P^{\circ}}},
 \]
 where 
 \begin{itemize}
@@ -581,7 +589,7 @@ and
 \begin{itemize}
 \item An \textbf{ideal gas} solution has \alert{\textbf{a $PVT$ behavior}} defined by the equation:
 \[
-\frac{PV}{RT}=1,
+\tfrac{PV}{RT}=1,
 \]
 where $P$ is pressure (in units of Pa), $T$ is temperature (in units
 of K), $V$ is molar volume (in units of m$^{3}$/mol), and $R=\unit[8.314]{\mathsf{J/(mol\cdot K)}}$.
@@ -589,7 +597,7 @@ of K), $V$ is molar volume (in units of m$^{3}$/mol), and $R=\unit[8.314]{\maths
 \item For \textbf{real gases}, we introduce a \alert{\textbf{compressibility factor}} $Z$ defined as
 %
 \[
-Z=\frac{PV}{RT} < 1.
+Z=\tfrac{PV}{RT} < 1.
 \]
 \pause
 \item For \textbf{real gases}, $Z \to 1$ only when
@@ -680,20 +688,20 @@ advantageous because of its \textbf{high mobility and high density}.
 \item A \alert{\textbf{general cubic equation of state}} can be written in terms
 of $Z$ \citep{Smith2005} as
 \[
-\boxed{1=\frac{1}{Z-\beta}-q\beta\frac{1}{(Z+\epsilon\beta)(Z+\sigma\beta)}},
+\boxed{1=\tfrac{1}{Z-\beta}-q\beta\tfrac{1}{(Z+\epsilon\beta)(Z+\sigma\beta)}},
 \]
 where  
 \begin{itemize}
 \item $\epsilon$ and $\sigma$ are pure numbers (same for all substances),  
 \item $\beta$ and $q$ are  parameters specific to substances and defined as
 \[
-\beta=\Omega\frac{P_{\mathsf{r}}}{T_{\mathsf{r}}} \qquad \mbox{and} \qquad
-q=\frac{\Psi}{\Omega}\frac{\alpha(T_{\mathsf{r}},\omega)}{T_{\mathsf{r}}}
+\beta=\Omega\tfrac{P_{\mathsf{r}}}{T_{\mathsf{r}}} \qquad \mbox{and} \qquad
+q=\tfrac{\Psi}{\Omega}\tfrac{\alpha(T_{\mathsf{r}},\omega)}{T_{\mathsf{r}}}
 \]
 %
 with specific to \textbf{a particular equation of state} $\Omega$, $\Psi$, and $\alpha(T)$, 
-\item the \textbf{reduced temperature and pressure} $T_{\mathsf{r}} = \frac{T}{T_{\mathsf{c}}}$ and
-$P_{\mathsf{r}} = \frac{P}{P_{\mathsf{c}}}$ are defined via \textbf{critical temperature and pressure} 
+\item the \textbf{reduced temperature and pressure} $T_{\mathsf{r}} = \tfrac{T}{T_{\mathsf{c}}}$ and
+$P_{\mathsf{r}} = \tfrac{P}{P_{\mathsf{c}}}$ are defined via \textbf{critical temperature and pressure} 
 $T_{\mathsf{c}}$ and $P_{\mathsf{c}}$, and 
 \item $\omega$ is a \alert{acentric factor} that depends on the substance.
 \end{itemize}
@@ -707,7 +715,7 @@ $T_{\mathsf{c}}$ and $P_{\mathsf{c}}$, and
 %\item \textbf{Note:} more commonly can be found in the form
 %%
 %\[
-%\boxed{P=\frac{RT}{V-\beta}-q(T)\beta\frac{1}{(V+\epsilon\beta)(V+\sigma\beta)}}.
+%\boxed{P=\tfrac{RT}{V-\beta}-q(T)\beta\tfrac{1}{(V+\epsilon\beta)(V+\sigma\beta)}}.
 %\]
 \item \textbf{Note:} For CO$_{2}$(g), ${T_{\mathsf{c}}=304.2\;\mathsf{K}}$, ${P_{\mathsf{c}}=73.83\;\mathsf{bar}}$,
 ${\omega=0.224}$. 
@@ -727,7 +735,7 @@ ${\omega=0.224}$.
 %\item In addition, the \alert{reduced temperature} $T_{\mathsf{r}}$ and
 %\alert{reduced pressure} $P_{\mathsf{r}}$ are defined as:
 %\[
-%T_{\mathsf{r}}=\frac{T}{T_{\mathsf{c}}}\qquad\text{and}\qquad P_{\mathsf{r}}=\frac{P}{P_{\mathsf{c}}},
+%T_{\mathsf{r}}=\tfrac{T}{T_{\mathsf{c}}}\qquad\text{and}\qquad P_{\mathsf{r}}=\tfrac{P}{P_{\mathsf{c}}},
 %\]
 %where $T_{\mathsf{c}}$ and $P_{\mathsf{c}}$ are, respectively, the
 %\textbf{critical temperature and pressure} of the substance.
@@ -823,7 +831,7 @@ in which \textbf{\alert{liquid and vapour coexist}}.
 \begin{figure}
 \centering 
 \includegraphics[width=1\textwidth]{figures/activity-models/phase-diagram-pv}
-\caption{\footnotesize Illustration of a $PV$ \textbf{phase diagram} of a substance.}
+\caption*{\footnotesize Illustration of a $PV$ \textbf{phase diagram} of a substance.}
 \end{figure}
 
 \ecol
@@ -838,7 +846,7 @@ using a \alert{\bf cubic equation of state}:
 \[
 Z^{3}+AZ^{2}+BZ+C=0,
 \]
-where $Z=\frac{PV}{RT}$ is compressibility factor, 
+where $Z=\tfrac{PV}{RT}$ is compressibility factor, 
 \textbf{“spurious”} behavior can happen as shown on the next figure.
 \item This equation of state has \textbf{utmost three roots}. 
 \end{itemize}
@@ -890,7 +898,7 @@ in for CO$_{2}$(g)?
 \pause
 \item We rearrange it to a more convenient form for \textbf{the largest root} computation \citep{Smith2005}
 \[
-\boxed{Z = f(Z) = 1+\beta-q\beta\frac{Z-\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}}
+\boxed{Z = f(Z) = 1+\beta-q\beta\tfrac{Z-\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}}
 \]
 and apply simplest iterative approach, the so-called \alert{\textbf{fixed-point iteration method}}: 
 \begin{itemize}
@@ -900,7 +908,7 @@ Z^{0}=1,
 \]
 \item the $\boldsymbol{i^{\text{th}}}$ \textbf{iteration}
 \[
-Z^{i+1} =f(Z^{i})= 1+\beta-q\beta\frac{Z^{i}-\beta}{(Z^{i}+\epsilon\beta)(Z^{i}+\sigma\beta)}, 
+Z^{i+1} =f(Z^{i})= 1+\beta-q\beta\tfrac{Z^{i}-\beta}{(Z^{i}+\epsilon\beta)(Z^{i}+\sigma\beta)}, 
 \]
 %
 \item the \textbf{acceptance criterion} $|Z^{i+1}-Z^{i}|<\varepsilon$, where $\varepsilon$ is selected tolerance.
@@ -926,7 +934,7 @@ Z^{i+1} =f(Z^{i})= 1+\beta-q\beta\frac{Z^{i}-\beta}{(Z^{i}+\epsilon\beta)(Z^{i}+
 \begin{centering}
 \includegraphics[height=0.8\textheight]{figures/activity-models/co2-compressibility-factor-fixed-point}
 \par\end{centering}
-\caption{The compressibility factor $Z$ of CO$_{2}$ for temperatures
+\caption*{The compressibility factor $Z$ of CO$_{2}$ for temperatures
 60–300 °C and 1–400 bar calculated using \textbf{fixed point iteration method}. }
 \end{figure}
 
@@ -1007,12 +1015,12 @@ whereas fixed point requires its \alert{\textbf{continuity}}.
 \begin{frame}{Calculating the compressibility factor of CO$_{\boldsymbol{2}}$, Newton's method}
 \begin{itemize}
 \item In \alert{\textbf{Newton's method}}, we transform the non-linear equation
-$Z=1+\beta-q\beta\frac{Z-\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}$
+$Z=1+\beta-q\beta\tfrac{Z-\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}$
 into the form $r(Z)=0$, where $r$ is the \textbf{residual function} 
 \[
 \boxed{r(Z) 
 	= f(Z) - Z 
-	= 1+\beta-q\beta\frac{Z-\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}-Z}.
+	= 1+\beta-q\beta\tfrac{Z-\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}-Z}.
 \]
 \item Newton's method requires \textbf{first order derivative} of $r(Z)$ in its iterative process:
 \begin{itemize}
@@ -1027,7 +1035,7 @@ Z^{i+1} =Z^{i}-r(Z^{i})/r^{\prime}(Z^{i}),
 where 
 %
 \[
-r^{\prime}(Z)=-\frac{q\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}\left\{ 1-(Z-\beta)\frac{2Z+(\epsilon+\sigma)\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}\right\} -1,
+r^{\prime}(Z)=-\tfrac{q\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}\left\{ 1-(Z-\beta)\tfrac{2Z+(\epsilon+\sigma)\beta}{(Z+\epsilon\beta)(Z+\sigma\beta)}\right\} -1,
 \]
 %
 \item and \textbf{acceptance criterion} $|r(Z^{i+1})|<\varepsilon$, where $\varepsilon$ is selected tolerance.
@@ -1096,14 +1104,14 @@ using:
 \]
 where $\theta$ is defined as:\[
 \theta\coloneqq\begin{cases}
-{\displaystyle \frac{1}{\sigma-\epsilon}\ln\left(\frac{Z+\sigma\beta}{Z+\epsilon\beta}\right)} & \epsilon\neq\sigma\\
-{\displaystyle \frac{\beta}{Z+\epsilon\beta}} & \epsilon=\sigma
+{\displaystyle \tfrac{1}{\sigma-\epsilon}\ln\left(\tfrac{Z+\sigma\beta}{Z+\epsilon\beta}\right)} & \epsilon\neq\sigma\\
+{\displaystyle \tfrac{\beta}{Z+\epsilon\beta}} & \epsilon=\sigma
 \end{cases}
 \]
 dependent on the equation of state.
 \item The \alert{\textbf{activity of CO$_{2}$(g)}} is calculated using:
 \[
-a_{\mathsf{CO_{2}\text{(g)}}}=\varphi_{\mathsf{CO_{2}\text{(g)}}}\frac{P}{P^{\circ}},
+a_{\mathsf{CO_{2}\text{(g)}}}=\varphi_{\mathsf{CO_{2}\text{(g)}}}\tfrac{P}{P^{\circ}},
 \]
 with $P$ measured in bar and $P^{\circ}=\unit[1]{\mathsf{bar}}$.
 \end{itemize}
@@ -1136,7 +1144,7 @@ of state (EOS) for temperatures 0–300 °C and 1–400 bar. }
 \begin{itemize}[<+->]
 \item  The \alert{activities of gaseous species}:
 \[
-a_{i}=\frac{\varphi_{i}x_{i}P}{P^{\circ}}.
+a_{i}=\tfrac{\varphi_{i}x_{i}P}{P^{\circ}}.
 \]
 %\item We will only consider CO$_{2}$(g) in the gaseous phase, so that the
 %\alert{mole fraction} $x_{i}=1$.
@@ -1150,13 +1158,13 @@ a_{i}=\frac{\varphi_{i}x_{i}P}{P^{\circ}}.
 \begin{itemize}[<+->]
 \item  The \alert{compressibility factor} 
 \[
-Z=\frac{PV}{RT} < 1
+Z=\tfrac{PV}{RT} < 1
 \]
 with $Z\equiv1$ \textbf{only} when the substance is an \textbf{ideal gas}.
 %
 \item Calculation of $Z$ requires the solution of the \alert{cubic equation of state}
 \[
-Z=\frac{Z}{Z-\beta}-q\beta\frac{Z}{(Z+\epsilon\beta)(Z+\sigma\beta)}
+Z=\tfrac{Z}{Z-\beta}-q\beta\tfrac{Z}{(Z+\epsilon\beta)(Z+\sigma\beta)}
 \]
 by \emph{fixed point method} or \emph{Newton's method}.
 \end{itemize}
