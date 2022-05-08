@@ -26,4 +26,4 @@ print('Ionic strength of solution is %f molal.' % I)
 
 # Print the calculated molality of each species
 for i in range(len(aqueous_species)):
-    print('Molality of %s is %f molal.' % (aqueous_species[i], m[i]))
+    print(f'Molality of {aqueous_species[i]:8s} is {m[i]:4.4e} molal.')

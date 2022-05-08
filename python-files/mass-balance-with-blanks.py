@@ -28,7 +28,8 @@ molar_masses_elements = []
 
 # Loop over all elements, their amounts, and their molar masses
 for element, amount, molarmass in zip(elements, b, molar_masses_elements):
-    print('Element %s has %f moles and %f grams' % (element, amount, amount*molarmass))
+    print(f'Element {element:2s} has {amount:4.4e} moles and {amount*molarmass:8.4f} grams')
+
 
 print("") # Just to skip one line in the output
 
@@ -38,4 +39,4 @@ for i in range(len(species)):
     molar_mass = A[:, i].dot(molar_masses_elements)
     # Calculate the mass of current species
     mass = 
-    print('Species {} has {} moles and {} grams.'.format(species[i], n[i], mass))
+    print(f'Species {species[i]:10s} has {n[i]:4.4e} moles and {mass:2.4f} grams.')
