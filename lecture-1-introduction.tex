@@ -65,9 +65,9 @@ we will use Python and Reaktoro (\href{https://reaktoro.org/}{\textcolor{indigo(
 \pause
 Possible forms of the project: 
 \begin{itemize}
-\item learning basics of geochemical simulation on one example (dissolving calcite in CO2-rich brine) in Python, 
-\item learning Reaktoro (Python-based framework to model geochemical reactions) via doing hands-on Jupyter notebook exercises (on variety of problems), or 
-\item learning Reaktoro via Jupyter notebooks and by trying to model and program realistic application example (try out a new interesting application). 
+\item[(I)] learning basics of geochemical simulation on one example (dissolving calcite in CO$_2$-rich brine) in Python, 
+\item[(II)] learning Reaktoro (Python-based framework to model geochemical reactions) via doing hands-on Jupyter notebook exercises (on variety of problems), or 
+\item[(III)] learning Reaktoro via Jupyter notebooks and by trying to model and program realistic application example (try out a new interesting application). 
 \end{itemize}
 % \item It will involve chemical reaction calculations for a \textbf{chemical system} containing different 
 % phases, such as 
@@ -88,7 +88,7 @@ Possible forms of the project:
 % and I will be able to clarify them. 
 \end{itemize}
 \pause
-\item Other computational tasks will be given throughout the lectures as \alert{\textbf{exercises, code-listings, and tutorials}} (using python scripts or Jupyter Notebooks).
+\item Other computational tasks will be given throughout the lectures as \alert{\textbf{exercises, code-listings, and tutorials}} (using Python scripts or Jupyter Notebooks).
 %
 \pause
 \item Lectures will contain \alert{\textbf{interactive quizzes}} helping to understand and apply the presented material. 
@@ -185,8 +185,9 @@ Earth's surface} or \textbf{deep in its interior}.
 %
 \begin{figure}
 \centering
+\vskip 10pt
 \includegraphics[height=0.5\columnwidth]{figures/applications/example-of-geochemical-reactions-in-yellowstone-geysers}
-\caption*{Geochemical reaction calculations for thermal water analysis 
+\caption*{Geochemical reaction calculations for thermal springs for different conditions        
 (Grand Prismatic, Midway Geyser Basin, Yellowstone, Wyoming, USA).}
 \end{figure}
 %
@@ -219,6 +220,7 @@ from the Earth's mantle upwards.}
 to mineral precipitation.}
 \end{figure}
 %
+\pause
 \rcol
 \vskip -20pt
 \begin{itemize}[<+->]
@@ -399,10 +401,10 @@ or
 \includegraphics[height=0.25\columnwidth]{figures/intro/poll.png}
 \end{center}    
 %
-% \hiddenpause
-% {\bf Answer}: \\
-% \qquad $\bullet$ The chemical processes of the time scale of 1 ms are governed by equilibrium. \\ 
-% \qquad $\bullet$ The chemical processes of the time scale of 1 min are governed by kinetics.
+\hiddenpause
+{\bf Answer}: \\
+\qquad $\bullet$ The chemical processes of the time scale of 1 ms are governed by equilibrium. \\ 
+\qquad $\bullet$ The chemical processes of the time scale of 1 min are governed by kinetics.
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
@@ -490,7 +492,7 @@ the reactions are \alert{\textbf{in equilibrium}}.
 \lcol
 
 \begin{itemize}
-	\item \alert{\textbf{Corrosion}}, a natural process that converts a refined metal into a more chemically stable form such as oxide, hydroxide, or sulfide.
+	\item \alert{\textbf{Corrosion}}, a natural process that converts a refined metal into a more chemically stable form such as oxide, hydroxide, or sulfide:
 		\begin{itemize}
 		\item galvanic corrosion 
 		\item electrolytic corrosion
@@ -542,6 +544,7 @@ the reactions are \alert{\textbf{in equilibrium}}.
 			%
 		\end{itemize}
 		%%%
+		\pause
 		\item \alert{\bf Homogeneous} or \alert{\bf heterogeneous}:
 		\begin{itemize}
 			\item A {\bf homogeneous} reaction involves a single phase, e.g., 
@@ -563,7 +566,7 @@ the reactions are \alert{\textbf{in equilibrium}}.
 \begin{frame}{Practical observations on chemical equilibrium}
 \vskip 10pt
 \begin{itemize}
-\item Chemical reactions \textbf{alter the amounts of species over time}, where species can be distributed among one or more phases (minerals, gaseous, mineral).
+\item Chemical reactions \textbf{alter the amounts of species over time}, where species can be distributed among one or more phases (minerals, gaseous or aqueous phases).
 \pause
 \item Each of these reactions have \textbf{forward and backward rates}. 
 \pause
@@ -574,15 +577,15 @@ the reactions are \alert{\textbf{in equilibrium}}.
 \pause
 \item Rate of the reaction is measured in mol/s.
 \pause
-\item Assume at some time $t$ this reaction has a \textbf{forward rate}
-of \alert{\textbf{2 mol/s}} and a \textbf{backward rate}
-of \alert{\textbf{1 mol/s}}.
-\pause
+% \item Assume at some time $t$ this reaction has a \textbf{forward rate}
+% of \alert{\textbf{2 mol/s}} and a \textbf{backward rate}
+% of \alert{\textbf{1 mol/s}}.
+% \pause
 \item \alert{\textbf{Net rate of the reaction}} = \textbf{forward rate} - \textbf{backward rate}. 
 \pause 
 \item 
 \textbf{forward rate} = \textbf{production rate} $>$ 0, \\
-\textbf{backward rate} = \textbf{consumption rate} $<$ 0.
+\textbf{backward rate} = $|$ \textbf{consumption rate} $<$ 0 $|$.
 \end{itemize}
 \end{frame}
 
@@ -594,15 +597,15 @@ Consider the reaction
 	\]
 %
 \alert{\textbf{Quiz:}} What is \textbf{rate of production\slash consumption}
-of A, B, C and D (in mol/s)? \\
+of A, B, C and D (in mol/s), assuming the the forward and backward reaction rates are 1 mol/s? \\
 \begin{center}{ \href{http://etc.ch/M2Rp}{\textcolor{indigo(dye)}{\tt http://etc.ch/M2Rp}}} \quad
 or \quad
-\includegraphics[height=0.23\columnwidth]{figures/intro/poll.png}
+\includegraphics[height=0.20\columnwidth]{figures/intro/poll.png}
 \end{center}
-% \hiddenpause
-% \textbf{Answer:} \\
-% \qquad $\bullet$ production rates are 1 mol/s for C, 2 mol/s for D; \\
-% \qquad $\bullet$ consumption rates are -1 mol/s for A, -1 mol/s for B. 
+\hiddenpause
+\textbf{Answer:} \\
+\qquad $\bullet$ production rates are 1 mol/s for C, 2 mol/s for D; \\
+\qquad $\bullet$ consumption rates are -1 mol/s for A, -1 mol/s for B. 
 \end{frame}
 % --------------------------------------------------------------------------------------------------------------------%
 % Chemical equilibrium of species
@@ -620,10 +623,10 @@ or \quad
 or \quad
 \includegraphics[height=0.23\columnwidth]{figures/intro/poll.png}
 \end{center}
-% \hiddenpause
-% \textbf{Answer:} \\ 
-% \qquad $\bullet$ the amounts of each species in the system \textbf{no longer experience any change}, and \\ 
-% \qquad $\bullet$ they are in \alert{\textbf{chemical equilibrium}}.
+\hiddenpause
+\textbf{Answer:} \\ 
+\qquad $\bullet$ the amounts of each species in the system \textbf{no longer experience any change}, and \\ 
+\qquad $\bullet$ they are in \alert{\textbf{chemical equilibrium}}.
 % %
 % \pause
 % \alert{\textbf{Example:}}
@@ -668,12 +671,12 @@ Let us mix 1 kg of H$_{2}$O with NaCl (halite):\\[-20pt]
 Let us consider \textbf{two scenarios}:
 \begin{itemize}
 %
-\item If we take \alert{\textbf{1 mg of NaCl}}, eventually, all salt fully dissolves, so the net rate of production of Na$^{+}$ and C$^-$ becomes zero.
+\item If we take \alert{\textbf{1 mg of NaCl}}, eventually, all salt fully dissolves, so the net rate of production of Na$^{+}$ and Cl$^-$ becomes zero.
 %%\item we have reached the \textbf{chemical equilibrium} of the system. 
 %\end{itemize}
 %
 \pause
-\item If we take \alert{\textbf{100 mg of NaCl }}: eventually, water solution will be saturated with the salt, so Na$^{+}$ and C$^-$  is precipitating NaCl with the similar rate as it is dissolving.
+\item If we take \alert{\textbf{100 mg of NaCl }}: eventually, water solution will be saturated with the salt, so Na$^{+}$ and Cl$^-$  is precipitating NaCl with the similar rate as it is dissolving.
 %%\item we have reached the \textbf{chemical equilibrium} of the system. 
 %\end{itemize}
 \end{itemize}
@@ -695,7 +698,7 @@ Let us consider \textbf{two scenarios}:
 	\]
 \vskip -10pt
 \pause
-\item This reaction is in equilibrium when CO$_{2}$(g) is \textbf{dissolving
+\item This \alert{\bf reaction is in equilibrium} when CO$_{2}$(g) is \textbf{dissolving
 }(\emph{from gas to solution}) and \textbf{exsolving} (\emph{from
 solution to gas}) at the same rate. 
 	\pause
@@ -716,7 +719,7 @@ conditions) can be calculated considering this reaction (and all others)
 in equilibrium. \\[5pt]
 %
 \alert{\textbf{Note}}: see the tutorial 
-\href{https://reaktoro.org/applications/solubility/solubility-calcite-on-acidity-and-temperature.html}{\textcolor{indigo(dye)}{\it Calcite solubility in water and CO2-saturated rainwater}} with Jupyter notebook \href{Calcite solubility in water and CO2-saturated rainwater}{\textcolor{indigo(dye)}{\it here}}.
+\href{https://reaktoro.org/applications/solubility/solubility-calcite-on-acidity-and-temperature.html}{\textcolor{indigo(dye)}{\it Calcite solubility in water and CO$_2$-saturated rainwater}} with Jupyter notebook \href{Calcite solubility in water and CO2-saturated rainwater}{\textcolor{indigo(dye)}{\it here}}.
 
 \end{itemize}
 %
@@ -733,7 +736,7 @@ in equilibrium. \\[5pt]
 \[
 \mathrm{\mathsf{CaCO_{3}(s,calcite) \rightleftharpoons Ca^{2+}(aq)+CO_{3}^{2-}(aq)}}
 \]
-\item This reaction is in equilibrium when calcite is \textbf{dissolving
+\item This \alert{\bf reaction is in equilibrium} when calcite is \textbf{dissolving
 }(\emph{from solid to solution}) and \textbf{precipitating} (\emph{from
 solution to solid}) at the same rate. 
 \item \textbf{\alert{\textbf{Good to know:}}} The \textbf{solubility of
@@ -741,7 +744,7 @@ calcite} (i.e., the maximum amount of calcite that the solution can
 dissolve at given temperature, pressure, and fluid composition conditions)
 can be calculated considering this reaction (and others) in equilibrium.
 \vskip 5pt
-\alert{\textbf{Note}}: See a tutorial \href{https://reaktoro.org/applications/solubility/solubility-calcite-on-acidity-and-temperature.html}{\textcolor{indigo(dye)}{\it Calcite solubility in water and CO2-saturated rainwater}} with Jupyter notebook \href{Calcite solubility in water and CO2-saturated rainwater}{\textcolor{indigo(dye)}{\it here}}.
+\alert{\textbf{Note}}: See a tutorial \href{https://reaktoro.org/applications/solubility/solubility-calcite-on-acidity-and-temperature.html}{\textcolor{indigo(dye)}{\it Calcite solubility in water and CO$_2$-saturated rainwater}} with Jupyter notebook \href{Calcite solubility in water and CO2-saturated rainwater}{\textcolor{indigo(dye)}{\it here}}.
 \end{itemize}
 
 \end{frame}
@@ -754,7 +757,7 @@ can be calculated considering this reaction (and others) in equilibrium.
 %
 \begin{frame}{Defining the chemical system for the modeling problem}
 \begin{itemize}
-\item A chemical system is a collection of phases (one or more). Examples:
+\item A {\bf chemical system} is a \alert{\bf collection of phases} (one or more). Examples:
 \begin{itemize}
 \item a chemical system with only an aqueous phase;
 \item a chemical system with aqueous and gaseous phase (CO$_2$(g));
@@ -845,6 +848,7 @@ step is to think about:
 \item What are the amounts of each species in the chemical state after equilibration?
 \end{itemize}
 \end{itemize}
+\pause
 \rcol
 \begin{itemize}
 \item A simple (but reasonable) chemical system for this problem is:
@@ -876,6 +880,7 @@ are involved}
 \begin{itemize}
 \item Assume water (H$_{2}$O) and calcite (CaCO$_{3}$) are mixed at some
 given temperature $T$ and pressure $P$.
+\pause
 \item A simple (but reasonable) chemical system for this problem is:
 \end{itemize}
 \begin{center}
@@ -923,12 +928,12 @@ Cl$^{-}$(aq) &  &  & \tabularnewline
 \par\end{center}
 \pause
 \begin{itemize}
-\item \alert{\textbf{We wan to know}}: 
+\item \alert{\textbf{We want to know}}: 
 \begin{itemize}
-\item How does the salinity of the brine impact the solubility of the water? 
+\item How does the salinity of the brine impact the solubility of halite in it? 
 \item What happens if we put too much of the table salt? 
-\item The phase of halite is significant to provide realistic estimation!
- because it has a point of solubility in water. 
+% \item The phase of halite is significant to provide realistic estimation!
+%  because it has a point of solubility in water. 
 \end{itemize}
 \end{itemize}
 
