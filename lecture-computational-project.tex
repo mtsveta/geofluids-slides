@@ -1,0 +1,160 @@
+
+\section{Computational project}
+%
+% https://ethz.zoom.us/rec/play/eff8FsJ-ZfoiA-l2EFNn_wY9RPhwZQ-N86KuVVsMc6Eb9UmYvAYoNhZkmpU7_mdvpgb37KsFzb6X9W9J.KNuq2Acqbg1fZbAy?continueMode=true
+\begin{frame}{Quiz on standard potentials}
+	
+	\begin{itemize}
+		\item \alert{\textbf{Quiz:}} what can we do alternatively to taking reference values of $\mu_0$, if we want to find standard potentials for pressures and temperatures lying in between the reference values?
+		%
+		\begin{center}
+			\href{http://etc.ch/vR5e}{\textcolor{indigo(dye)}{\tt http://etc.ch/vR5e}} \quad or \quad 
+			\includegraphics[height=0.2\columnwidth]{figures/computational-projects/polls.png}
+		\end{center}
+		%
+		\hiddenpause
+		\vskip 10pt
+		\item {\textbf{Answer:}} we interpolate between neighboring values of standard potentials.   
+		
+	\end{itemize}
+\end{frame}
+%
+\begin{frame}[fragile]{Quiz on variable of EquilibriumState providing information on the solubility}
+	
+\begin{lstlisting}[language=Python]
+class EquilibriumState:
+    def __init__(self):
+        self.T = None  # temperature in K
+        self.P = None  # pressure in Pa
+        self.n = None  # amounts of species in mol
+        self.m = None  # masses of species in g
+        self.y = None  # Lagrange multipliers y in J/mol
+        self.z = None  # Lagrange multipliers z in J/mol
+        self.c = None  # concentrations of the species
+        self.a = None  # activities of the species
+        self.g = None  # activity coefficients of the species
+\end{lstlisting}
+
+\begin{itemize}
+	\item \alert{\textbf{Quiz:}} out of all these properties stored in the class {\bf EquilibriumState}, which one will tell us the solubility of gas or mineral? 
+	%
+	%\vskip 10pt
+	\begin{center}
+		\href{http://etc.ch/vR5e}{\textcolor{indigo(dye)}{\tt http://etc.ch/vR5e}} \quad or \quad 
+		\includegraphics[height=0.08\columnwidth]{figures/computational-projects/polls.png}
+	\end{center}
+	%
+	%\vskip 10pt
+	\hiddenpause
+	\vskip 10pt
+	\item {\textbf{Answer:}} concentrations of the species, c (molal).
+% 	\item {\textbf{Answer:}} to make sure that we reach its solubility point, to dissolve the {\bf maximum} amount of CO$_2$(g) in the brine.
+\end{itemize}
+	
+\end{frame}
+%
+\begin{frame}{Quiz on adding NaCl into the recipe}
+	
+	\begin{itemize}
+		\item \alert{\textbf{Quiz:}} what does happen to the solubility of CO$_2$(g) if we add NaCl into the recipe?
+		%
+		\vskip 10pt
+		\begin{center}
+			\href{http://etc.ch/vR5e}{\textcolor{indigo(dye)}{\tt http://etc.ch/vR5e}} \quad or \quad 
+			\includegraphics[height=0.2\columnwidth]{figures/computational-projects/polls.png}
+		\end{center}
+		%
+		\vskip 10pt
+		\hiddenpause
+		\item {\textbf{Answer:}} it decreases, salting-out effect.
+	\end{itemize}
+	
+\end{frame}
+%
+\begin{frame}{Quiz on the amount of CO$_2$ amount}
+		
+		\begin{itemize}
+			\item \alert{\textbf{Quiz:}} why do we add so much initial CO$_2$(g)?
+			%
+			\vskip 10pt
+			\begin{center}
+				\href{http://etc.ch/vR5e}{\textcolor{indigo(dye)}{\tt http://etc.ch/vR5e}} \quad or \quad 
+				\includegraphics[height=0.2\columnwidth]{figures/computational-projects/polls.png}
+			\end{center}
+			%
+			\vskip 10pt
+			\hiddenpause
+			\vskip 10pt
+			\item {\textbf{Answer:}} to make sure that we reach its solubility point, to dissolve the {\bf maximum} amount of CO$_2$(g) in the brine.
+		\end{itemize}
+	
+\end{frame}
+\begin{frame}{Acidity of recipes}
+	\small
+	\begin{itemize}
+		\item Given three mixture: \\
+			\begin{itemize}
+				\item  {\bf Mixture 1} :  1kg of water, 0.6 mol of NaCl, 1 mol of calcite \\
+				\item  {\bf Mixture 2} :  1kg of water, 0.6 mol of NaCl, 1 mol of calcite, 5 mol of CO$_2$(g)\\
+				\item  {\bf Mixture 3} :  1kg of water, 5 mol of CO$_2$(g)\\
+			\end{itemize}
+		\item \alert{\textbf{Quiz:}} sort out these mixture w.r.t increasing acidity (decreasing pH).\\[5pt]
+		%
+		\vskip 5pt
+		\begin{center}
+			\href{http://etc.ch/vR5e}{\textcolor{indigo(dye)}{\tt http://etc.ch/vR5e}} \quad or \quad 
+			\includegraphics[height=0.18\columnwidth]{figures/computational-projects/polls.png}
+		\end{center}
+		%
+		\hiddenpause
+		\vskip 5pt
+		\item {\textbf{Answer:}} 1, 2, 3 because \\
+		\begin{itemize}
+			\item pH (Mixture 1) $\approx$ 10 \\
+			\item pH (Mixture 2) $\approx$ 6 \\
+			\item pH (Mixture 3) $\approx$ 4 \\
+		\end{itemize}
+	\end{itemize}
+
+	%b = element_amounts(kgH2O=1, molCO2=0.0, molNaCl=0.6, molCaCO3=1.0) -> pH = 10 (alkaline) 
+	%b = element_amounts(kgH2O=1, molCO2=5.0, molNaCl=0.6, molCaCO3=1.0) -> pH = 6 (slightly acidic)
+	%b = element_amounts(kgH2O=1, molCO2=5.0, molNaCl=0.0, molCaCO3=0.0) -> pH = 3.9 (acidic)
+\end{frame}
+
+\begin{frame}{pH dependence on the added amount of added CO$_2$(g)}
+	\small
+	\begin{itemize}
+
+		\item \alert{\textbf{Quiz:}} what happens around the point of added CO$_2$(g) equal 0.8 mols?\\[5pt]
+		%
+		\vskip 10pt
+		\begin{center}
+			\href{http://etc.ch/vR5e}{\textcolor{indigo(dye)}{\tt http://etc.ch/vR5e}} \quad or \quad 
+			\includegraphics[height=0.18\columnwidth]{figures/computational-projects/polls.png}
+		\end{center}
+		%
+		\vskip 10pt
+		\hiddenpause
+		\vskip 10pt
+		\item {\textbf{Answer:}} we have reached the saturation point of CO$_2$(g) in water, i.e., the aqueous solution cannot dissolve more CO$_2$ gas.
+		\end{itemize}
+\end{frame}
+
+\begin{frame}{Calcite solubility dependence on the added CO$_2$(g)}
+	\small
+	\begin{itemize}
+		
+		\item \alert{\textbf{Quiz:}} what does this plato with dissolved calcite indicate? \\[5pt]
+		%
+		\vskip 10pt
+		\begin{center}
+			\href{http://etc.ch/vR5e}{\textcolor{indigo(dye)}{\tt http://etc.ch/vR5e}} \quad or \quad 
+			\includegraphics[height=0.18\columnwidth]{figures/computational-projects/polls.png}
+		\end{center}
+		%
+		\vskip 10pt
+		\hiddenpause
+		\vskip 10pt
+		\item {\textbf{Answer:}} we have reached the saturation point of CO$_2$(g) in water, which does not effect the solubility of calcite.
+	\end{itemize}
+\end{frame}

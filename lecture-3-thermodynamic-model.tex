@@ -6,8 +6,9 @@
 %
 \begin{frame}{Activities -- the effective concentrations of the species}
 \begin{itemize}
-\item Let $c_{i}$ denote concentration of species $i$ (\textbf{Note}: sometime in literature it is denoted by $[i]$, 
-but i$[i] \neq n_i$).
+\item Let $c_{i}$ denote concentration of species $i$. \\
+\textbf{Note}: sometime in literature it is denoted by $[i]$, 
+but $c_i = [i] \neq n_i$.
 \pause
 \item If we would use $c_{i}$ instead of activities $a_{i}$ to calculate the chemical potentials, then
 \[
@@ -137,19 +138,21 @@ m_{i}=\tfrac{n_{i}}{\text{mass of solvent species H\ensuremath{_{2}}O(aq)}}.
 %
 \lcol
 \begin{itemize}
-\item Most activity models for aqueous solutions depends on the  \alert{\textbf{ionic strength}}:
+\item Most activity models for aqueous solutions depends on the  \alert{\textbf{ionic strength}} (in molal):
 \[
 \boxed{I=\tfrac{1}{2}\sum_{i=1}^{\text{solutes}}m_{i}Z_{i}^{2}},
 \]
-where:
+%where:
 \begin{itemize}
 \item $m_{i}$ is the \textbf{molality} of species $i$; and
 \item $Z_{i}$ is the \textbf{electric charge }of species $i$.
 \end{itemize}
 \pause
-\item $I$ is a measure (in molal) of \emph{how much concentrated is the solution with ionic
+\item $I$ is a measure of \emph{how concentrated is the solution with ionic
 species}, 
-\item \textbf{Note}: \alert{Neutral species} play no role in $I$, just the ions.
+\item \textbf{Note}: \\
+\quad - \alert{Neutral species} play no role in $I$.\\
+\quad - \alert{More ions} in the solution lead to higher $I$.\\
 \end{itemize}
 \rcol
 \begin{itemize}
@@ -162,7 +165,7 @@ by mixing 1 kg of H$_{2}$O and:
 \end{itemize}
 \vskip 5pt
 \begin{center}
-\href{http://etc.ch/qjLF}{\textcolor{indigo(dye)}{\tt http://etc.ch/qjLFhttp://etc.ch/qjLF}} or 
+\href{http://etc.ch/qjLF}{\textcolor{indigo(dye)}{\tt http://etc.ch/qjLF}} or 
 \includegraphics[height=0.45\columnwidth]{figures/activity-models/poll-ionic-strength.png}
 \end{center}
 \hiddenpause
@@ -276,7 +279,7 @@ A_{\gamma}=1.824928\cdot10^{6}\rho_{\mathsf{H_{2}O}}^{1/2}(\epsilon_{\mathsf{H_{
 where $\rho_{\mathsf{H_{2}O}}$ and $\epsilon_{\mathsf{H_{2}O}}$
 are the \textbf{density} and \textbf{dielectric constant of pure water} resp. 
 \item For 25~°C and 1~bar, $A_{\gamma}=0.5095$.
-\item \textbf{Limitations of the model}: 
+\item \alert{\textbf{Limitations of the model}}: 
 It is accurate for $I$ is in the range 0.1–0.7 molal, which is equivalent to 1 kg of water mixed with 5.8–40.9 grams of NaCl (0.5-4 teaspoons of table salt).
 \end{itemize}
 \end{frame}
@@ -333,6 +336,29 @@ It is accurate for $I$ is in the range 0.1–0.7 molal, which is equivalent to 1
 Source code: \href{https://polybox.ethz.ch/index.php/s/D0gfkcE1KBiFVxD}{\textcolor{indigo(dye)}{\it davies-activity-model.py}}
 
 \end{frame}
+
+\begin{frame}{Quiz, Code review}
+   
+\alert{\bf Quiz}: knowing that 
+%
+$\log_{10}\gamma_{i}=-A_{\gamma}Z_{i}^{2}\left(\tfrac{\sqrt{I}}{1+\sqrt{I}}-0.3I\right)$,
+%
+%
+how many mistakes does the code below have?
+%
+\lstinputlisting[language=Python, caption=Davies activity model]{python-files/davies-activity-model-with-mistake.py}
+%
+And what the correct version of the code will print out?
+
+\begin{center}
+\href{http://etc.ch/qjLF}{\textcolor{indigo(dye)}{\tt http://etc.ch/qjLF}} \quad or \quad 
+\includegraphics[height=0.12\columnwidth]{figures/activity-models/poll-ionic-strength.png}
+\end{center}
+
+\hiddenpause
+\textbf{Answer}: Three mistakes, gamma(1, 1.5) = 0.8888.
+
+\end{frame}
 %
 \subsubsection{Activity coefficient model for H$_2$O(aq), Davies model}
 %
@@ -361,12 +387,12 @@ What is the value of ionic strength $I$ and the activity of water $a_{\sf H_2O}$
 \end{center}
 \hiddenpause
 \item \textbf{Answer}: $I$ = 0, $a_{\sf H_2O}$ = 1.
-%\item \textbf{Note}: The above activity equation can be derived using \alert{\textbf{Gibbs–Duhem equation}}
-%\[
-%%\sum n_{i}\text{d}\mu_{i}=0\qquad\text{or}\qquad
-%\sum n_{i}\text{d}\ln a{}_{i}=0
-%\]
-%when the Davies model is used for the activities of ionic species.
+% \item \textbf{Note}: The above activity equation can be derived using \alert{\textbf{Gibbs–Duhem equation}}
+% \[
+% %\sum n_{i}\text{d}\mu_{i}=0\qquad\text{or}\qquad
+% \sum n_{i}\text{d}\ln a{}_{i}=0
+% \]
+% when the Davies model is used for the activities of ionic species.
 \end{itemize}
 \end{frame}
 %
@@ -377,17 +403,18 @@ What is the value of ionic strength $I$ and the activity of water $a_{\sf H_2O}$
 %
 \begin{frame}{Activity model for H$_{\boldsymbol{2}}$O(aq),  Ideal model}
 \begin{itemize}[<+->]
-\item For an \alert{\textbf{ideal solution}}, all contribution arising from ionic strength
+\item For an \alert{\textbf{ideal solution}} ($I$ = 0), all contribution arising from ionic strength
 can be eliminated:
 \begin{alignat*}{2}
 \ln a_{\mathsf{H_{2}O\text{(aq)}}} 
-& =\cancel{\tfrac{\ln10}{55.5084}A_{\gamma}\left[2\left(\tfrac{I+2\sqrt{I}}{1+\sqrt{I}}\right)-4\ln(1+\sqrt{I})-0.3I^{2}\right]}-\tfrac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}} \\ 
+& =\cancel{\tfrac{\ln10}{55.5084}A_{\gamma}\left[2\left(\tfrac{I+2\sqrt{I}}{1+\sqrt{I}}\right)-4\ln(1+\sqrt{I})-0.3I^{2}\right]}-\tfrac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}} \\[10pt]
 &=-\tfrac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}.
 \end{alignat*}
 %\item This results in the following simpler activity model for $a_{\mathsf{H_{2}O\text{(aq)}}}$:
 %\[
 %\ln a_{\mathsf{H_{2}O\text{(aq)}}}=-\tfrac{1-x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}{x_{\mathsf{\mathsf{H_{2}O\text{(aq)}}}}}.
 %\]
+\item This simplification is \textbf{valid only for the water}!
 \item \textbf{Let's investigate how accurate this approximation is?} 
 \item \textbf{Source code}: \href{https://polybox.ethz.ch/index.php/s/cAmnV8dKZH7AMcK}{\textcolor{indigo(dye)}{\it activity-water-davies-vs-ideal.py}}.
 \end{itemize}
@@ -577,7 +604,8 @@ and
 \item $P^{\circ}$ is a reference pressure, $P^{\circ}=\unit[1]{\mathsf{bar}}$.
 \end{itemize}
 \pause
-\item The \textbf{fugacity coefficients of ideal gases} are $\varphi_{i}=1$. \textbf{But}: the gases rarely behaving ideal.  
+\item The \textbf{fugacity coefficients of ideal gases} are $\varphi_{i}=1$. \\
+\textbf{But}! the gases rarely behaving ideal.  
 \end{itemize}
 \end{frame}
 %
@@ -587,7 +615,7 @@ and
 %
 \begin{frame}{Activity of CO$_{\boldsymbol{2}}$(g) using a cubic equation of state}
 \begin{itemize}
-\item An \textbf{ideal gas} solution has \alert{\textbf{a $PVT$ behavior}} defined by the equation:
+\item An \textbf{ideal gas} solution has \alert{\textbf{a $PVT$ behavior}} defined by the equation
 \[
 \tfrac{PV}{RT}=1,
 \]
@@ -879,7 +907,8 @@ in for CO$_{2}$(g)?
 	\includegraphics[height=0.18\columnwidth]{figures/activity-models/poll-ionic-strength.png}
 \end{center} 
 \only<6->{
-\textbf{Answer}: as we are interested in vapor (CO$_{2}$(g)) properties, we need \textbf{the largest root of cubic EOS}. }
+\textbf{Answer}: as we are interested in vapor (CO$_{2}$(g)) properties, we need \textbf{the largest root of cubic EOS}. 
+}
 %$T_{\mathrm{cr}}\approx\unit[31.04]{^{\circ}C}$
 \end{itemize}
 \rcol

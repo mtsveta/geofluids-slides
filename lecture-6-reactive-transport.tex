@@ -257,9 +257,10 @@ equation that governs the {\bf transport of a conservative quantity} $u$:
 	\item \alert{\bf Quiz}: which operator in this equation could be responsible for the reactive part of the modeling?
 	%
 	\begin{center}
-		\href{http://etc.ch/JTfB/?qr}{\textcolor{indigo(dye)}{\tt http://etc.ch/JTfB/?qr}} \quad or \quad 
+		\href{http://etc.ch/YYq6}{\textcolor{indigo(dye)}{\tt http://etc.ch/YYq6}} \quad or \quad 
 		\includegraphics[height=0.2\columnwidth]{figures/reactive-transport/polls.png}
 	\end{center}
+	\item \alert{\bf Answer}: $\rho (u)$ is the non-linear reaction function. 
 %where \\[5pt]
 %
 %\begin{itemize}
@@ -273,6 +274,7 @@ equation that governs the {\bf transport of a conservative quantity} $u$:
 %	\item $\rho (u)$ is the \alert{\bf reaction operator}. 
 %\end{itemize}
 \end{itemize}
+%
 \end{frame}
 \begin{frame}{Advection-diffusion-reaction equation (transport equation) \, ii}
 	\begin{itemize}
@@ -295,9 +297,9 @@ equation that governs the {\bf transport of a conservative quantity} $u$:
 		\begin{itemize}
 			\item $\frac{\partial u}{\partial t}$ is the  \alert{\bf time derivative};\\[2pt]
 			%
-			\item $\nabla u = \begin{pmatrix}\tfrac{\partial u}{\partial x} & \tfrac{\partial u}{\partial y} & \tfrac{\partial u}{\partial z}\end{pmatrix} $ is the \alert{\bf gradient operator} of scalar variable $u$ denoting \alert{\bf flux} and in combination with $D$ accounting for the \alert{\bf diffusion/dispersion processes}; \\[2pt]
+			\item $\nabla u = \begin{pmatrix}\tfrac{\partial u}{\partial x} & \tfrac{\partial u}{\partial y} & \tfrac{\partial u}{\partial z}\end{pmatrix} $ is the \alert{\bf gradient operator} of scalar variable $u$ denoting the  \alert{\bf flux} and in combination with $D$ accounting for the \alert{\bf diffusion/dispersion processes}; \\[2pt]
 			%
-			\item $\nabla\cdot\boldsymbol{v} =\tfrac{\partial v_{x}}{\partial x}+\tfrac{\partial v_{y}}{\partial y}+\tfrac{\partial v_{z}}{\partial z}$ is the \alert{divergence operator} of vector
+			\item $\nabla\cdot\boldsymbol{v} =\tfrac{\partial v_{x}}{\partial x}+\tfrac{\partial v_{y}}{\partial y}+\tfrac{\partial v_{z}}{\partial z}$ is the \alert{\bf divergence operator} of vector
 			variable $\boldsymbol{v}$ accounting \alert{\bf convection/advection};\\[2pt]
 			%
 			\item $\rho (u)$ is the \alert{\bf reaction operator}. 
@@ -312,7 +314,7 @@ equation that governs the {\bf transport of a conservative quantity} $u$:
 \begin{frame}{Advection-diffusion-reaction initial boundary value problem (I-BVP)}
 
 \begin{itemize}
-\item Adding initial and boundary condition, 
+\item With initial and boundary condition, 
 we obtain \alert{\bf initial boundary value problem (I-BVP)}
 %
 \begin{align*}
@@ -373,16 +375,22 @@ each term inside parenthesis to get
 %
 \begin{frame}{Exercise, 1D advection-diffusion equation (constant diffusion and velocity)}
 \begin{itemize}
-\item \alert{\textbf{Exercise:}} Assume velocity $v$ and diffusion coefficient
-$D$ are constant. How can we simplify
+\item \alert{\textbf{Quiz:}} Giving which assumptions can you simplify
 \[
 \frac{\partial u}{\partial t}+\frac{\partial(vu)}{\partial x}-\frac{\partial}{\partial x}\left(D\frac{\partial u}{\partial x}\right)+ \rho (u) =f?
 \]
-\hiddenpause
-\item \textbf{Answer:} We move both $v$ and $D$ outside the derivative
+%
+to 
+%
 \[
 \frac{\partial u}{\partial t}+v\frac{\partial u}{\partial x}-D\frac{\partial^{2}u}{\partial x}+ \rho (u) =f.
 \]
+\begin{center}
+		\href{http://etc.ch/YYq6}{\textcolor{indigo(dye)}{\tt http://etc.ch/YYq6}} \quad or \quad 
+		\includegraphics[height=0.2\columnwidth]{figures/reactive-transport/polls.png}
+	\end{center}
+\hiddenpause
+\item \alert{\textbf{Answer}}: Both $v$ and $D$ must be constant.
 \end{itemize}
 \end{frame}
 %
@@ -424,23 +432,26 @@ $D$ are constant. How can we simplify
 		\item{\bf Reaction equation} 
 		%
 		\begin{alignat*}{2}
-			\frac{\partial u}{\partial t}+R(u) & = 0, \quad  t > 0, \\[-5pt]
+			\tfrac{\partial u}{\partial t}+R(u) & = 0, \quad  t > 0, \\[-5pt]
 			u & = \bar{u}, \quad  t = 0,
 		\end{alignat*}
 		% 
 		is already discussed \alert{\bf chemical kinetic-equilibrium differential-algebraic equation (DAE)} 
 		%
 		\begin{alignat*}{4}
-			\frac{\mathrm{d}b_{e}}{\mathrm{d}t} & = f_e(n_e), %A_{e}(q_{e}+\nu_{e}^{{\rm T}}r)
+			\tfrac{\mathrm{d}b_{e}}{\mathrm{d}t} & = f_e(n_e), %A_{e}(q_{e}+\nu_{e}^{{\rm T}}r)
 			& \quad  &  t > 0, \\
-			\frac{\mathrm{d}n_{k}}{\mathrm{d}t} & = f_k(n_k),
+			\tfrac{\mathrm{d}n_{k}}{\mathrm{d}t} & = f_k(n_k),
 			%\nu_{k}^{{\rm T}}r+q_{k} 
 			&  \quad & t>0, \\
 			n_{e}  & = \varphi(T,P,b_{e}), & \quad  &  t > 0, \\
 			b_{e}  & = An_{e}^{\circ},       & \quad  & t = 0, \\
 			n_{k}  & = n_{k}^{\circ},         & \quad  & t=0.			
-		\end{alignat*} 
+		\end{alignat*}
+		%
+		solved by the scheme suitable for the stiff systems of ODEs and GEM approach.
 	\end{itemize}
+	
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
@@ -527,12 +538,18 @@ a point $x_{i}$
 f(x_{i}+\Delta x)=f(x_{i})+\frac{\partial f(x_{i})}{\partial x}\,\Delta x+\frac{1}{2}\frac{\partial^{2}f(x_{i})}{\partial x^{2}}\,\Delta x^{2}+\cdots+\frac{1}{n!}\frac{\partial^{n}f(x_{i})}{\partial x^{n}}\,\Delta x^{n}+\cdots
 \]
 \pause
-\item \alert{\textbf{Exercise:}} Write the Taylor expansion for $f(x)=e^{x}$ around
-$x_{i}=0$. 
+\item \alert{\textbf{Quiz:}} what is the Taylor expansion for $f(x)=e^{x}$ around
+$x_{i}=0$
+
+\begin{center}
+		\href{http://etc.ch/YYq6}{\textcolor{indigo(dye)}{\tt http://etc.ch/YYq6}} \quad or \quad 
+		\includegraphics[height=0.1\columnwidth]{figures/reactive-transport/polls.png}
+	\end{center}
+%
 \hiddenpause
 \item \textbf{Answer:}
 \[
-f(x_{i}+h)=e^{x_{i}+\Delta x} \approx 1+\, \Delta x+\frac{1}{2}\, \Delta x^{2}+\frac{1}{6}\, \Delta x^{3}+\cdots
+f(x_{i}+\Delta x)=e^{x_{i}+\Delta x} \approx 1+\, \Delta x+\frac{1}{2}\, \Delta x^{2}+\frac{1}{6}\, \Delta x^{3}+\cdots
 \]
 \end{itemize}
 \end{frame}
@@ -556,67 +573,78 @@ f(x_{i}+h)=e^{x_{i}+\Delta x} \approx 1+\, \Delta x+\frac{1}{2}\, \Delta x^{2}+\
 \begin{frame}{First-order FDM scheme}
 \begin{itemize}
 \item We can derive \alert{\textbf{finite difference approximations}} for derivatives 
-$\frac{\partial f(x_{i})}{\partial x}$, $\frac{\partial^{2}f(x_{i})}{\partial x^{2}}$, etc 
+$\frac{\partial f(x_{i})}{\partial x}$, $\frac{\partial^{2}f(x_{i})}{\partial x^{2}}$, etc: 
 %
-by truncating the Taylor expansion 
+% by truncating the Taylor expansion 
+% \[
+% f(x_{i}+\Delta x)=f(x_{i})+\frac{\partial f(x_{i})}{\partial x}\,\Delta x+\frac{1}{2}\frac{\partial^{2}f(x_{i})}{\partial x^{2}}\,\Delta x^{2}+\cdots+\frac{1}{n!}\frac{\partial^{n}f(x_{i})}{\partial x^{n}}\,\Delta x^{n}+\cdots
+% \]
+% %
+% up until the \alert{derivative order}. 
+\item {\bf 1st order approximation of $\frac{\partial f(x_{i})}{\partial x}$ }
 \[
-f(x_{i}+\Delta x)=f(x_{i})+\frac{\partial f(x_{i})}{\partial x}\,\Delta x+\frac{1}{2}\frac{\partial^{2}f(x_{i})}{\partial x^{2}}\,\Delta x^{2}+\cdots+\frac{1}{n!}\frac{\partial^{n}f(x_{i})}{\partial x^{n}}\,\Delta x^{n}+\cdots
+{\displaystyle \frac{\partial f(x_{i})}{\partial x}\approx\frac{f(x_{i}+h)-f(x_{i})}{\Delta x}} + O (\Delta x),
 \]
 %
-up until the \alert{derivative order}. 
-\pause
-\item For example, for {\bf 1st order approximation}
+\item {\bf 2nd order approximation} (central difference) of $\frac{\partial f(x_{i})}{\partial x}$ 
+%
 \[
-\begin{array}{ccc}
-{\displaystyle f(x_{i}+\Delta x)\approx f(x_{i})+\frac{\partial f(x_{i})}{\partial x}\, \Delta x} + O (\Delta x^2) \implies & {\displaystyle \frac{\partial f(x_{i})}{\partial x}\approx\frac{f(x_{i}+h)-f(x_{i})}{\Delta x}} + O (\Delta x),
-\end{array}
+\frac{\partial f(x_{i})}{\partial x}\approx\frac{f(x_{i}+\Delta x)-f(x_{i}-\Delta x)}{2\Delta x}+O(\Delta x^{2})
 \]
-the error decrease is of order $O (h)$ with decreasing $h$.
 %
-\pause
-\item \alert{\textbf{Exercise:}} Derive the {\bf second order approximation}, where the approximation error is proportional to $O(h^{2})$ with a decrease of $h$?
+\item {\bf 2nd order approximation} of $\frac{\partial^{2}f(x_{i})}{\partial x^{2}}$ 
 %
+\[
+\frac{\partial^{2}f(x_{i})}{\partial x^{2}} \approx\frac{f(x_{i}+\Delta x)-2f(x_{i})+f(x_{i}-\Delta x)}{\Delta x^{2}}
+\]
+%
+% the error decrease is of order $O (h)$ with decreasing $h$.
+%
+% \pause
+% \item \alert{\textbf{Exercise:}} Derive the {\bf second order approximation}, where the approximation error is proportional to $O(h^{2})$ with a decrease of $h$?
+% %
 \end{itemize}
 \end{frame}
 % --------------------------------------------------------------------------------------------------------------------%
 % Second-order FDM scheme
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Second-order FDM scheme, Central difference approximation}
-\begin{itemize}
-\item Write the following two {\bf truncated Taylor expansions}:
-\begin{align*}
-f(x_{i}+\Delta x) & =f(x_{i})+\frac{\partial f(x_{i})}{\partial x}\Delta x+\frac{1}{2}\frac{\partial^{2}f(x_{i})}{\partial x^{2}}\Delta x^{2}+O(\Delta x^{3})\\
-f(x_{i}-\Delta x) & =f(x_{i})-\frac{\partial f(x_{i})}{\partial x}\Delta x+\frac{1}{2}\frac{\partial^{2}f(x_{i})}{\partial x^{2}}\Delta x^{2}+O(\Delta x^{3})
-\end{align*}
-%
-\pause
-\item By subtracting the two equations, we can write
-\[
-\frac{\partial f(x_{i})}{\partial x}\approx\frac{f(x_{i}+\Delta x)-f(x_{i}-\Delta x)}{2\Delta x}+O(\Delta x^{2})
-\]
-which is a \alert{\bf central finite difference approximation} for $\partial f(x_{i})/\partial x$.
-\end{itemize}
-\end{frame}
+% \begin{frame}{Second-order FDM scheme, Central difference approximation}
+% \begin{itemize}
+% \item Write the following two {\bf truncated Taylor expansions}:
+% \begin{align*}
+% f(x_{i}+\Delta x) & =f(x_{i})+\frac{\partial f(x_{i})}{\partial x}\Delta x+\frac{1}{2}\frac{\partial^{2}f(x_{i})}{\partial x^{2}}\Delta x^{2}+O(\Delta x^{3})\\
+% f(x_{i}-\Delta x) & =f(x_{i})-\frac{\partial f(x_{i})}{\partial x}\Delta x+\frac{1}{2}\frac{\partial^{2}f(x_{i})}{\partial x^{2}}\Delta x^{2}+O(\Delta x^{3})
+% \end{align*}
+% %
+% \pause
+% \item By subtracting the two equations, we can write
+% \[
+% \frac{\partial f(x_{i})}{\partial x}\approx\frac{f(x_{i}+\Delta x)-f(x_{i}-\Delta x)}{2\Delta x}+O(\Delta x^{2})
+% \]
+% which is a \alert{\bf central finite difference approximation} for $\partial f(x_{i})/\partial x$.
+% \end{itemize}
+% \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Basics of finite difference method
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}{Usage of FDM to transform differential equation}
-\begin{itemize}
-\item We use the \alert{\bf finite difference formulas}
-\begin{align*}
-\frac{\partial f(x_{i})}{\partial x} & \approx\frac{f(x_{i}+\Delta x)-f(x_{i}-\Delta x)}{2\Delta x}\\
-\shortintertext{and}\frac{\partial^{2}f(x_{i})}{\partial x^{2}} & \approx\frac{f(x_{i}+\Delta x)-2f(x_{i})+f(x_{i}-\Delta x)}{\Delta x^{2}}
-\end{align*}
-to transform the \textbf{partial differential equation} (PDE)
-\[
-\frac{\partial u}{\partial t}+v\frac{\partial u}{\partial x}-D\frac{\partial^{2}u}{\partial x}=f \quad \mbox{on} \quad [x_L, x_R]
-\]
-into a \textbf{system of linear algebraic equations}.
-\end{itemize}
-\end{frame}
+% \begin{frame}{Usage of FDM to transform differential equation}
+% \begin{itemize}
+% \item We use the \alert{\bf finite difference formulas}
+% \begin{align*}
+% \frac{\partial f(x_{i})}{\partial x} & \approx\frac{f(x_{i}+\Delta x)-f(x_{i}-\Delta x)}{2\Delta x}\\
+% \shortintertext{and}
+% \frac{\partial^{2}f(x_{i})}{\partial x^{2}} & \approx\frac{f(x_{i}+\Delta x)-2f(x_{i})+f(x_{i}-\Delta x)}{\Delta x^{2}}
+% \end{align*}
+% to transform the \textbf{partial differential equation} (PDE)
+% \[
+% \frac{\partial u}{\partial t}+v\frac{\partial u}{\partial x}-D\frac{\partial^{2}u}{\partial x}=f \quad \mbox{on} \quad [x_L, x_R]
+% \]
+% into a \textbf{system of linear algebraic equations}.
+% \end{itemize}
+% \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Discretization of the transport equations
@@ -795,9 +823,8 @@ into the the following tridiagonal matrix form:
 \]
 \item \alert{\bf Tridiagonal matrix} is a band matrix that has nonzero elements on the main diagonal and first diagonal below and above it the main one.
 %
-\item \alert{\bf Exercise: } Find the values of the coefficients
-$\alert{a_{i}}, \alert{b_{i}}, \alert{c_{i}},$ and $\alert{d_{i}}$.
-\hiddenpause
+% \item \alert{\bf Exercise: } Find the values of the coefficients
+% $\alert{a_{i}}, \alert{b_{i}}, \alert{c_{i}},$ and $\alert{d_{i}}$.
 %\item \textbf{Answer:}
 \end{itemize}
 %\[
@@ -834,7 +861,7 @@ where
 %
 \begin{frame}{Discretization of transport equation: left boundary condition}
 \begin{itemize}
-\item On the \alert{\bf left boundary point}, $u=1$, and thus $u^{k}_{0}  =u^{k+1}_{0} =1.$ 
+\item On the \alert{\bf left boundary point}, $u=1$, and thus $u^{k}_{0}=u^{k+1}_{0} =1.$ 
 \item \textbf{Exercises: }What are the values of $a_{0}$, $b_{0}$, $c_{0}$
 and $d_{0}$ in the general equation:
 \[

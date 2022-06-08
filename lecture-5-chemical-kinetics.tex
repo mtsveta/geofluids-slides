@@ -33,9 +33,9 @@
 \begin{itemize}
 	\item combustion (turbulent combustion modeling),
 	\item atmospheric chemistry,
-	\item environmental/ecological modeling (e.g., Lotka--Volterra model), 
+	\item environmental/ecological modeling (e.g., Lotka--Volterra model describing the dynamics of the biological predator–prey interactions model), 
 	\item process engineering, and 
-	\item systems biology (e.g., cell cycle, metabolism networks and molecular signal transfer).
+	\item systems biology (with biological and biochemical processes such as cell cycle, metabolism networks and molecular signal transfer).
 \end{itemize}
 }
 
@@ -58,7 +58,7 @@
 \begin{frame}[<+->][shrink]{Global and elementary chemical kinetics reaction}
 	
 	\begin{itemize}
-		\item Kinetic mechanisms are described in a \textbf{single global step}. 
+		\item Quite often kinetic mechanisms are described in a \textbf{single global step}. 
 		\item \textbf{But!} In reality, such reaction happen in a series of elementary steps, \textbf{sequence of one or more
 			elementary reactions}:
 		\begin{itemize}
@@ -68,7 +68,7 @@
 		\end{itemize}
 		\item \alert{\textbf{Elementary chemical reactions}} is a transition between two atomic / molecular states. 
 		%
-		$$\mbox{State A} \xrightarrow[]{\text{Activation Energy}} \mbox{State B}$$
+		$$\mbox{State A} \xrightarrow[]{\text{Activation Energy}, \;E_a} \mbox{State B}$$
 		%
 		\item The \textbf{activation energy} between these two states determines \alert{the rate at which reactions occur}: 
 		%
@@ -111,7 +111,7 @@
 		%
 		\item \textbf{\alert{The time scale}}, on which the chemical reactions occur, spans many orders of magnitude (from microseconds to years).
 		%
-		\item Reactions are characterized by the so-called  \textbf{\alert{half-time}}.
+		\item Reactions are characterized by the so-called  \textbf{\alert{half-time}} (dependent on the nature and the order of reaction).
 		%
 		\item The range of time scales can differ by several orders of magnitude:
 		
@@ -237,11 +237,10 @@
 			$\bullet$ hydrocarbon + OH $\rightarrow$ alkyl radical + H$_2$O, \\[3pt]
 			$\bullet$ alkyl radical + O$_2$ ($^3\sum$) $\rightarrow$ alkylperoxy radical, \\[3pt]
 			$\bullet$ alkylperoxy radical + NO $\rightarrow$ alkoxy radical + NO$_2$, \\[3pt]
-			$\bullet$ alkoxy radical + O$_2$($^3\sum$) $\rightarrow$ aldehyde + HO. \\[3pt]
+			$\bullet$ alkoxy radical + O$_2$($^3\sum$) $\rightarrow$ aldehyde + HO. \\[10pt]
 		}
 		%
-		\item The ratio of hydrocarbons changes dependent on the type of pollution source.
-		\item No single species can be identified as reactants or products.
+		\item The atmospheric {\bf lifetimes of hydrocarbons} are determined by their {\bf reactivity towards OH} as well as by the {\bf average OH concentration level} $\Rightarrow$ these lifetimes {\bf vary from several hours to several years}.
 		\end{itemize}
 
 	
@@ -268,7 +267,9 @@
 %	
 \begin{itemize}
 	\item \textbf{\alert{The reaction rate}} is the rate at which reactants are consumed, 
-		or the rate at which products are formed,  $\mathsf{\frac{mol}{m^3 \cdot s}}$.
+		or the rate at which products are formed, 
+		%$\mathsf{\frac{mol}{s}}$.
+		$\mathsf{\frac{mol}{m^3 \cdot s}}$.
 	\pause
 	\item The reaction rate can be defined as \textbf{\alert{the rate of change of concentration}} of a
 reactant/product divided by its stoichiometric coefficient. 
@@ -285,14 +286,11 @@ reactant/product divided by its stoichiometric coefficient.
 		%
 		the reaction rate is defined as
 		%
-		\[r = \tfrac{1}{2}  \tfrac{d \mathsf{[H_2O]}}{dt} = - \tfrac{1}{2}  \tfrac{d \mathsf{[H_2]}}{dt} = -\tfrac{d \mathsf{[O_2]}}{dt}.\] 
+		\[r = \tfrac{1}{2}  \tfrac{d \mathsf{[H_2O]}}{dt} = \alert{-} \tfrac{1}{2}  \tfrac{d \mathsf{[H_2]}}{dt} = \alert{-}\tfrac{d \mathsf{[O_2]}}{dt}.\] 
 		\vskip -10pt
 		%
 		\pause
-		\item For more general reaction\\[-5pt]
-		%
-		\[0 \rightleftharpoons \sum_{i=1}^{N} \nu_i \,  \mathsf{A_i},\]
-		\vskip -5pt
+		\item For more \textbf{\alert{general reaction}} $0 \rightleftharpoons \sum_{i=1}^{N} \nu_i \,  \mathsf{A_i}$, 
 		%
 		we obtain
 		% 
@@ -344,29 +342,31 @@ reactant/product divided by its stoichiometric coefficient.
 %
 \end{frame}
 
-\begin{frame}{Example, Production/consumption rate}
+\begin{frame}{Quiz, Production/consumption rate}
 	
 	\begin{itemize}
-		\item Knowing that $r = \tfrac{1}{\nu_i}  \, \tfrac{d [ \mathsf{A_i}]}{dt} = \tfrac{1}{\nu_i} \, r(\mathsf{A_i}),$ where $\nu_i > 0$ for products and $\nu_i < 0$ for reactants. 
-		%
-		\pause
 		\item Consider the reaction 
 		%
 		$$\mathsf{a\, A + b\, B \rightleftharpoons c \, C + d \, D}.$$
 		%
-		\alert{\bf Quiz} (multiple choice): Which statements about reaction/production rates are correct?
+		\item Knowing that $r = \tfrac{1}{\nu_i}  \, \tfrac{d [ \mathsf{A_i}]}{dt} = \tfrac{1}{\nu_i} \, r(\mathsf{A_i}),$ where $\nu_i > 0$ for products and $\nu_i < 0$ for reactants. 
 		%
+		\pause
+		\alert{\bf Quiz} (multiple choice): which statements about reaction/production rates are correct?
+		%
+		\vskip 5pt
 		\begin{center}
-			\href{http://etc.ch/xREb}{\textcolor{indigo(dye)}{\tt http://etc.ch/xREb}} or 
-			\includegraphics[height=0.15\columnwidth]{figures/chemical-kinetics/polls.png}
+    	\href{http://etc.ch/wsKw}{\textcolor{indigo(dye)}{\tt http://etc.ch/wsKw}} \quad
+			or 
+		    \quad	\includegraphics[height=0.12\columnwidth]{figures/chemical-kinetics/polls.png}
 		\end{center}
 		\hiddenpause 
 		\vskip 10pt
-		\item {\bf Answer}: the correct relations on the reaction/production rates are
+		\item \alert{\bf Answer}: the correct relations on the reaction/production rates are
 		%
 		\begin{alignat*}{2}
-		- \tfrac{1}{a} \, r(\mathsf{A}) & = \tfrac{1}{d}\,  r(\mathsf{D}) \quad \Rightarrow \quad r(\mathsf{A}) = - \tfrac{a}{d} \,  r(\mathsf{D}), \\
-		- \tfrac{1}{b} \, r(\mathsf{B}) &  = \tfrac{1}{d} \,  r(\mathsf{D}), \\
+		- \tfrac{1}{a} \, r(\mathsf{A}) & = \tfrac{1}{d}\,  r(\mathsf{D}) \quad \Rightarrow \quad r(\mathsf{A}) = - \tfrac{a}{d} \,  r(\mathsf{D}), \\[-3pt]
+		- \tfrac{1}{b} \, r(\mathsf{B}) &  = \tfrac{1}{d} \,  r(\mathsf{D}), \\[-3pt]
 		\tfrac{1}{c} \,  r(\mathsf{C})  & = \tfrac{1}{d} \,  r(\mathsf{D}) \quad \Rightarrow \quad r(\mathsf{C}) = \tfrac{c}{d} \,  r(\mathsf{D}).
 		\end{alignat*}	
 	\end{itemize}
@@ -390,9 +390,9 @@ can be defined {\bf proportional to the concentrations of the reactants raised t
 where
 %
 \begin{itemize}
-	\item $k > 0$ is the rate coefficient, 
+	\item $k > 0$ is the {\bf rate coefficient}, 
 	\item $[\mathsf{A_i}]$ is a molar concentrations ($\mathsf{\tfrac{mol}{m^3}}$), 
-	\item $\alpha_i > 0$ is the order of reaction with respect to species $\mathsf{A_i}$, %such that $\alpha := \sum_{i}^{N} \alpha_i$ is the overall order of reaction, 
+	\item $\alpha_i > 0$ is the {\bf order of reaction with respect to species $\mathsf{A_i}$}, %such that $\alpha := \sum_{i}^{N} \alpha_i$ is the overall order of reaction, 
 	and 
 	\item $N$ is the number of species.
 \end{itemize}
@@ -401,6 +401,29 @@ where
 %
 \end{frame}
 %
+\begin{frame}{Quiz, Reaction rate via concentration of reactants}
+	
+	\begin{itemize}
+		\item Consider the elementary reaction 
+		%
+		$$\mathsf{a\, A + b\, B \rightleftharpoons c \, C + d \, D}.$$
+		%
+		\item 
+		\alert{\bf Quiz}: what is the reaction rate of this reaction?
+		%
+		\vskip 5pt
+		\begin{center}
+    	\href{http://etc.ch/wsKw}{\textcolor{indigo(dye)}{\tt http://etc.ch/wsKw}} \quad
+			or 
+		    \quad	\includegraphics[height=0.12\columnwidth]{figures/chemical-kinetics/polls.png}
+		\end{center}
+		%
+		\hiddenpause 
+		\vskip 10pt
+ 		\item \alert{\bf Answer}: the correct reaction rate is 
+ 		$\mathsf{r = k {[A]}^a {[B]}^b}$.
+	\end{itemize}
+\end{frame}
 % --------------------------------------------------------------------------------------------------------------------%
 % Order of reaction vs. stoichiometry
 % --------------------------------------------------------------------------------------------------------------------%
@@ -409,6 +432,11 @@ where
 	%
 	\small
 	\begin{itemize}
+	\item The sum of the powers is \alert{\bf the overall order of the reaction}, i.e., 
+	%
+	\[\mathsf{\alpha = \sum_{i=1}^{N} \alpha_i}.\]
+	%
+	\pause
 	\item For the overall reaction equation, \alert{\bf the order does not necessarily reflect the stoichiometry}, i.e., 
 	%
 	$\alpha_i \neq \nu_i$,
@@ -423,10 +451,7 @@ where
 %    \end{itemize}
 	%
 	\pause
-	\item The sum of the powers is \alert{\bf the overall order of the reaction}, i.e., 
-	%
-	\[\mathsf{\alpha = \sum_{i=1}^{N} \alpha_i}.\]
-	%
+	\vskip -5pt
 	\pause
 	\item For elementary reactions, {\bf the reaction orders and the absolute value of the stoichiometric
 coefficients} of the reactants are \alert{\bf commonly the same}. \\[5pt]
@@ -443,6 +468,31 @@ coefficients} of the reactants are \alert{\bf commonly the same}. \\[5pt]
 	%
 \end{frame}
 %
+\begin{frame}{Quiz, Order of reaction}
+	
+	\begin{itemize}
+		\item Consider the reaction 
+		%
+		$$\mathsf{
+		C_{6}H_{5}N_{2}Cl(aq) + H_{2}O (l) 
+        \rightleftharpoons
+        C_{6}H_{5}OH(aq) + N_{2}(g) + HCl(aq)}.$$
+		%
+		\item 
+		\alert{\bf Quiz}: given that $\mathsf{r = k [C_{6}H_{5}N_{2}Cl(aq)]^1 [H_{2}O(l)]^0}$, what is the overall order of this reaction?
+		%
+		\vskip 5pt
+		\begin{center}
+    	\href{http://etc.ch/wsKw}{\textcolor{indigo(dye)}{\tt http://etc.ch/wsKw}} \quad
+			or 
+		    \quad	\includegraphics[height=0.12\columnwidth]{figures/chemical-kinetics/polls.png}
+		\end{center}
+		%
+		\hiddenpause 
+		\vskip 10pt
+ 		\item \alert{\bf Answer}: the overall order is 1.
+	\end{itemize}
+\end{frame}
 % --------------------------------------------------------------------------------------------------------------------%
 % Stoichometry in intermediate reactions
 % --------------------------------------------------------------------------------------------------------------------%
@@ -501,7 +551,7 @@ coefficients} of the reactants are \alert{\bf commonly the same}. \\[5pt]
 	$$r := \tfrac{1}{\nu_i}  \, \tfrac{d [ \mathsf{A_i}]}{dt} \quad \mbox{and} \quad 
 		r := k \prod_{i=1}^{N} [\mathsf{A_i}]^{\alpha_i},$$
 	the {\bf differential equation} is used.
-	\item For simple cases, it may be analytically integrated (see Table \ref{tab:differential-integral-forms}).
+	\item For simple cases, it may be analytically integrated (see Table \ref{tab:differential-integral-forms}) to obtain \alert{\bf the integral form}.
 	\item \alert{\bf The half-life of the reaction} is the time required for the reagent concentration be reduced to half of its initial
 value.
 \end{itemize}
@@ -511,11 +561,11 @@ value.
 		\toprule 
 		Reaction & Order & Differential Form & Integrated form & Half-time \\[5pt]
 		\midrule 
-		A $\rightarrow$ B & 0 & $-\tfrac{d \mathsf{[A]}}{dt} = k$ & $\mathsf{[A]} = \mathsf{[A]_0} - k\,t$ & 
-		$t_{1/2} = \tfrac{\mathsf{[A]_0}}{2\,k}$ \\[5pt]
-		A $\rightarrow$ C & 1 & $-\tfrac{d \mathsf{[A]}}{dt} = k\, \mathsf{[A]}$ & $\ln \mathsf{[A]} = \ln \mathsf{[A]_0} - k\,t$ & $t_{1/2} = \tfrac{\ln 2}{k}$ \\[5pt]
-		A + B  $\rightarrow$ C & 2 & $-\tfrac{d \mathsf{[A]}}{dt} = k\, \mathsf{[A]}\, \mathsf{[B]}$ & 
-		$k\,t = \tfrac{1}{\mathsf{[B]_0} + \mathsf{[A]_0}} \ln \tfrac{\mathsf{[B]_0} \mathsf{[A]}}{\mathsf{[B]} \mathsf{[A]_0}}$ & $t_{1/2} = \tfrac{1}{k \, \mathsf{[A]_0}}$ (B = A) \\[5pt]
+		A $\rightarrow$ B & 0 & $-\tfrac{d \mathsf{[A]}}{dt} = k_0$ & $\mathsf{[A]} = \mathsf{[A]_0} - k_0\,t$ & 
+		$t_{1/2} = \tfrac{\mathsf{[A]_0}}{2\,k_0}$ \\[5pt]
+		A $\rightarrow$ B + C & 1 & $-\tfrac{d \mathsf{[A]}}{dt} = k_1\, \mathsf{[A]}$ & $\ln \mathsf{[A]} = \ln \mathsf{[A]_0} - k_1\,t$ & $t_{1/2} = \tfrac{\ln 2}{k_1}$ \\[5pt]
+		A + B  $\rightarrow$ C & 2 & $-\tfrac{d \mathsf{[A]}}{dt} = k_2\, \mathsf{[A]}\, \mathsf{[B]}$ & 
+		$k_2\,t = \tfrac{1}{\mathsf{[B]_0} + \mathsf{[A]_0}} \ln \tfrac{\mathsf{[B]_0} \mathsf{[A]}}{\mathsf{[B]} \mathsf{[A]_0}}$ & $t_{1/2} = \tfrac{1}{k_2 \, \mathsf{[A]_0}}$ (B = A) \\[5pt]
 		\bottomrule
 	\end{tabular*}
 	%
@@ -528,23 +578,64 @@ value.
 % Example, Differential \& integral forms for the reaction rate, Half-time
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[<+->]{Example, Differential \& integral forms for the reaction rate, Half-time}
+\begin{frame}{Quiz, Differential \& integral forms for the reaction rate, Half-time}
 	%
 	\begin{itemize}
-		\item \alert{\bf Quiz}: Given a first-order reactant and rate constant  $k$ = 1.5e-4 1/min, what is the the half-life of the reactant if the time is defined by  $t_{1/2} = \tfrac{\ln 2}{k}$?
+		\item \alert{\bf Quiz}: Given a first-order reactant and rate constant  $k_1$ = 1.5e-4 1/min, what is the the half-life of the reactant if the time is defined by  $t_{1/2} = \tfrac{\ln 2}{k_1}$?
 		%
 		\begin{center}
-			\href{http://etc.ch/xREb}{\textcolor{indigo(dye)}{\tt http://etc.ch/xREb}} or 
+			\href{http://etc.ch/wsKw}{\textcolor{indigo(dye)}{\tt http://etc.ch/wsKw}} 
+			\quad or \quad  
 			\includegraphics[height=0.2\columnwidth]{figures/chemical-kinetics/polls.png}
 		\end{center}
-		\hiddenpause 
-		\vskip 10pt
-		\item {\bf Answer}: ln2 / 1.5e-4 min = 
-		ln2 / 0.0000025 s $\approx$ 27.73e4 s
+ 		\hiddenpause 
+ 		\vskip 10pt
+ 		\item {\bf Answer}: ln(2) / 1.5e-4 min = 
+ 		ln2 / 0.0000025 s $\approx$ 27.73e4 s
 	\end{itemize}
 	%
 \end{frame}
 %
+\begin{frame}{Quiz, Reaction rate for the different order reactions}
+	%
+	\begin{itemize}
+		\item \alert{\bf Quiz} (multi-choice): Knowing formulation of the reactions rate for different order reactions
+		
+		\begin{table}
+\footnotesize
+	\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}lcccc}
+		\toprule 
+		Reaction & Order & Differential Form & Integrated form & Half-time \\[5pt]
+		\midrule 
+		A $\rightarrow$ B & 0 & $-\tfrac{d \mathsf{[A]}}{dt} = k_0$ & $\mathsf{[A]} = \mathsf{[A]_0} - k_0\,t$ & 
+		$t_{1/2} = \tfrac{\mathsf{[A]_0}}{2\,k_0}$ \\[5pt]
+		A $\rightarrow$ B + C & 1 & $-\tfrac{d \mathsf{[A]}}{dt} = k_1\, \mathsf{[A]}$ & $\ln \mathsf{[A]} = \ln \mathsf{[A]_0} - k_1\,t$ & $t_{1/2} = \tfrac{\ln 2}{k_1}$ \\[5pt]
+		A + B  $\rightarrow$ C & 2 & $-\tfrac{d \mathsf{[A]}}{dt} = k_2\, \mathsf{[A]}\, \mathsf{[B]}$ & 
+		$k_2\,t = \tfrac{1}{\mathsf{[B]_0} + \mathsf{[A]_0}} \ln \tfrac{\mathsf{[B]_0} \mathsf{[A]}}{\mathsf{[B]} \mathsf{[A]_0}}$ & $t_{1/2} = \tfrac{1}{k_2 \, \mathsf{[A]_0}}$ (B = A) \\[5pt]
+		\bottomrule
+	\end{tabular*}
+	%
+\end{table}
+		\vskip 10pt
+		%
+		Which statements below are correct?
+		%
+		\begin{center}
+			\href{http://etc.ch/wsKw}{\textcolor{indigo(dye)}{\tt http://etc.ch/wsKw}} 
+			\quad or \quad  
+			\includegraphics[height=0.1\columnwidth]{figures/chemical-kinetics/polls.png}
+		\end{center}
+		\hiddenpause 
+		\vskip 10pt
+		\item {\bf Answer}: Normally, the greater the concentration of reactants, the faster the reaction rate will occur. But this is not true of zero order reactions! 
+	\end{itemize}
+	%
+\end{frame}
+\begin{frame}
+\centering
+\includegraphics[height=0.6\textwidth]{figures/chemical-kinetics/maren-brener-slide.png}
+
+\end{frame}
 % --------------------------------------------------------------------------------------------------------------------%
 % Mass action kinetics and corresponding kinetic system of ODEs
 % --------------------------------------------------------------------------------------------------------------------%
@@ -568,11 +659,11 @@ value.
 		\end{itemize} 
 	%
 	\pause
-	\item \alert{\bf Kinetic system of ordinary differential equastions ODEs} defines the relationship between 
+	\item \alert{\bf Kinetic system of ordinary differential equations ODEs} defines the relationship between 
 	{\bf production rates of the species} $\tfrac{d \mathsf{[A_i]}}{dt}$ and {\bf reaction rates} $r_j$:
 	%
 	\[
-	\tfrac{d \mathsf{[A_j]}}{dt} = \sum_{j=1}^{\mathsf{N}} \nu_{ji} r_j, \quad j = 1, \ldots, \mathsf{M}.
+	\tfrac{d \mathsf{[A_i]}}{dt} = \sum_{j=1}^{\mathsf{M}} \nu_{ji} r_j, \quad i = 1, \ldots, \mathsf{N}.
 	\]
 	\vskip -5pt
 	\pause
@@ -580,9 +671,9 @@ value.
 	\alert{\bf initial value problem}
 	%
 	\[
-	\tfrac{d \mathsf{[A_j]}}{dt} = \sum_{j=1}^{\mathsf{N}} \nu_{ji} r_j, 
-	\quad [A_j](0) = [A_j]_0,
-	\quad j = 1, \ldots, \mathsf{M}.
+	\tfrac{d \mathsf{[A_i]}}{dt} = \sum_{j=1}^{\mathsf{M}} \nu_{ji} r_j, 
+	\quad [A_i](0) = [A_i]_0,
+	\quad i = 1, \ldots, \mathsf{N}.
 	\]
 	\end{itemize}
 	%
@@ -596,7 +687,7 @@ value.
 		\begin{itemize}
 		\item The overall reaction $\mathsf{2 \, H_2 + O_2 \rightleftharpoons 2\, H_2O}$ can be 
 		decomposed into the following $M=6$ elementary steps with corresponding 
-		the stoichiometry matrix $\nu \in \mathbb{R}^{6 \times 8}$
+		the stoichiometry matrix $\nu \in \mathbb{R}^{6 \times 8}$, $\nu = \{\nu_{i, j}\}_{i = 1, ...,6; j = 1, ..., 8}$
 			\lcol
 			{\scriptsize
 			\begin{alignat*}{4}
@@ -605,13 +696,14 @@ value.
 				R_3: & \quad \mathsf{H_2 + OH \xrightleftharpoons[]{k_3} H + H_2O}     && r_3 = k_3  \mathsf{[H_2][OH] } \\[-5pt]
 				R_4: & \quad \mathsf{H_2 + O \xrightleftharpoons[]{k_4} H + OH}           && r_4 = k_4  \mathsf{[H_2][O] } \\[-5pt]
 				R_5: & \quad \mathsf{O_2 + H + M \xrightleftharpoons[]{k_5} HO_2 + M} && r_5 = k_5  \mathsf{[O_2][H][M] } \\[-5pt]
-				R_6: & \quad \mathsf{HO_2 + OH \xrightleftharpoons[]{k_6} H_2O + OH} && r_6 = k_6  \mathsf{[HO_2][OH] }
+				R_6: & \quad \mathsf{HO_2 + OH \xrightleftharpoons[]{k_6} H_2O + O_2} && r_6 = k_6  \mathsf{[HO_2][OH] }
 			\end{alignat*}
 			}
 			\rcol
 			{\small
 				\vskip -30pt
 			\only<1	>{
+			\vskip 15pt
 			\[
 			\nu = 
 			\kbordermatrix{
@@ -621,32 +713,33 @@ value.
 				R_3 &   1 & -1 & 0 & 1 & 0 & \alert{*} & -1 & 0\\[5pt]
 				R_4 &  1 & -1 & 0 & 0 & -1 & \alert{*} & 1 & 0\\[5pt]
 				R_5 & -1 &  0 & 1 & 0 & 0 & \alert{*} & 0 & 0\\[5pt]
-				R_6 &  0 &  0 & -1 & 1 & 0 & \alert{*} & 0 & 0\\[5pt]
+				R_6 &  0 &  0 & -1 & 1 & 0 & \alert{*} & -1 & 0\\[5pt]
 			}
 			\]
 			}
 			\only<2>{
+			\vskip 15pt
 			\[
 			\nu = 
 			\kbordermatrix{
 				& \mathsf{H} & \mathsf{H_2} & \mathsf{HO_2} & \mathsf{H_2O} & \mathsf{O} & \mathsf{O_2} & \mathsf{OH} & \mathsf{M} \\
-				R_1 &   1 & -1 & 1 & 0 & 0 & -1 & 0 & 0\\[10pt]
-				R_2 & -1 &  0 & 0 & 0 & 1 & -1 & 1 & 0\\[10pt]
-				R_3 &   1 & -1 & 0 & 1 & 0 & 0 & -1 & 0\\[5pt]
-				R_4 &  1 & -1 & 0 & 0 & -1 & 0 & 1 & 0\\[5pt]
-				R_5 & -1 &  0 & 1 & 0 & 0 & -1 & 0 & 0\\[5pt]
-				R_6 &  0 &  0 & -1 & 1 & 0 & 0 & 0 & 0\\[5pt]
+				R_1 &   1 & -1 & 1 & 0 & 0 & \alert{-1} & 0 & 0\\[10pt]
+				R_2 & -1 &  0 & 0 & 0 & 1 & \alert{-1} & 1 & 0\\[10pt]
+				R_3 &   1 & -1 & 0 & 1 & 0 & \alert{0} & -1 & 0\\[5pt]
+				R_4 &  1 & -1 & 0 & 0 & -1 & \alert{0} & 1 & 0\\[5pt]
+				R_5 & -1 &  0 & 1 & 0 & 0 & \alert{-1} & 0 & 0\\[5pt]
+				R_6 &  0 &  0 & -1 & 1 & 0 & \alert{1} & -1 & 0\\[5pt]
 			}
 			\]
 			}
 			}
 			\ecol
 	%
-	\vskip -15pt 
+	\vskip 5pt 
 	\item \alert{\bf Quiz}: What are the coefficients in the column with the O$_2$? \\[5pt]
 	\begin{center}
-		\href{http://etc.ch/xREb}{\textcolor{indigo(dye)}{\tt http://etc.ch/xREb}} \quad or \quad
-		\includegraphics[height=0.1\columnwidth]{figures/chemical-kinetics/polls.png}
+		\href{http://etc.ch/wsKw}{\textcolor{indigo(dye)}{\tt http://etc.ch/wsKw}} \quad or \quad
+		\includegraphics[height=0.09\columnwidth]{figures/chemical-kinetics/polls.png}
 	\end{center}
 %	\item The production rates can be formulated as follows: 
 %	{\footnotesize
@@ -670,7 +763,7 @@ value.
 			R_3: & \quad \mathsf{H_2 + OH \xrightleftharpoons[]{k_3} H + H_2O}     && r_3 = k_3  \mathsf{[H_2][OH] } \\[-5pt]
 			R_4: & \quad \mathsf{H_2 + O \xrightleftharpoons[]{k_4} H + OH}           && r_4 = k_4  \mathsf{[H_2][O] } \\[-5pt]
 			R_5: & \quad \mathsf{O_2 + H + M \xrightleftharpoons[]{k_5} HO_2 + M} && r_5 = k_5  \mathsf{[O_2][H][M] } \\[-5pt]
-			R_6: & \quad \mathsf{HO_2 + OH \xrightleftharpoons[]{k_6} H_2O + OH} && r_6 = k_6  \mathsf{[HO_2][OH] }
+			R_6: & \quad \mathsf{HO_2 + OH \xrightleftharpoons[]{k_6} H_2O + O_2} && r_6 = k_6  \mathsf{[HO_2][OH] }
 		\end{alignat*}
 	}
 	\rcol
@@ -685,12 +778,12 @@ value.
 			R_3 &   1 & -1 & 0 & 1 & 0 & 0 & -1 & 0\\[5pt]
 			R_4 &  1 & -1 & 0 & 0 & -1 & 0 & 1 & 0\\[5pt]
 			R_5 & -1 &  0 & 1 & 0 & 0 & -1 & 0 & 0\\[5pt]
-			R_6 &  0 &  0 & -1 & 1 & 0 & 0 & 0 & 0\\[5pt]
+			R_6 &  0 &  0 & -1 & 1 & 0 & 1 & -1 & 0\\[5pt]
 		}
 		\]
 	}
 	\ecol
-	\vskip -10pt
+	\vskip 5pt
 	\begin{itemize}
 		\item The production rates can be formulated as follows: 
 		{\footnotesize
@@ -704,7 +797,7 @@ value.
 		%\vskip -35pt
 		\item \alert{\bf Quiz}: What is the right-hand side for the $\tfrac{d\mathsf{HO_2}}{dt}$?
 		%\begin{right}
-			\href{http://etc.ch/xREb}{\textcolor{indigo(dye)}{\tt http://etc.ch/xREb}} \quad or \quad
+			\href{http://etc.ch/wsKw}{\textcolor{indigo(dye)}{\tt http://etc.ch/wsKw}} \quad or \quad
 			\includegraphics[height=0.08\columnwidth]{figures/chemical-kinetics/polls.png}
 		%\end{right}
 		%
@@ -762,7 +855,7 @@ value.
 		\end{itemize}
 		%
 		\pause
-		\item $E_a$ is is the {\bf minimum energy} that the reactant molecules must possess before the reaction can occur (bigger $E$ is $\Rightarrow$ smaller is the reaction rate $\Rightarrow$ slower the reaction will proceed).
+		\item $E_a$ is is the {\bf minimum energy} that the reactant molecules must possess before the reaction can occur (bigger $E_a$ is $\Rightarrow$ smaller is the reaction rate $\Rightarrow$ slower the reaction will proceed).
 		\pause
 		\item $E_a$ is {\bf determined experimentally} by performing the reaction at several temperatures. 
 		%\pause
@@ -781,10 +874,9 @@ value.
 		\item After taking the {\bf natural logarithm of the Arrhenius equation}, one obtains
 		%
 		\[
-		\ln k := \ln A - \tfrac{E_a}{R} \, \tfrac{1}{T},
+		\underbrace{\ln k}_\text{$y$} := \ln A - \tfrac{E_a}{R} \, \underbrace{\tfrac{1}{T}}_\text{$x$},
 		\]
 		%
-		\item Assume that $y:=\ln k$ and $	x:=\tfrac{1}{T}$. 
 		\item Then, the  graph of $y = \ln A - \tfrac{E_a}{R} \, x$ is a \alert{\bf linear function}
 		with slope $\tan \alpha = - \tfrac{E_a}{R}$ and intersect $ \ln A$:
 		%
@@ -818,12 +910,11 @@ value.
 %
 \begin{frame}{Alternative forms of Arrhenius equation}
 	\begin{itemize}
-		\item In {\bf high-temperature gas-phase kinetic systems} (e.g., combustion and pyrolytic
-		systems) the temperature dependence of the rate coefficient is described by the 
+		\item In {\bf high-temperature gas-phase kinetic systems} (e.g., combustion systems) the temperature dependence of the rate coefficient is described by the 
 		\alert{\bf modified / extended Arrhenius equation}:
 		%
 		\[
-		k := B\,T^n e^{-\tfrac{C}{R\, T}},
+		k := B\,\alert{T^n} e^{-\tfrac{C}{R\, T}},
 		\]
 		%
 		where $B \neq A$ and $C \neq E_a$.
@@ -870,7 +961,6 @@ value.
 		\subfloat[Arrhenius plot]{\includegraphics[width=0.4\textwidth]{figures/chemical-kinetics/arrhenius-plot}} \qquad \qquad
  		\subfloat[Extended Arrhenius plot]{\includegraphics[width=0.38\textwidth]{figures/chemical-kinetics/extended-arrhenius-plot}}
 	\end{figure}
-
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
@@ -912,26 +1002,45 @@ value.
 		\tfrac{d\mathsf{[C]}}{dt} = \tfrac{k_1 \, k_3 \, \mathsf{[A]\, [M]}}{\alert<2>{k_2 \, [M]}  + k_3}, 
 		\]
 		where M represents applied pressure.\\[5pt]
-		%
-		\pause
-		\pause
-		\item {\bf Under low pressure}, [M] is very small ($k_2\, \mathsf{M} \ll k_3$), then 
-		%
-		\[	
-		\tfrac{d\mathsf{[C]}}{dt} = k_{\sf low} \, \mathsf{[A]\, [M]},
-		\]
-		%
-		where $k_{\sf low}$ is the {\bf reaction rate coefficient at low pressure}.\\[5pt]
-		%
-		\pause
-		\item {\bf For high pressure}, [M] is large  ($k_2\, \mathsf{M} \gg k_3$), then 
-		%
-		\[	
-		\tfrac{d\mathsf{[C]}}{dt} = k_{\sf high} \, \mathsf{[A]},
-		\]
-		%
-		where $k_{\sf high} $ is the {\bf reaction rate coefficient at high pressure}.
 	\end{itemize}
+% 	\begin{itemize}
+% 		%
+% 		\item {\bf Under low pressure}, [M] is very small ($k_2\, \mathsf{M} \ll k_3$), then 
+% 		%
+% 		\[	
+% 		\tfrac{d\mathsf{[C]}}{dt} = k_{\sf low} \, \mathsf{[A]\, [M]},
+% 		\]
+% 		%
+% 		where $k_{\sf low}$ is the {\bf reaction rate coefficient at low pressure}.\\[5pt]
+% 		%
+% 		\pause
+% 		\item {\bf For high pressure}, [M] is large  ($k_2\, \mathsf{M} \gg k_3$), then 
+% 		%
+% 		\[	
+% 		\tfrac{d\mathsf{[C]}}{dt} = k_{\sf high} \, \mathsf{[A]},
+% 		\]
+% 		%
+% 		where $k_{\sf high} $ is the {\bf reaction rate coefficient at high pressure}.
+% 	\end{itemize}
+    \vskip 20pt
+	\lcol
+	%\vskip 5pt
+	{\bf For low pressure}: [M] is small ($k_2\, \mathsf{M} \ll k_3$), then 
+	%
+	\[	
+	\tfrac{d\mathsf{[C]}}{dt} = k_{\sf low} \, \mathsf{[A]\, [M]},
+	\]
+	%
+	where $k_{\sf low}$ is the {\bf reaction rate coefficient at low pressure}.
+	\rcol
+	{\bf For high pressure}: [M] is large  ($k_2\, \mathsf{M} \gg k_3$), then 
+	%
+	\[	
+	\tfrac{d\mathsf{[C]}}{dt} = k_{\sf high} \, \mathsf{[A]},
+	\]
+	%
+	where $k_{\sf high} $ is the {\bf reaction rate coefficient at high pressure}.
+	\ecol
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
@@ -976,17 +1085,17 @@ value.
 	%
 	\small
 	\begin{itemize}
-		\item The \alert{\bf overall reaction mechanism} is the result of {\bf all the elementary reactions} in the mechanism.
+		\item The \alert{\bf overall reaction mechanism} is the result of {\bf all the elementary reactions mechanism}.
 		%
 		\item {\bf The reaction rate} and {\bf the reaction rate coefficient} are \alert{\bf determined by experiments}.
 		%
-		\item \alert{\bf The units of the reaction rate coefficients} $k$ depend on the relation 
-		$[k] = \tfrac{1}{\mathsf{s \, [mol/m^3]}^{n-1}}$, where $n$ is the order of reaction. \\
+% 		\item \alert{\bf The units of the reaction rate coefficients} $k$ depend on the relation 
+% 		$[k] = \tfrac{1}{\mathsf{s \, [mol/m^3]}^{n-1}}$, where $n$ is the order of reaction. \\
 		%{\bf Example}: for  the rate law $\tfrac{dw}{dt} = k \mathsf{[A][B]}$ of the second-order reaction, 
 		%$[k] = \tfrac{\mathsf{m^3}}{\mathsf{s \, mol}}$. 
 		%
 		%
-		\item The orders are generally \alert{\bf not equal} to the stoichiometric coefficients of the overall
+		\item {\bf The orders} are generally \alert{\bf not equal} to {\bf the stoichiometric coefficients} of the overall
 		reaction equation.
 		%
 %		\item Unlike elementary reactions, the overall reaction rate {\bf may contain the concentration of
@@ -1015,7 +1124,7 @@ value.
 % Reaction mechanism
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[<+->]{Reaction mechanisms}
+\begin{frame}{Reaction mechanisms}
 	%
 	\small
 	\begin{itemize}
@@ -1027,15 +1136,18 @@ value.
 			\item independent.
 		\end{itemize}
 		%
+		\pause
 		\item \alert{\bf In series occurring reactions} (consecutive reactions), reactant forms an {\bf intermediate product}, which subsequently reacts to form another product:
 		%
 		\[\mathsf{A} \xrightleftharpoons[]{k_1} \mathsf{B} \xrightleftharpoons[]{k_2} \mathsf{C}. \]
 		%
 		%
+		\pause
 		\item \alert{\bf In parallel reactions} (competitive reactions), the reagent is consumed by two different reaction paths to form {\bf different products}:
 		%
 		\[\mathsf{A} \xrightleftharpoons[]{k_1} \mathsf{B} \quad \mbox{and}\quad \mathsf{A} \xrightleftharpoons[]{k_2} \mathsf{C}. \]
 		%
+		\pause
 		\item Usually, kinetic mechanisms involve {\bf a combination of both reactions in series or parallel}.
 	\end{itemize}
 	%
@@ -1045,13 +1157,15 @@ value.
 % Example, Formation of butadiene C4H6 from ethanol
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[<+->]{Example, Formation of butadiene C$_4$H$_6$ from ethanol}
+\begin{frame}{Example, Formation of butadiene C$_4$H$_6$ from ethanol}
 	%
 	\begin{itemize}
 		\item \alert{\bf Butadiene} $\mathsf{C_4H_6}$ is the organic compound, colorless gas that is easily condensed to a liquid.
 		%
+		\pause
 		\item It is important industrially as a monomer in the \alert{\bf production of synthetic rubber}. 
 		%
+		\pause
 		\item In South America, Eastern Europe, China, and India, butadiene is {\bf produced from ethanol}:		
 		%
 		%\item The kinetic mechanisms involve reactions in series or parallel:
@@ -1059,6 +1173,7 @@ value.
 		%
 	\end{itemize}
 	\lcol
+	\pause
 	\begin{alignat*}{2}
 		& \mathsf{C_2H_5OH \xrightleftharpoons[]{} C_2H_4 + H_2O,} \quad \mbox{(parallel)}\\
 		& \mathsf{C_2H_5OH \xrightleftharpoons[]{} CH_3CHO + H_2,}  \quad \mbox{(parallel)}\\
@@ -1081,7 +1196,7 @@ value.
 	\small
 	%
 	\begin{itemize}
-		\item \alert{\bf Chain reactions} are defined by reactives intermediate reacting to produce another intermediates, 
+		\item \alert{\bf Chain reactions} (type of the consecutive reactions) are defined by reactives intermediate reacting to produce another intermediates, 
 		have complex kinetics, and occur quickly.
 		%
 		\item The intermediate species in a chain reaction is \alert{\bf a chain propagator}:
@@ -1132,7 +1247,7 @@ value.
 				\item combustion reactions in the car engines, e.g., combustion of octane (hydrocarbon)
 				%
 				\[
-				\mathsf{2 \, C_8\, H_{18} + 25\,O2 \rightarrow 16\, CO_2(g) + 18\,H_2O}.
+				\mathsf{2 \, C_8\, H_{18} + 25\,O_2 \rightarrow 16\, CO_2(g) + 18\,H_2O}.
 				\]			
 		\end{itemize}
 		%
@@ -1364,7 +1479,7 @@ value.
 			\end{itemize}
 		
 		\begin{center}
-			\href{http://etc.ch/xREb}{\textcolor{indigo(dye)}{\tt http://etc.ch/xREb}} \quad or \quad
+			\href{http://etc.ch/wsKw}{\textcolor{indigo(dye)}{\tt http://etc.ch/wsKw}} \quad or \quad
 			\includegraphics[height=0.15\columnwidth]{figures/chemical-kinetics/polls.png}
 		\end{center}
 		\hiddenpause
@@ -1415,7 +1530,7 @@ value.
 		%
     	 \vskip -40pt
 		\begin{center}
-			\href{http://etc.ch/xREb}{\textcolor{indigo(dye)}{\tt http://etc.ch/xREb}} \quad or \quad
+			\href{http://etc.ch/wsKw}{\textcolor{indigo(dye)}{\tt http://etc.ch/wsKw}} \quad or \quad
 			\includegraphics[height=0.17\columnwidth]{figures/chemical-kinetics/polls.png}
 		\end{center}
 		\hiddenpause
@@ -1463,7 +1578,7 @@ value.
 			\item the concentration change of this species is {\bf considered to be negligible} throughout the simulation period.
 		\end{itemize}
 	    \pause
-		\item \alert{\bf Example}: a {\bf second-order reaction} step $\mathsf{A+ B \rightarrow C}$ can be converted to {\bf first-order} 
+		\item \alert{\bf Example}: a {\bf second-order reaction} step $\mathsf{A+ B \rightarrow C}$ can be converted to {\bf first-order} $\mathsf{A \rightarrow C}$,
 		assuming $\mathsf{[B]} \approx {\rm const}$ during the simulations.
 		%
 		\begin{itemize}
@@ -1509,7 +1624,7 @@ value.
 			\item \alert{\bf Quiz}: how can we express concentrations of B?
 			%
 			\begin{center}
-				\href{http://etc.ch/xREb}{\textcolor{indigo(dye)}{\tt http://etc.ch/xREb}} \quad or \quad 
+				\href{http://etc.ch/wsKw}{\textcolor{indigo(dye)}{\tt http://etc.ch/wsKw}} \quad or \quad 
 				\includegraphics[height=0.18\columnwidth]{figures/chemical-kinetics/polls.png}
 			\end{center}
 			\vskip 10pt
@@ -1533,12 +1648,12 @@ value.
 			%
 			{\bf Example}: consider equilibrium reaction $\mathsf{A \xrightleftharpoons[k_2]{k_1} B \xrightarrow{k_3} C}$, where $k_3 \ll k_1, k_2$ \\
 			%
-			$\Rightarrow$  assuming $\mathsf{[B]} = K_e \, \mathsf{[A]}$, therefore $\tfrac{d\mathsf{[C]}}{dt} = k_3 \, \mathsf{[B]}$.		\\[10pt]
+% 			$\Rightarrow$ assuming $\mathsf{[B]} = K_e \, \mathsf{[A]}$, therefore $\tfrac{d\mathsf{[C]}}{dt} = k_3 \, \mathsf{[B]}$.		\\[10pt]
 		%
-		\item \alert{\bf Quiz}: how can we express the production rate of C?		
+		\item \alert{\bf Quiz}: assuming $\mathsf{[B]} = K_e \, \mathsf{[A]}$, how can we express the production rate of C?		
 		%
 		\begin{center}
-			\href{http://etc.ch/xREb}{\textcolor{indigo(dye)}{\tt http://etc.ch/xREb}} \quad or \quad 
+			\href{http://etc.ch/wsKw}{\textcolor{indigo(dye)}{\tt http://etc.ch/wsKw}} \quad or \quad 
 			\includegraphics[height=0.18\columnwidth]{figures/chemical-kinetics/polls.png}
 		\end{center}
 		\hiddenpause
@@ -1723,8 +1838,8 @@ value.
 		%
 		\[
 		\boxed{
-			J := \frac{\partial f(n, p)}{\partial n} = \bigg\{  \frac{\partial f_i}{\partial n_j} \bigg\}_{ij} \qquad  \mbox{or} \qquad
-			F := \frac{\partial f(n, p)}{\partial p} = \bigg\{  \frac{\partial f_i}{\partial p_j} \bigg\}_{ij}
+			J := \tfrac{\partial f(n, p)}{\partial n} = \bigg\{  \tfrac{\partial f_i}{\partial n_j} \bigg\}_{ij} \qquad  \mbox{or} \qquad
+			F := \tfrac{\partial f(n, p)}{\partial p} = \bigg\{  \tfrac{\partial f_i}{\partial p_j} \bigg\}_{ij}
 		}
 		\]
 		%
@@ -1971,27 +2086,27 @@ value.
 % Example, Barite precipitation using Palandri and Kharaka parameters
 % --------------------------------------------------------------------------------------------------------------------%
 %
-\begin{frame}[fragile]{Example of barite precipitation using acidic mechanism}
-	\small 
-	%
-		In rate law $r_{\sf Barite} = S \, {\rm sgn}(1-\mathrm{SI})\, |1-\mathrm{SI}| \, 
-		k \, e^{\Big[-\tfrac{E_a}{R}\Big(\tfrac{1}{T}-\tfrac{1}{298.15}\Big)\Big]},$ 
-		we defined 
-		$S$, $k$, and $E_a$:\\[10pt]	
-			%
-\begin{lstlisting}[language=Python, caption=Define barite mineral reaction and its parameters]
-eq_str_barite = "Barite = SO4-- + Ba++"
-min_reaction_barite = editor.addMineralReaction("Barite") \
-	.setEquation(eq_str_barite) \
-	.addMechanism("logk = -8.6615 mol/(m2*s); Ea = 22 kJ/mol") \
-	.setSpecificSurfaceArea(0.006, "m2/g")
-\end{lstlisting}
-	\begin{figure}
-		\centering
-		\includegraphics[height=0.37\textheight]{figures/chemical-kinetics/barite-acidic-mechanism.png}
-		\caption*{Barite precipitation.}
-	\end{figure}
-\end{frame}
+% \begin{frame}[fragile]{Example of barite precipitation using acidic mechanism}
+% 	\small 
+% 	%
+% 		In rate law $r_{\sf Barite} = S \, {\rm sgn}(1-\mathrm{SI})\, |1-\mathrm{SI}| \, 
+% 		k \, e^{\Big[-\tfrac{E_a}{R}\Big(\tfrac{1}{T}-\tfrac{1}{298.15}\Big)\Big]},$ 
+% 		we defined 
+% 		$S$, $k$, and $E_a$:\\[10pt]	
+% 			%
+% \begin{lstlisting}[language=Python, caption=Define barite mineral reaction and its parameters]
+% eq_str_barite = "Barite = SO4-- + Ba++"
+% min_reaction_barite = editor.addMineralReaction("Barite") \
+% 	.setEquation(eq_str_barite) \
+% 	.addMechanism("logk = -8.6615 mol/(m2*s); Ea = 22 kJ/mol") \
+% 	.setSpecificSurfaceArea(0.006, "m2/g")
+% \end{lstlisting}
+% 	\begin{figure}
+% 		\centering
+% 		\includegraphics[height=0.37\textheight]{figures/chemical-kinetics/barite-acidic-mechanism.png}
+% 		\caption*{Barite precipitation.}
+% 	\end{figure}
+% \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
 % Example, Barite precipitation using alternative database
@@ -2191,9 +2306,9 @@ min_reaction_barite = editor.addMineralReaction("Barite") \
 				$$
 				\quad 
 				\begin{cases}
-					\tfrac{{\rm d} n_\mathsf{A}}{{\rm d} t} = - a\, n_\mathsf{A} + b\, n_\mathsf{B}\cdot n_\mathsf{C}\\
-					\tfrac{{\rm d} n_\mathsf{B}}{{\rm d} t} =   a\, n_\mathsf{A}-b\, n_\mathsf{B}\cdot n_\mathsf{C}-c\, n_\mathsf{B}^{2}\\
-					\tfrac{{\rm d} n_\mathsf{B}}{{\rm d} t} =   c\, n_\mathsf{B}^{2}
+					\tfrac{{\rm d} n_\mathsf{A}}{{\rm d} t} = - k_a\, n_\mathsf{A} + k_b\, n_\mathsf{B}\, n_\mathsf{C}\\
+					\tfrac{{\rm d} n_\mathsf{B}}{{\rm d} t} =   k_a\, n_\mathsf{A}-k_b\, n_\mathsf{B}\, n_\mathsf{C}-k_c\, n_\mathsf{B}^{2}\\
+					\tfrac{{\rm d} n_\mathsf{B}}{{\rm d} t} =   k_c\, n_\mathsf{B}^{2}
 				\end{cases}
 				$$
 			\column{.6\textwidth}
@@ -2216,7 +2331,7 @@ min_reaction_barite = editor.addMineralReaction("Barite") \
 %
 \begin{frame}{Example, Calcite dissolution}
 	
- Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/eq.sodium-chloride-solubility-in-water.ipynb}{\textcolor{indigo(dye)}{\it Kinetic dissolution of carbonate}} with \href{https://polybox.ethz.ch/index.php/s/DEVT1vjNEJNh4Zo}{\textcolor{indigo(dye)}{\it recording}}:
+ Jupyter notebook tutorial \href{https://github.com/mtsveta/reaktoro-jupyter/blob/geofluids-examples/tutorial/eq.sodium-chloride-solubility-in-water.ipynb}{\textcolor{indigo(dye)}{\it Kinetic dissolution of carbonate}} (with Reaktoro v1) with \href{https://polybox.ethz.ch/index.php/s/DEVT1vjNEJNh4Zo}{\textcolor{indigo(dye)}{\it recording}}:
  	%
  	\begin{figure}[!t]
  	\centering

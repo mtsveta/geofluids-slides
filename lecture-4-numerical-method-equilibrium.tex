@@ -11,17 +11,15 @@
 \item Calculate the amounts of the species in each phase at equilibrium
 at given:
 \begin{itemize}
-\item \textbf{temperature} (e.g., 100 ~ °C);
+\item \textbf{temperature} (e.g., 100 °C);
 \item \textbf{pressure} (e.g, 300 bar); and 
 \item \textbf{amounts of elements H, O, C, Na, Cl} 
+\end{itemize}
 \item \textbf{Note}: the latter is rather given as a recipe that determine the values of H, O, C, Na, Cl by formula matrix b = A n, e.g., 
 \begin{itemize}
 \item 1 kg of H$_{2}$O,
 \item 1 mol CO$_{2}$, 
 \item 0.1 mol of NaCl.
-\end{itemize}
-% 
-
 \end{itemize}
 \end{itemize}
 \rcol
@@ -112,7 +110,7 @@ which corresponds to a state in which the {\bf Gibbs energy does not change with
 \column{0.4\textwidth}
 \vskip 20pt
 \begin{itemize}
-\item Consider the function $f$ defined as:
+\item Consider the function $f$ defined as
 \[
 f(x,y)=(x-1)^{2}+(y+1)^{2}.
 \]
@@ -124,23 +122,23 @@ f(x,y)=(x-1)^{2}+(y+1)^{2}.
 \vskip -10pt
 \pause
 \begin{itemize}
-\item The values of $(x,y)$ that minimizes $f$ can be found using:
+\item The values of $(x,y)$ that minimizes $f$ can be found using
 \begin{alignat*}{3}
 \frac{\partial f}{\partial x} & =0 \; & \implies & \; & 2(x-1) & = 0 \; \implies  \; x = 1\\
 \frac{\partial f}{\partial y} & =0 & \implies &  & 2(y+1) & =0 \; \implies  \; y = -1.
 \end{alignat*}
 \pause
 %\begin{itemize}
-\item \alert{\textbf{Question}}: How can we tell, mathematically, that the solution
+\item \alert{\textbf{Quiz}}: How can we tell, mathematically, that the solution
 above corresponds to a minimum?
 \begin{center}
-	\href{http://etc.ch/cKvh}{\textcolor{indigo(dye)}{\tt http://etc.ch/cKvh}} \quad or \quad 
+	\href{http://etc.ch/DjZU}{\textcolor{indigo(dye)}{\tt http://etc.ch/DjZU}} \quad or \quad 
 	\includegraphics[height=0.15\columnwidth]{figures/numerical-methods-chemical-equilibrium/polls.png}
 \end{center}
-\hiddenpause
-\vskip 5pt
-\item \textbf{Answer:} Check if the derivatives $\partial^{2}f/\partial x^{2}$
-and $\partial^{2}f/\partial y^{2}$ at $(1,-1)$ are non-negative.
+% \hiddenpause
+% \vskip 5pt
+% \item \textbf{http://etc.ch/DjZU:} Check if the derivatives $\partial^{2}f/\partial x^{2}$
+% and $\partial^{2}f/\partial y^{2}$ at $(1,-1)$ are non-negative.
 %\end{itemize}
 \end{itemize}
 \end{columns}
@@ -182,29 +180,30 @@ at obtained stationary point $(x_\star, y_\star)$.
 	\[
 	f(x,y)=x^{2}-y^{2}.
 	\]
-	\includegraphics[width=1\columnwidth]{figures/numerical-methods-chemical-equilibrium/saddle-point-with-axis.png}
+	\includegraphics[width=0.8\columnwidth]{figures/numerical-methods-chemical-equilibrium/saddle-point-with-axis.png}
 	\end{itemize}
 	
 	\column{0.5\textwidth}
 	\pause
 	\begin{itemize}
-	\item At $(x,y)=(0,0)$: 
-	\[
+	\item At $(x,y)=(0,0)$,  
+	$
 	{\displaystyle \frac{\partial f}{\partial x}=\frac{\partial f}{\partial y}=0,}
-	\]
+	$ 
 	but $f(0,0)=0$ is \textbf{neither a minimum nor a maximum}. 
 	%
 	\pause
-	\item \alert{\textbf{Quiz:}} What are the signs of $\partial^{2}f/\partial x^{2}$ and $\partial^{2}f/\partial y^{2}$ for this example?
+	\item \alert{\textbf{Quiz:}} What are the signs of $\partial^{2}f/\partial x^{2}$ and $\partial^{2}f/\partial y^{2}$ 
+	for this example?
 	%
 	\begin{center}
-		\href{http://etc.ch/cKvh}{\textcolor{indigo(dye)}{\tt http://etc.ch/cKvh}} \quad or \quad 
-		\includegraphics[height=0.15\columnwidth]{figures/numerical-methods-chemical-equilibrium/polls.png}
+		\href{http://etc.ch/DjZU}{\textcolor{indigo(dye)}{\tt http://etc.ch/DjZU}} \quad or \quad 
+		\includegraphics[height=0.2\columnwidth]{figures/numerical-methods-chemical-equilibrium/polls.png}
 	\end{center}
 	%
-	\hiddenpause
-	\item {\textbf{Answer:}} The values of $\partial^{2}f/\partial x^{2}>0$
-	and $\partial^{2}f/\partial y^{2}<0$ at $(0,0)$, which implies a \alert{\bf saddle point}.
+% 	\hiddenpause
+% 	\item {\textbf{http://etc.ch/DjZU:}} The values of $\partial^{2}f/\partial x^{2} \geqslant 0$
+% 	and $\partial^{2}f/\partial y^{2} \leqslant 0$ at $(0,0)$, which implies a \alert{\bf saddle point}.
 	\end{itemize}
 	\end{columns}
 	
@@ -234,7 +233,7 @@ where the \alert{unknowns} $n$, $y$, and $z$ correspond to
 n_{i}\, z_{i}=0,\qquad n_{i}\geq0,\qquad z_{i}\geq0.
 \]
 \end{itemize}
-\pause
+
 \item {\bf Note}: The above form of the Lagrangian function is called {\bf matrix form} but one can write it explicitly for each unknown $n_{i}$, $y_{j}$, and $z_{i}$. 
 \end{itemize}
 \end{frame}
@@ -244,21 +243,31 @@ n_{i}\, z_{i}=0,\qquad n_{i}\geq0,\qquad z_{i}\geq0.
 % --------------------------------------------------------------------------------------------------------------------%
 %
 \begin{frame}{System of equation corresponding to minimization of Lagrangian}
-\begin{itemize}
-\item Instead of finding \alert{only} $n=(n_{1},\ldots,n_{\text{N}})$ that solves 
+
+\begin{columns}[t]
+	
+\column{0.5\textwidth}
+
+Instead of finding \alert{only $n=(n_{1},\ldots,n_{\text{N}})$} \\
+that solves\\[6pt] 
 \begin{alignat*}{2}
-\frac{\partial G}{\partial n_{i}} & =0 & \qquad & (i=1,\ldots,\text{N}),
+\frac{\partial G}{\partial n_{i}} & =0 & \qquad & (i=1,\ldots,\text{N})
 \end{alignat*}
-\pause
- we find \alert{$n=(n_{1},\ldots,n_{\text{N}})$}, \alert{$y=(y_{1},\ldots,y_{\text{E}})$},
-and \alert{$z=(z_{1},\ldots,z_{\text{N}})$} that solves 
+
+\column{0.5\textwidth}
+	
+We find \alert{$n=(n_{1},\ldots,n_{\text{N}})$}, \alert{$y=(y_{1},\ldots,y_{\text{E}})$},
+and \alert{$z=(z_{1},\ldots,z_{\text{N}})$} \\
+that solves 
 \begin{alignat*}{2}
 \frac{\partial L}{\partial n_{i}} & =0 & \qquad\vphantom{\frac{\partial L}{\partial y_{j}}} & (i=1,\ldots,\text{N}),\\
 \frac{\partial L}{\partial y_{j}} & =0 & \vphantom{\frac{\partial L}{\partial y_{j}}} & (j=1,\ldots,\text{E}),\\
 n_{i}z_{i} & =0 & \vphantom{\frac{\partial L}{\partial y_{j}}} & (i=1,\ldots,\text{N}),\\
 n_{i},z_{i} & \geq0 & \vphantom{\frac{\partial L}{\partial y_{j}}} & (i=1,\ldots,\text{N}).
 \end{alignat*}
-\end{itemize}
+
+\end{columns}
+
 \end{frame}
 %
 % --------------------------------------------------------------------------------------------------------------------%
@@ -272,20 +281,21 @@ n_{i},z_{i} & \geq0 & \vphantom{\frac{\partial L}{\partial y_{j}}} & (i=1,\ldots
 %
 \column{0.5\textwidth}
 %
-We rewrite the system of equations \\[10pt]
+We rewrite the system of equations knowing that $L(n,y,z):=G(n)-(An-b)^{T}y-n^{T}z$\\[1pt]
 %
 \begin{alignat*}{2}
-\frac{\partial L}{\partial n_{i}} & =0 & \qquad\vphantom{\frac{\partial L}{\partial y_{j}}} & (i=1,\ldots,\text{N}),\\[10pt]
-\frac{\partial L}{\partial y_{j}} & =0 & \vphantom{\frac{\partial L}{\partial y_{j}}} & (j=1,\ldots,\text{E}),\\
-n_{i}z_{i} & =0 & \vphantom{\frac{\partial L}{\partial y_{j}}} & (i=1,\ldots,\text{N}),\\
-n_{i},z_{i} & \geq0 & \vphantom{\frac{\partial L}{\partial y_{j}}} & (i=1,\ldots,\text{N}),
+\frac{\partial L}{\partial n_{i}} & =0 & \qquad & (i=1,\ldots,\text{N}),\\[10pt]
+\frac{\partial L}{\partial y_{j}} & =0 & \qquad & (j=1,\ldots,\text{E}),\\[10pt]
+\frac{\partial L}{\partial z_{i}} & =0 & \qquad & (i=1,\ldots,\text{N}),
 \end{alignat*}
 \column{0.5\textwidth}
 %
+\vskip 10pt
 using the definition of $\mu_{i}\coloneqq\partial G/\partial n_{i}$: 
 \pause
 \begin{overprint}
 \onslide<2-> 
+\vskip 10pt
 \begin{alignat*}{2}
 \mu_{i}-\sum_{j=1}^{\text{E}}A_{ji}y_{j} & -z_{i}=0 & \qquad\vphantom{\frac{\partial L}{\partial y_{j}}} & (i=1,\ldots,\text{N}),\\
 \sum_{i=1}^{\text{N}}A_{ji}n_{i}-b_{j} & =0 & \vphantom{\frac{\partial L}{\partial y_{j}}} & (j=1,\ldots,\text{E}),\\
@@ -296,7 +306,8 @@ n_{i},z_{i} & \geq0 & \vphantom{\frac{\partial L}{\partial y_{j}}} & (i=1,\ldots
 \end{columns}
 \pause
 \vskip 10pt
-\alert{\bf Note}: Since $\mu_{i}$ is a function of unknown $n_{i}$, we obtain {\bf non-linear system of equation}.
+\alert{\bf Note}: Since $\mu_{i}$ is a function of unknown $n_{i}$, we obtain {\bf non-linear system of equation} w.r.t. to unknowns
+$n$, $y$, and $z$ (of a size 3N + E).
 
 \end{frame}
 
@@ -318,22 +329,22 @@ n_{i},z_{i} & \geq0 & \vphantom{\frac{\partial L}{\partial y_{j}}} & (i=1,\ldots
 \item \alert{\textbf{Quiz}}: What would be $f(x)$ and $x$ in a context of chemical equilibrium problem?
 %
 \begin{center}
-	\href{http://etc.ch/cKvh}{\textcolor{indigo(dye)}{\tt http://etc.ch/cKvh}} \quad or \quad 
+	\href{http://etc.ch/DjZU}{\textcolor{indigo(dye)}{\tt http://etc.ch/DjZU}} \quad or \quad 
 	\includegraphics[height=0.13\columnwidth]{figures/numerical-methods-chemical-equilibrium/polls.png}
 \end{center}
 \hiddenpause
-\item \alert{\textbf{Answer}}: We will define $f$ as our Gibbs energy function
-\[
-f(x)=G(x;T,P),
-\]
-\vskip -10pt
-where 
-\begin{itemize}
-\item $x=(x_{1},\ldots,x_{\text{n}})$ represents the \alert{unknown
-species amounts}, ${n=(n_{1},\ldots,n_{\text{N}})}$, 
-\item $A$ specifies the \alert{formula matrix of the system}, and 
-\item $b$ stands for the \alert{vector of element amounts}.
-\end{itemize}
+% \item \alert{\textbf{http://etc.ch/DjZU}}: We will define $f$ as our Gibbs energy function
+% \[
+% f(x)=G(x;T,P),
+% \]
+% \vskip -10pt
+% where 
+% \begin{itemize}
+% \item $x=(x_{1},\ldots,x_{\text{n}})$ represents the \alert{unknown
+% species amounts}, ${n=(n_{1},\ldots,n_{\text{N}})}$, 
+% \item $A$ specifies the \alert{formula matrix of the system}, and 
+% \item $b$ stands for the \alert{vector of element amounts}.
+% \end{itemize}
 \end{itemize}
 \end{frame}
 %
@@ -354,8 +365,8 @@ L(x,y,z)=f(x)-(Ax-b)^{T}y-x^{T}z.
 \begin{alignat*}{2}
 \partial f/\partial x-A^{T}y-z & =0, & \qquad\\
 Ax-b & =0,\\
-x_{i}z_{i} & =0 &  & (i=1,\ldots,n),\\
-x_{i},z_{i} & \geq0 &  & (i=1,\ldots,n).
+x_{i}z_{i} & =0 &  & (i=1,\ldots,\mathsf{N}),\\
+x_{i},z_{i} & \geq0 &  & (i=1,\ldots,\mathsf{N}).
 \end{alignat*}
 %
 %where $g=\partial f/\partial x$.
@@ -421,15 +432,16 @@ species that can exist in equilibrium.
 
 \ecol
 
+\vskip 5pt
 \begin{itemize}
 	\item \alert{\bf Quiz}: What can we say about the amount of mineral dissolved in water?
 	%
 	\begin{center}
-		\href{http://etc.ch/cKvh}{\textcolor{indigo(dye)}{\tt http://etc.ch/cKvh}} \quad or \quad 
+		\href{http://etc.ch/DjZU}{\textcolor{indigo(dye)}{\tt http://etc.ch/DjZU}} \quad or \quad 
 		\includegraphics[height=0.1\columnwidth]{figures/numerical-methods-chemical-equilibrium/polls.png}
 	\end{center}
-	\hiddenpause
-	\item \alert{\bf Answer}: The amount will be of order $\tau$.
+% 	\hiddenpause
+% 	\item \alert{\bf http://etc.ch/DjZU}: The amount will be of order $\tau$.
 \end{itemize}
 \end{frame}
 %
@@ -438,6 +450,7 @@ species that can exist in equilibrium.
 % --------------------------------------------------------------------------------------------------------------------%
 %
 \begin{frame}{Interior-point Newton method}
+\vskip -10pt
 \begin{columns}[t]
 
 \column{0.5\textwidth}
@@ -446,9 +459,9 @@ species that can exist in equilibrium.
 the obtained system of non-linear equations:
 %
 \begin{alignat*}{2}
-\frac{\partial f}{\partial x} - A^{T}y-z & =0, & \qquad\\
-Ax-b & =0,\\
-x_{i}z_{i} & =\tau &  & (i=1,\ldots,n),\\
+\tfrac{\partial f}{\partial x} - A^{T}y-z & =0, & \qquad\\[-4pt]
+Ax-b & =0,\\[-4pt]
+x_{i}z_{i} & =\alert{\tau} &  & (i=1,\ldots,n),\\[-4pt]
 x_{i},z_{i} & \geq0 &  & (i=1,\ldots,n).
 \end{alignat*}
 %
@@ -457,21 +470,23 @@ x_{i},z_{i} & \geq0 &  & (i=1,\ldots,n).
 
 \column{0.5\textwidth}
 \begin{itemize}
-\item Define the \alert{\bf residual function} $F$ as follows:
+\item Define the \alert{\bf residual function} $R$
+%
 \[
-F(x,y,z)\coloneqq
+R(x,y,z)\coloneqq
 %\begin{bmatrix}F_{1}\\
 %F_{2}\\
 %F_{3}
 %\end{bmatrix}
 \begin{bmatrix}
-\frac{\partial f}{\partial x} - A^{T}\,y-z\\
-Ax-b\\
+\frac{\partial f}{\partial x} - A^{T}\,y-z\\[-2pt]
+Ax-b\\[-2pt]
 XZe-\tau
 \end{bmatrix}, 
 \]
+\vskip -5pt
 %
-where 
+%where 
 \begin{itemize}
 \item $e=(1,\ldots,1)^{T}$,
 \item $X=\text{diag}(x)$, and 
@@ -480,11 +495,18 @@ where
 \end{itemize}
 \end{columns}
 \vskip 10pt
+%
+$\bullet$ 
+\alert{\bf Quiz}: How will Newton method formulate the problem of finding (x, y, z)?
+%
+\begin{center}
+	\href{http://etc.ch/DjZU}{\textcolor{indigo(dye)}{\tt http://etc.ch/DjZU}} \quad or \quad 
+	\includegraphics[height=0.08\columnwidth]{figures/numerical-methods-chemical-equilibrium/polls.png}
+\end{center}
+%
+\hiddenpause
 \begin{tcolorbox}
-	The resulting problem: find $(x,y,z)$, with $x,z\geq0$, so that: 
-	\[
-	F(x,y,z)=0.
-	\]
+	The resulting problem: find $(x,y,z)$, with $x,z\geq0$, so that $R(x,y,z)=0$.
 \end{tcolorbox}
 
 \end{frame}
@@ -500,7 +522,7 @@ where
 \begin{itemize}
 \item Newton's method require the Jacobian $J$ of the residual function:
 \[
-F(x,y,z)
+R(x,y,z)
 %\coloneqq
 %\begin{bmatrix}
 %F_{1}\\
@@ -516,9 +538,9 @@ XZe-\tau
 which is defined as  
 \[
 J :=\begin{bmatrix}
-\frac{\partial F_1}{\partial x} & \frac{\partial F_1}{\partial y} & \frac{\partial F_1}{\partial z}\\
-\frac{\partial F_2}{\partial x} & \frac{\partial F_2}{\partial y} & \frac{\partial F_2}{\partial z}\\
-\frac{\partial F_3}{\partial x} & \frac{\partial F_3}{\partial y} &\frac{\partial F_3}{\partial z}
+\frac{\partial R_1}{\partial x} & \frac{\partial R_1}{\partial y} & \frac{\partial R_1}{\partial z}\\
+\frac{\partial R_2}{\partial x} & \frac{\partial R_2}{\partial y} & \frac{\partial R_2}{\partial z}\\
+\frac{\partial R_3}{\partial x} & \frac{\partial R_3}{\partial y} &\frac{\partial R_3}{\partial z}
 \end{bmatrix}.
 \]
 %
@@ -528,7 +550,7 @@ J :=\begin{bmatrix}
 \rcol
 \hiddenpause
 \begin{itemize}
-	\item {\bf Answer}:
+	\item \alert{\bf Answer}:
 	\[
 	J
 	=\begin{bmatrix}
@@ -567,7 +589,7 @@ where
 \item The \alert{\bf Hessian matrix of the Gibbs energy} is
 \[
 H :=\frac{\partial^{2}G}{\partial n^{2}} 
-\qquad\text{or in element-wise notation}\qquad 
+\qquad\text{or in the  element-wise notation}\qquad 
 H :=\big\{ H_{ij} \big\}_{ij} 
 := \Bigg\{ \frac{\partial^{2}G}{\partial n_{i}\partial n_{j}}\Bigg\}_{ij} 
 \]
@@ -579,8 +601,8 @@ H :=\big\{ H_{ij} \big\}_{ij}
 \[
 H_{ij}=\frac{\partial\mu_{i}}{\partial n_{j}}=\frac{\partial}{\partial n_{j}}\left(\mu_{i}^{\circ}+RT\ln a_{i}\right)=RT\frac{\partial\ln a_{i}}{\partial n_{j}}.
 \]
-\item Expressions for $\partial\ln a_{i}/\partial n_{j}$ can be derived
-for all previous activity models.
+\item Expressions for \alert{$\partial\ln a_{i}/\partial n_{j}$ can be derived
+for all previous activity models}.
 \end{itemize}
 \end{frame}
 %
@@ -589,16 +611,16 @@ for all previous activity models.
 % --------------------------------------------------------------------------------------------------------------------%
 \begin{frame}{Partial molar derivatives of activities}
 \begin{itemize}[<+->]
-\item Instead of exact calculation of partial molar derivatives, 
-we {\bf derive  them for ideal models}.
-\item We use activity models to {\bf correct for the non-ideal behavior}
+% \item Instead of exact calculation of partial molar derivatives, 
+% we {\bf derive  them for ideal models}.
+\item We used activity models to {\bf correct for the non-ideal behavior}
 of the aqueous and gaseous solutions.
-\item We use the partial molar derivatives of ideal activity models as it is {\bf simpler to derive}. 
+\item But! We use the partial molar derivatives of ideal activity models as it is {\bf simpler to derive}. 
 %
-\item So, in\\[-30pt]
+\item In\\[-30pt]
 %
 \begin{alignat*}{2}
-	\mu_{i}-\sum_{j=1}^{\text{E}}A_{ji}y_{j} & -z_{i}=0 & \qquad\vphantom{\frac{\partial L}{\partial y_{j}}} & (i=1,\ldots,\text{N}),\\[-10pt]
+	\alert{\mu_{i}}-\sum_{j=1}^{\text{E}}A_{ji}y_{j} & -z_{i}=0 & \qquad\vphantom{\frac{\partial L}{\partial y_{j}}} & (i=1,\ldots,\text{N}),\\[-10pt]
 	\sum_{i=1}^{\text{N}}A_{ji}n_{i}-b_{j} & =0 & \vphantom{\frac{\partial L}{\partial y_{j}}} & (j=1,\ldots,\text{E}),\\[-15pt]
 	n_{i}z_{i} & =0 & \vphantom{\frac{\partial L}{\partial y_{j}}} & (i=1,\ldots,\text{N}),\\[-10pt]
 	n_{i},z_{i} & \geq0 & \vphantom{\frac{\partial L}{\partial y_{j}}} & (i=1,\ldots,\text{N}),
@@ -606,8 +628,7 @@ of the aqueous and gaseous solutions.
 %
 \alert{\bf $\mu_{i}$ will be calculated exactly}. But the {\bf Jacobian will be approximated}.
 %
-\item Ideally, an \alert{\bf automatic differentiation} scheme should be used
-to compute these derivatives (beyond the scope of this course).
+\item In the ideal case, an \alert{\bf automatic differentiation} scheme should be used to compute these derivatives.
 \end{itemize}
 
 \end{frame}
@@ -624,23 +645,33 @@ a_{i}=\gamma_{i}m_{i},\text{ where }m_{i}=55.508\frac{n_{i}}{n_{w}}.
 \]
 \pause
 \item Its ideal activity model is $a_{i}=m_{i}$, with $\gamma_{i}=1$.
-\hiddenpause
-\item Thus, 
+\pause
+\item \alert{\bf Quiz}: What is the partial derivative  aqueous species $\frac{\partial\ln a_{i}}{\partial n_{j}}$?
+\vskip 5pt
+\begin{center}
+	\href{http://etc.ch/DjZU}{\textcolor{indigo(dye)}{\tt http://etc.ch/DjZU}} \quad or \quad 
+	\includegraphics[height=0.08\columnwidth]{figures/numerical-methods-chemical-equilibrium/polls.png}
+\end{center}
 %
+\hiddenpause
+%
+\item \alert{\bf Answer}: 
 \begin{alignat*}{2}
-\frac{\partial\ln a_{i}}{\partial n_{j}}
-\approx\frac{\partial\ln m_{i}}{\partial n_{j}} 
-& = \mathsf{\alert{Exercise}} \\
-& \onslide<4->{
-	= \frac{\partial55.508}{\partial n_j} 
-   + \frac{\partial\ln n_{i}}{\partial n_{j}}
-   - \frac{\partial\ln n_{w}}{\partial n_{j}}
+\tfrac{\partial\ln a_{i}}{\partial n_{j}}
+\approx\tfrac{\partial\ln m_{i}}{\partial n_{j}} 
+& 
+	= \tfrac{\partial55.508}{\partial n_j} 
+  + \tfrac{\partial\ln n_{i}}{\partial n_{j}}
+  - \tfrac{\partial\ln n_{w}}{\partial n_{j}}
          = \begin{cases}
-         	\dfrac{1}{n_{i}} & j=i,\\
-         	-\dfrac{1}{n_{w}} & j=w,\\
+         	\tfrac{1}{n_{i}} & j=i,\\
+         	-\tfrac{1}{n_{w}} & j=w,\\
          	0 & \text{otherwise}.
-         \end{cases}}
+         \end{cases}
 \end{alignat*}
+%
+\hiddenpause
+
 \end{itemize}
 \end{frame}
 %
@@ -667,16 +698,22 @@ a_{i}=\gamma_{i}m_{i},\text{ where }m_{i}=55.508\frac{n_{i}}{n_{w}}.
 a_{w}=-\frac{1-x_{w}}{x_{w}}, \qquad \text{where} \qquad 
 x_{w}=\frac{n_{w}}{\sum n_{i}}.
 \]
-\hiddenpause
-\item Thus, 
+\pause
+\item \alert{\bf Exercise}: Show that
+% \begin{center}
+% 	\href{http://etc.ch/DjZU}{\textcolor{indigo(dye)}{\tt http://etc.ch/DjZU}} \quad or \quad 
+% 	\includegraphics[height=0.08\columnwidth]{figures/numerical-methods-chemical-equilibrium/polls.png}
+% \end{center}
+% %
+% \hiddenpause
+% \item \alert{\bf Answer}: 
 %
 \begin{alignat*}{2}
-\frac{\partial\ln a_{w}}{\partial n_{j}} & =\mathsf{\alert{Exercise}} \\
-%
-& \onslide<3->{= \frac{\partial\ln(x_{w}-1)}{\partial n_{j}}-\frac{\partial\ln x_{w}}{\partial n_{j}}=\begin{cases}
-	-\dfrac{1}{n_{w}} & j=w,\\
-	-\dfrac{1}{n_{w}}\dfrac{x_{w}}{x_{w}-1} \qquad \qquad & j\neq w.
-\end{cases}}
+\tfrac{\partial\ln a_{w}}{\partial n_{j}} & 
+= \tfrac{\partial\ln(x_{w}-1)}{\partial n_{j}}-\tfrac{\partial\ln x_{w}}{\partial n_{j}}=\begin{cases}
+	-\tfrac{1}{n_{w}} & j=w,\\
+	-\tfrac{1}{n_{w}}\tfrac{x_{w}}{x_{w}-1} \qquad \qquad & j\neq w.
+\end{cases}
 \end{alignat*}
 %
 \end{itemize}
@@ -723,16 +760,20 @@ was only a function of $T$ and $P$, i.e.,
 %\rcol
 \begin{itemize}
 \hiddenpause
-\item Thus, the value of the following derivative
+\item \alert{\bf Quiz}: Calculate 
+$\frac{\partial\ln a_{\mathsf{CO_{2}\text{(g)}}}}{\partial n_{j}}$ accodring to the assumption above
+%
+\begin{center}
+	\href{http://etc.ch/DjZU}{\textcolor{indigo(dye)}{\tt http://etc.ch/DjZU}} \quad or \quad 
+	\includegraphics[height=0.08\columnwidth]{figures/numerical-methods-chemical-equilibrium/polls.png}
+\end{center}
+%
+\hiddenpause
+\item \alert{\bf Answer}: 
 %
 \begin{alignat*}{2}
-\frac{\partial\ln a_{\mathsf{CO_{2}\text{(g)}}}}{\partial n_{j}} & =\mathsf{\alert{Exercise}} \\
-&\onslide<3->{ = 0.}
+\tfrac{\partial\ln a_{\mathsf{CO_{2}\text{(g)}}}}{\partial n_{j}} = 0.
 \end{alignat*}
-%\item \textbf{Answer:}
-%\[
-%\frac{\partial\ln a_{\mathsf{CO_{2}\text{(g)}}}}{\partial n_{j}}=0.
-%\]
 \end{itemize}
 %\ecol
 \end{frame}
@@ -859,14 +900,15 @@ def ln_activities_aqueous_species_ddn(T, P, nphase):
 %%
 %in the Newton method.
 \item At the first Newton iteration, start with {\bf initial guess} \\
-${x^{0}=(x_{1}^{0},\ldots,x_{\text{n}}^{0})}$,
-${y^{0}=(y_{1}^{0},\ldots,y_{\text{m}}^{0})}$ and ${z^{0}=(z_{1}^{0},\ldots,z_{\text{n}}^{0})}$. 
+${x^{0}}$,
+${y^{0}}$ and 
+${z^{0}}$. 
 \end{itemize}
 
 %\column{0.5\textwidth}
 \begin{itemize}
-\item Compute ${x^{1}=(x_{1}^{1},\ldots,x_{\text{n}}^{1})}$, ${y^{1}=(y_{1}^{1},\ldots,y_{\text{m}}^{1})}$
-and ${z^{1}=(z_{1}^{1},\ldots,z_{\text{n}}^{1})}$ using
+\item Compute ${x^{1}}$, ${y^{1}}$
+and ${z^{1}}$ using
 \begin{align*}
 x^{1} & =x^{0}+\alpha_{x}^{0}\Delta x^{0}\\
 y^{1} & =y^{0}+\Delta y^{0}\\
@@ -886,10 +928,10 @@ $\Delta x^{0}$, $\Delta y^{0}$, $\Delta z^{0}$?
 %
 \begin{frame}{Numerical solution by the interior-point Newton method \, ii}
 \begin{itemize}
-\item To calculate the Newton variations ${\Delta x^{0}=(\Delta x_{1}^{0},\ldots,\Delta x_{\text{n}}^{0})}$,
-${\Delta y^{0}=(\Delta y_{1}^{0},\ldots,\Delta y_{\text{m}}^{0})}$
-and ${\Delta z^{0}=(\Delta z_{1}^{0},\ldots,\Delta z_{\text{n}}^{0})}$,
-we solve the matrix equation 
+\item To calculate the Newton variations ${\Delta x^{0}}$,
+${\Delta y^{0}}$
+and ${\Delta z^{0}}$,
+we solve the matrix equation\\[5pt] 
 %
 \[
 \underset{J^{0}}{\underbrace{\begin{bmatrix}H^{0} & -A^{T} & -I\\
@@ -898,18 +940,18 @@ Z^{0} & 0 & X^{0}
 \end{bmatrix}}}\begin{bmatrix}\Delta x^{0}\\
 \Delta y^{0}\\
 \Delta z^{0}
-\end{bmatrix}=-\underset{F^{0}}{\underbrace{\begin{bmatrix}g^{0}-A^{T}y^{0}-z^{0}\\
+\end{bmatrix}=-\underset{R^{0}}{\underbrace{\begin{bmatrix}g^{0}-A^{T}y^{0}-z^{0}\\
 Ax^{0}-b\\
 X^{0}Z^{0}e-\tau
 \end{bmatrix}}}
 \]
 %
-where $J^{0}$, $F^{0}$, $H^{0}$, $Z^{0}$, $X^{0}$ represent to evaluation of respective matrices using the values of $x$, $y$, $z$ at the 0th iteration, i.e., 
+where $J^{0}$, $R^{0}$, $H^{0}$, $Z^{0}$, $X^{0}$ represent to evaluation of respective matrices using the values of $x$, $y$, $z$ at the 0th iteration, i.e., 
 \begin{itemize}
 	\item $J^{0} := J(x^0, y^0, z^0)$, 
-	\item $F^{0} := F(x^0, y^0, z^0)$, etc.
+	\item $R^{0} := R(x^0, y^0, z^0)$, etc.
 \end{itemize}
-%$J^{0} := J(x^0, y^0, z^0)$ and $F^{0} := F(x^0, y^0, z^0)$.
+%$J^{0} := J(x^0, y^0, z^0)$ and $R^{0} := R(x^0, y^0, z^0)$.
 %
 %\item Here, terms with superscript $0$, for example $H^{0}$ and $g^{0}$, means evaluation using the values of $x$, $y$, $z$ at the 0th iteration.
 \end{itemize}
@@ -935,7 +977,7 @@ J^k \,
 	\Delta y^{k}\\
 	\Delta z^{k}
 \end{bmatrix}
-=- F^k
+=- R^k
 \]
 %
 \item New approximations $x^{k+1}$, $y^{k+1}$,
@@ -1036,136 +1078,3 @@ $
 %\end{columns}
 
 \end{frame}
-%
-%\section{Computational project}
-%%
-%\begin{frame}{Quiz on standard potentials}
-%	
-%	\begin{itemize}
-%		\item \alert{\textbf{Quiz:}} what can we do alternatively to taking reference values of mu0, if we want to find standard potentials for pressures and temperatures lying in between the reference values?
-%		%
-%		\begin{center}
-%			\href{http://etc.ch/cKvh}{\textcolor{indigo(dye)}{\tt http://etc.ch/cKvh}} \quad or \quad 
-%			\includegraphics[height=0.2\columnwidth]{figures/numerical-methods-chemical-equilibrium/polls.png}
-%		\end{center}
-%		%
-%		\hiddenpause
-%		\vskip 10pt
-%		\item {\textbf{Answer:}} we interpolate between neighboring values of standard potentials.   
-%		
-%	\end{itemize}
-%\end{frame}
-%%
-%\begin{frame}{Quiz on variable of EquilibriumState providing information on the solubility}
-%	
-%	\begin{itemize}
-%		\item \alert{\textbf{Quiz:}} out of all these properties stored in the class EquilibriumState, which one will tell us the solubility of gas or mineral? 
-%		%
-%		\begin{center}
-%			\href{http://etc.ch/cKvh}{\textcolor{indigo(dye)}{\tt http://etc.ch/cKvh}} \quad or \quad 
-%			\includegraphics[height=0.2\columnwidth]{figures/numerical-methods-chemical-equilibrium/polls.png}
-%		\end{center}
-%		%
-%		\hiddenpause
-%		\vskip 10pt
-%		\item {\textbf{Answer:}} to make sure that we reach its solubility point, to dissolve the {\bf maximum} amount of CO$_2$(g) in the brine.
-%	\end{itemize}
-%	
-%\end{frame}
-%%
-%\begin{frame}{Quiz on adding NaCl into the recipe}
-%	
-%	\begin{itemize}
-%		\item \alert{\textbf{Quiz:}} what does happen to the solubility of CO$_2$(g) if we add NaCl into the recipe?
-%		%
-%		\begin{center}
-%			\href{http://etc.ch/cKvh}{\textcolor{indigo(dye)}{\tt http://etc.ch/cKvh}} \quad or \quad 
-%			\includegraphics[height=0.2\columnwidth]{figures/numerical-methods-chemical-equilibrium/polls.png}
-%		\end{center}
-%		%
-%		\hiddenpause
-%		\item {\textbf{Answer:}} it decreases, salting-out effect.
-%	\end{itemize}
-%	
-%\end{frame}
-%%
-%\begin{frame}{Quiz on the amount of CO$_2$ amount}
-%		
-%		\begin{itemize}
-%			\item \alert{\textbf{Quiz:}} why do we add so much initial CO$_2$(g)?
-%			%
-%			\begin{center}
-%				\href{http://etc.ch/cKvh}{\textcolor{indigo(dye)}{\tt http://etc.ch/cKvh}} \quad or \quad 
-%				\includegraphics[height=0.2\columnwidth]{figures/numerical-methods-chemical-equilibrium/polls.png}
-%			\end{center}
-%			%
-%			\hiddenpause
-%			\vskip 10pt
-%			\item {\textbf{Answer:}} to make sure that we reach its solubility point, to dissolve the {\bf maximum} amount of CO$_2$(g) in the brine.
-%		\end{itemize}
-%	
-%\end{frame}
-%\begin{frame}{Acidity of recipes}
-%	\small
-%	\begin{itemize}
-%		\item Given three mixture: \\
-%			\begin{itemize}
-%				\item  {\bf Mixture 1} :  1kg of water, 0.6 mol of NaCl, 1 mol of calcite \\
-%				\item  {\bf Mixture 2} :  1kg of water, 0.6 mol of NaCl, 1 mol of calcite, 5 mol of CO$_2$(g)\\
-%				\item  {\bf Mixture 3} :  1kg of water, 5 mol of CO$_2$(g)\\
-%			\end{itemize}
-%		\item \alert{\textbf{Quiz:}} sort out these mixture w.r.t increasing acidity (decreasing pH).\\[5pt]
-%		%
-%		\begin{center}
-%			\href{http://etc.ch/cKvh}{\textcolor{indigo(dye)}{\tt http://etc.ch/cKvh}} \quad or \quad 
-%			\includegraphics[height=0.18\columnwidth]{figures/numerical-methods-chemical-equilibrium/polls.png}
-%		\end{center}
-%		%
-%		\hiddenpause
-%		\vskip 10pt
-%		\item {\textbf{Answer:}} 1, 2, 3 because \\
-%		\begin{itemize}
-%			\item pH (Mixture 1) $\approx$ 10 \\
-%			\item pH (Mixture 2) $\approx$ 6 \\
-%			\item pH (Mixture 3) $\approx$ 4 \\
-%		\end{itemize}
-%	\end{itemize}
-%
-%	%b = element_amounts(kgH2O=1, molCO2=0.0, molNaCl=0.6, molCaCO3=1.0) -> pH = 10 (alkaline) 
-%	%b = element_amounts(kgH2O=1, molCO2=5.0, molNaCl=0.6, molCaCO3=1.0) -> pH = 6 (slightly acidic)
-%	%b = element_amounts(kgH2O=1, molCO2=5.0, molNaCl=0.0, molCaCO3=0.0) -> pH = 3.9 (acidic)
-%\end{frame}
-%
-%\begin{frame}{pH dependence on the added amount of added CO$_2$(g)}
-%	\small
-%	\begin{itemize}
-%
-%		\item \alert{\textbf{Quiz:}} what happens around the point of added CO$_2$(g) equal 0.8 mols?\\[5pt]
-%		%
-%		\begin{center}
-%			\href{http://etc.ch/cKvh}{\textcolor{indigo(dye)}{\tt http://etc.ch/cKvh}} \quad or \quad 
-%			\includegraphics[height=0.18\columnwidth]{figures/numerical-methods-chemical-equilibrium/polls.png}
-%		\end{center}
-%		%
-%		\hiddenpause
-%		\vskip 10pt
-%		\item {\textbf{Answer:}} we have reached the saturation point of CO$_2$(g) in water, i.e., the aqueous solution cannot dissolve more CO$_2$ gas.
-%		\end{itemize}
-%\end{frame}
-%
-%\begin{frame}{Calcite solubility dependence on the added CO$_2$(g)}
-%	\small
-%	\begin{itemize}
-%		
-%		\item \alert{\textbf{Quiz:}} what does this plato with dissolved calcite indicate? \\[5pt]
-%		%
-%		\begin{center}
-%			\href{http://etc.ch/cKvh}{\textcolor{indigo(dye)}{\tt http://etc.ch/cKvh}} \quad or \quad 
-%			\includegraphics[height=0.18\columnwidth]{figures/numerical-methods-chemical-equilibrium/polls.png}
-%		\end{center}
-%		%
-%		\hiddenpause
-%		\vskip 10pt
-%		\item {\textbf{Answer:}} we have reached the saturation point of CO$_2$(g) in water, which does not effect the solubility of calcite.
-%	\end{itemize}
-%\end{frame}
